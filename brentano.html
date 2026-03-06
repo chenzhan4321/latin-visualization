@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brentano — Sprich aus der Ferne (1801)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #FAF7F0;
+  --text: #2C2416;
+  --accent: #8B4513;
+  --highlight: #F5E6CC;
+  --border: #D4C5A9;
+  --tooltip-bg: #FFFEF9;
+  --font-poem: 'Cormorant Garamond', 'Georgia', serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+::selection { background: var(--highlight); color: var(--text); }
+
+/* Header */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250, 247, 240, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  height: 64px;
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  height: 100%; display: flex; align-items: center; justify-content: space-between;
+}
+.header-title h1 {
+  font-family: var(--font-poem); font-size: 1.35rem; font-weight: 600;
+  color: var(--text); letter-spacing: 0.01em;
+}
+.header-title h1 em { font-style: italic; font-weight: 400; }
+.header-subtitle { font-size: 0.8rem; color: #8a7e6b; }
+
+/* Main layout */
+.main-content {
+  max-width: 1100px; margin: 0 auto; padding: 24px 24px 120px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px;
+}
+.column-heading {
+  font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em; color: #9e937e;
+  margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+
+/* Stanza blocks */
+.stanza {
+  padding: 8px 8px; border-radius: 6px; cursor: pointer;
+  transition: background-color 0.2s; margin-bottom: 4px;
+}
+.stanza:hover { background: rgba(245, 230, 204, 0.4); }
+.stanza.active { background: var(--highlight); }
+
+.stanza-num {
+  font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600;
+  color: #b5a990; text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+/* Poem text */
+.poem-line {
+  font-family: var(--font-poem); font-size: 1.15rem; line-height: 1.9;
+  color: var(--text);
+}
+.poem-line.indented { padding-left: 2em; }
+.translation-line {
+  font-family: var(--font-poem); font-size: 1rem; line-height: 1.9;
+  color: #5a4e3a; font-style: italic;
+}
+.translation-line.indented { padding-left: 2em; }
+
+/* Word hover */
+.word {
+  cursor: pointer; position: relative; transition: color 0.15s; padding: 1px 0;
+}
+.word:hover {
+  text-decoration: underline; text-decoration-style: dotted;
+  text-underline-offset: 3px; text-decoration-color: var(--border);
+}
+
+/* POS colors */
+.w-noun { color: #2E5090; }
+.w-verb { color: #8B2500; }
+.w-adj  { color: #006400; }
+.w-adv  { color: #6A4C93; }
+.w-prep { color: #7B6840; }
+.w-conj { color: #8B7355; }
+.w-pron { color: #4682B4; }
+
+/* Tooltip */
+.tooltip {
+  position: absolute; z-index: 200; max-width: 320px; min-width: 180px;
+  padding: 12px 14px; background: var(--tooltip-bg);
+  border: 1px solid var(--border); border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(44,36,22,0.12), 0 1px 4px rgba(44,36,22,0.06);
+  font-family: var(--font-ui); font-size: 0.85rem; line-height: 1.5;
+  opacity: 0; pointer-events: none; transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.tooltip.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.tooltip-lemma { font-family: var(--font-poem); font-size: 1.1rem; font-weight: 700; margin-bottom: 3px; }
+.tooltip-pos {
+  display: inline-block; padding: 1px 8px; font-size: 0.65rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em; color: white;
+  background: var(--accent); border-radius: 3px; margin-bottom: 6px;
+}
+.tooltip-info { font-size: 0.8rem; color: #6d5f4a; margin-bottom: 4px; }
+.tooltip-gloss {
+  font-style: italic; color: #5a4e3a; padding-top: 4px; border-top: 1px solid #eae4d6;
+}
+
+/* Commentary panel */
+.commentary-panel {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+  height: 340px; background: var(--tooltip-bg);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 20px rgba(44,36,22,0.08);
+  transform: translateY(100%); transition: transform 0.3s ease;
+}
+.commentary-panel.open { transform: translateY(0); }
+
+.commentary-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 44px; border-bottom: 1px solid var(--border);
+  background: rgba(250, 247, 240, 0.6);
+}
+.commentary-tabs { display: flex; gap: 4px; }
+.tab-btn {
+  font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500;
+  padding: 6px 14px; border: none; border-radius: 4px;
+  background: transparent; color: #8a7e6b; cursor: pointer; transition: all 0.15s;
+}
+.tab-btn:hover { background: #f0ebe0; color: var(--text); }
+.tab-btn.active { background: var(--accent); color: white; }
+.commentary-close {
+  font-size: 1.4rem; line-height: 1; border: none; background: none;
+  color: #8a7e6b; cursor: pointer; padding: 4px 8px; border-radius: 4px;
+}
+.commentary-close:hover { color: var(--text); background: #f0ebe0; }
+
+.commentary-body {
+  padding: 16px 24px; height: calc(340px - 44px); overflow-y: auto;
+}
+.tab-content {
+  display: none; font-family: var(--font-ui); font-size: 0.88rem;
+  line-height: 1.7; color: var(--text);
+}
+.tab-content.active { display: block; }
+.tab-content h3 {
+  font-family: var(--font-poem); font-size: 1.05rem; font-weight: 600;
+  margin-bottom: 6px; color: var(--accent);
+}
+.tab-content p { margin-bottom: 8px; }
+.tab-content ul { margin: 6px 0; padding-left: 18px; }
+.tab-content li { margin-bottom: 4px; }
+
+.vocab-entry { margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #eae4d6; }
+.vocab-entry:last-child { border-bottom: none; }
+.vocab-word { font-family: var(--font-poem); font-weight: 700; }
+.vocab-pos { font-size: 0.72rem; color: var(--accent); text-transform: uppercase; }
+.vocab-def { color: #5a4e3a; }
+
+.syntax-box {
+  padding: 10px 14px; background: #f5f0e6; border-radius: 6px;
+  border-left: 3px solid var(--accent); margin-bottom: 10px;
+}
+.syntax-label {
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #8a7e6b; margin-bottom: 4px;
+}
+.syntax-normal { font-family: var(--font-poem); font-size: 1rem; color: var(--text); }
+.syntax-gloss { font-size: 0.85rem; color: #5a4e3a; font-style: italic; }
+
+.translation-box {
+  font-family: var(--font-poem); font-size: 1.05rem; line-height: 2;
+  color: var(--text); padding: 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content { grid-template-columns: 1fr; gap: 24px; padding: 16px 16px 160px; }
+  .header-inner { padding: 0 16px; }
+  .header-title h1 { font-size: 1.1rem; }
+  .commentary-panel { height: 280px; }
+  .commentary-body { padding: 12px 16px; }
+  .poem-line { font-size: 1.05rem; }
+}
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-title">
+      <h1>Brentano &mdash; <em>Sprich aus der Ferne</em> &mdash; 1801</h1>
+    </div>
+    <span class="header-subtitle">Clemens Brentano (1778&ndash;1842)</span>
+  </div>
+</header>
+
+<main class="main-content" id="main-content">
+  <h2 class="column-heading">Deutsch</h2>
+  <h2 class="column-heading">中文翻译</h2>
+  <!-- Stanzas rendered by JS -->
+</main>
+
+<div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
+
+<aside id="commentary-panel" class="commentary-panel" aria-hidden="true">
+  <div class="commentary-header">
+    <div class="commentary-tabs">
+      <button class="tab-btn active" data-tab="wortschatz">单词</button>
+      <button class="tab-btn" data-tab="syntax">句法</button>
+      <button class="tab-btn" data-tab="meaning">意理</button>
+      <button class="tab-btn" data-tab="interpretation">阐释</button>
+      <button class="tab-btn" data-tab="translation">翻译</button>
+    </div>
+    <button class="commentary-close" id="commentary-close">&times;</button>
+  </div>
+  <div class="commentary-body">
+    <div class="tab-content active" id="tab-wortschatz"></div>
+    <div class="tab-content" id="tab-syntax"></div>
+    <div class="tab-content" id="tab-meaning"></div>
+    <div class="tab-content" id="tab-interpretation"></div>
+    <div class="tab-content" id="tab-translation"></div>
+  </div>
+</aside>
+
+<script>
+// ============================================================
+// POEM DATA
+// ============================================================
+const STANZAS = [
+  {
+    id: 1,
+    type: "refrain",
+    lines: [
+      { de: "Sprich aus der Ferne,", indent: false },
+      { de: "Heimliche Welt,", indent: true },
+      { de: "Die sich so gerne", indent: true },
+      { de: "Zu mir gesellt!", indent: true },
+    ],
+    cn: [
+      { text: "请从远方开口吧，", indent: false },
+      { text: "神秘的世界，", indent: true },
+      { text: "你总是如此乐意", indent: true },
+      { text: "与我相伴！", indent: true },
+    ],
+    words: [
+      { form: "Sprich", lemma: "sprechen", pos: "verb", cls: "w-verb", info: "命令式第二人称单数", gloss: "说吧，开口" },
+      { form: "Ferne", lemma: "die Ferne", pos: "noun", cls: "w-noun", info: "阴性名词", gloss: "远方，远处" },
+      { form: "Heimliche", lemma: "heimlich", pos: "adj", cls: "w-adj", info: "形容词，此处作定语", gloss: "秘密的，隐秘的，神秘的" },
+      { form: "Welt", lemma: "die Welt", pos: "noun", cls: "w-noun", info: "阴性名词", gloss: "世界" },
+      { form: "gerne", lemma: "gern(e)", pos: "adv", cls: "w-adv", info: "副词", gloss: "乐意地，喜欢" },
+      { form: "gesellt", lemma: "sich gesellen", pos: "verb", cls: "w-verb", info: "反身动词，此处完成分词", gloss: "与……结伴，相伴" },
+    ],
+    syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Heimliche Welt, die sich so gerne zu mir gesellt, sprich aus der Ferne!</div><div class="syntax-gloss">= 神秘的世界，你这总爱与我相伴的，请从远方开口说话！</div></div><p><b>Sprich</b>（祈使句谓语）置于句首，形成呼唤语气。<b>Heimliche Welt</b> 是被呼唤的对象（Vokativ）。<b>die sich so gerne zu mir gesellt</b> 是修饰 Welt 的关系从句。</p>`,
+    meaning: `<p>诗人向一个"神秘世界"发出呼唤，请它从远方向自己说话。这个"heimliche Welt"既指自然界的隐秘力量，也暗示内心世界。</p><p>"sich gesellen"（相伴）表达了诗人与这个神秘世界之间亲密而自愿的关系——它"乐意"走近诗人。</p><p>作为首尾呼应的叠句（Refrain），它构成全诗的框架。</p>`,
+    interpretation: `<p>这是典型的浪漫主义"呼唤"姿态——诗人不是去寻找世界，而是请世界来向他"说话"（sprich）。</p><p><b>heimlich</b> 一词在浪漫主义中含义丰富：既有"秘密"之意，也有"亲密、家一般"的温暖感（词源上与 Heim = 家 相关）。</p><p>Brentano 把不可见的精神世界拟人化为一位愿意相伴的友人。</p>`,
+    translationNote: `<p>"Sprich"译为"请开口吧"而非简单的"说"，以传达祈使语气中的恳切感。"heimlich"译为"神秘的"，兼顾秘密与亲近两层意思。</p>`,
+  },
+  {
+    id: 2,
+    type: "long",
+    lines: [
+      { de: "Wenn das Abendrot niedergesunken,", indent: false },
+      { de: "Keine freudige Farbe mehr spricht,", indent: false },
+      { de: "Und die Kränze still leuchtender Funken", indent: false },
+      { de: "Die Nacht um die schattigte Stirne flicht:", indent: false },
+    ],
+    cn: [
+      { text: "当晚霞已沉落，", indent: false },
+      { text: "再无欢快的色彩言说，", indent: false },
+      { text: "而那静静发光的火花编成的花环", indent: false },
+      { text: "被夜编结在阴影笼罩的额头上：", indent: false },
+    ],
+    words: [
+      { form: "Abendrot", lemma: "das Abendrot", pos: "noun", cls: "w-noun", info: "中性名词。Abend（傍晚）+ Rot（红色）= 晚霞", gloss: "晚霞" },
+      { form: "niedergesunken", lemma: "niedersinken", pos: "verb", cls: "w-verb", info: "过去分词。nieder（向下）+ sinken（沉没）", gloss: "沉落，落下" },
+      { form: "freudige", lemma: "freudig", pos: "adj", cls: "w-adj", info: "形容词", gloss: "欢快的，喜悦的" },
+      { form: "spricht", lemma: "sprechen", pos: "verb", cls: "w-verb", info: "第三人称单数现在时", gloss: "说话（此处：表达、呈现）" },
+      { form: "Kränze", lemma: "der Kranz", pos: "noun", cls: "w-noun", info: "阳性名词复数", gloss: "花环，花冠" },
+      { form: "leuchtender", lemma: "leuchtend", pos: "adj", cls: "w-adj", info: "现在分词作形容词，属格复数", gloss: "发光的，闪亮的" },
+      { form: "Funken", lemma: "der Funke", pos: "noun", cls: "w-noun", info: "阳性弱变化名词复数", gloss: "火花，火星（此处指星星）" },
+      { form: "schattigte", lemma: "schattig", pos: "adj", cls: "w-adj", info: "= schattige，古语/方言拼写", gloss: "有阴影的，阴暗的" },
+      { form: "Stirne", lemma: "die Stirn", pos: "noun", cls: "w-noun", info: "阴性名词，古体写法 Stirne = Stirn", gloss: "额头，前额" },
+      { form: "flicht", lemma: "flechten", pos: "verb", cls: "w-verb", info: "第三人称单数现在时", gloss: "编织，编结" },
+    ],
+    syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Wenn das Abendrot niedergesunken [ist], keine freudige Farbe mehr spricht, und die Nacht die Kränze still leuchtender Funken um die schattigte Stirne flicht:</div><div class="syntax-gloss">= 当晚霞沉落了，没有欢快的色彩再"说话"，而夜晚把静静发光的火花花环编织在（自己）阴影笼罩的额头上：</div></div><p>"Wenn"引导三个并列的条件从句（时间从句）。<b>ist</b> 被省略（niedergesunken [ist]）。第三句中 <b>die Nacht</b> 是主语，<b>flicht</b> 是谓语，<b>Kränze</b> 是宾语——语序大幅倒装。</p>`,
+    meaning: `<p>描绘黄昏到入夜的过渡：晚霞消退，色彩沉默（"keine Farbe spricht"——色彩拟人化为"说话"），星星（"leuchtende Funken"）如花环般出现在夜空的"额头"上。</p><p>夜被拟人化，有"额头"（Stirne），星星是她佩戴的花冠。这是一幅完整的视觉画面：夜女神戴上星辰之冠。</p>`,
+    interpretation: `<p>色彩"说话"（spricht）与首节"sprich"呼应——白天世界的"语言"是色彩，当色彩沉默，另一种更深沉的语言（夜的语言）就开始了。</p><p><b>schattigte</b>（= schattige）是方言化的古体拼写，增添了口语化的音乐感。Brentano 常故意使用这种民歌风格的语言。</p><p>星星被称为"Funken"（火花）而非"Sterne"——日常化的比喻让宇宙景象变得亲切。</p>`,
+    translationNote: `<p>"keine Farbe mehr spricht"直译为"没有色彩再说话"，译为"再无欢快的色彩言说"保留了拟人。"schattigte Stirne"是夜的拟人化额头，译文加了"阴影笼罩的"以传达画面。</p>`,
+  },
+  {
+    id: 3,
+    type: "short",
+    lines: [
+      { de: "Wehet der Sterne", indent: true },
+      { de: "Heiliger Sinn", indent: true },
+      { de: "Leis durch die Ferne", indent: true },
+      { de: "Bis zu mir hin.", indent: true },
+    ],
+    cn: [
+      { text: "那星辰的", indent: true },
+      { text: "神圣意蕴", indent: true },
+      { text: "便轻轻吹过远方", indent: true },
+      { text: "直到我身旁。", indent: true },
+    ],
+    words: [
+      { form: "Wehet", lemma: "wehen", pos: "verb", cls: "w-verb", info: "第三人称单数。诗歌体用 -et 而非 weht", gloss: "吹，飘" },
+      { form: "Sterne", lemma: "der Stern", pos: "noun", cls: "w-noun", info: "阳性名词复数，属格", gloss: "星星，星辰" },
+      { form: "Heiliger", lemma: "heilig", pos: "adj", cls: "w-adj", info: "形容词，阳性主格", gloss: "神圣的" },
+      { form: "Sinn", lemma: "der Sinn", pos: "noun", cls: "w-noun", info: "阳性名词", gloss: "意义，意蕴，感觉" },
+      { form: "Leis", lemma: "leise", pos: "adv", cls: "w-adv", info: "= leise 的诗歌缩略形式", gloss: "轻轻地，低声地" },
+    ],
+    syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Der heilige Sinn der Sterne wehet leis durch die Ferne bis zu mir hin.</div><div class="syntax-gloss">= 星辰的神圣意蕴轻轻地从远方吹拂到我身边。</div></div><p>主语是 <b>der Sterne heiliger Sinn</b>（星辰的神圣意蕴），谓语是 <b>wehet</b>（吹拂）。倒装后谓语前置，主语分布在两行里，制造了缓缓飘来的节奏感。</p>`,
+    meaning: `<p>这是第二节条件从句的主句：当夜幕降临后，星辰的"神圣意蕴"就像微风一样从远方飘向诗人。</p><p>"Sinn"（意蕴）用 "wehen"（吹拂）来形容——意义不是被理解的，而是像风一样被感受到的。这是浪漫主义的典型认知方式：用感官（而非理性）来把握世界的深层意义。</p>`,
+    interpretation: `<p>"wehet"用了诗歌体的 -et 词尾（而非口语的 weht），与首节 "gesellt" 的韵脚呼应，也赋予诗歌一种古雅的仪式感。</p><p>"Leis"（= leise 的缩略）既描述声音的轻柔，也暗示这种感知需要安静与专注。只有在夜晚的寂静中，星辰的语言才能被听到。</p>`,
+    translationNote: `<p>"heiliger Sinn"译为"神圣意蕴"而非"神圣的意义"，因为 Sinn 在这里不是抽象逻辑含义，而是可以"吹拂"的、近乎物质性的精神力量。</p>`,
+  },
+  {
+    id: 4,
+    type: "long",
+    lines: [
+      { de: "Wenn des Mondes still lindernde Tränen", indent: false },
+      { de: "Lösen der Nächte verborgenes Weh,", indent: false },
+      { de: "Dann wehet Friede. In goldenen Kähnen", indent: false },
+      { de: "Schiffen die Geister im himmlischen See.", indent: false },
+    ],
+    cn: [
+      { text: "当月亮静静的抚慰之泪", indent: false },
+      { text: "化解了黑夜隐藏的忧伤，", indent: false },
+      { text: "于是和平吹来。在金色的小船上", indent: false },
+      { text: "精灵们在天上的湖中漫游。", indent: false },
+    ],
+    words: [
+      { form: "Mondes", lemma: "der Mond", pos: "noun", cls: "w-noun", info: "阳性名词，属格", gloss: "月亮" },
+      { form: "lindernde", lemma: "lindernd", pos: "adj", cls: "w-adj", info: "现在分词作形容词", gloss: "抚慰的，缓和的" },
+      { form: "Tränen", lemma: "die Träne", pos: "noun", cls: "w-noun", info: "阴性名词复数", gloss: "眼泪，泪水" },
+      { form: "Lösen", lemma: "lösen", pos: "verb", cls: "w-verb", info: "第三人称复数现在时", gloss: "解开，化解" },
+      { form: "verborgenes", lemma: "verborgen", pos: "adj", cls: "w-adj", info: "过去分词作形容词", gloss: "隐藏的，隐秘的" },
+      { form: "Weh", lemma: "das Weh", pos: "noun", cls: "w-noun", info: "中性名词", gloss: "痛苦，忧伤" },
+      { form: "Friede", lemma: "der Friede(n)", pos: "noun", cls: "w-noun", info: "阳性弱变化名词，古体 Friede = Frieden", gloss: "和平，安宁" },
+      { form: "Kähnen", lemma: "der Kahn", pos: "noun", cls: "w-noun", info: "阳性名词复数与格", gloss: "小船" },
+      { form: "Schiffen", lemma: "schiffen", pos: "verb", cls: "w-verb", info: "第三人称复数现在时", gloss: "乘船航行" },
+      { form: "Geister", lemma: "der Geist", pos: "noun", cls: "w-noun", info: "阳性名词复数", gloss: "精灵，灵魂，精神" },
+      { form: "himmlischen", lemma: "himmlisch", pos: "adj", cls: "w-adj", info: "形容词与格", gloss: "天上的，天堂般的" },
+    ],
+    syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Wenn des Mondes still lindernde Tränen der Nächte verborgenes Weh lösen, dann wehet Friede.</div><div class="syntax-gloss">= 当月亮的静静抚慰的泪水化解了夜晚隐藏的忧伤，于是和平吹来。</div></div><p><b>Tränen</b>（泪水）是主语，<b>lösen</b>（化解）是谓语，<b>Weh</b>（忧伤）是宾语。后半句独立：<b>Die Geister schiffen in goldenen Kähnen im himmlischen See.</b></p>`,
+    meaning: `<p>月光被比作"泪水"——但不是悲伤的泪，而是"抚慰的"（lindernd）泪。月光能化解黑夜隐藏的痛苦，带来和平。</p><p>后半句画面突变：精灵们乘金色小船在天空之湖（= 月光下的天空）中航行。天空被想象为湖面，星光或月光为金色小船。这是极富想象力的通感画面。</p>`,
+    interpretation: `<p>"wehet Friede"与第三节 "wehet der Sterne heiliger Sinn" 平行——"吹拂"成为这首诗中精神力量传达的核心动词。</p><p>"goldene Kähne im himmlischen See"是典型的浪漫主义意象：将天空转化为水面，打破天地界限。这呼应了诺瓦利斯"万物皆相关"的浪漫主义自然哲学。</p>`,
+    translationNote: `<p>"still lindernde Tränen"中 still 既修饰 lindernde 也营造氛围，译为"静静的抚慰之泪"。"schiffen"是较少见的动词，译为"漫游"比"航行"更有诗意。</p>`,
+  },
+  {
+    id: 5,
+    type: "short",
+    lines: [
+      { de: "Glänzender Lieder", indent: true },
+      { de: "Klingender Lauf", indent: true },
+      { de: "Ringelt sich nieder,", indent: true },
+      { de: "Wallet hinauf.", indent: true },
+    ],
+    cn: [
+      { text: "闪亮歌曲的", indent: true },
+      { text: "叮当旋律", indent: true },
+      { text: "蜿蜒而下，", indent: true },
+      { text: "涌动而上。", indent: true },
+    ],
+    words: [
+      { form: "Glänzender", lemma: "glänzend", pos: "adj", cls: "w-adj", info: "现在分词作形容词，属格复数", gloss: "闪亮的，灿烂的" },
+      { form: "Lieder", lemma: "das Lied", pos: "noun", cls: "w-noun", info: "中性名词复数", gloss: "歌曲" },
+      { form: "Klingender", lemma: "klingend", pos: "adj", cls: "w-adj", info: "现在分词作形容词，阳性主格", gloss: "发出声响的，叮当作响的" },
+      { form: "Lauf", lemma: "der Lauf", pos: "noun", cls: "w-noun", info: "阳性名词", gloss: "行进，流动，旋律进程" },
+      { form: "Ringelt", lemma: "sich ringeln", pos: "verb", cls: "w-verb", info: "第三人称单数，反身动词", gloss: "蜿蜒，卷曲" },
+      { form: "Wallet", lemma: "wallen", pos: "verb", cls: "w-verb", info: "第三人称单数，诗歌体 -et", gloss: "涌动，波动，飘荡" },
+    ],
+    syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Glänzender Lieder klingender Lauf ringelt sich nieder [und] wallet hinauf.</div><div class="syntax-gloss">= 闪亮歌曲的叮当旋律蜿蜒而下，又涌动而上。</div></div><p>主语是 <b>Lauf</b>（旋律进程），由两个属格修饰语 <b>glänzender Lieder</b>（闪亮歌曲的）和 <b>klingender</b>（叮当作响的）层层修饰。两个谓语 <b>ringelt sich nieder</b> 和 <b>wallet hinauf</b> 对称并列。</p>`,
+    meaning: `<p>精灵之歌的旋律在天地之间上下流动——像蛇一样蜿蜒而下（ringelt sich nieder），又像波浪涌上（wallet hinauf）。</p><p>这是声音的可视化：歌声变成了可以"看到"的运动轨迹。上下往复的运动暗示天地之间的循环与贯通。</p>`,
+    interpretation: `<p>这一节是全诗音乐性最强的段落。"Glänzender"（视觉）描述 "Lieder"（听觉），"Klingender"（听觉）描述 "Lauf"（运动）——典型的<b>通感</b>（Synästhesie），浪漫主义最重要的修辞手法之一。</p><p>nieder / hinauf 的对立构成了一个完美的圆环运动，呼应了全诗"远方与身边""天上与人间"的往复主题。</p>`,
+    translationNote: `<p>"Lauf"直译为"行进/流动"，这里指旋律的运动轨迹，译为"旋律"。"ringelt sich"（蜿蜒卷曲）和 "wallet"（涌动）都是非常具象的动词，保留原文的动态画面感。</p>`,
+  },
+  {
+    id: 6,
+    type: "long",
+    lines: [
+      { de: "Wenn der Mitternacht heiliges Grauen", indent: false },
+      { de: "Bang durch die dunklen Wälder hinschleicht,", indent: false },
+      { de: "Und die Büsche gar wundersam schauen,", indent: false },
+      { de: "Alles sich finster, tiefsinnig bezeugt:", indent: false },
+    ],
+    cn: [
+      { text: "当午夜神圣的战栗", indent: false },
+      { text: "惶然穿过幽暗的森林潜行，", indent: false },
+      { text: "而灌木丛发出奇异的凝视，", indent: false },
+      { text: "万物都阴沉而深邃地表白着：", indent: false },
+    ],
+    words: [
+      { form: "Mitternacht", lemma: "die Mitternacht", pos: "noun", cls: "w-noun", info: "阴性名词。Mitter(=Mitte 中间) + Nacht(夜)", gloss: "午夜" },
+      { form: "Grauen", lemma: "das Grauen", pos: "noun", cls: "w-noun", info: "中性名词（名词化动词）", gloss: "恐惧，战栗" },
+      { form: "Bang", lemma: "bang(e)", pos: "adv", cls: "w-adv", info: "副词", gloss: "惶恐地，胆怯地" },
+      { form: "hinschleicht", lemma: "hinschleichen", pos: "verb", cls: "w-verb", info: "第三人称单数。hin（朝那边）+ schleichen（潜行）", gloss: "悄悄潜行过去" },
+      { form: "wundersam", lemma: "wundersam", pos: "adj", cls: "w-adj", info: "形容词/副词", gloss: "奇异的，不可思议的" },
+      { form: "schauen", lemma: "schauen", pos: "verb", cls: "w-verb", info: "第三人称复数", gloss: "看，凝视" },
+      { form: "finster", lemma: "finster", pos: "adj", cls: "w-adj", info: "形容词", gloss: "阴暗的，阴沉的" },
+      { form: "tiefsinnig", lemma: "tiefsinnig", pos: "adj", cls: "w-adj", info: "tief（深）+ sinnig（有意味的）", gloss: "深思的，意味深长的" },
+      { form: "bezeugt", lemma: "sich bezeugen", pos: "verb", cls: "w-verb", info: "第三人称单数，反身用法", gloss: "表明，表白" },
+    ],
+    syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Wenn der Mitternacht heiliges Grauen bang durch die dunklen Wälder hinschleicht, und die Büsche gar wundersam schauen, [und] alles sich finster, tiefsinnig bezeugt:</div><div class="syntax-gloss">= 当午夜的神圣战栗惶恐地穿过幽暗森林潜行，灌木丛奇异地凝视着，万物都阴沉而深邃地表白着：</div></div><p>又是 <b>Wenn</b> 引导的条件/时间从句（对应下一节的主句）。<b>Grauen</b>（战栗）是主语，被拟人化为在森林中"潜行"。<b>Büsche</b>（灌木）会"看"，<b>Alles</b>（万物）会"表白"——全面的拟人。</p>`,
+    meaning: `<p>从月夜推进到午夜——最深的黑暗时刻。恐惧感（Grauen）像幽灵般在森林里潜行，灌木丛变得有了眼睛（"schauen"），整个自然都在黑暗中"表白"着什么。</p><p>这不是单纯的恐怖，而是"heiliges Grauen"（神圣的战栗）——对自然深处神秘力量的敬畏，类似于宗教体验。</p>`,
+    interpretation: `<p>"heiliges Grauen"将恐惧提升为神圣体验，这是浪漫主义的核心概念之一——在自然的可怖中感受崇高（das Erhabene）。</p><p>"die Büsche schauen"（灌木凝视）是万物有灵论（Animismus）的诗意表达。在浪漫主义看来，自然不是死物，而是处处有生命和意识。</p><p>"tiefsinnig bezeugt"——万物在深沉地"做见证"，仿佛自然界有自己的语言，等待被倾听。</p>`,
+    translationNote: `<p>"Grauen"兼有"恐惧"和"灰暗"双重语义，译为"战栗"以传达身体性的感受。"schauen"比"sehen"更主动，译为"凝视"而非"看"。</p>`,
+  },
+  {
+    id: 7,
+    type: "short",
+    lines: [
+      { de: "Wandelt im Dunkeln", indent: true },
+      { de: "Freundliches Spiel,", indent: true },
+      { de: "Still Lichter funkeln", indent: true },
+      { de: "Schimmerndes Ziel.", indent: true },
+    ],
+    cn: [
+      { text: "在黑暗中漫步着", indent: true },
+      { text: "友善的嬉戏，", indent: true },
+      { text: "静静的光闪烁", indent: true },
+      { text: "微光粼粼的目标。", indent: true },
+    ],
+    words: [
+      { form: "Wandelt", lemma: "wandeln", pos: "verb", cls: "w-verb", info: "第三人称单数", gloss: "漫步，行走，变化" },
+      { form: "Dunkeln", lemma: "das Dunkel(n)", pos: "noun", cls: "w-noun", info: "名词化形容词，与格", gloss: "黑暗" },
+      { form: "Freundliches", lemma: "freundlich", pos: "adj", cls: "w-adj", info: "形容词，中性主格", gloss: "友善的，友好的" },
+      { form: "Spiel", lemma: "das Spiel", pos: "noun", cls: "w-noun", info: "中性名词", gloss: "游戏，嬉戏，光影变幻" },
+      { form: "funkeln", lemma: "funkeln", pos: "verb", cls: "w-verb", info: "第三人称复数", gloss: "闪烁，闪耀" },
+      { form: "Schimmerndes", lemma: "schimmernd", pos: "adj", cls: "w-adj", info: "现在分词作形容词", gloss: "微光闪烁的" },
+      { form: "Ziel", lemma: "das Ziel", pos: "noun", cls: "w-noun", info: "中性名词", gloss: "目标，终点" },
+    ],
+    syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Freundliches Spiel wandelt im Dunkeln, stille Lichter funkeln, [es gibt ein] schimmerndes Ziel.</div><div class="syntax-gloss">= 友善的嬉戏在黑暗中漫步，静静的光闪烁，（那是）微光闪烁的目标。</div></div><p>四行由三个并列短句组成。<b>Spiel</b>（嬉戏）是第一句主语；<b>Lichter</b>（光）是第二句主语；<b>Ziel</b>（目标）是独立的名词短语，像一声感叹。句法极度简洁，接近民歌。</p>`,
+    meaning: `<p>上一节描绘午夜的阴森之后，这里峰回路转：黑暗中并非只有恐惧，还有"友善的嬉戏"——光影在黑暗中游荡，闪烁的微光指向某个美好的目标。</p><p>这是全诗的关键转折：即使在最深的黑暗中，也有光和友善的存在。</p>`,
+    interpretation: `<p>"Freundliches Spiel"与"heiliges Grauen"形成对比——恐惧不是终点，黑暗的深处隐藏着友善的光。这正是"heimliche Welt"（首节）的实质：表面可怖，内在温暖。</p><p>"Schimmerndes Ziel"结尾独立成句，像远处一盏灯，给人方向感和希望。</p>`,
+    translationNote: `<p>"Spiel"在这里不只是"游戏"，更指光影的变幻——像萤火虫或林间月光。"schimmernd"（微微发光）与"glänzend"（灿烂发光）不同，译为"微光粼粼"以区分。</p>`,
+  },
+  {
+    id: 8,
+    type: "long",
+    lines: [
+      { de: "Alles ist freundlich wohlwollend verbunden,", indent: false },
+      { de: "Bietet sich tröstend und traurend die Hand,", indent: false },
+      { de: "Sind durch die Nächte die Lichter gewunden,", indent: false },
+      { de: "Alles ist ewig im Innern verwandt.", indent: false },
+    ],
+    cn: [
+      { text: "万物都以善意友好地相连，", indent: false },
+      { text: "在慰藉与忧伤中彼此伸出手，", indent: false },
+      { text: "光亮蜿蜒穿过了一个又一个夜晚，", indent: false },
+      { text: "万物在内心深处永远相亲。", indent: false },
+    ],
+    words: [
+      { form: "freundlich", lemma: "freundlich", pos: "adj", cls: "w-adj", info: "副词性用法", gloss: "友好地" },
+      { form: "wohlwollend", lemma: "wohlwollend", pos: "adj", cls: "w-adj", info: "现在分词。wohl（好）+ wollend（愿意的）", gloss: "善意的，好意的" },
+      { form: "verbunden", lemma: "verbinden", pos: "verb", cls: "w-verb", info: "过去分词，与 ist 构成被动/状态", gloss: "连接，结合" },
+      { form: "tröstend", lemma: "tröstend", pos: "adj", cls: "w-adj", info: "现在分词", gloss: "安慰着的" },
+      { form: "traurend", lemma: "trauernd", pos: "adj", cls: "w-adj", info: "现在分词。注意诗中写作 traurend（方言缩略）= trauernd", gloss: "悲伤着的" },
+      { form: "gewunden", lemma: "winden", pos: "verb", cls: "w-verb", info: "过去分词，与 sind 构成完成时", gloss: "缠绕，蜿蜒" },
+      { form: "ewig", lemma: "ewig", pos: "adv", cls: "w-adv", info: "副词", gloss: "永远，永恒" },
+      { form: "Innern", lemma: "das Innere", pos: "noun", cls: "w-noun", info: "名词化形容词，与格", gloss: "内心，内部" },
+      { form: "verwandt", lemma: "verwandt", pos: "adj", cls: "w-adj", info: "形容词（原为 verwenden 的分词，但已独立）", gloss: "相关的，有亲缘的" },
+    ],
+    syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Alles ist freundlich [und] wohlwollend verbunden. [Alles] bietet sich tröstend und traurend die Hand. Die Lichter sind durch die Nächte gewunden. Alles ist ewig im Innern verwandt.</div><div class="syntax-gloss">= 万物都友好而善意地相连。万物在慰藉与忧伤中彼此伸出手。光亮蜿蜒穿过了夜晚。万物在内心深处永远相亲。</div></div><p>四个句子，前两句和末句以 <b>Alles</b>（万物）开头，构成三叠。"bietet sich die Hand"是固定搭配"彼此伸出手"。</p>`,
+    meaning: `<p>全诗的哲学总结：万物在深处是相连、相亲的。黑暗中有光，痛苦中有慰藉，远方与身旁相通——这就是首节那个"神秘世界"说出的话。</p><p>"tröstend und traurend"（安慰着又悲伤着）同时并存——不是非此即彼，而是在悲伤中就包含着慰藉。</p>`,
+    interpretation: `<p>"Alles ist ewig im Innern verwandt"是全诗的核心命题，也是德国浪漫主义自然哲学的精髓——万物内在相关（Universalpoesie / Sympathie der Natur）。</p><p>四行长句后紧跟叠句（Refrain），意味着诗人已经听到了"heimliche Welt"的回答：世界的秘密就是万物的内在亲缘。</p><p>这一节没有"Wenn"条件句，而是用直陈句直接宣告——从前面的感知、猜测，到这里变为确信。</p>`,
+    translationNote: `<p>"verwandt"既有"有血缘关系"也有"相关的"意思，译为"相亲"兼顾两层含义。"traurend"是 trauernd 的方言缩写，Brentano 为了押韵（verbunden / gewunden）而使用。</p>`,
+  },
+  {
+    id: 9,
+    type: "refrain",
+    lines: [
+      { de: "Sprich aus der Ferne,", indent: false },
+      { de: "Heimliche Welt,", indent: true },
+      { de: "Die sich so gerne", indent: true },
+      { de: "Zu mir gesellt!", indent: true },
+    ],
+    cn: [
+      { text: "请从远方开口吧，", indent: false },
+      { text: "神秘的世界，", indent: true },
+      { text: "你总是如此乐意", indent: true },
+      { text: "与我相伴！", indent: true },
+    ],
+    words: [],
+    syntax: `<p>与首节完全相同，构成环形结构（Ringkomposition）。</p>`,
+    meaning: `<p>叠句再现，但经历了全诗的旅程后，这个"请说话"已不再是空洞的呼唤——诗人已在黄昏、月夜、午夜中逐步听到了那个"神秘世界"的回答。</p><p>叠句从"请求"变为"确认"：这个世界确实在说话，万物确实相连。</p>`,
+    interpretation: `<p>首尾呼应的叠句赋予全诗圆环结构，与诗中"ringelt sich nieder, wallet hinauf"的上下循环一致。形式即内容。</p><p>最后的感叹号不再是焦急的呼唤，而是满足的确认与感恩。</p>`,
+    translationNote: `<p>与首节翻译完全相同——保持叠句的仪式感。</p>`,
+  },
+];
+
+// ============================================================
+// RENDER
+// ============================================================
+function render() {
+  const main = document.getElementById('main-content');
+
+  STANZAS.forEach((st, idx) => {
+    // German stanza cell
+    const deDiv = document.createElement('div');
+    deDiv.className = 'stanza';
+    deDiv.dataset.stanza = st.id;
+
+    const label = document.createElement('div');
+    label.className = 'stanza-num';
+    label.textContent = st.type === 'refrain' ? (idx === 0 ? 'Refrain' : 'Refrain (da capo)') : `Strophe ${st.id}`;
+    deDiv.appendChild(label);
+
+    st.lines.forEach(line => {
+      const p = document.createElement('div');
+      p.className = 'poem-line' + (line.indent ? ' indented' : '');
+      // Wrap words for tooltip
+      const wordsInLine = line.de.replace(/[,;:.!?"""]/g, m => `<punct>${m}</punct>`);
+      const tokens = line.de.split(/\s+/);
+      tokens.forEach((token, ti) => {
+        if (ti > 0) p.appendChild(document.createTextNode(' '));
+        // Separate trailing punctuation
+        const match = token.match(/^([A-Za-zÀ-ÿäöüÄÖÜß]+)([^A-Za-zÀ-ÿäöüÄÖÜß]*)$/);
+        if (match) {
+          const wordText = match[1];
+          const punct = match[2];
+          const wordInfo = st.words.find(w => w.form === wordText);
+          if (wordInfo) {
+            const span = document.createElement('span');
+            span.className = 'word ' + (wordInfo.cls || '');
+            span.textContent = wordText;
+            span.dataset.stanza = st.id;
+            span.dataset.form = wordInfo.form;
+            p.appendChild(span);
+          } else {
+            p.appendChild(document.createTextNode(wordText));
+          }
+          if (punct) p.appendChild(document.createTextNode(punct));
+        } else {
+          p.appendChild(document.createTextNode(token));
+        }
+      });
+      deDiv.appendChild(p);
+    });
+
+    deDiv.addEventListener('click', (e) => {
+      if (!e.target.closest('.word')) openCommentary(st.id);
+    });
+    main.appendChild(deDiv);
+
+    // Chinese translation cell
+    const cnDiv = document.createElement('div');
+    cnDiv.className = 'stanza';
+    cnDiv.dataset.stanzaCn = st.id;
+    const cnLabel = document.createElement('div');
+    cnLabel.className = 'stanza-num';
+    cnLabel.textContent = '\u00a0'; // spacer
+    cnDiv.appendChild(cnLabel);
+    st.cn.forEach(line => {
+      const p = document.createElement('div');
+      p.className = 'translation-line' + (line.indent ? ' indented' : '');
+      p.textContent = line.text;
+      cnDiv.appendChild(p);
+    });
+    cnDiv.addEventListener('click', () => openCommentary(st.id));
+    main.appendChild(cnDiv);
+  });
+}
+
+// ============================================================
+// TOOLTIP
+// ============================================================
+const tooltipEl = document.getElementById('tooltip');
+let currentWord = null;
+
+document.addEventListener('click', (e) => {
+  const wordEl = e.target.closest('.word');
+  if (wordEl) {
+    e.stopPropagation();
+    showTooltip(wordEl);
+    return;
+  }
+  hideTooltip();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideTooltip(); });
+
+function showTooltip(el) {
+  const sid = parseInt(el.dataset.stanza);
+  const form = el.dataset.form;
+  const st = STANZAS.find(s => s.id === sid);
+  if (!st) return;
+  const w = st.words.find(x => x.form === form);
+  if (!w) return;
+
+  if (currentWord) currentWord.style.background = '';
+  currentWord = el;
+  el.style.background = 'var(--highlight)';
+
+  tooltipEl.innerHTML = `
+    <div class="tooltip-lemma">${w.lemma}</div>
+    <span class="tooltip-pos">${w.pos}</span>
+    ${w.info ? `<div class="tooltip-info">${w.info}</div>` : ''}
+    <div class="tooltip-gloss">${w.gloss}</div>
+  `;
+
+  const rect = el.getBoundingClientRect();
+  let top = rect.bottom + window.scrollY + 8;
+  let left = rect.left + window.scrollX;
+  tooltipEl.style.visibility = 'hidden';
+  tooltipEl.classList.add('visible');
+  const tw = tooltipEl.offsetWidth || 200;
+  const th = tooltipEl.offsetHeight || 100;
+  if (rect.bottom + th + 8 > window.innerHeight) top = rect.top + window.scrollY - th - 8;
+  if (left + tw > window.innerWidth - 16) left = window.innerWidth - tw - 16;
+  if (left < 8) left = 8;
+  tooltipEl.style.top = top + 'px';
+  tooltipEl.style.left = left + 'px';
+  tooltipEl.style.visibility = '';
+}
+
+function hideTooltip() {
+  if (currentWord) { currentWord.style.background = ''; currentWord = null; }
+  tooltipEl.classList.remove('visible');
+}
+
+// ============================================================
+// COMMENTARY PANEL
+// ============================================================
+const panel = document.getElementById('commentary-panel');
+let currentStanza = null;
+
+document.getElementById('commentary-close').addEventListener('click', closePanel);
+panel.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+});
+
+function openCommentary(stanzaId) {
+  // Clear highlights
+  document.querySelectorAll('.stanza.active').forEach(el => el.classList.remove('active'));
+  currentStanza = stanzaId;
+
+  // Highlight both DE and CN
+  document.querySelectorAll(`.stanza[data-stanza="${stanzaId}"], .stanza[data-stanza-cn="${stanzaId}"]`)
+    .forEach(el => el.classList.add('active'));
+
+  const st = STANZAS.find(s => s.id === stanzaId);
+  if (!st) return;
+
+  // Wortschatz tab
+  const wEl = document.getElementById('tab-wortschatz');
+  if (st.words.length > 0) {
+    wEl.innerHTML = st.words.map(w => `
+      <div class="vocab-entry">
+        <span class="vocab-word">${w.form}</span>
+        <span class="vocab-pos">${w.pos}</span>
+        — <span class="vocab-def">${w.lemma}：${w.gloss}</span>
+        ${w.info ? `<br><small style="color:#8a7e6b">${w.info}</small>` : ''}
+      </div>
+    `).join('');
+  } else {
+    wEl.innerHTML = '<p style="color:#b5a990;font-style:italic">同首节，不再重复。</p>';
+  }
+
+  // Syntax
+  document.getElementById('tab-syntax').innerHTML = st.syntax || '';
+  // Meaning
+  document.getElementById('tab-meaning').innerHTML = st.meaning || '';
+  // Interpretation
+  document.getElementById('tab-interpretation').innerHTML = st.interpretation || '';
+  // Translation
+  const tEl = document.getElementById('tab-translation');
+  let tHTML = '<div class="translation-box">';
+  st.cn.forEach(l => { tHTML += `<div${l.indent ? ' style="padding-left:2em"' : ''}>${l.text}</div>`; });
+  tHTML += '</div>';
+  if (st.translationNote) tHTML += '<div style="margin-top:8px;font-size:0.85rem;color:#6d5f4a"><b>译注：</b>' + st.translationNote.replace(/<\/?p>/g, '') + '</div>';
+  tEl.innerHTML = tHTML;
+
+  panel.classList.add('open');
+  switchTab('wortschatz');
+}
+
+function closePanel() {
+  panel.classList.remove('open');
+  document.querySelectorAll('.stanza.active').forEach(el => el.classList.remove('active'));
+  currentStanza = null;
+}
+
+function switchTab(name) {
+  panel.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  panel.querySelectorAll('.tab-content').forEach(c => c.classList.toggle('active', c.id === `tab-${name}`));
+}
+
+// Init
+render();
+</script>
+</body>
+</html>
