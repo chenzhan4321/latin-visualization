@@ -194,6 +194,39 @@ body {
   color: var(--text); padding: 8px 0;
 }
 
+/* Meter notation */
+.meter-line {
+  font-family: var(--font-poem); font-size: 1.05rem; line-height: 1.4;
+  margin-bottom: 2px; color: var(--text);
+}
+.meter-scan {
+  font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.2;
+  color: var(--accent); letter-spacing: 0.15em; margin-bottom: 8px;
+}
+.meter-stress { font-weight: 700; color: #8B2500; }
+.meter-unstress { color: #9e937e; }
+.rhyme-tag {
+  display: inline-block; width: 18px; text-align: center;
+  font-size: 0.75rem; font-weight: 600; color: white;
+  border-radius: 3px; margin-right: 6px; line-height: 1.6;
+}
+.rhyme-a { background: #2E5090; }
+.rhyme-b { background: #8B4513; }
+.rhyme-c { background: #006400; }
+.meter-summary {
+  padding: 10px 14px; background: #f5f0e6; border-radius: 6px;
+  border-left: 3px solid var(--accent); margin-bottom: 12px; font-size: 0.85rem;
+}
+.meter-summary b { color: var(--accent); }
+.alt-translation {
+  margin-top: 10px; padding: 10px 14px; background: #f5f0e6;
+  border-radius: 6px; border-left: 3px solid #006400;
+}
+.alt-translation-label {
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #006400; margin-bottom: 4px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .main-content { grid-template-columns: 1fr; gap: 24px; padding: 16px 16px 160px; }
@@ -231,6 +264,7 @@ body {
       <button class="tab-btn" data-tab="syntax">句法</button>
       <button class="tab-btn" data-tab="meaning">意理</button>
       <button class="tab-btn" data-tab="interpretation">阐释</button>
+      <button class="tab-btn" data-tab="metrik">格律</button>
       <button class="tab-btn" data-tab="translation">翻译</button>
     </div>
     <button class="commentary-close" id="commentary-close">&times;</button>
@@ -240,6 +274,7 @@ body {
     <div class="tab-content" id="tab-syntax"></div>
     <div class="tab-content" id="tab-meaning"></div>
     <div class="tab-content" id="tab-interpretation"></div>
+    <div class="tab-content" id="tab-metrik"></div>
     <div class="tab-content" id="tab-translation"></div>
   </div>
 </aside>
@@ -259,11 +294,12 @@ const STANZAS = [
       { de: "Zu mir gesellt!", indent: true },
     ],
     cn: [
-      { text: "请从远方开口吧，", indent: false },
-      { text: "神秘的世界，", indent: true },
-      { text: "你总是如此乐意", indent: true },
-      { text: "与我相伴！", indent: true },
+      { text: "请从远方把话传，", indent: false },
+      { text: "隐秘的世界——", indent: true },
+      { text: "你总是那样心甘，", indent: true },
+      { text: "与我相连！", indent: true },
     ],
+    altTranslation: `<div class="alt-translation"><div class="alt-translation-label">直译版（不押韵）</div><div class="translation-box" style="font-size:0.95rem">请从远方开口吧，<br>神秘的世界，<br>你总是如此乐意<br>与我相伴！</div></div><div style="margin-top:8px;font-size:0.85rem;color:#6d5f4a"><b>韵式说明：</b>原文 abab（传 / 甘 押 -an 韵 = a，界 / 连 押 -ian/-ie 韵 = b）。中文很难完美复现交叉韵，这里用"传/甘"和"界/连"近似模拟。</div>`,
     words: [
       { form: "Sprich", lemma: "sprechen", pos: "verb", cls: "w-verb", info: "命令式第二人称单数", gloss: "说吧，开口" },
       { form: "Ferne", lemma: "die Ferne", pos: "noun", cls: "w-noun", info: "阴性名词", gloss: "远方，远处" },
@@ -287,10 +323,10 @@ const STANZAS = [
       { de: "Die Nacht um die schattigte Stirne flicht:", indent: false },
     ],
     cn: [
-      { text: "当晚霞已沉落，", indent: false },
-      { text: "再无欢快的色彩言说，", indent: false },
-      { text: "而那静静发光的火花编成的花环", indent: false },
-      { text: "被夜编结在阴影笼罩的额头上：", indent: false },
+      { text: "当晚霞已然沉沦，", indent: false },
+      { text: "欢快的色彩不再言说，", indent: false },
+      { text: "静静发光的星火编成花冠，", indent: false },
+      { text: "被夜戴上阴影的额头：", indent: false },
     ],
     words: [
       { form: "Abendrot", lemma: "das Abendrot", pos: "noun", cls: "w-noun", info: "中性名词。Abend（傍晚）+ Rot（红色）= 晚霞", gloss: "晚霞" },
@@ -307,7 +343,8 @@ const STANZAS = [
     syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Wenn das Abendrot niedergesunken [ist], keine freudige Farbe mehr spricht, und die Nacht die Kränze still leuchtender Funken um die schattigte Stirne flicht:</div><div class="syntax-gloss">= 当晚霞沉落了，没有欢快的色彩再"说话"，而夜晚把静静发光的火花花环编织在（自己）阴影笼罩的额头上：</div></div><p>"Wenn"引导三个并列的条件从句（时间从句）。<b>ist</b> 被省略（niedergesunken [ist]）。第三句中 <b>die Nacht</b> 是主语，<b>flicht</b> 是谓语，<b>Kränze</b> 是宾语——语序大幅倒装。</p>`,
     meaning: `<p>描绘黄昏到入夜的过渡：晚霞消退，色彩沉默（"keine Farbe spricht"——色彩拟人化为"说话"），星星（"leuchtende Funken"）如花环般出现在夜空的"额头"上。</p><p>夜被拟人化，有"额头"（Stirne），星星是她佩戴的花冠。这是一幅完整的视觉画面：夜女神戴上星辰之冠。</p>`,
     interpretation: `<p>色彩"说话"（spricht）与首节"sprich"呼应——白天世界的"语言"是色彩，当色彩沉默，另一种更深沉的语言（夜的语言）就开始了。</p><p><b>schattigte</b>（= schattige）是方言化的古体拼写，增添了口语化的音乐感。Brentano 常故意使用这种民歌风格的语言。</p><p>星星被称为"Funken"（火花）而非"Sterne"——日常化的比喻让宇宙景象变得亲切。</p>`,
-    translationNote: `<p>"keine Farbe mehr spricht"直译为"没有色彩再说话"，译为"再无欢快的色彩言说"保留了拟人。"schattigte Stirne"是夜的拟人化额头，译文加了"阴影笼罩的"以传达画面。</p>`,
+    translationNote: `<p>"keine Farbe mehr spricht"直译为"没有色彩再说话"，保留拟人。原文 abab 韵（niedergesunken/Funken, spricht/flicht），中文用"沉沦/花冠"和"言说/额头"近似对应。</p>`,
+    altTranslation: `<div class="alt-translation"><div class="alt-translation-label">押韵尝试版</div><div class="translation-box" style="font-size:0.95rem">当晚霞沉入暮云，(a)<br>欢愉的色彩无声，(b)<br>静静的星火成花环，(a')<br>夜戴上阴影的冠缨。(b')</div></div><div style="margin-top:6px;font-size:0.82rem;color:#6d5f4a">押韵版牺牲了部分准确性：如"无声"比"不再言说"少了拟人感；"冠缨"是为押韵而添加的意象。翻译时需要在韵律与忠实之间取舍。</div>`,
   },
   {
     id: 3,
@@ -319,10 +356,10 @@ const STANZAS = [
       { de: "Bis zu mir hin.", indent: true },
     ],
     cn: [
-      { text: "那星辰的", indent: true },
-      { text: "神圣意蕴", indent: true },
-      { text: "便轻轻吹过远方", indent: true },
-      { text: "直到我身旁。", indent: true },
+      { text: "星辰的", indent: true },
+      { text: "神圣心意", indent: true },
+      { text: "便轻轻越过远方", indent: true },
+      { text: "吹到我这里。", indent: true },
     ],
     words: [
       { form: "Wehet", lemma: "wehen", pos: "verb", cls: "w-verb", info: "第三人称单数。诗歌体用 -et 而非 weht", gloss: "吹，飘" },
@@ -334,7 +371,8 @@ const STANZAS = [
     syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Der heilige Sinn der Sterne wehet leis durch die Ferne bis zu mir hin.</div><div class="syntax-gloss">= 星辰的神圣意蕴轻轻地从远方吹拂到我身边。</div></div><p>主语是 <b>der Sterne heiliger Sinn</b>（星辰的神圣意蕴），谓语是 <b>wehet</b>（吹拂）。倒装后谓语前置，主语分布在两行里，制造了缓缓飘来的节奏感。</p>`,
     meaning: `<p>这是第二节条件从句的主句：当夜幕降临后，星辰的"神圣意蕴"就像微风一样从远方飘向诗人。</p><p>"Sinn"（意蕴）用 "wehen"（吹拂）来形容——意义不是被理解的，而是像风一样被感受到的。这是浪漫主义的典型认知方式：用感官（而非理性）来把握世界的深层意义。</p>`,
     interpretation: `<p>"wehet"用了诗歌体的 -et 词尾（而非口语的 weht），与首节 "gesellt" 的韵脚呼应，也赋予诗歌一种古雅的仪式感。</p><p>"Leis"（= leise 的缩略）既描述声音的轻柔，也暗示这种感知需要安静与专注。只有在夜晚的寂静中，星辰的语言才能被听到。</p>`,
-    translationNote: `<p>"heiliger Sinn"译为"神圣意蕴"而非"神圣的意义"，因为 Sinn 在这里不是抽象逻辑含义，而是可以"吹拂"的、近乎物质性的精神力量。</p>`,
+    translationNote: `<p>"heiliger Sinn"译为"神圣心意"而非"神圣的意义"，因为 Sinn 在这里不是抽象逻辑含义，而是可以"吹拂"的精神力量。原文 Sterne/Ferne 押韵（a），Sinn/hin 押韵（b）。</p>`,
+    altTranslation: `<div class="alt-translation"><div class="alt-translation-label">押韵尝试版</div><div class="translation-box" style="font-size:0.95rem">&emsp;便有星辰的 (a)<br>&emsp;圣洁灵犀 (b)<br>&emsp;轻拂过远方 (a')<br>&emsp;到我心里。(b)</div></div><div style="margin-top:6px;font-size:0.82rem;color:#6d5f4a">"灵犀"对应 Sinn（心意），与"里"押 -i 韵，模拟 Sinn/hin。</div>`,
   },
   {
     id: 4,
@@ -346,10 +384,10 @@ const STANZAS = [
       { de: "Schiffen die Geister im himmlischen See.", indent: false },
     ],
     cn: [
-      { text: "当月亮静静的抚慰之泪", indent: false },
-      { text: "化解了黑夜隐藏的忧伤，", indent: false },
-      { text: "于是和平吹来。在金色的小船上", indent: false },
-      { text: "精灵们在天上的湖中漫游。", indent: false },
+      { text: "当月亮静静洒下抚慰的泪，", indent: false },
+      { text: "化解了夜晚深藏的伤，", indent: false },
+      { text: "便有和风吹来。金色小舟上", indent: false },
+      { text: "精灵在天湖之中徜徉。", indent: false },
     ],
     words: [
       { form: "Mondes", lemma: "der Mond", pos: "noun", cls: "w-noun", info: "阳性名词，属格", gloss: "月亮" },
@@ -367,7 +405,8 @@ const STANZAS = [
     syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Wenn des Mondes still lindernde Tränen der Nächte verborgenes Weh lösen, dann wehet Friede.</div><div class="syntax-gloss">= 当月亮的静静抚慰的泪水化解了夜晚隐藏的忧伤，于是和平吹来。</div></div><p><b>Tränen</b>（泪水）是主语，<b>lösen</b>（化解）是谓语，<b>Weh</b>（忧伤）是宾语。后半句独立：<b>Die Geister schiffen in goldenen Kähnen im himmlischen See.</b></p>`,
     meaning: `<p>月光被比作"泪水"——但不是悲伤的泪，而是"抚慰的"（lindernd）泪。月光能化解黑夜隐藏的痛苦，带来和平。</p><p>后半句画面突变：精灵们乘金色小船在天空之湖（= 月光下的天空）中航行。天空被想象为湖面，星光或月光为金色小船。这是极富想象力的通感画面。</p>`,
     interpretation: `<p>"wehet Friede"与第三节 "wehet der Sterne heiliger Sinn" 平行——"吹拂"成为这首诗中精神力量传达的核心动词。</p><p>"goldene Kähne im himmlischen See"是典型的浪漫主义意象：将天空转化为水面，打破天地界限。这呼应了诺瓦利斯"万物皆相关"的浪漫主义自然哲学。</p>`,
-    translationNote: `<p>"still lindernde Tränen"中 still 既修饰 lindernde 也营造氛围，译为"静静的抚慰之泪"。"schiffen"是较少见的动词，译为"漫游"比"航行"更有诗意。</p>`,
+    translationNote: `<p>原文 Tränen/Kähnen 押韵（a），Weh/See 押韵（b）。中文"泪/上"不完全韵，"伤/徜徉"押 -ang 韵（b）。"schiffen"译为"徜徉"比"航行"更有诗意。</p>`,
+    altTranslation: `<div class="alt-translation"><div class="alt-translation-label">押韵尝试版</div><div class="translation-box" style="font-size:0.95rem">月亮静洒抚慰泪，(a)<br>消融了夜的悲哀，(b)<br>和风便来。金船漂荡于天水，(a)<br>精灵在星湖中徘徊。(b)</div></div><div style="margin-top:6px;font-size:0.82rem;color:#6d5f4a">"泪/水"押 -ui 韵（a），"哀/徊"押 -ai 韵（b），较好地模拟了原文的交叉韵。但"天水"不如"天湖"直观。</div>`,
   },
   {
     id: 5,
@@ -379,10 +418,10 @@ const STANZAS = [
       { de: "Wallet hinauf.", indent: true },
     ],
     cn: [
-      { text: "闪亮歌曲的", indent: true },
-      { text: "叮当旋律", indent: true },
-      { text: "蜿蜒而下，", indent: true },
-      { text: "涌动而上。", indent: true },
+      { text: "璀璨之歌的", indent: true },
+      { text: "铿锵流淌", indent: true },
+      { text: "蜿蜒而降，", indent: true },
+      { text: "涌向天上。", indent: true },
     ],
     words: [
       { form: "Glänzender", lemma: "glänzend", pos: "adj", cls: "w-adj", info: "现在分词作形容词，属格复数", gloss: "闪亮的，灿烂的" },
@@ -395,7 +434,8 @@ const STANZAS = [
     syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Glänzender Lieder klingender Lauf ringelt sich nieder [und] wallet hinauf.</div><div class="syntax-gloss">= 闪亮歌曲的叮当旋律蜿蜒而下，又涌动而上。</div></div><p>主语是 <b>Lauf</b>（旋律进程），由两个属格修饰语 <b>glänzender Lieder</b>（闪亮歌曲的）和 <b>klingender</b>（叮当作响的）层层修饰。两个谓语 <b>ringelt sich nieder</b> 和 <b>wallet hinauf</b> 对称并列。</p>`,
     meaning: `<p>精灵之歌的旋律在天地之间上下流动——像蛇一样蜿蜒而下（ringelt sich nieder），又像波浪涌上（wallet hinauf）。</p><p>这是声音的可视化：歌声变成了可以"看到"的运动轨迹。上下往复的运动暗示天地之间的循环与贯通。</p>`,
     interpretation: `<p>这一节是全诗音乐性最强的段落。"Glänzender"（视觉）描述 "Lieder"（听觉），"Klingender"（听觉）描述 "Lauf"（运动）——典型的<b>通感</b>（Synästhesie），浪漫主义最重要的修辞手法之一。</p><p>nieder / hinauf 的对立构成了一个完美的圆环运动，呼应了全诗"远方与身边""天上与人间"的往复主题。</p>`,
-    translationNote: `<p>"Lauf"直译为"行进/流动"，这里指旋律的运动轨迹，译为"旋律"。"ringelt sich"（蜿蜒卷曲）和 "wallet"（涌动）都是非常具象的动词，保留原文的动态画面感。</p>`,
+    translationNote: `<p>原文 Lieder/nieder 押韵（a），Lauf/hinauf 押韵（b）。中文"歌/降"不押韵，但"流淌/天上"押 -ang 韵（b），"降"与"上"语义对立呼应原文 nieder/hinauf 的对立。</p>`,
+    altTranslation: `<div class="alt-translation"><div class="alt-translation-label">押韵尝试版</div><div class="translation-box" style="font-size:0.95rem">&emsp;灿烂歌声 (a)<br>&emsp;鸣响流转 (b)<br>&emsp;盘旋而倾 (a)<br>&emsp;涌向云端。(b)</div></div><div style="margin-top:6px;font-size:0.82rem;color:#6d5f4a">"声/倾"押 -ing 韵（a），"转/端"押 -uan 韵（b）。"盘旋而倾"= ringelt sich nieder，"涌向云端"= wallet hinauf。</div>`,
   },
   {
     id: 6,
@@ -407,10 +447,10 @@ const STANZAS = [
       { de: "Alles sich finster, tiefsinnig bezeugt:", indent: false },
     ],
     cn: [
-      { text: "当午夜神圣的战栗", indent: false },
-      { text: "惶然穿过幽暗的森林潜行，", indent: false },
-      { text: "而灌木丛发出奇异的凝视，", indent: false },
-      { text: "万物都阴沉而深邃地表白着：", indent: false },
+      { text: "当午夜神圣的惊惶", indent: false },
+      { text: "怯怯穿过幽暗的林间，", indent: false },
+      { text: "灌木丛投来奇异的目光，", indent: false },
+      { text: "万物幽深沉默地自白：", indent: false },
     ],
     words: [
       { form: "Mitternacht", lemma: "die Mitternacht", pos: "noun", cls: "w-noun", info: "阴性名词。Mitter(=Mitte 中间) + Nacht(夜)", gloss: "午夜" },
@@ -426,7 +466,8 @@ const STANZAS = [
     syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Wenn der Mitternacht heiliges Grauen bang durch die dunklen Wälder hinschleicht, und die Büsche gar wundersam schauen, [und] alles sich finster, tiefsinnig bezeugt:</div><div class="syntax-gloss">= 当午夜的神圣战栗惶恐地穿过幽暗森林潜行，灌木丛奇异地凝视着，万物都阴沉而深邃地表白着：</div></div><p>又是 <b>Wenn</b> 引导的条件/时间从句（对应下一节的主句）。<b>Grauen</b>（战栗）是主语，被拟人化为在森林中"潜行"。<b>Büsche</b>（灌木）会"看"，<b>Alles</b>（万物）会"表白"——全面的拟人。</p>`,
     meaning: `<p>从月夜推进到午夜——最深的黑暗时刻。恐惧感（Grauen）像幽灵般在森林里潜行，灌木丛变得有了眼睛（"schauen"），整个自然都在黑暗中"表白"着什么。</p><p>这不是单纯的恐怖，而是"heiliges Grauen"（神圣的战栗）——对自然深处神秘力量的敬畏，类似于宗教体验。</p>`,
     interpretation: `<p>"heiliges Grauen"将恐惧提升为神圣体验，这是浪漫主义的核心概念之一——在自然的可怖中感受崇高（das Erhabene）。</p><p>"die Büsche schauen"（灌木凝视）是万物有灵论（Animismus）的诗意表达。在浪漫主义看来，自然不是死物，而是处处有生命和意识。</p><p>"tiefsinnig bezeugt"——万物在深沉地"做见证"，仿佛自然界有自己的语言，等待被倾听。</p>`,
-    translationNote: `<p>"Grauen"兼有"恐惧"和"灰暗"双重语义，译为"战栗"以传达身体性的感受。"schauen"比"sehen"更主动，译为"凝视"而非"看"。</p>`,
+    translationNote: `<p>原文 Grauen/schauen 押韵（a），hinschleicht/bezeugt 近似韵（b）。中文"惊惶/目光"押 -ang 韵（a），"林间/自白"不完全押韵，模拟了原文 b 韵的不完全感。</p>`,
+    altTranslation: `<div class="alt-translation"><div class="alt-translation-label">押韵尝试版</div><div class="translation-box" style="font-size:0.95rem">午夜神圣的悚然 (a)<br>怯怯潜过幽暗密林，(b)<br>灌木丛投来异样的容颜，(a)<br>万物在阴郁中深沉。(b)</div></div><div style="margin-top:6px;font-size:0.82rem;color:#6d5f4a">"悚然/容颜"押 -an 韵（a），"密林/深沉"近似韵（b）。"容颜"比"凝视"更拟人，但偏离了 schauen（看）的本义。</div>`,
   },
   {
     id: 7,
@@ -438,10 +479,10 @@ const STANZAS = [
       { de: "Schimmerndes Ziel.", indent: true },
     ],
     cn: [
-      { text: "在黑暗中漫步着", indent: true },
-      { text: "友善的嬉戏，", indent: true },
-      { text: "静静的光闪烁", indent: true },
-      { text: "微光粼粼的目标。", indent: true },
+      { text: "暗中漫步着", indent: true },
+      { text: "友善的光影，", indent: true },
+      { text: "静静闪烁着", indent: true },
+      { text: "微光的远景。", indent: true },
     ],
     words: [
       { form: "Wandelt", lemma: "wandeln", pos: "verb", cls: "w-verb", info: "第三人称单数", gloss: "漫步，行走，变化" },
@@ -455,7 +496,8 @@ const STANZAS = [
     syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Freundliches Spiel wandelt im Dunkeln, stille Lichter funkeln, [es gibt ein] schimmerndes Ziel.</div><div class="syntax-gloss">= 友善的嬉戏在黑暗中漫步，静静的光闪烁，（那是）微光闪烁的目标。</div></div><p>四行由三个并列短句组成。<b>Spiel</b>（嬉戏）是第一句主语；<b>Lichter</b>（光）是第二句主语；<b>Ziel</b>（目标）是独立的名词短语，像一声感叹。句法极度简洁，接近民歌。</p>`,
     meaning: `<p>上一节描绘午夜的阴森之后，这里峰回路转：黑暗中并非只有恐惧，还有"友善的嬉戏"——光影在黑暗中游荡，闪烁的微光指向某个美好的目标。</p><p>这是全诗的关键转折：即使在最深的黑暗中，也有光和友善的存在。</p>`,
     interpretation: `<p>"Freundliches Spiel"与"heiliges Grauen"形成对比——恐惧不是终点，黑暗的深处隐藏着友善的光。这正是"heimliche Welt"（首节）的实质：表面可怖，内在温暖。</p><p>"Schimmerndes Ziel"结尾独立成句，像远处一盏灯，给人方向感和希望。</p>`,
-    translationNote: `<p>"Spiel"在这里不只是"游戏"，更指光影的变幻——像萤火虫或林间月光。"schimmernd"（微微发光）与"glänzend"（灿烂发光）不同，译为"微光粼粼"以区分。</p>`,
+    translationNote: `<p>原文 Dunkeln/funkeln 押韵（a），Spiel/Ziel 押韵（b）。中文"步着/烁着"（a）形式对称，"光影/远景"押 -ing 韵（b）。"Spiel"译为"光影"而非"游戏"，更贴合语境。</p>`,
+    altTranslation: `<div class="alt-translation"><div class="alt-translation-label">押韵尝试版</div><div class="translation-box" style="font-size:0.95rem">&emsp;暗中流连 (a)<br>&emsp;友善游戏，(b)<br>&emsp;静光斑斓 (a)<br>&emsp;闪烁的谜。(b)</div></div><div style="margin-top:6px;font-size:0.82rem;color:#6d5f4a">"流连/斑斓"押 -an 韵（a），"游戏/谜"押 -i 韵（b）。"闪烁的谜"=schimmerndes Ziel，将"目标"转化为"谜"——目标在黑暗中像谜一样闪烁。</div>`,
   },
   {
     id: 8,
@@ -467,10 +509,10 @@ const STANZAS = [
       { de: "Alles ist ewig im Innern verwandt.", indent: false },
     ],
     cn: [
-      { text: "万物都以善意友好地相连，", indent: false },
-      { text: "在慰藉与忧伤中彼此伸出手，", indent: false },
-      { text: "光亮蜿蜒穿过了一个又一个夜晚，", indent: false },
-      { text: "万物在内心深处永远相亲。", indent: false },
+      { text: "万物友好而善意地相牵，", indent: false },
+      { text: "慰藉着、忧伤着，彼此伸出手，", indent: false },
+      { text: "光穿过一个个夜蜿蜒，", indent: false },
+      { text: "万物在心底永远相守。", indent: false },
     ],
     words: [
       { form: "freundlich", lemma: "freundlich", pos: "adj", cls: "w-adj", info: "副词性用法", gloss: "友好地" },
@@ -486,7 +528,8 @@ const STANZAS = [
     syntax: `<div class="syntax-box"><div class="syntax-label">还原语序</div><div class="syntax-normal">Alles ist freundlich [und] wohlwollend verbunden. [Alles] bietet sich tröstend und traurend die Hand. Die Lichter sind durch die Nächte gewunden. Alles ist ewig im Innern verwandt.</div><div class="syntax-gloss">= 万物都友好而善意地相连。万物在慰藉与忧伤中彼此伸出手。光亮蜿蜒穿过了夜晚。万物在内心深处永远相亲。</div></div><p>四个句子，前两句和末句以 <b>Alles</b>（万物）开头，构成三叠。"bietet sich die Hand"是固定搭配"彼此伸出手"。</p>`,
     meaning: `<p>全诗的哲学总结：万物在深处是相连、相亲的。黑暗中有光，痛苦中有慰藉，远方与身旁相通——这就是首节那个"神秘世界"说出的话。</p><p>"tröstend und traurend"（安慰着又悲伤着）同时并存——不是非此即彼，而是在悲伤中就包含着慰藉。</p>`,
     interpretation: `<p>"Alles ist ewig im Innern verwandt"是全诗的核心命题，也是德国浪漫主义自然哲学的精髓——万物内在相关（Universalpoesie / Sympathie der Natur）。</p><p>四行长句后紧跟叠句（Refrain），意味着诗人已经听到了"heimliche Welt"的回答：世界的秘密就是万物的内在亲缘。</p><p>这一节没有"Wenn"条件句，而是用直陈句直接宣告——从前面的感知、猜测，到这里变为确信。</p>`,
-    translationNote: `<p>"verwandt"既有"有血缘关系"也有"相关的"意思，译为"相亲"兼顾两层含义。"traurend"是 trauernd 的方言缩写，Brentano 为了押韵（verbunden / gewunden）而使用。</p>`,
+    translationNote: `<p>原文 verbunden/gewunden 押韵（a），Hand/verwandt 押韵（b）。中文"相牵/蜿蜒"押 -an 韵（a），"手/相守"押 -ou 韵（b），较好地模拟了交叉韵。"verwandt"译为"相守"兼顾"有亲缘"和"永远在一起"两层含义。</p>`,
+    altTranslation: `<div class="alt-translation"><div class="alt-translation-label">押韵尝试版</div><div class="translation-box" style="font-size:0.95rem">万物善意地相连，(a)<br>伸出慰藉与悲伤的手，(b)<br>光穿过暗夜百转千回旋，(a)<br>万物在心底是永恒的亲友。(b)</div></div><div style="margin-top:6px;font-size:0.82rem;color:#6d5f4a">"相连/旋"押 -an 韵（a），"手/友"押 -ou 韵（b）。"百转千回旋"= gewunden，增添了蜿蜒缠绕的画面感。</div>`,
   },
   {
     id: 9,
@@ -498,10 +541,10 @@ const STANZAS = [
       { de: "Zu mir gesellt!", indent: true },
     ],
     cn: [
-      { text: "请从远方开口吧，", indent: false },
-      { text: "神秘的世界，", indent: true },
-      { text: "你总是如此乐意", indent: true },
-      { text: "与我相伴！", indent: true },
+      { text: "请从远方把话传，", indent: false },
+      { text: "隐秘的世界——", indent: true },
+      { text: "你总是那样心甘，", indent: true },
+      { text: "与我相连！", indent: true },
     ],
     words: [],
     syntax: `<p>与首节完全相同，构成环形结构（Ringkomposition）。</p>`,
@@ -641,6 +684,103 @@ function hideTooltip() {
 }
 
 // ============================================================
+// METRIK DATA (separate for clarity)
+// ============================================================
+const METRIK = {
+  1: {
+    summary: `<b>格式：</b>短节（Kurzstrophe），4行，韵式 <b>abab</b>（交叉韵 Kreuzreim）<br><b>节拍：</b>每行 2 个重音，扬抑格（Trochäus）为主，交替阴性韵脚（-e）和阳性韵脚`,
+    scansion: [
+      { de: "Sprich aus der Ferne,", scan: "×́  ×  ×  ×́ ×", rhyme: "a", ending: "阴性韵（weiblich）" },
+      { de: "Heimliche Welt,", scan: "×́ × ×  ×́", rhyme: "b", ending: "阳性韵（männlich）" },
+      { de: "Die sich so gerne", scan: "×  ×́   ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Zu mir gesellt!", scan: "×  ×́  × ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p><b>Ferne / gerne</b> 押韵（a），<b>Welt / gesellt</b> 押韵（b）。短节的轻快节奏有民歌（Volkslied）风格，与长节的沉稳形成对比。每行仅两个重音，像轻声呼唤。</p>`,
+  },
+  2: {
+    summary: `<b>格式：</b>长节（Langstrophe），4行，韵式 <b>abab</b><br><b>节拍：</b>每行 4 个重音，以抑扬抑格（Amphibrachys ××́×）为主，接近民歌的三拍子舞曲节奏`,
+    scansion: [
+      { de: "Wenn das Abendrot niedergesunken,", scan: "×   ×   ×́ × ×́   ×́ × × ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Keine freudige Farbe mehr spricht,", scan: "×́ ×   ×́ × ×  ×́ ×  ×́    ×́", rhyme: "b", ending: "阳性韵" },
+      { de: "Und die Kränze still leuchtender Funken", scan: "×   ×   ×́ ×    ×́    ×́ × ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Die Nacht um die schattigte Stirne flicht:", scan: "×   ×́     ×  ×   ×́ × ×   ×́ ×  ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p><b>niedergesunken / Funken</b> 押韵（a），<b>spricht / flicht</b> 押韵（b）。长节行内音节更多、句法更复杂，像大河缓缓流淌，与短节的"轻吟"形成节奏上的交替呼吸。</p>`,
+  },
+  3: {
+    summary: `<b>格式：</b>短节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 2 个重音，与首节（Refrain）相同的轻快节奏`,
+    scansion: [
+      { de: "Wehet der Sterne", scan: "×́ ×   ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Heiliger Sinn", scan: "×́ × ×  ×́", rhyme: "b", ending: "阳性韵" },
+      { de: "Leis durch die Ferne", scan: "×́    ×     ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Bis zu mir hin.", scan: "×́  ×  ×́  ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p><b>Sterne / Ferne</b> 押韵（a），<b>Sinn / hin</b> 押韵（b）。注意 <b>Ferne</b> 同时出现在首节和此节，形成音韵上的回环（Leitmotiv）。短节是长节的"回答"——长节铺陈画面，短节传达感受。</p>`,
+  },
+  4: {
+    summary: `<b>格式：</b>长节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 4 个重音，抑扬抑格为主`,
+    scansion: [
+      { de: "Wenn des Mondes still lindernde Tränen", scan: "×    ×   ×́ ×    ×́   ×́ × ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Lösen der Nächte verborgenes Weh,", scan: "×́ ×   ×  ×́ ×  × ×́ × ×   ×́", rhyme: "b", ending: "阳性韵" },
+      { de: "Dann wehet Friede. In goldenen Kähnen", scan: "×́    ×́ ×   ×́ ×    ×  ×́ × ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Schiffen die Geister im himmlischen See.", scan: "×́ ×     ×   ×́ ×    ×  ×́ × ×    ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p><b>Tränen / Kähnen</b> 押韵（a），<b>Weh / See</b> 押韵（b）。第三行中间断句（"Friede. In goldenen Kähnen"），打破了节奏的均匀流动——句法跨行（Enjambement），和平像一声叹息后转入新画面。</p>`,
+  },
+  5: {
+    summary: `<b>格式：</b>短节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 2 个重音，扬抑格`,
+    scansion: [
+      { de: "Glänzender Lieder", scan: "×́ × ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Klingender Lauf", scan: "×́ × ×   ×́", rhyme: "b", ending: "阳性韵" },
+      { de: "Ringelt sich nieder,", scan: "×́ ×    ×́   ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Wallet hinauf.", scan: "×́ ×   × ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p><b>Lieder / nieder</b> 押韵（a），<b>Lauf / hinauf</b> 押韵（b）。nieder（向下）/ hinauf（向上）不仅押韵而且语义对立，声音与意义完美契合。全诗音乐性最强的一节。</p>`,
+  },
+  6: {
+    summary: `<b>格式：</b>长节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 4 个重音，抑扬抑格`,
+    scansion: [
+      { de: "Wenn der Mitternacht heiliges Grauen", scan: "×    ×   ×́ × ×́     ×́ × ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Bang durch die dunklen Wälder hinschleicht,", scan: "×́     ×     ×   ×́  ×    ×́ ×  × ×́", rhyme: "b", ending: "阳性韵" },
+      { de: "Und die Büsche gar wundersam schauen,", scan: "×   ×   ×́ ×    ×́  ×́ × ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Alles sich finster, tiefsinnig bezeugt:", scan: "×́ ×   ×́   ×́ ×    ×́  × ×  × ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p><b>Grauen / schauen</b> 押韵（a），<b>hinschleicht / bezeugt</b> 押不完全韵（b，-eicht/-eugt 近似韵 unreiner Reim）。不完全韵制造了一种不安感，恰好呼应午夜的"heiliges Grauen"。</p>`,
+  },
+  7: {
+    summary: `<b>格式：</b>短节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 2 个重音`,
+    scansion: [
+      { de: "Wandelt im Dunkeln", scan: "×́ ×    ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Freundliches Spiel,", scan: "×́  × ×    ×́", rhyme: "b", ending: "阳性韵" },
+      { de: "Still Lichter funkeln", scan: "×́   ×́ ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Schimmerndes Ziel.", scan: "×́  × ×     ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p><b>Dunkeln / funkeln</b> 押韵（a），<b>Spiel / Ziel</b> 押韵（b）。Dunkeln（黑暗）与 funkeln（闪烁）押韵——黑暗中就蕴含着光的种子，韵脚本身就在"说话"。</p>`,
+  },
+  8: {
+    summary: `<b>格式：</b>长节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 4 个重音，抑扬抑格`,
+    scansion: [
+      { de: "Alles ist freundlich wohlwollend verbunden,", scan: "×́ ×  ×́   ×́  ×    ×́  × ×  × ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Bietet sich tröstend und traurend die Hand,", scan: "×́ ×  ×́    ×́  ×    ×   ×́  ×   ×  ×́", rhyme: "b", ending: "阳性韵" },
+      { de: "Sind durch die Nächte die Lichter gewunden,", scan: "×́    ×     ×  ×́ ×   ×   ×́ ×  × ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Alles ist ewig im Innern verwandt.", scan: "×́ ×  ×́  ×́ ×  ×  ×́ ×   × ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p><b>verbunden / gewunden</b> 押韵（a），<b>Hand / verwandt</b> 押韵（b）。verbunden（相连）/ gewunden（蜿蜒）语义相关，Hand（手）/ verwandt（相亲）也语义相关——韵脚即论点。全诗最有力的一节。</p>`,
+  },
+  9: {
+    summary: `同首节（Refrain）。经历全诗旅程后，同样的格律获得了新的重量。`,
+    scansion: [
+      { de: "Sprich aus der Ferne,", scan: "×́  ×  ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Heimliche Welt,", scan: "×́ × ×  ×́", rhyme: "b", ending: "阳性韵" },
+      { de: "Die sich so gerne", scan: "×  ×́   ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
+      { de: "Zu mir gesellt!", scan: "×  ×́  × ×́", rhyme: "b", ending: "阳性韵" },
+    ],
+    note: `<p>首尾同韵同律，形成<b>环形结构</b>（Ringkomposition）。全诗韵式统一为 abab 交叉韵，长短节交替——像呼吸的节奏，吸气（长节）与呼气（短节）。</p>
+    <p><b>全诗格律总结：</b>长节（4重音）与短节（2重音）严格交替，如同潮涨潮落。长节铺展画面、展开叙述；短节收拢情感、传达感受。这种长短交替本身就是"远方与身旁"主题的音乐化表达。</p>`,
+  },
+};
+
+// ============================================================
 // COMMENTARY PANEL
 // ============================================================
 const panel = document.getElementById('commentary-panel');
@@ -684,12 +824,35 @@ function openCommentary(stanzaId) {
   document.getElementById('tab-meaning').innerHTML = st.meaning || '';
   // Interpretation
   document.getElementById('tab-interpretation').innerHTML = st.interpretation || '';
+  // Metrik
+  const mEl = document.getElementById('tab-metrik');
+  const met = METRIK[stanzaId];
+  if (met) {
+    let mHTML = `<div class="meter-summary">${met.summary}</div>`;
+    mHTML += '<div style="margin-bottom:12px">';
+    met.scansion.forEach(s => {
+      const rc = s.rhyme === 'a' ? 'rhyme-a' : s.rhyme === 'b' ? 'rhyme-b' : 'rhyme-c';
+      mHTML += `<div style="display:flex;gap:8px;align-items:baseline;margin-bottom:2px">`;
+      mHTML += `<span class="rhyme-tag ${rc}">${s.rhyme}</span>`;
+      mHTML += `<span class="meter-line">${s.de}</span>`;
+      mHTML += `<span style="font-size:0.72rem;color:#8a7e6b;white-space:nowrap">${s.ending}</span>`;
+      mHTML += `</div>`;
+      mHTML += `<div style="padding-left:26px" class="meter-scan">${s.scan}</div>`;
+    });
+    mHTML += '</div>';
+    mHTML += met.note;
+    mEl.innerHTML = mHTML;
+  } else {
+    mEl.innerHTML = '';
+  }
+
   // Translation
   const tEl = document.getElementById('tab-translation');
   let tHTML = '<div class="translation-box">';
   st.cn.forEach(l => { tHTML += `<div${l.indent ? ' style="padding-left:2em"' : ''}>${l.text}</div>`; });
   tHTML += '</div>';
   if (st.translationNote) tHTML += '<div style="margin-top:8px;font-size:0.85rem;color:#6d5f4a"><b>译注：</b>' + st.translationNote.replace(/<\/?p>/g, '') + '</div>';
+  if (st.altTranslation) tHTML += st.altTranslation;
   tEl.innerHTML = tHTML;
 
   panel.classList.add('open');
