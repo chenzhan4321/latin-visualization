@@ -1,0 +1,10 @@
+[project]
+name = "latin-visualization"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "cltk[stanza]>=2.5.1",
+    "lxml>=6.0.2",
+    "requests>=2.32.5",
+]

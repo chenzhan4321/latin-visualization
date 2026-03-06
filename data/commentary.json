@@ -1,0 +1,1591 @@
+{
+  "s1": {
+    "grammar": [
+      "The poem opens with an accusative-infinitive construction: 'animus fert (me) dicere formas mutatas in nova corpora'.",
+      "'In nova...corpora' is an example of hyperbaton - the preposition and adjective are separated from the noun they modify."
+    ],
+    "vocabulary": [
+      "'fert animus' is an idiom meaning 'my mind inclines/leads me to', not literal 'carries'.",
+      "'mutatas' (< muto) is a perfect passive participle modifying 'formas'."
+    ],
+    "context": [
+      "This is the proem (invocation) of the poem. Ovid announces his theme: transformation.",
+      "Unlike Virgil's 'arma virumque cano', Ovid's opening is notably casual and personal."
+    ]
+  },
+  "s2": {
+    "grammar": [
+      "'di' (nominative plural of 'deus') is the subject. 'coeptis' is a dative/ablative plural of the perfect participle 'coeptum'.",
+      "'nam vos mutastis et illas' - 'et' here means 'also', not just 'and'."
+    ],
+    "vocabulary": [
+      "'adspirate' (< adspiro) means 'breathe upon favorably', 'inspire'.",
+      "'primaque ab origine mundi' - 'origo' here means 'beginning, origin'."
+    ],
+    "context": [
+      "The invocation to the gods rather than the Muses is unusual. Ovid implicates the gods themselves in the transformations.",
+      "'ad mea...tempora' - Ovid promises a continuous narrative from creation to his own time (the reign of Augustus)."
+    ]
+  },
+  "s3": {
+    "grammar": [
+      "Lines 10-14."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s4": {
+    "grammar": [
+      "Lines 15-15."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s5": {
+    "grammar": [
+      "Lines 16-20."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s6": {
+    "grammar": [
+      "Lines 21-21."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s7": {
+    "grammar": [
+      "Lines 22-23."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s8": {
+    "grammar": [
+      "Lines 24-25."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s9": {
+    "grammar": [
+      "Lines 26-31."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s10": {
+    "grammar": [
+      "Lines 32-35."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s11": {
+    "grammar": [
+      "Lines 36-37."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s12": {
+    "grammar": [
+      "Lines 38-42."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s13": {
+    "grammar": [
+      "Lines 43-44."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s14": {
+    "grammar": [
+      "Lines 45-48."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s15": {
+    "grammar": [
+      "Lines 49-51."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s16": {
+    "grammar": [
+      "Lines 52-53."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s17": {
+    "grammar": [
+      "Lines 54-56."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s18": {
+    "grammar": [
+      "Lines 57-60."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s19": {
+    "grammar": [
+      "Lines 61-62."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s20": {
+    "grammar": [
+      "Lines 63-66."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s21": {
+    "grammar": [
+      "Lines 67-68."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s22": {
+    "grammar": [
+      "Lines 69-71."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s23": {
+    "grammar": [
+      "Lines 72-75."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s24": {
+    "grammar": [
+      "Lines 76-77."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s25": {
+    "grammar": [
+      "Lines 78-81."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s26": {
+    "grammar": [
+      "Lines 82-83."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s27": {
+    "grammar": [
+      "Lines 84-86."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s28": {
+    "grammar": [
+      "Lines 87-88."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s29": {
+    "grammar": [
+      "Lines 89-90."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s30": {
+    "grammar": [
+      "Lines 91-93."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s31": {
+    "grammar": [
+      "Lines 94-96."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s32": {
+    "grammar": [
+      "Lines 97-97."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s33": {
+    "grammar": [
+      "Lines 98-100."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s34": {
+    "grammar": [
+      "Lines 101-102."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s35": {
+    "grammar": [
+      "Lines 103-106."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s36": {
+    "grammar": [
+      "Lines 107-108."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s37": {
+    "grammar": [
+      "Lines 109-110."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s38": {
+    "grammar": [
+      "Lines 111-112."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s39": {
+    "grammar": [
+      "Lines 113-115."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s40": {
+    "grammar": [
+      "Lines 116-118."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s41": {
+    "grammar": [
+      "Lines 119-120."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s42": {
+    "grammar": [
+      "Lines 121-122."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s43": {
+    "grammar": [
+      "Lines 123-124."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s44": {
+    "grammar": [
+      "Lines 125-127."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s45": {
+    "grammar": [
+      "Lines 128-129."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s46": {
+    "grammar": [
+      "Lines 130-131."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s47": {
+    "grammar": [
+      "Lines 132-136."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s48": {
+    "grammar": [
+      "Lines 137-140."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s49": {
+    "grammar": [
+      "Lines 141-143."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s50": {
+    "grammar": [
+      "Lines 144-145."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s51": {
+    "grammar": [
+      "Lines 146-146."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s52": {
+    "grammar": [
+      "Lines 147-147."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s53": {
+    "grammar": [
+      "Lines 148-148."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s54": {
+    "grammar": [
+      "Lines 149-150."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s55": {
+    "grammar": [
+      "Lines 151-153."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s56": {
+    "grammar": [
+      "Lines 154-155."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s57": {
+    "grammar": [
+      "Lines 156-162."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s58": {
+    "grammar": [
+      "Lines 163-167."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s59": {
+    "grammar": [
+      "Lines 168-169."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s60": {
+    "grammar": [
+      "Lines 170-174."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s61": {
+    "grammar": [
+      "Lines 175-176."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s62": {
+    "grammar": [
+      "Lines 177-180."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s63": {
+    "grammar": [
+      "Lines 181-184."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s64": {
+    "grammar": [
+      "Lines 185-186."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s65": {
+    "grammar": [
+      "Lines 187-189."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s66": {
+    "grammar": [
+      "Lines 190-191."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s67": {
+    "grammar": [
+      "Lines 192-195."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s68": {
+    "grammar": [
+      "Lines 196-206."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s69": {
+    "grammar": [
+      "Lines 207-209."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s70": {
+    "grammar": [
+      "Lines 210-210."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s71": {
+    "grammar": [
+      "Lines 211-211."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s72": {
+    "grammar": [
+      "Lines 212-213."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s73": {
+    "grammar": [
+      "Lines 214-215."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s74": {
+    "grammar": [
+      "Lines 216-219."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s75": {
+    "grammar": [
+      "Lines 220-225."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s76": {
+    "grammar": [
+      "Lines 226-229."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s77": {
+    "grammar": [
+      "Lines 230-231."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s78": {
+    "grammar": [
+      "Lines 232-235."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s79": {
+    "grammar": [
+      "Lines 236-237."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s80": {
+    "grammar": [
+      "Lines 238-239."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s81": {
+    "grammar": [
+      "Lines 240-241."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s82": {
+    "grammar": [
+      "Lines 242-245."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s83": {
+    "grammar": [
+      "Lines 246-249."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s84": {
+    "grammar": [
+      "Lines 250-252."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s85": {
+    "grammar": [
+      "Lines 253-258."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s86": {
+    "grammar": [
+      "Lines 259-261."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s87": {
+    "grammar": [
+      "Lines 262-266."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s88": {
+    "grammar": [
+      "Lines 267-267."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s89": {
+    "grammar": [
+      "Lines 268-269."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s90": {
+    "grammar": [
+      "Lines 270-271."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s91": {
+    "grammar": [
+      "Lines 272-273."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s92": {
+    "grammar": [
+      "Lines 274-275."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s93": {
+    "grammar": [
+      "Lines 276-282."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s94": {
+    "grammar": [
+      "Lines 283-284."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s95": {
+    "grammar": [
+      "Lines 285-287."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s96": {
+    "grammar": [
+      "Lines 288-290."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s97": {
+    "grammar": [
+      "Lines 291-292."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s98": {
+    "grammar": [
+      "Lines 293-296."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s99": {
+    "grammar": [
+      "Lines 297-298."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s100": {
+    "grammar": [
+      "Lines 299-300."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s101": {
+    "grammar": [
+      "Lines 301-303."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s102": {
+    "grammar": [
+      "Lines 304-306."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s103": {
+    "grammar": [
+      "Lines 307-308."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s104": {
+    "grammar": [
+      "Lines 309-310."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s105": {
+    "grammar": [
+      "Lines 311-312."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s106": {
+    "grammar": [
+      "Lines 313-315."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s107": {
+    "grammar": [
+      "Lines 316-317."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s108": {
+    "grammar": [
+      "Lines 318-321."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s109": {
+    "grammar": [
+      "Lines 322-323."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s110": {
+    "grammar": [
+      "Lines 324-329."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s111": {
+    "grammar": [
+      "Lines 330-338."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s112": {
+    "grammar": [
+      "Lines 339-342."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s113": {
+    "grammar": [
+      "Lines 343-347."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s114": {
+    "grammar": [
+      "Lines 348-355."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s115": {
+    "grammar": [
+      "Lines 356-357."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s116": {
+    "grammar": [
+      "Lines 358-360."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s117": {
+    "grammar": [
+      "Lines 361-362."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s118": {
+    "grammar": [
+      "Lines 363-364."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s119": {
+    "grammar": [
+      "Lines 365-368."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s120": {
+    "grammar": [
+      "Lines 369-370."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s121": {
+    "grammar": [
+      "Lines 371-374."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s122": {
+    "grammar": [
+      "Lines 375-387."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s123": {
+    "grammar": [
+      "Lines 388-389."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s124": {
+    "grammar": [
+      "Lines 390-392."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s125": {
+    "grammar": [
+      "Lines 393-397."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s126": {
+    "grammar": [
+      "Lines 398-399."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s127": {
+    "grammar": [
+      "Lines 400-402."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s128": {
+    "grammar": [
+      "Lines 403-406."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s129": {
+    "grammar": [
+      "Lines 407-408."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s130": {
+    "grammar": [
+      "Lines 409-409."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s131": {
+    "grammar": [
+      "Lines 410-410."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s132": {
+    "grammar": [
+      "Lines 411-413."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s133": {
+    "grammar": [
+      "Lines 414-415."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s134": {
+    "grammar": [
+      "Lines 416-421."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s135": {
+    "grammar": [
+      "Lines 422-429."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s136": {
+    "grammar": [
+      "Lines 430-431."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s137": {
+    "grammar": [
+      "Lines 432-433."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s138": {
+    "grammar": [
+      "Lines 434-437."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s139": {
+    "grammar": [
+      "Lines 438-440."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s140": {
+    "grammar": [
+      "Lines 441-444."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s141": {
+    "grammar": [
+      "Lines 445-447."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s142": {
+    "grammar": [
+      "Lines 448-451."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s143": {
+    "grammar": [
+      "Lines 452-453."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s144": {
+    "grammar": [
+      "Lines 454-460."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s145": {
+    "grammar": [
+      "Lines 461-469."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s146": {
+    "grammar": [
+      "Lines 470-470."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s147": {
+    "grammar": [
+      "Lines 471-471."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s148": {
+    "grammar": [
+      "Lines 472-473."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s149": {
+    "grammar": [
+      "Lines 474-476."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s150": {
+    "grammar": [
+      "Lines 477-477."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s151": {
+    "grammar": [
+      "Lines 478-480."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s152": {
+    "grammar": [
+      "Lines 481-491."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s153": {
+    "grammar": [
+      "Lines 492-496."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s154": {
+    "grammar": [
+      "Lines 497-501."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s155": {
+    "grammar": [
+      "Lines 502-507."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s156": {
+    "grammar": [
+      "Lines 508-509."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s157": {
+    "grammar": [
+      "Lines 510-511."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s158": {
+    "grammar": [
+      "Lines 512-518."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s159": {
+    "grammar": [
+      "Lines 519-520."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s160": {
+    "grammar": [
+      "Lines 521-532."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s161": {
+    "grammar": [
+      "Lines 533-539."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s162": {
+    "grammar": [
+      "Lines 540-542."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s163": {
+    "grammar": [
+      "Lines 543-545."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s164": {
+    "grammar": [
+      "Lines 546-547."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s165": {
+    "grammar": [
+      "Lines 548-552."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s166": {
+    "grammar": [
+      "Lines 553-556."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s167": {
+    "grammar": [
+      "Lines 557-567."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s168": {
+    "grammar": [
+      "Lines 568-573."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s169": {
+    "grammar": [
+      "Lines 574-576."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s170": {
+    "grammar": [
+      "Lines 577-582."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s171": {
+    "grammar": [
+      "Lines 583-586."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s172": {
+    "grammar": [
+      "Lines 587-587."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s173": {
+    "grammar": [
+      "Lines 588-592."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s174": {
+    "grammar": [
+      "Lines 593-596."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s175": {
+    "grammar": [
+      "Lines 597-600."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s176": {
+    "grammar": [
+      "Lines 601-604."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s177": {
+    "grammar": [
+      "Lines 605-606."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s178": {
+    "grammar": [
+      "Lines 607-609."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s179": {
+    "grammar": [
+      "Lines 610-611."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s180": {
+    "grammar": [
+      "Lines 612-614."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s181": {
+    "grammar": [
+      "Lines 615-616."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s182": {
+    "grammar": [
+      "Lines 617-619."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s183": {
+    "grammar": [
+      "Lines 620-621."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s184": {
+    "grammar": [
+      "Lines 622-624."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s185": {
+    "grammar": [
+      "Lines 625-627."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s186": {
+    "grammar": [
+      "Lines 628-629."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s187": {
+    "grammar": [
+      "Lines 630-631."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s188": {
+    "grammar": [
+      "Lines 632-634."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s189": {
+    "grammar": [
+      "Lines 635-638."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s190": {
+    "grammar": [
+      "Lines 639-641."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s191": {
+    "grammar": [
+      "Lines 642-644."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s192": {
+    "grammar": [
+      "Lines 645-648."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s193": {
+    "grammar": [
+      "Lines 649-650."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s194": {
+    "grammar": [
+      "Lines 651-657."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s195": {
+    "grammar": [
+      "Lines 658-659."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s196": {
+    "grammar": [
+      "Lines 660-660."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s197": {
+    "grammar": [
+      "Lines 661-667."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s198": {
+    "grammar": [
+      "Lines 668-670."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s199": {
+    "grammar": [
+      "Lines 671-672."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s200": {
+    "grammar": [
+      "Lines 673-675."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s201": {
+    "grammar": [
+      "Lines 676-677."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s202": {
+    "grammar": [
+      "Lines 678-684."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s203": {
+    "grammar": [
+      "Lines 685-688."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s204": {
+    "grammar": [
+      "Lines 689-691."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s205": {
+    "grammar": [
+      "Lines 692-697."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s206": {
+    "grammar": [
+      "Lines 698-706."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s207": {
+    "grammar": [
+      "Lines 707-708."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s208": {
+    "grammar": [
+      "Lines 709-712."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s209": {
+    "grammar": [
+      "Lines 713-714."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s210": {
+    "grammar": [
+      "Lines 715-716."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s211": {
+    "grammar": [
+      "Lines 717-719."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s212": {
+    "grammar": [
+      "Lines 720-721."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s213": {
+    "grammar": [
+      "Lines 722-723."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s214": {
+    "grammar": [
+      "Lines 724-727."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s215": {
+    "grammar": [
+      "Lines 728-728."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s216": {
+    "grammar": [
+      "Lines 729-733."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s217": {
+    "grammar": [
+      "Lines 734-737."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s218": {
+    "grammar": [
+      "Lines 738-743."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s219": {
+    "grammar": [
+      "Lines 744-746."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s220": {
+    "grammar": [
+      "Lines 747-756."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s221": {
+    "grammar": [
+      "Lines 757-759."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s222": {
+    "grammar": [
+      "Lines 760-764."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s223": {
+    "grammar": [
+      "Lines 765-772."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s224": {
+    "grammar": [
+      "Lines 773-774."
+    ],
+    "vocabulary": [],
+    "context": []
+  },
+  "s225": {
+    "grammar": [
+      "Lines 775-779."
+    ],
+    "vocabulary": [],
+    "context": []
+  }
+}
