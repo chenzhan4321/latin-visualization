@@ -194,17 +194,26 @@ body {
   color: var(--text); padding: 8px 0;
 }
 
-/* Meter notation */
-.meter-line {
-  font-family: var(--font-poem); font-size: 1.05rem; line-height: 1.4;
-  margin-bottom: 2px; color: var(--text);
+/* Meter notation - interlinear syllable alignment */
+.meter-row {
+  display: flex; align-items: baseline; gap: 6px; margin-bottom: 10px;
 }
-.meter-scan {
-  font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.2;
-  color: var(--accent); letter-spacing: 0.15em; margin-bottom: 8px;
+.meter-syllables {
+  display: flex; flex-wrap: wrap; gap: 1px 6px;
 }
-.meter-stress { font-weight: 700; color: #8B2500; }
-.meter-unstress { color: #9e937e; }
+.meter-syl {
+  display: flex; flex-direction: column; align-items: center; min-width: 20px;
+}
+.meter-syl-mark {
+  font-size: 0.9rem; line-height: 1; margin-bottom: 1px;
+}
+.meter-syl-text {
+  font-family: var(--font-poem); font-size: 1rem; line-height: 1.3;
+}
+.meter-stressed .meter-syl-text { font-weight: 700; color: #8B2500; }
+.meter-stressed .meter-syl-mark { color: #8B2500; }
+.meter-unstressed .meter-syl-text { color: #6d5f4a; }
+.meter-unstressed .meter-syl-mark { color: #b5a990; }
 .rhyme-tag {
   display: inline-block; width: 18px; text-align: center;
   font-size: 0.75rem; font-weight: 600; color: white;
@@ -690,90 +699,90 @@ const METRIK = {
   1: {
     summary: `<b>格式：</b>短节（Kurzstrophe），4行，韵式 <b>abab</b>（交叉韵 Kreuzreim）<br><b>节拍：</b>每行 2 个重音，扬抑格（Trochäus）为主，交替阴性韵脚（-e）和阳性韵脚`,
     scansion: [
-      { de: "Sprich aus der Ferne,", scan: "×́  ×  ×  ×́ ×", rhyme: "a", ending: "阴性韵（weiblich）" },
-      { de: "Heimliche Welt,", scan: "×́ × ×  ×́", rhyme: "b", ending: "阳性韵（männlich）" },
-      { de: "Die sich so gerne", scan: "×  ×́   ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Zu mir gesellt!", scan: "×  ×́  × ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Sprich",s:1},{t:"aus",s:0},{t:"der",s:0},{t:"Fer",s:1},{t:"ne",s:0}], rhyme: "a", ending: "阴性韵（weiblich）" },
+      { syls: [{t:"Heim",s:1},{t:"li",s:0},{t:"che",s:0},{t:"Welt",s:1}], rhyme: "b", ending: "阳性韵（männlich）" },
+      { syls: [{t:"Die",s:0},{t:"sich",s:1},{t:"so",s:0},{t:"ger",s:1},{t:"ne",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Zu",s:0},{t:"mir",s:1},{t:"ge",s:0},{t:"sellt",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p><b>Ferne / gerne</b> 押韵（a），<b>Welt / gesellt</b> 押韵（b）。短节的轻快节奏有民歌（Volkslied）风格，与长节的沉稳形成对比。每行仅两个重音，像轻声呼唤。</p>`,
   },
   2: {
     summary: `<b>格式：</b>长节（Langstrophe），4行，韵式 <b>abab</b><br><b>节拍：</b>每行 4 个重音，以抑扬抑格（Amphibrachys ××́×）为主，接近民歌的三拍子舞曲节奏`,
     scansion: [
-      { de: "Wenn das Abendrot niedergesunken,", scan: "×   ×   ×́ × ×́   ×́ × × ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Keine freudige Farbe mehr spricht,", scan: "×́ ×   ×́ × ×  ×́ ×  ×́    ×́", rhyme: "b", ending: "阳性韵" },
-      { de: "Und die Kränze still leuchtender Funken", scan: "×   ×   ×́ ×    ×́    ×́ × ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Die Nacht um die schattigte Stirne flicht:", scan: "×   ×́     ×  ×   ×́ × ×   ×́ ×  ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Wenn",s:0},{t:"das",s:0},{t:"A",s:1},{t:"bend",s:0},{t:"rot",s:1},{t:"nie",s:1},{t:"der",s:0},{t:"ge",s:0},{t:"sun",s:1},{t:"ken",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Kei",s:1},{t:"ne",s:0},{t:"freu",s:1},{t:"di",s:0},{t:"ge",s:0},{t:"Far",s:1},{t:"be",s:0},{t:"mehr",s:0},{t:"spricht",s:1}], rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Und",s:0},{t:"die",s:0},{t:"Krän",s:1},{t:"ze",s:0},{t:"still",s:1},{t:"leuch",s:1},{t:"ten",s:0},{t:"der",s:0},{t:"Fun",s:1},{t:"ken",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Die",s:0},{t:"Nacht",s:1},{t:"um",s:0},{t:"die",s:0},{t:"schat",s:1},{t:"tig",s:0},{t:"te",s:0},{t:"Stir",s:1},{t:"ne",s:0},{t:"flicht",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p><b>niedergesunken / Funken</b> 押韵（a），<b>spricht / flicht</b> 押韵（b）。长节行内音节更多、句法更复杂，像大河缓缓流淌，与短节的"轻吟"形成节奏上的交替呼吸。</p>`,
   },
   3: {
     summary: `<b>格式：</b>短节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 2 个重音，与首节（Refrain）相同的轻快节奏`,
     scansion: [
-      { de: "Wehet der Sterne", scan: "×́ ×   ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Heiliger Sinn", scan: "×́ × ×  ×́", rhyme: "b", ending: "阳性韵" },
-      { de: "Leis durch die Ferne", scan: "×́    ×     ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Bis zu mir hin.", scan: "×́  ×  ×́  ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"We",s:1},{t:"het",s:0},{t:"der",s:0},{t:"Ster",s:1},{t:"ne",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Hei",s:1},{t:"li",s:0},{t:"ger",s:0},{t:"Sinn",s:1}], rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Leis",s:1},{t:"durch",s:0},{t:"die",s:0},{t:"Fer",s:1},{t:"ne",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Bis",s:0},{t:"zu",s:0},{t:"mir",s:1},{t:"hin",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p><b>Sterne / Ferne</b> 押韵（a），<b>Sinn / hin</b> 押韵（b）。注意 <b>Ferne</b> 同时出现在首节和此节，形成音韵上的回环（Leitmotiv）。短节是长节的"回答"——长节铺陈画面，短节传达感受。</p>`,
   },
   4: {
     summary: `<b>格式：</b>长节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 4 个重音，抑扬抑格为主`,
     scansion: [
-      { de: "Wenn des Mondes still lindernde Tränen", scan: "×    ×   ×́ ×    ×́   ×́ × ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Lösen der Nächte verborgenes Weh,", scan: "×́ ×   ×  ×́ ×  × ×́ × ×   ×́", rhyme: "b", ending: "阳性韵" },
-      { de: "Dann wehet Friede. In goldenen Kähnen", scan: "×́    ×́ ×   ×́ ×    ×  ×́ × ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Schiffen die Geister im himmlischen See.", scan: "×́ ×     ×   ×́ ×    ×  ×́ × ×    ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Wenn",s:0},{t:"des",s:0},{t:"Mon",s:1},{t:"des",s:0},{t:"still",s:1},{t:"lin",s:1},{t:"dern",s:0},{t:"de",s:0},{t:"Trä",s:1},{t:"nen",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Lö",s:1},{t:"sen",s:0},{t:"der",s:0},{t:"Näch",s:1},{t:"te",s:0},{t:"ver",s:0},{t:"bor",s:1},{t:"ge",s:0},{t:"nes",s:0},{t:"Weh",s:1}], rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Dann",s:1},{t:"we",s:1},{t:"het",s:0},{t:"Frie",s:1},{t:"de.",s:0},{t:"In",s:0},{t:"gol",s:1},{t:"de",s:0},{t:"nen",s:0},{t:"Käh",s:1},{t:"nen",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Schif",s:1},{t:"fen",s:0},{t:"die",s:0},{t:"Gei",s:1},{t:"ster",s:0},{t:"im",s:0},{t:"himm",s:1},{t:"li",s:0},{t:"schen",s:0},{t:"See",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p><b>Tränen / Kähnen</b> 押韵（a），<b>Weh / See</b> 押韵（b）。第三行中间断句（"Friede. In goldenen Kähnen"），打破了节奏的均匀流动——句法跨行（Enjambement），和平像一声叹息后转入新画面。</p>`,
   },
   5: {
     summary: `<b>格式：</b>短节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 2 个重音，扬抑格`,
     scansion: [
-      { de: "Glänzender Lieder", scan: "×́ × ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Klingender Lauf", scan: "×́ × ×   ×́", rhyme: "b", ending: "阳性韵" },
-      { de: "Ringelt sich nieder,", scan: "×́ ×    ×́   ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Wallet hinauf.", scan: "×́ ×   × ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Glän",s:1},{t:"zen",s:0},{t:"der",s:0},{t:"Lie",s:1},{t:"der",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Klin",s:1},{t:"gen",s:0},{t:"der",s:0},{t:"Lauf",s:1}], rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Rin",s:1},{t:"gelt",s:0},{t:"sich",s:0},{t:"nie",s:1},{t:"der",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Wal",s:1},{t:"let",s:0},{t:"hin",s:0},{t:"auf",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p><b>Lieder / nieder</b> 押韵（a），<b>Lauf / hinauf</b> 押韵（b）。nieder（向下）/ hinauf（向上）不仅押韵而且语义对立，声音与意义完美契合。全诗音乐性最强的一节。</p>`,
   },
   6: {
     summary: `<b>格式：</b>长节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 4 个重音，抑扬抑格`,
     scansion: [
-      { de: "Wenn der Mitternacht heiliges Grauen", scan: "×    ×   ×́ × ×́     ×́ × ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Bang durch die dunklen Wälder hinschleicht,", scan: "×́     ×     ×   ×́  ×    ×́ ×  × ×́", rhyme: "b", ending: "阳性韵" },
-      { de: "Und die Büsche gar wundersam schauen,", scan: "×   ×   ×́ ×    ×́  ×́ × ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Alles sich finster, tiefsinnig bezeugt:", scan: "×́ ×   ×́   ×́ ×    ×́  × ×  × ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Wenn",s:0},{t:"der",s:0},{t:"Mit",s:1},{t:"ter",s:0},{t:"nacht",s:1},{t:"hei",s:1},{t:"li",s:0},{t:"ges",s:0},{t:"Grau",s:1},{t:"en",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Bang",s:1},{t:"durch",s:0},{t:"die",s:0},{t:"dunk",s:1},{t:"len",s:0},{t:"Wäl",s:1},{t:"der",s:0},{t:"hin",s:0},{t:"schleicht",s:1}], rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Und",s:0},{t:"die",s:0},{t:"Bü",s:1},{t:"sche",s:0},{t:"gar",s:1},{t:"wun",s:1},{t:"der",s:0},{t:"sam",s:0},{t:"schau",s:1},{t:"en",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Al",s:1},{t:"les",s:0},{t:"sich",s:0},{t:"fin",s:1},{t:"ster",s:0},{t:"tief",s:1},{t:"sin",s:0},{t:"nig",s:0},{t:"be",s:0},{t:"zeugt",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p><b>Grauen / schauen</b> 押韵（a），<b>hinschleicht / bezeugt</b> 押不完全韵（b，-eicht/-eugt 近似韵 unreiner Reim）。不完全韵制造了一种不安感，恰好呼应午夜的"heiliges Grauen"。</p>`,
   },
   7: {
     summary: `<b>格式：</b>短节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 2 个重音`,
     scansion: [
-      { de: "Wandelt im Dunkeln", scan: "×́ ×    ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Freundliches Spiel,", scan: "×́  × ×    ×́", rhyme: "b", ending: "阳性韵" },
-      { de: "Still Lichter funkeln", scan: "×́   ×́ ×   ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Schimmerndes Ziel.", scan: "×́  × ×     ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Wan",s:1},{t:"delt",s:0},{t:"im",s:0},{t:"Dun",s:1},{t:"keln",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Freund",s:1},{t:"li",s:0},{t:"ches",s:0},{t:"Spiel",s:1}], rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Still",s:1},{t:"Lich",s:1},{t:"ter",s:0},{t:"fun",s:1},{t:"keln",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Schim",s:1},{t:"mern",s:0},{t:"des",s:0},{t:"Ziel",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p><b>Dunkeln / funkeln</b> 押韵（a），<b>Spiel / Ziel</b> 押韵（b）。Dunkeln（黑暗）与 funkeln（闪烁）押韵——黑暗中就蕴含着光的种子，韵脚本身就在"说话"。</p>`,
   },
   8: {
     summary: `<b>格式：</b>长节，4行，韵式 <b>abab</b><br><b>节拍：</b>每行 4 个重音，抑扬抑格`,
     scansion: [
-      { de: "Alles ist freundlich wohlwollend verbunden,", scan: "×́ ×  ×́   ×́  ×    ×́  × ×  × ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Bietet sich tröstend und traurend die Hand,", scan: "×́ ×  ×́    ×́  ×    ×   ×́  ×   ×  ×́", rhyme: "b", ending: "阳性韵" },
-      { de: "Sind durch die Nächte die Lichter gewunden,", scan: "×́    ×     ×  ×́ ×   ×   ×́ ×  × ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Alles ist ewig im Innern verwandt.", scan: "×́ ×  ×́  ×́ ×  ×  ×́ ×   × ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Al",s:1},{t:"les",s:0},{t:"ist",s:0},{t:"freund",s:1},{t:"lich",s:0},{t:"wohl",s:1},{t:"wol",s:0},{t:"lend",s:0},{t:"ver",s:0},{t:"bun",s:1},{t:"den",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Bie",s:1},{t:"tet",s:0},{t:"sich",s:0},{t:"trö",s:1},{t:"stend",s:0},{t:"und",s:0},{t:"trau",s:1},{t:"rend",s:0},{t:"die",s:0},{t:"Hand",s:1}], rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Sind",s:1},{t:"durch",s:0},{t:"die",s:0},{t:"Näch",s:1},{t:"te",s:0},{t:"die",s:0},{t:"Lich",s:1},{t:"ter",s:0},{t:"ge",s:0},{t:"wun",s:1},{t:"den",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Al",s:1},{t:"les",s:0},{t:"ist",s:0},{t:"e",s:1},{t:"wig",s:0},{t:"im",s:0},{t:"In",s:1},{t:"nern",s:0},{t:"ver",s:0},{t:"wandt",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p><b>verbunden / gewunden</b> 押韵（a），<b>Hand / verwandt</b> 押韵（b）。verbunden（相连）/ gewunden（蜿蜒）语义相关，Hand（手）/ verwandt（相亲）也语义相关——韵脚即论点。全诗最有力的一节。</p>`,
   },
   9: {
     summary: `同首节（Refrain）。经历全诗旅程后，同样的格律获得了新的重量。`,
     scansion: [
-      { de: "Sprich aus der Ferne,", scan: "×́  ×  ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Heimliche Welt,", scan: "×́ × ×  ×́", rhyme: "b", ending: "阳性韵" },
-      { de: "Die sich so gerne", scan: "×  ×́   ×  ×́ ×", rhyme: "a", ending: "阴性韵" },
-      { de: "Zu mir gesellt!", scan: "×  ×́  × ×́", rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Sprich",s:1},{t:"aus",s:0},{t:"der",s:0},{t:"Fer",s:1},{t:"ne",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Heim",s:1},{t:"li",s:0},{t:"che",s:0},{t:"Welt",s:1}], rhyme: "b", ending: "阳性韵" },
+      { syls: [{t:"Die",s:0},{t:"sich",s:1},{t:"so",s:0},{t:"ger",s:1},{t:"ne",s:0}], rhyme: "a", ending: "阴性韵" },
+      { syls: [{t:"Zu",s:0},{t:"mir",s:1},{t:"ge",s:0},{t:"sellt",s:1}], rhyme: "b", ending: "阳性韵" },
     ],
     note: `<p>首尾同韵同律，形成<b>环形结构</b>（Ringkomposition）。全诗韵式统一为 abab 交叉韵，长短节交替——像呼吸的节奏，吸气（长节）与呼气（短节）。</p>
     <p><b>全诗格律总结：</b>长节（4重音）与短节（2重音）严格交替，如同潮涨潮落。长节铺展画面、展开叙述；短节收拢情感、传达感受。这种长短交替本身就是"远方与身旁"主题的音乐化表达。</p>`,
@@ -832,12 +841,22 @@ function openCommentary(stanzaId) {
     mHTML += '<div style="margin-bottom:12px">';
     met.scansion.forEach(s => {
       const rc = s.rhyme === 'a' ? 'rhyme-a' : s.rhyme === 'b' ? 'rhyme-b' : 'rhyme-c';
-      mHTML += `<div style="display:flex;gap:8px;align-items:baseline;margin-bottom:2px">`;
+      mHTML += `<div class="meter-row">`;
       mHTML += `<span class="rhyme-tag ${rc}">${s.rhyme}</span>`;
-      mHTML += `<span class="meter-line">${s.de}</span>`;
-      mHTML += `<span style="font-size:0.72rem;color:#8a7e6b;white-space:nowrap">${s.ending}</span>`;
+      if (s.syls) {
+        // New syllable-aligned format
+        mHTML += `<div class="meter-syllables">`;
+        s.syls.forEach(syl => {
+          const cls = syl.s ? 'meter-stressed' : 'meter-unstressed';
+          mHTML += `<div class="meter-syl ${cls}"><span class="meter-syl-mark">${syl.s ? '×́' : '×'}</span><span class="meter-syl-text">${syl.t}</span></div>`;
+        });
+        mHTML += `</div>`;
+      } else if (s.de) {
+        // Legacy format: just show text
+        mHTML += `<span style="font-family:var(--font-poem);font-size:1rem">${s.de}</span>`;
+      }
+      mHTML += `<span style="font-size:0.72rem;color:#8a7e6b;white-space:nowrap;margin-left:auto">${s.ending}</span>`;
       mHTML += `</div>`;
-      mHTML += `<div style="padding-left:26px" class="meter-scan">${s.scan}</div>`;
     });
     mHTML += '</div>';
     mHTML += met.note;
