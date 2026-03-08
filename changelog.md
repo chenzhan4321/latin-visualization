@@ -1,3 +1,4 @@
+[2026-03-08] v0.4.0: Add Jinkui Yaolue 金匱要略 Ch.16 commentary page — 驚悸吐衄下血胸滿瘀血病 with 6 sections, 6 tabs (Vocabulary/Grammar/Medicine/注疏/方劑 Formula/Clinical), TCM-specific annotations with pulse qualities, herb analysis, 君臣佐使 formula breakdown
 [2026-03-08] v0.3.0: Add Zuozhuan 左傳 commentary page — 「鄭伯克段于鄢」(Duke Yin, Year 1) with 7 sections, 6 tabs (Vocabulary/Grammar/Context/注疏/Narrative/春秋筆法), classical Chinese character-level annotations; target audience: American sinology students
 [2026-03-08] v0.2.1: Add project-level CLAUDE.md for cross-device Claude Code context
 [2026-03-06] v0.2.0: Rich sentence annotations - interlinear gloss, word reordering, syntax analysis, grammar notes, rhetoric for all 225 sentences via DeepSeek API; commentary panel rewritten with 3 tabs (逐词对照/句法分析/语法要点); punctuation tokenization fix
