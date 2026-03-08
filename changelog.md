@@ -1,3 +1,4 @@
+[2026-03-09] v0.5.0: Add Yantie Lun 鹽鐵論 散不足 commentary page — 39 sections, 6 tabs (Vocabulary/Grammar/Context/Rhetoric/Notes/Translation), complete chapter coverage with original English translations, character-level annotations, ancient/modern contrast analysis
 [2026-03-08] v0.4.0: Add Jinkui Yaolue 金匱要略 Ch.16 commentary page — 驚悸吐衄下血胸滿瘀血病 with 6 sections, 6 tabs (Vocabulary/Grammar/Medicine/注疏/方劑 Formula/Clinical), TCM-specific annotations with pulse qualities, herb analysis, 君臣佐使 formula breakdown
 [2026-03-08] v0.3.0: Add Zuozhuan 左傳 commentary page — 「鄭伯克段于鄢」(Duke Yin, Year 1) with 7 sections, 6 tabs (Vocabulary/Grammar/Context/注疏/Narrative/春秋筆法), classical Chinese character-level annotations; target audience: American sinology students
 [2026-03-08] v0.2.1: Add project-level CLAUDE.md for cross-device Claude Code context
