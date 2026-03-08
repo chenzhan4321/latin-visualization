@@ -1,6 +1,7 @@
 const SECTIONS_7_9 = [
   {
     id: 7,
+    label: "Klage um Rom (55–68)",
     lines: [
       { de: "Doch klag ich Rom / nicht mich / ich scheue keinen Tod", indent: false },
       { de: "Den mir von langer Hand die Eisen-feste Noth", indent: false },
@@ -83,6 +84,7 @@ const SECTIONS_7_9 = [
   },
   {
     id: 8,
+    label: "Verteidigung: Einsamkeit (69–82)",
     lines: [
       { de: "Was hab ich denn verwürckt? Unredliche Gemütter!", indent: false },
       { de: "Kommt Kläger! tretet vor! entdeckt wie herb und bitter", indent: false },
@@ -168,6 +170,7 @@ const SECTIONS_7_9 = [
   },
   {
     id: 9,
+    label: "Verteidigung: Milde und Christenverfolgung (83–100)",
     lines: [
       { de: "Ich fahre keine Witt'b mit rauen Worten an /", indent: false },
       { de: "Ich helffe wo ich mag / den ich nicht retten kan", indent: false },
