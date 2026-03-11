@@ -36,11 +36,48 @@ scripts/            — Python 数据生成流水线（.gitignore 中排除）
 - HTML 文件内联完整 CSS + JS 渲染逻辑
 - Commentary 面板 6-7 个 tab（词汇/句法/解读/阐释/译注/押韵翻译/格律）
 
+## Annotation Pipeline Framework
+
+`framework/` 目录定义了标准化的注释流水线，允许多个 LLM 或人工标注者协作：
+
+```
+framework/
+  pipeline.md       — 架构文档：5 个阶段的输入/输出规范
+  schema.js         — 数据 schema + 验证函数（Node.js）
+  validate.js       — CLI 验证工具：node framework/validate.js --all
+  prompts/
+    word-selection.md   — Stage 2: 选词 prompt 模板
+    word-annotation.md  — Stage 3: 词汇标注 prompt 模板
+    commentary.md       — Stage 4: Commentary 生成 prompt 模板
+    translation.md      — Stage 5: 翻译 prompt 模板
+```
+
+### 流水线阶段
+
+1. **Text Segmentation** — 分段、定标题
+2. **Word Selection** — 决定哪些词需要标注（输出 `WordCandidate[]`）
+3. **Word Annotation** — 对选中的词生成结构化标注（输出 `WordAnnotation`）
+4. **Commentary** — 生成各 tab 的 HTML commentary
+5. **Translation** — 生成英文翻译
+6. **Assembly** — 拼装成最终 JS 数据文件
+
+每个阶段都有标准输入/输出 schema，可以独立运行、并行处理、由不同模型完成。
+
+### Tab 配置（按文体）
+
+| 文体 | Tabs |
+|---|---|
+| `german-poetry` | grammar, meaning, interpretation, translationNote, altTranslation, meter |
+| `classical-chinese-history` | grammar, context, commentary, narrative, springAutumn |
+| `classical-chinese-tcm` | grammar, medicine, commentary, formula, clinical |
+| `classical-chinese-political` | grammar, context, rhetoric, notes, translation |
+
 ## 新增 commentary 页面的流程
 
-1. 在 `data/` 下创建 `xxx_s*.js`，按诗节编写数据常量
+1. 在 `data/` 下创建 `xxx_s*.js`，按诗节编写数据常量（参考 `framework/schema.js`）
 2. 创建 `xxx.html`，内联 CSS + JS，引入数据文件
 3. 双栏布局（原文 | 翻译），点击诗节展开 commentary 面板
+4. 验证：`node framework/validate.js data/xxx_s*.js`
 
 ## 技术要点
 

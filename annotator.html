@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annotation Pipeline — on.commentary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAF7F0;
+  --text: #2C2416;
+  --accent: #8B4513;
+  --highlight: #F5E6CC;
+  --border: #D4C5A9;
+  --panel-bg: #FFFEF9;
+  --font-zh: 'Noto Serif TC', 'Songti SC', serif;
+  --font-ui: 'Inter', -apple-system, sans-serif;
+  --w-noun: #2E5090;
+  --w-verb: #8B2500;
+  --w-adj: #006400;
+  --w-adv: #6A4C93;
+  --w-prep: #7B6840;
+  --w-part: #996633;
+  --w-proper: #4682B4;
+  --w-medical: #B22222;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,247,240,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+header h1 { font-size: 1rem; font-weight: 600; color: var(--accent); }
+header .meta { font-size: 0.78rem; color: #8a7e6b; }
+
+/* ── Pipeline Steps ─────────────────────────────────── */
+.pipeline-nav {
+  display: flex; gap: 2px;
+  background: #f0ebe0; border-radius: 8px; padding: 3px;
+  margin: 16px 24px 0;
+}
+.step-btn {
+  flex: 1;
+  padding: 8px 4px;
+  border: none; border-radius: 6px;
+  background: transparent;
+  font-family: var(--font-ui);
+  font-size: 0.75rem; font-weight: 500;
+  color: #8a7e6b;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+.step-btn:hover { background: #e8e0d0; color: var(--text); }
+.step-btn.active { background: var(--accent); color: white; }
+.step-btn .step-num {
+  display: block; font-size: 0.65rem; opacity: 0.7; margin-bottom: 2px;
+}
+
+/* ── Main Layout ────────────────────────────────────── */
+main { max-width: 1200px; margin: 0 auto; padding: 16px 24px 100px; }
+
+.step-panel { display: none; }
+.step-panel.active { display: block; }
+
+/* ── Step 1: Input ──────────────────────────────────── */
+.config-row {
+  display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;
+}
+.config-row label {
+  font-size: 0.8rem; font-weight: 500; color: #8a7e6b;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.config-row select, .config-row input {
+  padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px;
+  font-family: var(--font-ui); font-size: 0.85rem;
+  background: white; color: var(--text);
+}
+textarea {
+  width: 100%; min-height: 300px;
+  padding: 16px; border: 1px solid var(--border); border-radius: 8px;
+  font-family: var(--font-zh); font-size: 1.05rem; line-height: 2;
+  background: white; color: var(--text);
+  resize: vertical;
+}
+textarea.code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.82rem; line-height: 1.5;
+  min-height: 200px;
+}
+
+/* ── Step 2: Segmentation ───────────────────────────── */
+.section-card {
+  background: white; border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px; margin-bottom: 12px;
+}
+.section-card .section-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+}
+.section-card .section-id {
+  background: var(--accent); color: white;
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; flex-shrink: 0;
+}
+.section-card input.section-title {
+  flex: 1; padding: 4px 8px; border: 1px solid var(--border);
+  border-radius: 4px; font-size: 0.85rem;
+}
+.section-card .section-text {
+  font-family: var(--font-zh); font-size: 1rem;
+  line-height: 2; color: var(--text);
+  padding: 8px 0;
+  border-top: 1px solid #f0ebe0;
+}
+.section-card .section-actions {
+  display: flex; gap: 8px; margin-top: 8px;
+}
+
+/* ── Step 3: Word Selection ─────────────────────────── */
+.word-selector {
+  background: white; border: 1px solid var(--border); border-radius: 8px;
+  padding: 20px; margin-bottom: 16px;
+}
+.word-selector .section-label {
+  font-size: 0.8rem; font-weight: 600; color: var(--accent);
+  margin-bottom: 8px;
+}
+.char-grid {
+  font-family: var(--font-zh);
+  font-size: 1.2rem; line-height: 2.4;
+  letter-spacing: 0.1em;
+}
+.char-grid .char {
+  cursor: pointer;
+  padding: 2px 1px;
+  border-radius: 3px;
+  transition: all 0.1s;
+  display: inline;
+}
+.char-grid .char:hover { background: #f0ebe0; }
+.char-grid .char.selected {
+  background: var(--accent); color: white; border-radius: 3px;
+}
+.char-grid .char.punct { cursor: default; color: #999; }
+
+.selected-words {
+  margin-top: 16px; padding-top: 12px; border-top: 1px solid #f0ebe0;
+}
+.selected-words h4 {
+  font-size: 0.8rem; color: #8a7e6b; margin-bottom: 8px;
+}
+.word-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px; margin: 3px 4px 3px 0;
+  background: var(--highlight); border: 1px solid var(--border);
+  border-radius: 16px; font-size: 0.85rem; cursor: pointer;
+}
+.word-chip .remove {
+  font-size: 0.7rem; color: #999; cursor: pointer;
+  width: 16px; height: 16px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.word-chip .remove:hover { background: #ddd; color: #666; }
+
+/* ── Step 4: Word Annotation ────────────────────────── */
+.annotation-form {
+  background: white; border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px; margin-bottom: 12px;
+}
+.annotation-form .form-word {
+  font-family: var(--font-zh); font-size: 1.3rem; font-weight: 700;
+  color: var(--accent); margin-bottom: 12px;
+}
+.form-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.form-group {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.form-group.full { grid-column: 1 / -1; }
+.form-group label {
+  font-size: 0.72rem; font-weight: 600; color: #8a7e6b; text-transform: uppercase;
+}
+.form-group input, .form-group select, .form-group textarea {
+  padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px;
+  font-size: 0.85rem; font-family: var(--font-ui);
+  min-height: auto;
+}
+.form-group textarea { min-height: 60px; font-size: 0.82rem; line-height: 1.5; }
+.form-group .char-count {
+  font-size: 0.65rem; color: #aaa; text-align: right;
+}
+.form-group .char-count.over { color: #c00; font-weight: 600; }
+.validation-badge {
+  font-size: 0.7rem; padding: 2px 8px; border-radius: 10px;
+  display: inline-block; margin-left: 8px;
+}
+.validation-badge.ok { background: #d4edda; color: #155724; }
+.validation-badge.err { background: #f8d7da; color: #721c24; }
+
+/* ── Step 5: Commentary ─────────────────────────────── */
+.commentary-editor {
+  background: white; border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px; margin-bottom: 12px;
+}
+.commentary-tabs {
+  display: flex; gap: 2px; margin-bottom: 12px;
+  background: #f0ebe0; border-radius: 6px; padding: 2px;
+}
+.c-tab-btn {
+  padding: 6px 12px; border: none; border-radius: 4px;
+  background: transparent; font-family: var(--font-ui);
+  font-size: 0.75rem; font-weight: 500; color: #8a7e6b;
+  cursor: pointer; transition: all 0.15s;
+}
+.c-tab-btn:hover { background: #e8e0d0; color: var(--text); }
+.c-tab-btn.active { background: var(--accent); color: white; }
+.c-tab-content { display: none; }
+.c-tab-content.active { display: block; }
+.c-tab-content textarea {
+  min-height: 200px; font-size: 0.85rem; line-height: 1.6;
+}
+
+/* ── Step 6: Export ──────────────────────────────────── */
+.export-preview {
+  background: #1e1e1e; color: #d4d4d4;
+  border-radius: 8px; padding: 16px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.78rem; line-height: 1.5;
+  max-height: 600px; overflow: auto;
+  white-space: pre-wrap; word-break: break-all;
+}
+.export-preview .key { color: #9cdcfe; }
+.export-preview .str { color: #ce9178; }
+.export-preview .num { color: #b5cea8; }
+
+/* ── Buttons ────────────────────────────────────────── */
+.btn {
+  padding: 8px 20px; border: none; border-radius: 6px;
+  font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500;
+  cursor: pointer; transition: all 0.15s;
+}
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: #6d3710; }
+.btn-secondary { background: #f0ebe0; color: var(--text); }
+.btn-secondary:hover { background: #e0d8c8; }
+.btn-danger { background: #dc3545; color: white; }
+.btn-danger:hover { background: #b02a37; }
+.btn-sm { padding: 4px 12px; font-size: 0.75rem; }
+.btn + .btn { margin-left: 8px; }
+
+.actions-bar {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 16px; padding-top: 16px; border-top: 1px solid #f0ebe0;
+}
+
+/* ── Section Switcher (Steps 3-5) ───────────────────── */
+.section-switcher {
+  display: flex; gap: 4px; margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.section-switcher .s-btn {
+  width: 32px; height: 32px;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: white; font-size: 0.75rem; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; justify-content: center;
+}
+.section-switcher .s-btn:hover { background: #f0ebe0; }
+.section-switcher .s-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+.section-switcher .s-btn.done { background: #d4edda; border-color: #a3d9a5; }
+
+/* ── LLM Assist ─────────────────────────────────────── */
+.llm-assist {
+  background: #f8f5ee; border: 1px dashed var(--border);
+  border-radius: 8px; padding: 12px 16px; margin-top: 12px;
+}
+.llm-assist summary {
+  font-size: 0.8rem; font-weight: 600; color: var(--accent);
+  cursor: pointer; list-style: none;
+}
+.llm-assist summary::before { content: '🤖 '; }
+.llm-assist .prompt-box {
+  margin-top: 8px; background: white; border: 1px solid var(--border);
+  border-radius: 6px; padding: 10px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.75rem; line-height: 1.5;
+  max-height: 300px; overflow: auto;
+  white-space: pre-wrap;
+}
+.llm-assist .paste-area {
+  margin-top: 8px;
+}
+
+/* ── Toast ──────────────────────────────────────────── */
+.toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  padding: 10px 20px; border-radius: 8px;
+  font-size: 0.82rem; font-weight: 500;
+  background: #333; color: white;
+  transform: translateY(80px); opacity: 0;
+  transition: all 0.3s ease;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast.success { background: #155724; }
+.toast.error { background: #721c24; }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .pipeline-nav { overflow-x: auto; }
+  .form-grid { grid-template-columns: 1fr; }
+  .config-row { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Annotation Pipeline</h1>
+  <span class="meta">on.commentary</span>
+</header>
+
+<nav class="pipeline-nav" id="pipelineNav">
+  <button class="step-btn active" data-step="1">
+    <span class="step-num">1</span>Input
+  </button>
+  <button class="step-btn" data-step="2">
+    <span class="step-num">2</span>Segment
+  </button>
+  <button class="step-btn" data-step="3">
+    <span class="step-num">3</span>Select Words
+  </button>
+  <button class="step-btn" data-step="4">
+    <span class="step-num">4</span>Annotate
+  </button>
+  <button class="step-btn" data-step="5">
+    <span class="step-num">5</span>Commentary
+  </button>
+  <button class="step-btn" data-step="6">
+    <span class="step-num">6</span>Export
+  </button>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════
+     STEP 1: Input
+     ═══════════════════════════════════════════════════════ -->
+<div class="step-panel active" id="step-1">
+  <h2 style="font-size:1.1rem; margin-bottom:12px;">Raw Text Input</h2>
+
+  <div class="config-row">
+    <label>
+      Genre
+      <select id="cfgGenre" onchange="onGenreChange()">
+        <option value="classical-chinese-political">Classical Chinese — Political</option>
+        <option value="classical-chinese-history">Classical Chinese — History</option>
+        <option value="classical-chinese-tcm">Classical Chinese — TCM</option>
+        <option value="classical-chinese-philosophy">Classical Chinese — Philosophy</option>
+        <option value="classical-chinese-literary">Classical Chinese — Literary / Poetry</option>
+        <option value="classical-chinese-military">Classical Chinese — Military</option>
+        <option value="german-poetry">German Poetry</option>
+        <option value="latin-poetry">Latin Poetry</option>
+        <option value="other">Other (custom tabs)</option>
+      </select>
+      <div id="customTabsRow" style="display:none; margin-top:6px;">
+        <label style="font-size:0.8rem; font-weight:500; color:#8a7e6b;">
+          Custom tabs (comma-separated)
+          <input type="text" id="cfgCustomTabs" value="grammar, context, notes, translation"
+                 placeholder="grammar, context, notes, ..." style="width:360px;"
+                 oninput="updateCustomTabs()">
+        </label>
+      </div>
+    </label>
+    <label>
+      Target Audience
+      <input type="text" id="cfgAudience" value="American sinology students" style="width:260px;">
+    </label>
+    <label>
+      Work Title
+      <input type="text" id="cfgTitle" placeholder="e.g. Yantie Lun 鹽鐵論, Ch.29" style="width:260px;">
+    </label>
+  </div>
+
+  <div class="fetch-row" style="display:flex; gap:8px; align-items:flex-end; margin-bottom:12px;">
+    <label style="flex:1; font-size:0.8rem; font-weight:500; color:#8a7e6b; display:flex; flex-direction:column; gap:4px;">
+      Fetch text from URL
+      <input type="text" id="fetchUrl" placeholder="https://ctext.org/... or any URL with Chinese text" style="width:100%; padding:6px 10px; border:1px solid var(--border); border-radius:6px; font-size:0.85rem;">
+    </label>
+    <button class="btn btn-secondary" onclick="fetchText()" id="fetchBtn" style="white-space:nowrap;">
+      Fetch Text
+    </button>
+    <select id="fetchMode" style="padding:6px 8px; border:1px solid var(--border); border-radius:6px; font-size:0.78rem; color:#8a7e6b;">
+      <option value="auto">Auto-detect</option>
+      <option value="ctext">ctext.org</option>
+      <option value="wikisource">Wikisource</option>
+      <option value="generic">Generic (all CJK text)</option>
+    </select>
+  </div>
+  <div id="fetchStatus" style="font-size:0.78rem; color:#8a7e6b; margin-bottom:8px; display:none;"></div>
+
+  <textarea id="rawText" placeholder="Paste the full original text here, or use &quot;Fetch Text&quot; above to grab from a URL.&#10;&#10;Use blank lines to separate sections/paragraphs.&#10;The segmenter will use these as section boundaries."></textarea>
+
+  <div class="actions-bar">
+    <span style="font-size:0.78rem; color:#8a7e6b;" id="charCount">0 characters</span>
+    <button class="btn btn-primary" onclick="runSegmentation()">Segment Text &rarr;</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     STEP 2: Segmentation
+     ═══════════════════════════════════════════════════════ -->
+<div class="step-panel" id="step-2">
+  <h2 style="font-size:1.1rem; margin-bottom:4px;">Segmentation</h2>
+  <p style="font-size:0.78rem; color:#8a7e6b; margin-bottom:12px;">
+    Review section boundaries and titles. Click "Split" to break a section, "Merge" to join with the next.
+  </p>
+  <div id="sectionCards"></div>
+  <div class="actions-bar">
+    <button class="btn btn-secondary" onclick="goStep(1)">&larr; Back</button>
+    <button class="btn btn-primary" onclick="goStep(3)">Select Words &rarr;</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     STEP 3: Word Selection
+     ═══════════════════════════════════════════════════════ -->
+<div class="step-panel" id="step-3">
+  <h2 style="font-size:1.1rem; margin-bottom:4px;">Word Selection</h2>
+  <p style="font-size:0.78rem; color:#8a7e6b; margin-bottom:12px;">
+    Click characters to select words for annotation. Click again to deselect. Drag to select multi-character words.
+  </p>
+  <div class="section-switcher" id="wordSelSections"></div>
+  <div id="wordSelArea"></div>
+
+  <details class="llm-assist">
+    <summary>LLM Assist: Generate word selection prompt</summary>
+    <div class="prompt-box" id="wordSelPrompt"></div>
+    <div class="paste-area">
+      <p style="font-size:0.75rem; color:#8a7e6b; margin:8px 0 4px;">Paste LLM JSON output:</p>
+      <textarea class="code" id="wordSelPaste" placeholder='[{"form":"賢良","reason":"...","priority":"high"}, ...]' style="min-height:100px;"></textarea>
+      <button class="btn btn-sm btn-secondary" onclick="importWordSelection()" style="margin-top:6px;">Import</button>
+    </div>
+  </details>
+
+  <div class="actions-bar">
+    <button class="btn btn-secondary" onclick="goStep(2)">&larr; Back</button>
+    <button class="btn btn-primary" onclick="goStep(4)">Annotate Words &rarr;</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     STEP 4: Word Annotation
+     ═══════════════════════════════════════════════════════ -->
+<div class="step-panel" id="step-4">
+  <h2 style="font-size:1.1rem; margin-bottom:4px;">Word Annotation</h2>
+  <p style="font-size:0.78rem; color:#8a7e6b; margin-bottom:12px;">
+    Fill in structured annotations for each selected word.
+  </p>
+  <div class="section-switcher" id="annotSections"></div>
+  <div id="annotArea"></div>
+
+  <details class="llm-assist">
+    <summary>LLM Assist: Generate annotation prompt</summary>
+    <div class="prompt-box" id="annotPrompt"></div>
+    <div class="paste-area">
+      <p style="font-size:0.75rem; color:#8a7e6b; margin:8px 0 4px;">Paste LLM JSON output:</p>
+      <textarea class="code" id="annotPaste" placeholder='[{"form":"賢良","pinyin":"xiánliáng","pos":"noun","cls":"w-noun","info":"...","gloss":"..."}, ...]' style="min-height:100px;"></textarea>
+      <button class="btn btn-sm btn-secondary" onclick="importAnnotations()" style="margin-top:6px;">Import</button>
+    </div>
+  </details>
+
+  <div class="actions-bar">
+    <button class="btn btn-secondary" onclick="goStep(3)">&larr; Back</button>
+    <button class="btn btn-primary" onclick="goStep(5)">Commentary &rarr;</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     STEP 5: Commentary + Translation
+     ═══════════════════════════════════════════════════════ -->
+<div class="step-panel" id="step-5">
+  <h2 style="font-size:1.1rem; margin-bottom:4px;">Commentary &amp; Translation</h2>
+  <p style="font-size:0.78rem; color:#8a7e6b; margin-bottom:12px;">
+    Write or paste HTML commentary for each tab, and the English translation.
+  </p>
+  <div class="section-switcher" id="commSections"></div>
+  <div id="commArea"></div>
+
+  <details class="llm-assist">
+    <summary>LLM Assist: Generate commentary prompt</summary>
+    <div class="prompt-box" id="commPrompt"></div>
+    <div class="paste-area">
+      <p style="font-size:0.75rem; color:#8a7e6b; margin:8px 0 4px;">Paste LLM JSON output:</p>
+      <textarea class="code" id="commPaste" placeholder='{"grammar":"<p>...","context":"<p>...","en":[{"text":"..."}]}' style="min-height:100px;"></textarea>
+      <button class="btn btn-sm btn-secondary" onclick="importCommentary()" style="margin-top:6px;">Import</button>
+    </div>
+  </details>
+
+  <div class="actions-bar">
+    <button class="btn btn-secondary" onclick="goStep(4)">&larr; Back</button>
+    <button class="btn btn-primary" onclick="goStep(6)">Export &rarr;</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     STEP 6: Export
+     ═══════════════════════════════════════════════════════ -->
+<div class="step-panel" id="step-6">
+  <h2 style="font-size:1.1rem; margin-bottom:4px;">Export</h2>
+  <p style="font-size:0.78rem; color:#8a7e6b; margin-bottom:12px;">
+    Review and download the final JS data file.
+  </p>
+  <div style="margin-bottom:12px;">
+    <button class="btn btn-primary" onclick="generateExport()">Generate JS</button>
+    <button class="btn btn-secondary" onclick="validateExport()">Validate</button>
+    <button class="btn btn-secondary" onclick="copyExport()">Copy to Clipboard</button>
+    <button class="btn btn-secondary" onclick="downloadExport()">Download .js</button>
+  </div>
+  <div id="validationResult" style="margin-bottom:12px;"></div>
+  <div class="export-preview" id="exportPreview">
+    Click "Generate JS" to preview the output.
+  </div>
+  <div class="actions-bar">
+    <button class="btn btn-secondary" onclick="goStep(5)">&larr; Back</button>
+    <span></span>
+  </div>
+</div>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ════════════════════════════════════════════════════════
+// State
+// ════════════════════════════════════════════════════════
+const state = {
+  genre: 'classical-chinese-political',
+  audience: 'American sinology students',
+  title: '',
+  sections: [],        // [{id, title, text, lines}]
+  selectedWords: {},   // sectionId -> [{form, start, end}]
+  annotations: {},     // sectionId -> [{form, pinyin, pos, cls, info, gloss}]
+  commentary: {},      // sectionId -> {grammar, context, ...}
+  translations: {},    // sectionId -> [{text, indent}]
+  currentSection: 1,
+};
+
+const TABS_BY_GENRE = {
+  'classical-chinese-political': ['grammar', 'context', 'rhetoric', 'notes', 'translation'],
+  'classical-chinese-history':   ['grammar', 'context', 'commentary', 'narrative', 'springAutumn'],
+  'classical-chinese-tcm':       ['grammar', 'medicine', 'commentary', 'formula', 'clinical'],
+  'classical-chinese-philosophy':['grammar', 'context', 'interpretation', 'commentary', 'translation'],
+  'classical-chinese-literary':  ['grammar', 'context', 'rhetoric', 'imagery', 'translation'],
+  'classical-chinese-military':  ['grammar', 'context', 'strategy', 'commentary', 'translation'],
+  'german-poetry':               ['grammar', 'meaning', 'interpretation', 'translationNote', 'altTranslation', 'meter'],
+  'latin-poetry':                ['grammar', 'context', 'rhetoric'],
+  'other':                       ['grammar', 'context', 'notes', 'translation'],
+};
+
+function onGenreChange() {
+  const genre = document.getElementById('cfgGenre').value;
+  document.getElementById('customTabsRow').style.display = genre === 'other' ? 'block' : 'none';
+  state.genre = genre;
+}
+
+function updateCustomTabs() {
+  const raw = document.getElementById('cfgCustomTabs').value;
+  const tabs = raw.split(',').map(t => t.trim()).filter(t => t && /^[a-zA-Z]+$/.test(t));
+  if (tabs.length > 0) {
+    TABS_BY_GENRE['other'] = tabs;
+  }
+}
+
+const POS_OPTIONS = [
+  {value: 'noun', label: 'noun'},
+  {value: 'verb', label: 'verb'},
+  {value: 'adj', label: 'adjective'},
+  {value: 'adv', label: 'adverb'},
+  {value: 'prep', label: 'preposition'},
+  {value: 'part', label: 'particle'},
+  {value: 'proper', label: 'proper noun'},
+  {value: 'medical', label: 'medical term'},
+];
+
+const POS_TO_CLS = {
+  noun:'w-noun', verb:'w-verb', adj:'w-adj', adv:'w-adv',
+  prep:'w-prep', part:'w-part', proper:'w-proper', medical:'w-medical'
+};
+
+// ════════════════════════════════════════════════════════
+// Navigation
+// ════════════════════════════════════════════════════════
+function goStep(n) {
+  document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.step-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('step-' + n).classList.add('active');
+  document.querySelector(`.step-btn[data-step="${n}"]`).classList.add('active');
+
+  // Refresh the step's content
+  if (n === 3) renderWordSelection();
+  if (n === 4) renderAnnotationForms();
+  if (n === 5) renderCommentaryEditor();
+  if (n === 6) generateExport();
+}
+
+document.querySelectorAll('.step-btn').forEach(btn => {
+  btn.addEventListener('click', () => goStep(parseInt(btn.dataset.step)));
+});
+
+// Character count for raw text
+document.getElementById('rawText').addEventListener('input', e => {
+  document.getElementById('charCount').textContent = e.target.value.length + ' characters';
+});
+
+// ════════════════════════════════════════════════════════
+// Text Fetching
+// ════════════════════════════════════════════════════════
+const CORS_PROXIES = [
+  url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+  url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+];
+
+async function fetchText() {
+  const url = document.getElementById('fetchUrl').value.trim();
+  if (!url) { toast('Please enter a URL', 'error'); return; }
+
+  const mode = document.getElementById('fetchMode').value;
+  const btn = document.getElementById('fetchBtn');
+  const status = document.getElementById('fetchStatus');
+
+  btn.disabled = true;
+  btn.textContent = 'Fetching...';
+  status.style.display = 'block';
+  status.textContent = 'Connecting...';
+
+  try {
+    let html = null;
+
+    // Try direct fetch first (works for CORS-enabled sites)
+    try {
+      status.textContent = 'Trying direct fetch...';
+      const resp = await fetch(url, { signal: AbortSignal.timeout(8000) });
+      if (resp.ok) html = await resp.text();
+    } catch(e) {}
+
+    // Try CORS proxies
+    if (!html) {
+      for (const proxy of CORS_PROXIES) {
+        try {
+          status.textContent = 'Trying proxy...';
+          const resp = await fetch(proxy(url), { signal: AbortSignal.timeout(12000) });
+          if (resp.ok) { html = await resp.text(); break; }
+        } catch(e) {}
+      }
+    }
+
+    if (!html) {
+      throw new Error('Could not fetch URL. Try opening it in your browser, selecting the text, and pasting here.');
+    }
+
+    status.textContent = 'Parsing...';
+
+    // Detect site and parse accordingly
+    const detectedMode = mode === 'auto' ? detectSite(url) : mode;
+    const result = parseHTML(html, detectedMode, url);
+
+    if (!result.text) {
+      throw new Error('No text extracted. Try switching the mode or paste manually.');
+    }
+
+    // Fill in the textarea
+    document.getElementById('rawText').value = result.text;
+    document.getElementById('charCount').textContent = result.text.length + ' characters';
+
+    // Auto-fill title if empty
+    if (result.title && !document.getElementById('cfgTitle').value) {
+      document.getElementById('cfgTitle').value = result.title;
+    }
+
+    status.innerHTML = `Extracted <b>${result.text.length}</b> characters` +
+      (result.sections ? `, <b>${result.sections}</b> sections` : '') +
+      ` (mode: ${detectedMode})`;
+    toast('Text fetched successfully', 'success');
+
+  } catch(e) {
+    status.textContent = 'Error: ' + e.message;
+    toast(e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Fetch Text';
+  }
+}
+
+function detectSite(url) {
+  if (/ctext\.org/i.test(url)) return 'ctext';
+  if (/wikisource\.org/i.test(url)) return 'wikisource';
+  if (/guoxue|zhonghuadiancang|sou-yun/i.test(url)) return 'generic';
+  return 'generic';
+}
+
+function parseHTML(html, mode, url) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+
+  // Get page title
+  let title = doc.querySelector('title')?.textContent?.trim() || '';
+
+  if (mode === 'ctext') return parseCtext(doc, title);
+  if (mode === 'wikisource') return parseWikisource(doc, title);
+  return parseGeneric(doc, title);
+}
+
+function parseCtext(doc, title) {
+  // ctext.org: Chinese text lives in <td class="ctext"> elements
+  // Each paragraph is a row in a table
+  const lines = [];
+
+  // Method 1: Look for td.ctext (main text cells)
+  const ctextCells = doc.querySelectorAll('td.ctext');
+  if (ctextCells.length > 0) {
+    ctextCells.forEach(td => {
+      // Get only Chinese text, skip English translations
+      const text = td.textContent.trim();
+      if (text && /[\u4e00-\u9fff]/.test(text)) {
+        lines.push(text);
+      }
+    });
+  }
+
+  // Method 2: If no td.ctext, look for div#content
+  if (lines.length === 0) {
+    const content = doc.querySelector('#content2, #content3, .text');
+    if (content) {
+      // Walk through child nodes, collect Chinese text
+      content.querySelectorAll('tr').forEach(tr => {
+        const tds = tr.querySelectorAll('td');
+        tds.forEach(td => {
+          const cls = td.className || '';
+          // Skip English columns (usually have 'etext' class)
+          if (cls.includes('etext') || cls.includes('english')) return;
+          const text = td.textContent.trim();
+          if (text && /[\u4e00-\u9fff]/.test(text) && text.length > 1) {
+            lines.push(text);
+          }
+        });
+      });
+    }
+  }
+
+  // Method 3: Brute force — find all runs of Chinese text
+  if (lines.length === 0) {
+    const allText = doc.body?.textContent || '';
+    const matches = allText.match(/[「」『』（）\u3000-\u303f\u4e00-\u9fff\uf900-\ufaff，。、；：！？]{4,}/g);
+    if (matches) lines.push(...matches);
+  }
+
+  // Group consecutive lines into paragraphs (blank-line separated)
+  const text = lines.join('\n');
+
+  // Clean up title
+  title = title.replace(/\s*[-–—|].*$/, '').replace(/Chinese Text Project/i, '').trim();
+
+  return { text, title, sections: lines.length };
+}
+
+function parseWikisource(doc, title) {
+  const stanzas = [];
+  const content = doc.querySelector('.mw-parser-output') || doc.querySelector('#mw-content-text');
+  if (!content) {
+    return { text: '', title, sections: 0 };
+  }
+
+  // Method 1: Wikisource poem structure (ws-poem-stanza > ws-poem-line)
+  const poemDiv = content.querySelector('.ws-poem');
+  if (poemDiv) {
+    poemDiv.querySelectorAll('.ws-poem-stanza').forEach(stanza => {
+      const lines = [];
+      stanza.querySelectorAll('.ws-poem-line').forEach(line => {
+        const text = line.textContent.trim();
+        if (text) lines.push(text);
+      });
+      if (lines.length > 0) stanzas.push(lines.join('\n'));
+    });
+  }
+
+  // Method 2: Classic poem div structure
+  if (stanzas.length === 0) {
+    content.querySelectorAll('div.poem p, .stanza, .verse').forEach(el => {
+      const text = el.textContent.trim();
+      if (text) stanzas.push(text);
+    });
+  }
+
+  // Method 3: Regular paragraphs (prose texts, CJK or otherwise)
+  if (stanzas.length === 0) {
+    content.querySelectorAll('p').forEach(p => {
+      // Skip tiny paragraphs (navigation, metadata)
+      const text = p.textContent.trim();
+      if (text.length > 10 && !p.closest('.ws-noexport, .noprint, .mw-editsection')) {
+        stanzas.push(text);
+      }
+    });
+  }
+
+  title = title.replace(/\s*[-–—|].*(Wikisource|free online library).*$/i, '').trim();
+  return { text: stanzas.join('\n\n'), title, sections: stanzas.length };
+}
+
+function parseGeneric(doc, title) {
+  const lines = [];
+
+  // Try common content containers first
+  const containers = doc.querySelectorAll('article, main, .content, .text, .article-body, #content, .entry-content, .mw-parser-output');
+  const scope = containers.length > 0 ? containers[0] : doc.body;
+
+  if (!scope) return { text: '', title, sections: 0 };
+
+  // Check if this looks like a CJK text
+  const fullText = scope.textContent || '';
+  const cjkTotal = (fullText.match(/[\u4e00-\u9fff]/g) || []).length;
+  const isCJK = cjkTotal > 20;
+
+  // Collect paragraphs
+  scope.querySelectorAll('p, h2, h3, h4, li, td, dd, blockquote, .ws-poem-stanza').forEach(el => {
+    // Skip navigation, metadata, edit sections
+    if (el.closest('.noprint, .ws-noexport, .mw-editsection, nav, footer, header, .sidebar')) return;
+
+    const text = el.textContent.trim();
+    if (!text || text.length < 5) return;
+
+    if (isCJK) {
+      // CJK mode: keep elements with substantial CJK content
+      const cjkCount = (text.match(/[\u4e00-\u9fff]/g) || []).length;
+      if (cjkCount > 3 && cjkCount / text.length > 0.3) {
+        lines.push(text);
+      }
+    } else {
+      // Non-CJK mode: keep substantial text paragraphs
+      if (text.length > 15) {
+        lines.push(text);
+      }
+    }
+  });
+
+  // Deduplicate (nested elements can cause repeats)
+  const seen = new Set();
+  const unique = lines.filter(l => {
+    // Also skip if this line is a substring of an already-added longer line
+    if (seen.has(l)) return false;
+    for (const prev of seen) {
+      if (prev.includes(l) && prev.length > l.length + 10) return false;
+    }
+    seen.add(l);
+    return true;
+  });
+
+  return { text: unique.join('\n\n'), title, sections: unique.length };
+}
+
+// ════════════════════════════════════════════════════════
+// Step 1 → 2: Segmentation
+// ════════════════════════════════════════════════════════
+function runSegmentation() {
+  const raw = document.getElementById('rawText').value.trim();
+  if (!raw) { toast('Please paste text first', 'error'); return; }
+
+  state.genre = document.getElementById('cfgGenre').value;
+  state.audience = document.getElementById('cfgAudience').value;
+  state.title = document.getElementById('cfgTitle').value;
+
+  // Split by blank lines
+  const blocks = raw.split(/\n\s*\n/).filter(b => b.trim());
+
+  state.sections = blocks.map((block, i) => ({
+    id: i + 1,
+    title: '',
+    text: block.trim(),
+    lines: block.trim().split('\n').filter(l => l.trim()).map(l => ({ zh: l.trim() })),
+  }));
+
+  renderSections();
+  goStep(2);
+}
+
+function renderSections() {
+  const container = document.getElementById('sectionCards');
+  container.innerHTML = state.sections.map((s, i) => `
+    <div class="section-card" data-idx="${i}">
+      <div class="section-header">
+        <div class="section-id">${s.id}</div>
+        <input class="section-title" value="${esc(s.title)}"
+               placeholder="Section title (English, 3-8 words)"
+               oninput="state.sections[${i}].title = this.value">
+      </div>
+      <div class="section-text">${esc(s.text)}</div>
+      <div class="section-actions">
+        <button class="btn btn-sm btn-secondary" onclick="splitSection(${i})">Split at cursor</button>
+        ${i < state.sections.length - 1 ? `<button class="btn btn-sm btn-secondary" onclick="mergeSection(${i})">Merge with next</button>` : ''}
+        <button class="btn btn-sm btn-danger" onclick="deleteSection(${i})">Delete</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function splitSection(idx) {
+  const s = state.sections[idx];
+  const lines = s.lines;
+  if (lines.length < 2) { toast('Too short to split', 'error'); return; }
+  const mid = Math.ceil(lines.length / 2);
+  const s1 = { ...s, lines: lines.slice(0, mid), text: lines.slice(0, mid).map(l => l.zh).join('\n') };
+  const s2 = { id: s.id + 1, title: '', lines: lines.slice(mid), text: lines.slice(mid).map(l => l.zh).join('\n') };
+  state.sections.splice(idx, 1, s1, s2);
+  renumberSections();
+  renderSections();
+}
+
+function mergeSection(idx) {
+  const s1 = state.sections[idx];
+  const s2 = state.sections[idx + 1];
+  s1.lines = [...s1.lines, ...s2.lines];
+  s1.text = s1.lines.map(l => l.zh).join('\n');
+  state.sections.splice(idx + 1, 1);
+  renumberSections();
+  renderSections();
+}
+
+function deleteSection(idx) {
+  state.sections.splice(idx, 1);
+  renumberSections();
+  renderSections();
+}
+
+function renumberSections() {
+  state.sections.forEach((s, i) => s.id = i + 1);
+}
+
+// ════════════════════════════════════════════════════════
+// Step 3: Word Selection
+// ════════════════════════════════════════════════════════
+let dragStart = null;
+
+function renderWordSelection() {
+  // Section switcher
+  const switcher = document.getElementById('wordSelSections');
+  switcher.innerHTML = state.sections.map(s => {
+    const hasSel = (state.selectedWords[s.id] || []).length > 0;
+    return `<button class="s-btn ${s.id === state.currentSection ? 'active' : ''} ${hasSel ? 'done' : ''}"
+              onclick="state.currentSection=${s.id}; renderWordSelection();">${s.id}</button>`;
+  }).join('');
+
+  const s = state.sections.find(s => s.id === state.currentSection);
+  if (!s) return;
+
+  const sel = state.selectedWords[s.id] || [];
+  const fullText = s.text;
+
+  // Build char grid
+  const isPunct = ch => /[，。、；：「」『』（）《》！？\s\n\r]/.test(ch);
+
+  let html = `<div class="word-selector">
+    <div class="section-label">Section ${s.id}: ${esc(s.title || '(untitled)')}</div>
+    <div class="char-grid" id="charGrid" data-sid="${s.id}">`;
+
+  for (let i = 0; i < fullText.length; i++) {
+    const ch = fullText[i];
+    if (ch === '\n') { html += '<br>'; continue; }
+    const isSelected = sel.some(w => i >= w.start && i < w.end);
+    const p = isPunct(ch);
+    html += `<span class="char ${isSelected ? 'selected' : ''} ${p ? 'punct' : ''}"
+              data-idx="${i}" ${p ? '' : `onmousedown="charMouseDown(event,${i})" onmouseup="charMouseUp(event,${i})" onmouseover="charMouseOver(event,${i})"`}>${esc(ch)}</span>`;
+  }
+
+  html += `</div>`;
+
+  // Selected words chips
+  html += `<div class="selected-words"><h4>Selected words (${sel.length})</h4>`;
+  sel.forEach((w, wi) => {
+    html += `<span class="word-chip">
+      <span style="font-family:var(--font-zh)">${esc(w.form)}</span>
+      <span class="remove" onclick="removeWord(${s.id},${wi})">&times;</span>
+    </span>`;
+  });
+  html += `</div></div>`;
+
+  document.getElementById('wordSelArea').innerHTML = html;
+
+  // Generate prompt
+  updateWordSelPrompt(s);
+}
+
+function charMouseDown(e, idx) {
+  e.preventDefault();
+  dragStart = idx;
+}
+
+function charMouseOver(e, idx) {
+  if (dragStart === null) return;
+  // Visual feedback during drag
+  const grid = document.getElementById('charGrid');
+  grid.querySelectorAll('.char.dragging').forEach(c => c.classList.remove('dragging'));
+  const lo = Math.min(dragStart, idx), hi = Math.max(dragStart, idx);
+  for (let i = lo; i <= hi; i++) {
+    const c = grid.querySelector(`.char[data-idx="${i}"]`);
+    if (c && !c.classList.contains('punct')) c.classList.add('dragging');
+  }
+}
+
+function charMouseUp(e, idx) {
+  if (dragStart === null) return;
+  const sid = parseInt(document.getElementById('charGrid').dataset.sid);
+  const s = state.sections.find(s => s.id === sid);
+  const lo = Math.min(dragStart, idx), hi = Math.max(dragStart, idx);
+  dragStart = null;
+
+  const form = s.text.substring(lo, hi + 1).replace(/\s/g, '');
+  if (!form) return;
+
+  if (!state.selectedWords[sid]) state.selectedWords[sid] = [];
+
+  // Toggle: if already selected, remove
+  const existing = state.selectedWords[sid].findIndex(w => w.start === lo && w.end === hi + 1);
+  if (existing >= 0) {
+    state.selectedWords[sid].splice(existing, 1);
+  } else {
+    // Check for overlap and remove overlapping
+    state.selectedWords[sid] = state.selectedWords[sid].filter(w =>
+      w.end <= lo || w.start >= hi + 1
+    );
+    state.selectedWords[sid].push({ form, start: lo, end: hi + 1 });
+    state.selectedWords[sid].sort((a, b) => a.start - b.start);
+  }
+
+  renderWordSelection();
+}
+
+function removeWord(sid, idx) {
+  state.selectedWords[sid].splice(idx, 1);
+  renderWordSelection();
+}
+
+function updateWordSelPrompt(section) {
+  const prompt = `Text: ${section.text}\n\nSection title: ${section.title || '(untitled)'}\nGenre: ${state.genre}\nTarget audience: ${state.audience}\n\nFrom this passage, select 4-8 words or short phrases that need annotation for the target audience.\n\nOutput format (JSON array):\n[\n  {"form": "<characters>", "reason": "<why>", "priority": "high|medium|low"}\n]`;
+  document.getElementById('wordSelPrompt').textContent = prompt;
+}
+
+function importWordSelection() {
+  try {
+    const data = JSON.parse(document.getElementById('wordSelPaste').value);
+    const sid = state.currentSection;
+    const s = state.sections.find(s => s.id === sid);
+    if (!state.selectedWords[sid]) state.selectedWords[sid] = [];
+
+    data.forEach(item => {
+      const idx = s.text.indexOf(item.form);
+      if (idx >= 0 && !state.selectedWords[sid].some(w => w.form === item.form)) {
+        state.selectedWords[sid].push({ form: item.form, start: idx, end: idx + item.form.length });
+      }
+    });
+    state.selectedWords[sid].sort((a, b) => a.start - b.start);
+    renderWordSelection();
+    toast(`Imported ${data.length} words`, 'success');
+  } catch (e) {
+    toast('Invalid JSON: ' + e.message, 'error');
+  }
+}
+
+// ════════════════════════════════════════════════════════
+// Step 4: Word Annotation
+// ════════════════════════════════════════════════════════
+function renderAnnotationForms() {
+  // Section switcher
+  const switcher = document.getElementById('annotSections');
+  switcher.innerHTML = state.sections.map(s => {
+    const words = state.selectedWords[s.id] || [];
+    const annots = state.annotations[s.id] || [];
+    const done = words.length > 0 && annots.length >= words.length;
+    return `<button class="s-btn ${s.id === state.currentSection ? 'active' : ''} ${done ? 'done' : ''}"
+              onclick="state.currentSection=${s.id}; renderAnnotationForms();">${s.id}</button>`;
+  }).join('');
+
+  const sid = state.currentSection;
+  const words = state.selectedWords[sid] || [];
+  if (!state.annotations[sid]) state.annotations[sid] = [];
+
+  const container = document.getElementById('annotArea');
+
+  if (words.length === 0) {
+    container.innerHTML = '<p style="color:#8a7e6b; font-size:0.85rem;">No words selected for this section. Go back to Step 3 to select words.</p>';
+    updateAnnotPrompt(sid);
+    return;
+  }
+
+  container.innerHTML = words.map((w, wi) => {
+    const a = state.annotations[sid].find(a => a.form === w.form) || {};
+    const posOptions = POS_OPTIONS.map(p =>
+      `<option value="${p.value}" ${a.pos === p.value ? 'selected' : ''}>${p.label}</option>`
+    ).join('');
+
+    const glossLen = (a.gloss || '').length;
+    const glossOver = glossLen > 60;
+
+    return `<div class="annotation-form" data-form="${esc(w.form)}">
+      <div class="form-word">${esc(w.form)}
+        <span class="validation-badge ${a.pinyin && a.info && a.gloss ? 'ok' : 'err'}">${a.pinyin && a.info && a.gloss ? 'OK' : 'incomplete'}</span>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Pinyin</label>
+          <input type="text" value="${esc(a.pinyin || '')}" placeholder="e.g. xiánliáng"
+                 oninput="updateAnnotation(${sid},'${esc(w.form)}','pinyin',this.value)">
+        </div>
+        <div class="form-group">
+          <label>Part of Speech</label>
+          <select onchange="updateAnnotation(${sid},'${esc(w.form)}','pos',this.value); renderAnnotationForms();">
+            <option value="">— select —</option>
+            ${posOptions}
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Gloss (tooltip, max 60 chars)</label>
+          <input type="text" value="${esc(a.gloss || '')}" maxlength="80"
+                 oninput="updateAnnotation(${sid},'${esc(w.form)}','gloss',this.value); this.nextElementSibling.textContent=this.value.length+'/60'; this.nextElementSibling.className='char-count'+(this.value.length>60?' over':'')">
+          <span class="char-count ${glossOver ? 'over' : ''}">${glossLen}/60</span>
+        </div>
+        <div class="form-group full">
+          <label>Info (1-3 sentences: meaning, context, significance)</label>
+          <textarea oninput="updateAnnotation(${sid},'${esc(w.form)}','info',this.value)">${esc(a.info || '')}</textarea>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  updateAnnotPrompt(sid);
+}
+
+function updateAnnotation(sid, form, field, value) {
+  if (!state.annotations[sid]) state.annotations[sid] = [];
+  let entry = state.annotations[sid].find(a => a.form === form);
+  if (!entry) {
+    entry = { form, pinyin: '', pos: '', cls: '', info: '', gloss: '' };
+    state.annotations[sid].push(entry);
+  }
+  entry[field] = value;
+  if (field === 'pos') {
+    entry.cls = POS_TO_CLS[value] || '';
+  }
+}
+
+function updateAnnotPrompt(sid) {
+  const s = state.sections.find(s => s.id === sid);
+  const words = (state.selectedWords[sid] || []).map(w => w.form);
+  const prompt = `Annotate each of the following words as they appear in context.\n\nWords: ${words.join(', ')}\nContext: ${s ? s.text : ''}\nSection: ${s ? s.title || '(untitled)' : ''}\nTarget audience: ${state.audience}\n\nOutput a JSON array:\n[\n  {"form":"...","pinyin":"...","pos":"noun|verb|adj|adv|prep|part|proper|medical","cls":"w-noun|...","info":"1-3 sentences","gloss":"max 60 chars"}\n]`;
+  document.getElementById('annotPrompt').textContent = prompt;
+}
+
+function importAnnotations() {
+  try {
+    const data = JSON.parse(document.getElementById('annotPaste').value);
+    const sid = state.currentSection;
+    if (!state.annotations[sid]) state.annotations[sid] = [];
+
+    data.forEach(item => {
+      const existing = state.annotations[sid].findIndex(a => a.form === item.form);
+      if (existing >= 0) {
+        state.annotations[sid][existing] = { ...state.annotations[sid][existing], ...item };
+      } else {
+        state.annotations[sid].push(item);
+      }
+    });
+    renderAnnotationForms();
+    toast(`Imported ${data.length} annotations`, 'success');
+  } catch (e) {
+    toast('Invalid JSON: ' + e.message, 'error');
+  }
+}
+
+// ════════════════════════════════════════════════════════
+// Step 5: Commentary + Translation
+// ════════════════════════════════════════════════════════
+function renderCommentaryEditor() {
+  const switcher = document.getElementById('commSections');
+  switcher.innerHTML = state.sections.map(s => {
+    const hasComm = state.commentary[s.id] && Object.keys(state.commentary[s.id]).length > 0;
+    return `<button class="s-btn ${s.id === state.currentSection ? 'active' : ''} ${hasComm ? 'done' : ''}"
+              onclick="state.currentSection=${s.id}; renderCommentaryEditor();">${s.id}</button>`;
+  }).join('');
+
+  const sid = state.currentSection;
+  const s = state.sections.find(s => s.id === sid);
+  if (!s) return;
+
+  const tabs = TABS_BY_GENRE[state.genre] || ['grammar', 'context'];
+  if (!state.commentary[sid]) state.commentary[sid] = {};
+  if (!state.translations[sid]) state.translations[sid] = [];
+
+  // Build tab UI
+  let html = `<div class="commentary-editor">
+    <div style="font-size:0.85rem; font-weight:600; color:var(--accent); margin-bottom:8px;">
+      Section ${s.id}: ${esc(s.title || '(untitled)')}
+    </div>
+    <div style="font-family:var(--font-zh); font-size:0.95rem; line-height:2; color:#555; margin-bottom:12px; padding:8px; background:#f8f5ee; border-radius:6px;">
+      ${esc(s.text)}
+    </div>
+
+    <h4 style="font-size:0.82rem; margin-bottom:8px;">English Translation</h4>
+    <textarea id="transInput" style="min-height:120px; margin-bottom:16px;"
+      oninput="saveTranslation(${sid})">${esc((state.translations[sid] || []).map(t => t.text).join('\n'))}</textarea>
+
+    <h4 style="font-size:0.82rem; margin-bottom:8px;">Commentary Tabs</h4>
+    <div class="commentary-tabs">
+      ${tabs.map((t, i) => `<button class="c-tab-btn ${i===0 ? 'active' : ''}"
+        onclick="switchCommTab(this,'${t}')">${t}</button>`).join('')}
+    </div>
+    ${tabs.map((t, i) => `<div class="c-tab-content ${i===0 ? 'active' : ''}" id="ctab-${t}">
+      <textarea placeholder="HTML content for '${t}' tab...\n\nUse <p>, <b>, <i>, <ul>, <li>, <table>..."
+        oninput="state.commentary[${sid}]['${t}']=this.value">${esc(state.commentary[sid][t] || '')}</textarea>
+    </div>`).join('')}
+  </div>`;
+
+  document.getElementById('commArea').innerHTML = html;
+  updateCommPrompt(sid);
+}
+
+function switchCommTab(btn, tab) {
+  btn.closest('.commentary-editor').querySelectorAll('.c-tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  btn.closest('.commentary-editor').querySelectorAll('.c-tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('ctab-' + tab).classList.add('active');
+}
+
+function saveTranslation(sid) {
+  const text = document.getElementById('transInput').value;
+  state.translations[sid] = text.split('\n').filter(l => l.trim()).map(l => ({ text: l.trim(), indent: false }));
+}
+
+function updateCommPrompt(sid) {
+  const s = state.sections.find(s => s.id === sid);
+  const tabs = TABS_BY_GENRE[state.genre] || [];
+  const words = state.annotations[sid] || [];
+  const prompt = `Generate commentary for the following section.\n\nSection ${s.id}: ${s.title || '(untitled)'}\n\nOriginal text:\n${s.text}\n\nWord annotations:\n${JSON.stringify(words, null, 2)}\n\nGenre: ${state.genre}\nAudience: ${state.audience}\nTabs: ${tabs.join(', ')}\n\nAlso provide an English translation.\n\nOutput JSON:\n{\n  "en": [{"text": "...", "indent": false}, ...],\n  ${tabs.map(t => `"${t}": "<html>..."`).join(',\n  ')}\n}`;
+  document.getElementById('commPrompt').textContent = prompt;
+}
+
+function importCommentary() {
+  try {
+    const data = JSON.parse(document.getElementById('commPaste').value);
+    const sid = state.currentSection;
+    if (!state.commentary[sid]) state.commentary[sid] = {};
+
+    // Import commentary tabs
+    const tabs = TABS_BY_GENRE[state.genre] || [];
+    tabs.forEach(t => {
+      if (data[t]) state.commentary[sid][t] = data[t];
+    });
+
+    // Import translation
+    if (data.en) {
+      state.translations[sid] = Array.isArray(data.en)
+        ? data.en.map(e => typeof e === 'string' ? { text: e, indent: false } : e)
+        : [{ text: String(data.en), indent: false }];
+    }
+
+    renderCommentaryEditor();
+    toast('Imported commentary', 'success');
+  } catch (e) {
+    toast('Invalid JSON: ' + e.message, 'error');
+  }
+}
+
+// ════════════════════════════════════════════════════════
+// Step 6: Export
+// ════════════════════════════════════════════════════════
+function generateExport() {
+  const first = state.sections[0]?.id || 1;
+  const last = state.sections[state.sections.length - 1]?.id || 1;
+  const varName = `SECTIONS_${first}_${last}`;
+
+  const sections = state.sections.map(s => {
+    const tabs = TABS_BY_GENRE[state.genre] || [];
+    const obj = {
+      id: s.id,
+      title: s.title || `Section ${s.id}`,
+      lines: s.lines,
+      en: state.translations[s.id] || [{ text: '', indent: false }],
+      words: (state.annotations[s.id] || []).filter(a => a.pinyin),
+    };
+    tabs.forEach(t => {
+      obj[t] = (state.commentary[s.id] || {})[t] || null;
+    });
+    return obj;
+  });
+
+  // Build JS output with template literals for HTML content
+  let js = `const ${varName} = [\n`;
+  sections.forEach((s, si) => {
+    js += '  {\n';
+    js += `    id: ${s.id},\n`;
+    js += `    title: ${JSON.stringify(s.title)},\n`;
+    js += `    lines: [\n`;
+    s.lines.forEach(l => {
+      js += `      { zh: ${JSON.stringify(l.zh)}${l.indent ? ', indent: true' : ''} },\n`;
+    });
+    js += `    ],\n`;
+    js += `    en: [\n`;
+    s.en.forEach(e => {
+      js += `      { text: ${JSON.stringify(e.text)}${e.indent ? ', indent: true' : ''} },\n`;
+    });
+    js += `    ],\n`;
+    js += `    words: [\n`;
+    s.words.forEach(w => {
+      js += `      { form: ${JSON.stringify(w.form)}, pinyin: ${JSON.stringify(w.pinyin)}, pos: ${JSON.stringify(w.pos)}, cls: ${JSON.stringify(w.cls)}, info: ${JSON.stringify(w.info)}, gloss: ${JSON.stringify(w.gloss)} },\n`;
+    });
+    js += `    ],\n`;
+    const tabs = TABS_BY_GENRE[state.genre] || [];
+    tabs.forEach(t => {
+      const val = s[t];
+      if (val === null) {
+        js += `    ${t}: null,\n`;
+      } else if (typeof val === 'string') {
+        js += `    ${t}: \`${val.replace(/`/g, '\\`').replace(/\$/g, '\\$')}\`,\n`;
+      }
+    });
+    js += '  },\n';
+  });
+  js += '];\n';
+
+  document.getElementById('exportPreview').textContent = js;
+  state._exportJs = js;
+  state._exportVarName = varName;
+}
+
+function validateExport() {
+  const tabs = TABS_BY_GENRE[state.genre] || [];
+  let errors = 0;
+  let html = '';
+
+  state.sections.forEach(s => {
+    const sErrors = [];
+    if (!s.title) sErrors.push('Missing title');
+    const words = state.annotations[s.id] || [];
+    const selected = state.selectedWords[s.id] || [];
+    if (selected.length > 0 && words.length === 0) sErrors.push('Words selected but not annotated');
+    words.forEach(w => {
+      if (!w.pinyin) sErrors.push(`Word "${w.form}": missing pinyin`);
+      if (!w.pos) sErrors.push(`Word "${w.form}": missing pos`);
+      if (!w.info) sErrors.push(`Word "${w.form}": missing info`);
+      if (!w.gloss) sErrors.push(`Word "${w.form}": missing gloss`);
+      if (w.gloss && w.gloss.length > 60) sErrors.push(`Word "${w.form}": gloss exceeds 60 chars`);
+    });
+    const trans = state.translations[s.id] || [];
+    if (trans.length === 0) sErrors.push('Missing translation');
+
+    if (sErrors.length > 0) {
+      errors += sErrors.length;
+      html += `<div style="margin-bottom:6px;"><b style="color:#c00;">Section ${s.id}:</b> ${sErrors.join('; ')}</div>`;
+    } else {
+      html += `<div style="margin-bottom:4px; color:#155724;">Section ${s.id}: OK (${words.length} words)</div>`;
+    }
+  });
+
+  html = `<div style="font-size:0.82rem; padding:12px; background:${errors ? '#fff3cd' : '#d4edda'}; border-radius:6px; margin-bottom:12px;">
+    <b>${errors ? errors + ' error(s) found' : 'All sections valid'}</b>
+  </div>` + html;
+
+  document.getElementById('validationResult').innerHTML = html;
+}
+
+function copyExport() {
+  if (!state._exportJs) { generateExport(); }
+  navigator.clipboard.writeText(state._exportJs).then(() => toast('Copied to clipboard', 'success'));
+}
+
+function downloadExport() {
+  if (!state._exportJs) { generateExport(); }
+  const first = state.sections[0]?.id || 1;
+  const last = state.sections[state.sections.length - 1]?.id || 1;
+  const filename = prompt('Filename:', `data_s${first}_${last}.js`) || 'export.js';
+  const blob = new Blob([state._exportJs], { type: 'text/javascript' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+}
+
+// ════════════════════════════════════════════════════════
+// Utilities
+// ════════════════════════════════════════════════════════
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function toast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + (type || '') + ' show';
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ════════════════════════════════════════════════════════
+// Persistence (localStorage)
+// ════════════════════════════════════════════════════════
+function saveState() {
+  try {
+    localStorage.setItem('annotator-state', JSON.stringify(state));
+  } catch(e) {}
+}
+
+function loadState() {
+  try {
+    const saved = localStorage.getItem('annotator-state');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      Object.assign(state, parsed);
+      // Restore UI
+      document.getElementById('cfgGenre').value = state.genre;
+      document.getElementById('cfgAudience').value = state.audience;
+      document.getElementById('cfgTitle').value = state.title || '';
+      if (state.sections.length > 0) {
+        document.getElementById('rawText').value = state.sections.map(s => s.text).join('\n\n');
+      }
+    }
+  } catch(e) {}
+}
+
+// Auto-save every 10 seconds
+setInterval(saveState, 10000);
+window.addEventListener('beforeunload', saveState);
+
+// Load on startup
+loadState();
+</script>
+</body>
+</html>
