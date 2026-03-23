@@ -1,65 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ovid - Metamorphoses - Liber I</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>on.commentary — Classical Text Commentary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAF7F0;
+  --bg-deep: #F3EDE0;
+  --text: #2C2416;
+  --text-muted: #8a7e6b;
+  --accent: #8B4513;
+  --accent-light: #A0522D;
+  --border: #D4C5A9;
+  --border-light: #E8DCC8;
+  --card-bg: #FFFEF9;
+  --highlight: #F5E6CC;
+}
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <link rel="stylesheet" href="css/style.css">
+body {
+  font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── Decorative grain overlay ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ── Header ── */
+header {
+  text-align: center;
+  padding: 80px 24px 20px;
+}
+
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+header .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* ── Decorative rule ── */
+.rule {
+  width: 120px;
+  height: 1px;
+  background: var(--border);
+  margin: 28px auto 0;
+  position: relative;
+}
+.rule::before {
+  content: '~';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+  padding: 0 12px;
+  color: var(--border);
+  font-size: 1.4rem;
+}
+
+/* ── Intro ── */
+.intro {
+  max-width: 620px;
+  margin: 36px auto 0;
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  padding: 0 24px;
+}
+
+/* ── Section headers ── */
+.section-label {
+  max-width: 900px;
+  margin: 56px auto 20px;
+  padding: 0 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-light);
+}
+
+/* ── Card grid ── */
+.grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 28px 28px 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(139,69,19,0.08);
+  transform: translateY(-2px);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.card:hover::after {
+  transform: scaleX(1);
+}
+
+.card .lang-tag {
+  display: inline-block;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--highlight);
+  padding: 2px 10px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.card .author {
+  font-size: 0.95rem;
+  color: var(--accent-light);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.card .desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Tool card (full width) ── */
+.card.tool-card {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.card.tool-card .tool-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ── Footer ── */
+footer {
+  max-width: 900px;
+  margin: 64px auto 0;
+  padding: 28px 24px 48px;
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  header { padding-top: 48px; }
+  header h1 { font-size: 2.2rem; }
+  .grid { grid-template-columns: 1fr; }
+  .card.tool-card { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="header-title">
-        <h1>Ovid &mdash; <em>Metamorphoses</em> &mdash; Liber I</h1>
-      </div>
-      <div class="header-nav">
-        <label for="line-jump" class="line-jump-label">Go to line:</label>
-        <input type="number" id="line-jump" class="line-jump-input" min="1" placeholder="e.g. 42">
-      </div>
+<header>
+  <h1>on.commentary</h1>
+  <p class="subtitle">Classical Text Commentary &middot; Structured Annotation</p>
+  <div class="rule"></div>
+</header>
+
+<p class="intro">
+  Multi-layered commentary on classical texts across languages and traditions,
+  generated through a structured prompt engineering pipeline
+  and rendered as interactive dual-column web pages.
+</p>
+
+<!-- ── Western Classics ── -->
+<div class="section-label">Western Classics</div>
+<div class="grid">
+
+  <a class="card" href="ovid.html">
+    <span class="lang-tag">Latin &ndash; Chinese</span>
+    <h2>Metamorphoses, Liber I</h2>
+    <p class="author">Ovid (8 AD)</p>
+    <p class="desc">Creation myth and the Ages of Man. Morphological analysis, word-by-word glossing, and syntactic commentary.</p>
+  </a>
+
+  <a class="card" href="brentano.html">
+    <span class="lang-tag">German &ndash; Chinese</span>
+    <h2>Sprich aus der Ferne</h2>
+    <p class="author">Clemens Brentano (1801)</p>
+    <p class="desc">Romantic night-poem with meter analysis, rhyming Chinese translations, and literary interpretation.</p>
+  </a>
+
+  <a class="card" href="gryphius.html">
+    <span class="lang-tag">German &ndash; Chinese</span>
+    <h2>Papinianus I,1</h2>
+    <p class="author">Andreas Gryphius (1659)</p>
+    <p class="desc">Baroque tragedy in Alexandriner verse. Archaic spelling annotations, caesura scansion, and rhetorical analysis.</p>
+  </a>
+
+</div>
+
+<!-- ── Chinese Classics ── -->
+<div class="section-label">Chinese Classics</div>
+<div class="grid">
+
+  <a class="card" href="zuozhuan.html">
+    <span class="lang-tag">Classical Chinese &ndash; English</span>
+    <h2>Zuozhuan &middot; 鄭伯克段于鄢</h2>
+    <p class="author">Zuo Commentary, Duke Yin Year 1</p>
+    <p class="desc">The foundational narrative of the <i>Spring and Autumn Annals</i>. Historical context, grammar, and the art of <i>chunqiu bifa</i>.</p>
+  </a>
+
+  <a class="card" href="yantie.html">
+    <span class="lang-tag">Classical Chinese &ndash; English</span>
+    <h2>Yantie Lun &middot; 散不足</h2>
+    <p class="author">Discourses on Salt &amp; Iron (81 BC)</p>
+    <p class="desc">Political debate on state monopoly. Rhetorical analysis, historical notes, and translation commentary.</p>
+  </a>
+
+  <a class="card" href="jinkui.html">
+    <span class="lang-tag">Classical Chinese &ndash; English</span>
+    <h2>Jinkui Yaolue &middot; Ch.16</h2>
+    <p class="author">Zhang Zhongjing (c. 200 AD)</p>
+    <p class="desc">Palpitation, hematemesis, and blood stasis. Medical terminology, formula analysis, and clinical commentary.</p>
+  </a>
+
+</div>
+
+<!-- ── Tools ── -->
+<div class="section-label">Tools</div>
+<div class="grid">
+
+  <a class="card tool-card" href="annotator.html">
+    <div>
+      <span class="lang-tag">Interactive</span>
+      <h2>Annotation Pipeline</h2>
+      <p class="author">Structured Commentary Generator</p>
     </div>
-  </header>
+    <p class="tool-desc">
+      Paste raw text and walk through 6 pipeline stages &mdash;
+      segmentation, word selection, annotation, commentary, translation, and assembly &mdash;
+      with human override at every step.
+    </p>
+  </a>
 
-  <!-- Loading overlay -->
-  <div id="loading-overlay" class="loading-overlay">
-    <div class="spinner"></div>
-    <p class="loading-text">Loading text...</p>
-  </div>
+</div>
 
-  <!-- Main two-column layout: paired rows -->
-  <main class="main-content" id="main-content">
-    <h2 class="column-heading">Latin</h2>
-    <h2 class="column-heading">Chinese Translation</h2>
-    <!-- Lines are rendered as paired grid cells by app.js -->
-  </main>
+<footer>
+  <p>Built with structured prompt engineering &middot; <a href="https://github.com/chenzhan4321/latin-visualization">GitHub</a></p>
+</footer>
 
-  <!-- Word tooltip (created dynamically, but we keep a container) -->
-  <div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
-
-  <!-- Commentary panel (hidden by default, slides up) -->
-  <aside id="commentary-panel" class="commentary-panel" aria-hidden="true">
-    <div class="commentary-header">
-      <div class="commentary-tabs">
-        <button class="tab-btn active" data-tab="interlinear">逐词对照</button>
-        <button class="tab-btn" data-tab="syntax">句法分析</button>
-        <button class="tab-btn" data-tab="grammar">语法要点</button>
-      </div>
-      <button class="commentary-close" id="commentary-close" aria-label="Close commentary">&times;</button>
-    </div>
-    <div class="commentary-body">
-      <div class="tab-content active" id="tab-interlinear"></div>
-      <div class="tab-content" id="tab-syntax"></div>
-      <div class="tab-content" id="tab-grammar"></div>
-    </div>
-  </aside>
-
-  <script type="module" src="js/app.js"></script>
 </body>
 </html>

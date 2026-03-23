@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>on.commentary — Pipeline Overview</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+  :root { --r-heading-font: 'Inter', sans-serif; --r-main-font: 'Inter', sans-serif; }
+  .reveal { font-size: 32px; }
+  .reveal h1, .reveal h2, .reveal h3 { color: #8B4513; font-weight: 700; }
+  .reveal h1 { font-size: 1.8em; }
+  .reveal h2 { font-size: 1.3em; }
+  .reveal section { text-align: left; }
+  .reveal .center { text-align: center; }
+  .reveal ul { margin-left: 1.2em; }
+  .reveal li { margin-bottom: 0.4em; }
+  .reveal code { background: #F5E6CC; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; color: #8B4513; }
+  .reveal pre { background: #FAF7F0; border: 1px solid #D4C5A9; border-radius: 8px; padding: 16px; font-size: 0.55em; white-space: pre; tab-size: 2; }
+  .pipeline-flow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 0; margin: 1em 0; }
+  .pipeline-box { display: inline-flex; align-items: center; background: #F5E6CC; border: 2px solid #D4C5A9; border-radius: 8px; padding: 8px 16px; margin: 4px; font-weight: 600; font-size: 0.7em; }
+  .pipeline-arrow { display: inline-flex; align-items: center; font-size: 1.2em; margin: 0 4px; color: #8B4513; }
+  .highlight { color: #8B4513; font-weight: 700; }
+  .genre-table td, .genre-table th { padding: 6px 14px; font-size: 0.75em; border: 1px solid #D4C5A9; }
+  .genre-table th { background: #F5E6CC; }
+  .demo-link { font-size: 0.6em; color: #666; margin-top: 1em; }
+  .reveal .small { font-size: 0.7em; color: #666; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .reveal .subtitle-zh { font-family: 'Noto Serif SC', serif; font-size: 0.65em; color: #8a7e6b; letter-spacing: 0.05em; }
+  .reveal .tag { display: inline-block; background: #8B4513; color: #fff; font-size: 0.5em; padding: 2px 10px; border-radius: 12px; vertical-align: middle; margin-left: 8px; font-weight: 600; }
+  .genre-table { border-collapse: collapse; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ========== Title ========== -->
+<section class="center">
+  <h1 style="font-size:2.2em; letter-spacing:0.02em;">on.commentary</h1>
+  <p class="subtitle-zh" style="margin-top:0.6em;">古典文献多语注释的结构化生成</p>
+  <p style="font-size:0.75em; color:#666; margin-top:0.3em;">Prompt-Driven Annotation Pipeline for Classical Text Commentary</p>
+  <p style="font-size:0.6em; color:#999; margin-top:2.5em;">Chen Zhan &middot; 2026.03</p>
+</section>
+
+<!-- ========== Problem ========== -->
+<section>
+  <h2>Why This Project?</h2>
+  <ul>
+    <li>Classical texts (Latin, German baroque, Classical Chinese) need <span class="highlight">multi-layered commentary</span></li>
+    <li>Traditional commentary is expensive: one expert, one text, months of work</li>
+    <li>LLMs are good at <em>individual</em> annotation tasks, but lack <em>structured workflow</em></li>
+  </ul>
+  <p style="margin-top:1em; font-size:0.8em;">
+    <b>Goal:</b> a modular pipeline where each stage is a well-defined prompt, <br>
+    allowing multiple LLMs (or humans) to collaborate on annotation.
+  </p>
+</section>
+
+<!-- ========== Demo Pages ========== -->
+<section>
+  <h2>What It Produces</h2>
+  <p>Static web pages with dual-column layout + interactive commentary:</p>
+  <div class="two-col" style="margin-top:0.8em; font-size:0.75em;">
+    <div>
+      <p><b>Western Classics</b></p>
+      <ul>
+        <li>Ovid <i>Metamorphoses</i> I (Latin-Chinese)</li>
+        <li>Brentano <i>Sprich aus der Ferne</i> (German-Chinese)</li>
+        <li>Gryphius <i>Papinianus</i> I,1 (German-Chinese)</li>
+      </ul>
+    </div>
+    <div>
+      <p><b>Chinese Classics</b></p>
+      <ul>
+        <li>Zuozhuan <i>Left Commentary</i> (Classical Chinese-English)</li>
+        <li>Yantie Lun <i>Discourses on Salt & Iron</i></li>
+        <li>Jinkui Yaolue <i>Essential Prescriptions</i> Ch.16</li>
+      </ul>
+    </div>
+  </div>
+  <p class="small" style="margin-top:1em;">Pure frontend (GitHub Pages), no build tools, no backend.</p>
+</section>
+
+<!-- ========== Pipeline Overview ========== -->
+<section>
+  <h2>The Pipeline: 6 Stages</h2>
+  <div class="pipeline-flow">
+    <span class="pipeline-box">1. Segmentation<br><span style="font-weight:400;font-size:0.8em;">Raw Text &rarr; Sections</span></span>
+    <span class="pipeline-arrow">&rarr;</span>
+    <span class="pipeline-box">2. Word Selection<br><span style="font-weight:400;font-size:0.8em;">Which words to annotate?</span></span>
+    <span class="pipeline-arrow">&rarr;</span>
+    <span class="pipeline-box">3. Word Annotation<br><span style="font-weight:400;font-size:0.8em;">Structured lexical entries</span></span>
+  </div>
+  <div class="pipeline-flow" style="margin-top:0;">
+    <span class="pipeline-box">4. Commentary<br><span style="font-weight:400;font-size:0.8em;">Multi-tab analysis</span></span>
+    <span class="pipeline-arrow">&rarr;</span>
+    <span class="pipeline-box">5. Translation<br><span style="font-weight:400;font-size:0.8em;">Scholarly translation</span></span>
+    <span class="pipeline-arrow">&rarr;</span>
+    <span class="pipeline-box">6. Assembly<br><span style="font-weight:400;font-size:0.8em;">JS data file</span></span>
+  </div>
+  <p style="font-size:0.75em;">
+    Each stage is a <b>pure function</b>: defined input &rarr; defined output.<br>
+    Every stage can be done by a <em>different</em> model, a human, or both.
+  </p>
+</section>
+
+<!-- ========== Stage 1-2 ========== -->
+<section>
+  <h2>Stage 1-2: Segmentation & Word Selection</h2>
+  <div class="two-col">
+    <div>
+      <h3 style="font-size:0.85em;">1. Segmentation</h3>
+      <p style="font-size:0.7em;">Split raw text into sections with titles.</p>
+      <pre>Raw text &rarr; Section[]
+{ id: 1,
+  title: "The Official's Warning",
+  lines: [{zh: "大夫曰..."}] }</pre>
+    </div>
+    <div>
+      <h3 style="font-size:0.85em;">2. Word Selection</h3>
+      <p style="font-size:0.7em;">Pick 4-8 words per section that need annotation.<br>The most <b>judgment-heavy</b> stage.</p>
+      <pre>{ form: "賢良",
+  reason: "Technical term for
+    the Confucian scholars",
+  priority: "high" }</pre>
+    </div>
+  </div>
+  <p class="small" style="margin-top:0.8em;">
+    Key design: selection is <em>separated</em> from annotation — different skills, different models.
+  </p>
+</section>
+
+<!-- ========== Stage 3 ========== -->
+<section>
+  <h2>Stage 3: Word Annotation</h2>
+  <p style="font-size:0.75em;">For each selected word, generate a structured annotation entry:</p>
+<pre style="font-size:0.55em;">{
+  "form": "箕子",
+  "pinyin": "Jīzǐ",
+  "pos": "proper",    // noun | verb | adj | adv | prep | part | proper | medical
+  "cls": "w-proper",  // CSS class for color-coding
+  "info": "Jizi — uncle of the last Shang king. When the king began
+           using ivory chopsticks, Jizi foresaw that this small
+           luxury would escalate...",
+  "gloss": "Jizi (Shang prince who warned against luxury)"
+}</pre>
+  <p style="font-size:0.7em; margin-top:0.5em;">
+    Each annotation is <b>self-contained</b> &rarr; can be generated in parallel, cross-validated by different models.
+  </p>
+</section>
+
+<!-- ========== Stage 4: Commentary ========== -->
+<section>
+  <h2>Stage 4: Commentary Generation</h2>
+  <p style="font-size:0.75em;">Multi-tab analysis, configured by genre:</p>
+  <table class="genre-table" style="margin-top:0.5em;">
+    <tr><th>Genre</th><th>Tabs</th></tr>
+    <tr><td>German Poetry</td><td>Grammar, Meaning, Interpretation, Translation Note, Alt-Translation, Meter</td></tr>
+    <tr><td>Chinese History</td><td>Grammar, Context, Commentary, Narrative, Spring&Autumn</td></tr>
+    <tr><td>Chinese TCM</td><td>Grammar, Medicine, Commentary, Formula, Clinical</td></tr>
+    <tr><td>Chinese Political</td><td>Grammar, Context, Rhetoric, Notes, Translation</td></tr>
+  </table>
+  <p class="small" style="margin-top:0.8em;">
+    Each tab is a prompt template in <code>framework/prompts/</code> &mdash; HTML output, not Markdown.
+  </p>
+</section>
+
+<!-- ========== Prompt Engineering ========== -->
+<section>
+  <h2>The Core: Prompt Engineering</h2>
+  <ul style="font-size:0.8em;">
+    <li><b>Schema as contract</b> &mdash; strict JSON schema for each stage's I/O; the LLM only needs to fill the template</li>
+    <li><b>Audience parameter</b> &mdash; the same text gets different annotations for different readers (Sinology student vs. TCM practitioner)</li>
+    <li><b>Genre parameter</b> &mdash; controls which commentary tabs are generated</li>
+    <li><b>Separation of concerns</b> &mdash; word <em>selection</em> (literary judgment) vs. word <em>annotation</em> (lexicographic precision) are different skills</li>
+    <li><b>Validation</b> &mdash; <code>node framework/validate.js</code> catches schema violations before they reach the webpage</li>
+  </ul>
+</section>
+
+<!-- ========== Multi-Model ========== -->
+<section>
+  <h2>Multi-Model Collaboration</h2>
+  <div class="two-col" style="font-size:0.7em;">
+    <div>
+      <p><b>A. Sequential Pipeline</b></p>
+<pre>Model A &rarr; Model B &rarr; Model C &rarr; Model D
+(each stage by a specialist)</pre>
+      <p style="margin-top:0.6em;"><b>B. Parallel Annotation</b></p>
+<pre>           ┌─ Model A (words 1-3)
+Word List ─┤─ Model B (words 4-6)
+           └─ Model C (words 7-8)</pre>
+    </div>
+    <div>
+      <p><b>C. Cross-Validation</b></p>
+<pre>Text ─&gt; Model A ──┐
+                   ├─&gt; Human merge
+Text ─&gt; Model B ──┘</pre>
+      <p style="margin-top:0.6em;"><b>D. Specialist Routing</b></p>
+<pre>       ┌─ Model A (grammar, rhetoric)
+Text ──┤
+       └─ Model B (history, context)</pre>
+    </div>
+  </div>
+  <p class="small" style="margin-top:0.5em;">Because each stage has a defined schema, models are <em>interchangeable</em>.</p>
+</section>
+
+<!-- ========== Interactive Annotator ========== -->
+<section>
+  <h2>Interactive Annotator Tool</h2>
+  <ul style="font-size:0.8em;">
+    <li>A web-based UI for running the pipeline step-by-step</li>
+    <li>Paste raw text &rarr; walk through each stage &rarr; export JS data file</li>
+    <li>Human can override at any stage (edit word selections, fix annotations)</li>
+    <li>Preview the final commentary page in real-time</li>
+  </ul>
+  <p class="demo-link" style="margin-top:1em;">
+    <code>annotator.html</code> &mdash; live on GitHub Pages
+  </p>
+</section>
+
+<!-- ========== Architecture ========== -->
+<section>
+  <h2>Tech Stack</h2>
+  <ul style="font-size:0.8em;">
+    <li><b>Frontend:</b> Vanilla HTML/CSS/JS, no build tools</li>
+    <li><b>Data:</b> JS constants in <code>data/*.js</code>, imported via <code>&lt;script&gt;</code></li>
+    <li><b>Validation:</b> Node.js schema checker (<code>framework/schema.js</code>)</li>
+    <li><b>Deployment:</b> GitHub Pages, automatic on push to <code>main</code></li>
+    <li><b>Prompts:</b> Markdown templates in <code>framework/prompts/</code></li>
+  </ul>
+  <p class="small" style="margin-top:0.8em;">
+    Deliberately minimal &mdash; the complexity is in the prompts, not the code.
+  </p>
+</section>
+
+<!-- ========== Examples Intro ========== -->
+<section class="center">
+  <h2>Commentary in Action</h2>
+  <p style="font-size:0.8em; color:#666; margin-top:0.5em;">Five examples from the live site showing<br>how structured commentary aids language learning</p>
+</section>
+
+<!-- ========== Example 1: False Friend ========== -->
+<section>
+  <h2>Ex 1. Historical False Friend <span class="tag">Gryphius</span></h2>
+  <blockquote style="font-size:0.8em; border-left:4px solid #8B4513; padding-left:16px; margin:0.8em 0; font-style:italic;">
+    "Der reichen Ehre schaut wie <b>schlecht</b> der Pöfel geh"
+  </blockquote>
+  <div class="two-col" style="font-size:0.72em;">
+    <div>
+      <p><b>Without commentary:</b></p>
+      <p>A modern German reader reads <em>schlecht</em> as "bad" &mdash; <span style="color:#c00;">wrong.</span></p>
+    </div>
+    <div>
+      <p><b>With commentary:</b></p>
+      <p>17th-century <em>schlecht</em> = "simple, lowly, humble".<br>
+      Also: <em>Pöfel</em> = Pöbel (commoners), <em>geh</em> = archaic conjugation.</p>
+    </div>
+  </div>
+  <p class="small" style="margin-top:1em;">
+    Lesson: historical texts need <b>historical lexicography</b>, not just a dictionary.
+  </p>
+</section>
+
+<!-- ========== Example 2: Medical Terms ========== -->
+<section>
+  <h2>Ex 2. Disambiguating Medical Terms <span class="tag">Jinkui Yaolue</span></h2>
+  <blockquote style="font-size:0.8em; border-left:4px solid #8B4513; padding-left:16px; margin:0.8em 0; font-style:italic;">
+    脈動而弱，動即為驚，弱則為悸
+  </blockquote>
+  <table class="genre-table" style="margin-top:0.5em; font-size:0.7em;">
+    <tr><th></th><th>驚 jīng (fright)</th><th>悸 jì (palpitation)</th></tr>
+    <tr><td><b>Cause</b></td><td>External stimulus &rarr; shock scatters qi</td><td>Internal deficiency &rarr; qi/blood depleted</td></tr>
+    <tr><td><b>Pulse</b></td><td>Stirring (動) &rarr; excess</td><td>Weak (弱) &rarr; deficiency</td></tr>
+    <tr><td><b>Pattern</b></td><td>Excess (實)</td><td>Deficiency (虛)</td></tr>
+  </table>
+  <p class="small" style="margin-top:0.8em;">
+    Lesson: two similar-looking terms describe <b>opposite diagnostic conditions</b>. Commentary prevents clinical confusion.
+  </p>
+</section>
+
+<!-- ========== Example 3: Context ========== -->
+<section>
+  <h2>Ex 3. Essential Historical Context <span class="tag">Zuozhuan</span></h2>
+  <blockquote style="font-size:0.8em; border-left:4px solid #8B4513; padding-left:16px; margin:0.8em 0; font-style:italic;">
+    欲立之，亟請於武公，公弗許
+  </blockquote>
+  <div class="two-col" style="font-size:0.72em;">
+    <div>
+      <p><b>Surface reading:</b></p>
+      <p>"A mother wants to change the heir. A family dispute."</p>
+    </div>
+    <div>
+      <p><b>With context tab:</b></p>
+      <p>Zhou succession follows <b>立嫡以長</b> (primogeniture). Lady Jiang's request is a <em>constitutional violation</em> threatening the entire feudal order.</p>
+    </div>
+  </div>
+  <p class="small" style="margin-top:1em;">
+    Lesson: without institutional context, political texts collapse into personal anecdotes.
+  </p>
+</section>
+
+<!-- ========== Example 4: Meter ========== -->
+<section>
+  <h2>Ex 4. Prosody Made Visible <span class="tag">Gryphius</span></h2>
+  <blockquote style="font-size:0.8em; border-left:4px solid #8B4513; padding-left:16px; margin:0.8em 0; font-style:italic;">
+    Wer ü&middot;ber al&middot;le steigt / und von der stol&middot;tzen Höh
+  </blockquote>
+  <p style="font-size:0.72em;">The <b>meter tab</b> provides:</p>
+  <ul style="font-size:0.7em;">
+    <li><b>Alexandriner</b>: 6-foot iambic with medial caesura after foot 3</li>
+    <li>Syllable-by-syllable scansion: <code>u — u — u — / u — u — u —(u)</code></li>
+    <li>Rhyme scheme: <b>aa bb cc dd</b> (paired couplets)</li>
+    <li>Feminine ending (+1 syllable) vs. masculine ending explained</li>
+  </ul>
+  <p class="small" style="margin-top:0.8em;">
+    Lesson: scansion annotation lets students <b>hear</b> the meter, not just be told about it.
+  </p>
+</section>
+
+<!-- ========== Example 5: Rhetoric ========== -->
+<section>
+  <h2>Ex 5. Rhetorical Structure & Irony <span class="tag">Yantie Lun</span></h2>
+  <div style="font-size:0.72em;">
+    <p><b>Three-act structure revealed by commentary:</b></p>
+    <table class="genre-table" style="margin-top:0.4em;">
+      <tr><th style="width:80px;">Section</th><th>Text</th><th>Rhetoric tab reveals</th></tr>
+      <tr><td>1</td><td>Grandee compares scholars to cicadas that "fall silent when autumn comes"</td><td>Metaphor as political threat</td></tr>
+      <tr><td>2</td><td>Worthy Man invokes Confucius, Bi Gan, Wu Zixu</td><td>Refuses insult; elevates to moral principle</td></tr>
+      <tr><td>3</td><td><b>大夫默然。</b></td><td>The Grandee is silenced &mdash; <em>by his own metaphor</em></td></tr>
+    </table>
+  </div>
+  <p class="small" style="margin-top:0.8em;">
+    Lesson: 4 characters carry devastating irony &mdash; but only if you see the <b>structural relationship</b> across sections.
+  </p>
+</section>
+
+<!-- ========== Summary ========== -->
+<section class="center">
+  <h2>Takeaway</h2>
+  <p style="font-size:0.85em; max-width: 650px; margin: 0.8em auto; line-height:1.7;">
+    Classical text commentary = a <b>structured prompt engineering</b> problem.
+  </p>
+  <ul style="font-size:0.75em; max-width: 600px; margin: 0.8em auto; list-style: none; text-align: center;">
+    <li style="margin-bottom:0.5em;">Break the task into stages with <b>clear I/O schemas</b></li>
+    <li style="margin-bottom:0.5em;">Let each stage be a <b>self-contained prompt</b></li>
+    <li>LLMs become reliable, composable annotators</li>
+  </ul>
+</section>
+
+<!-- ========== Q&A ========== -->
+<section class="center">
+  <h1 style="font-size:2em;">Q &amp; A</h1>
+  <p style="font-size:0.7em; color:#666; margin-top:1.5em;">
+    Live demo &rarr; <code>chenzhan4321.github.io/latin-visualization</code>
+  </p>
+  <p style="font-size:0.6em; color:#999; margin-top:0.5em;">
+    GitHub &rarr; <code>github.com/chenzhan4321/latin-visualization</code>
+  </p>
+</section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: true,
+  width: 960,
+  height: 700,
+  margin: 0.08,
+  transition: 'fade',
+  transitionSpeed: 'fast'
+});
+</script>
+</body>
+</html>

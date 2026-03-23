@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ovid - Metamorphoses - Liber I</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-title">
+        <h1>Ovid &mdash; <em>Metamorphoses</em> &mdash; Liber I</h1>
+      </div>
+      <div class="header-nav">
+        <label for="line-jump" class="line-jump-label">Go to line:</label>
+        <input type="number" id="line-jump" class="line-jump-input" min="1" placeholder="e.g. 42">
+      </div>
+    </div>
+  </header>
+
+  <!-- Loading overlay -->
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="spinner"></div>
+    <p class="loading-text">Loading text...</p>
+  </div>
+
+  <!-- Main two-column layout: paired rows -->
+  <main class="main-content" id="main-content">
+    <h2 class="column-heading">Latin</h2>
+    <h2 class="column-heading">Chinese Translation</h2>
+    <!-- Lines are rendered as paired grid cells by app.js -->
+  </main>
+
+  <!-- Word tooltip (created dynamically, but we keep a container) -->
+  <div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
+
+  <!-- Commentary panel (hidden by default, slides up) -->
+  <aside id="commentary-panel" class="commentary-panel" aria-hidden="true">
+    <div class="commentary-header">
+      <div class="commentary-tabs">
+        <button class="tab-btn active" data-tab="interlinear">逐词对照</button>
+        <button class="tab-btn" data-tab="syntax">句法分析</button>
+        <button class="tab-btn" data-tab="grammar">语法要点</button>
+      </div>
+      <button class="commentary-close" id="commentary-close" aria-label="Close commentary">&times;</button>
+    </div>
+    <div class="commentary-body">
+      <div class="tab-content active" id="tab-interlinear"></div>
+      <div class="tab-content" id="tab-syntax"></div>
+      <div class="tab-content" id="tab-grammar"></div>
+    </div>
+  </aside>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
