@@ -3332,5 +3332,1683 @@
         "significance": "Serves as a historical example to argue that past events, like the Punic Wars, do not affect us in the present, paralleling the irrelevance of death."
       }
     ]
+  },
+  {
+    "id": 107,
+    "language": "classical-chinese",
+    "source": "莊子·齊物論",
+    "text": "天地與我並生，而萬物與我為一。既已為一矣，且得有言乎？既已謂之一矣，且得無言乎？一與言為二，二與一為三。自此以往，巧歷不能得，而況其凡乎！",
+    "difficulty": "Zhuangzi's paradox of language and unity — self-referential logic, numerical wordplay on 'one/two/three' that collapses the distinction between silence and speech",
+    "translation_A": "Heaven and Earth were born together with me, and all things and I are one. Since we are already one, how can there be any speech? Since we have already referred to it as one, how can there be no speech? One and speech make two, two and one make three. From this point onward, even clever calculations cannot grasp it, let alone ordinary ones!",
+    "translation_D": "Heaven and Earth were born together with me, and all things and I are one. Since we are already one, how can we have speech? Since we have already called it one, how can we not speak? One and speech make two, two and one make three. From this point onward, clever reasoning cannot attain it, how much less the ordinary!",
+    "annotations": [
+      {
+        "form": "天地",
+        "meaning": "Heaven and Earth, symbolizing the universe or the natural world.",
+        "significance": "Represents the ultimate reality or the cosmos, emphasizing the interconnectedness of all things. It sets the stage for discussing the relationship between the individual and the universe."
+      },
+      {
+        "form": "為一",
+        "meaning": "To be one or unified.",
+        "significance": "Highlights the monistic view central to Daoist philosophy, suggesting that all things are fundamentally interconnected and undivided."
+      },
+      {
+        "form": "言",
+        "meaning": "Speech, words, or language.",
+        "significance": "Represents the human attempt to describe or categorize reality. The text questions the adequacy of language in capturing the unity of existence."
+      },
+      {
+        "form": "一",
+        "meaning": "One, unity, or the ultimate reality.",
+        "significance": "Symbolizes the indivisible whole. The text critiques the process of dividing this unity through language and reasoning."
+      },
+      {
+        "form": "二",
+        "meaning": "Two, duality, or division.",
+        "significance": "Represents the process of differentiation and division that arises from language and reasoning, which the text argues leads to further fragmentation."
+      },
+      {
+        "form": "巧歷",
+        "meaning": "Ingenious reasoning or skillful argumentation.",
+        "significance": "Critiques the limitations of human reasoning in grasping ultimate truth, reflecting Daoist skepticism of rational discourse.",
+        "correction_note": "Adjusted 'sophistry' to 'ingenious reasoning' for more accurate connotation."
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "language": "classical-chinese",
+    "source": "莊子·養生主",
+    "text": "吾生也有涯，而知也無涯。以有涯隨無涯，殆已！已而為知者，殆而已矣！為善無近名，為惡無近刑。緣督以為經，可以保身，可以全生，可以養親，可以盡年。",
+    "difficulty": "Compressed philosophical argument about limits of knowledge; 緣督以為經 is notoriously ambiguous (follow the central channel as guiding principle?)",
+    "translation_A": "My life has a limit, but knowledge is limitless. Pursuing the limitless with the limited is perilous. Indeed, how perilous it is for one who seeks knowledge! To do good without seeking fame, to commit no wrong without fearing punishment—by adhering to these principles, one can protect oneself, preserve one's life, care for one's parents, and live out one's years.",
+    "translation_D": "My life has a limit, while knowledge has no limit. To pursue the limitless with the limited is perilous! Indeed, those who consider themselves knowledgeable are in peril! Do good without seeking fame, do evil without fearing punishment. If you govern yourself with this as a principle, you can protect your person, preserve your life, nurture your relatives, and fulfill your years.",
+    "annotations": [
+      {
+        "form": "吾生也有涯",
+        "meaning": "My life has a limit",
+        "significance": "This phrase highlights the finite nature of human existence, contrasting with the boundless nature of knowledge, which is a central theme in Daoist philosophy."
+      },
+      {
+        "form": "知也無涯",
+        "meaning": "knowledge has no limit",
+        "significance": "This phrase underscores the infinite nature of knowledge, emphasizing the futility of attempting to fully grasp it, a key concept in Daoist thought."
+      },
+      {
+        "form": "殆已！已而為知者，殆而已矣！",
+        "meaning": "How dangerous! Those who think they know are in danger.",
+        "significance": "This warning against the arrogance of assuming complete knowledge aligns with Daoist humility and the recognition of the limits of human understanding."
+      },
+      {
+        "form": "為善無近名，為惡無近刑",
+        "meaning": "Do good without seeking fame, do evil without fearing punishment",
+        "significance": "This reflects the Daoist ideal of acting virtuously without external motivations, central to self-cultivation and aligning with the natural order."
+      },
+      {
+        "form": "緣督以為經",
+        "meaning": "If you govern yourself with this as a principle",
+        "significance": "This phrase introduces a guiding principle for living in harmony with Daoist teachings, emphasizing self-regulation and moral integrity."
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "language": "classical-chinese",
+    "source": "荀子·勸學",
+    "text": "假輿馬者，非利足也，而致千里；假舟楫者，非能水也，而絕江河。君子生非異也，善假於物也。",
+    "difficulty": "Deceptively simple surface but 假 is polysemous (borrow/rely on); 生非異 compressed argument about nature vs nurture; 善假於物 is a key Xunzi concept",
+    "translation_A": "One who borrows a cart and horses does not necessarily have strong legs, yet can travel a thousand miles. One who borrows a boat and paddles does not necessarily excel in water, yet can cross rivers and streams. A noble person is not born different; they are simply skilled at borrowing from the world.",
+    "translation_D": "By using chariots and horses, it is not because of advantageous feet, and yet one can travel a thousand li; by using boats and oars, it is not because of an ability to manage water, and yet one can cross rivers and streams. The noble person is not born different; it is because they are good at using things.",
+    "annotations": [
+      {
+        "form": "假",
+        "meaning": "to borrow; to use; to rely on",
+        "significance": "This word emphasizes the idea of utilizing external resources or tools to achieve a goal, which is central to the passage's message about effective use of resources."
+      },
+      {
+        "form": "君子",
+        "meaning": "gentleman; noble person; virtuous person",
+        "significance": "In Confucian philosophy, '君子' represents the ideal moral and ethical individual. Here, it highlights the importance of virtuous behavior in achieving success through proper use of resources."
+      },
+      {
+        "form": "生非異也",
+        "meaning": "people are not born different",
+        "significance": "This phrase challenges the idea of innate differences in ability, emphasizing that success comes from how one uses resources rather than inherent talent."
+      },
+      {
+        "form": "善假於物也",
+        "meaning": "being good at using things",
+        "significance": "This phrase encapsulates the main argument of the passage, stressing the importance of effectively utilizing resources to achieve great accomplishments."
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "language": "classical-chinese",
+    "source": "荀子·非十二子",
+    "text": "不知壹天下建國家之權稱，上功用大儉約而僈差等，曾不足以容辨異縣君臣，然而其持之有故，其言之成理，足以欺惑愚眾。是墨翟、宋鈃也。",
+    "difficulty": "Dense polemical prose attacking Mohists; 權稱 (standards of weight/measure as political metaphor), 僈差等 (abolish rank distinctions), compressed clause chains",
+    "translation_A": "Unaware of the true nature of the world and the proper establishment of state authority, they emphasize excessive frugality and chaotic equality, which are insufficient to distinguish the roles of rulers and ministers even at the county level. Nevertheless, they cling to their arguments as if they were based on reason, and their words are enough to deceive the ignorant masses. These are the likes of Mozi and Song Xing.",
+    "translation_D": "One does not know how to establish the right to rule the nation, yet they emphasize utility and excessive frugality while confusing noble and base. This is insufficient to distinguish the differences between ruler and minister. Nevertheless, they hold their views for a reason, and their words seem reasonable, sufficient to deceive the ignorant masses. These are the doctrines of Mozi and Song Xing.",
+    "annotations": [
+      {
+        "form": "建國家之權稱",
+        "meaning": "the establishment of the right to rule the nation",
+        "significance": "This phrase is central to the discussion of political legitimacy and governance, highlighting the author's focus on the proper foundation of state authority."
+      },
+      {
+        "form": "大儉約",
+        "meaning": "excessive frugality",
+        "significance": "This term critiques the idea of extreme frugality, which was a key tenet of Mohist philosophy, suggesting it is impractical or misguided."
+      },
+      {
+        "form": "欺惑愚眾",
+        "meaning": "deceiving the ignorant masses",
+        "significance": "This phrase underscores the author's concern that certain doctrines, though flawed, can mislead common people due to their superficial appeal."
+      },
+      {
+        "form": "持之有故",
+        "meaning": "holding a position with reasoning",
+        "significance": "This term acknowledges that the doctrines being criticized are not arbitrary but are based on some form of logical argumentation."
+      },
+      {
+        "form": "言之成理",
+        "meaning": "words that seem reasonable",
+        "significance": "This phrase highlights the persuasive power of the doctrines in question, which the author argues are misleading despite their apparent logic."
+      },
+      {
+        "form": "僈差等",
+        "meaning": "confusion between noble and base",
+        "significance": "This term suggests that the doctrines fail to properly distinguish between what is morally superior and inferior, leading to ethical confusion."
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "language": "classical-chinese",
+    "source": "左傳·僖公三十年",
+    "text": "若亡鄭而有益於君，敢以煩執事。越國以鄙遠，君知其難也。焉用亡鄭以陪鄰？鄰之厚，君之薄也。若舍鄭以為東道主，行李之往來，共其乏困，君亦無所害。",
+    "difficulty": "Diplomatic rhetoric with layered conditional reasoning; 東道主 origin passage; 行李 means envoys not luggage; 共其乏困 = supply their needs",
+    "translation_A": "If the elimination of Zheng is to bring benefit to your lordship, I dare to trouble you with this matter. The state of Yue is distant, and your lordship understands its difficulty. Why then eliminate Zheng to support Chu? The strength of Chu is the weakness of your lordship. If we abandon Zheng to serve as the master of the east, sharing in the difficulties of travel and hardship, your lordship will not be harmed.",
+    "translation_D": "If losing Zheng would benefit you, my lord, I dare to trouble the officials. For the state of Yue is distant, and you, my lord, understand its difficulties. Why then abandon Zheng to accompany Chu? The depth of Chu's resources, the shallowness of your support. If you abandon Zheng to become the host of the eastern states, the coming and going of your retinue, sharing in its hardships, you, my lord, would not be harmed in any way.",
+    "annotations": [
+      {
+        "form": "亡鄭",
+        "meaning": "to lose or abandon Zheng",
+        "significance": "Refers to the potential loss of the state of Zheng. This phrase is significant because it highlights the political and strategic considerations of the speaker, who is weighing the consequences of losing Zheng against potential benefits for the ruler."
+      },
+      {
+        "form": "煩執事",
+        "meaning": "to trouble or bother the officials",
+        "significance": "This phrase reflects the speaker's humility and deference to the officials. It shows the rhetorical strategy of presenting a proposal while acknowledging the potential inconvenience it may cause."
+      },
+      {
+        "form": "東道主",
+        "meaning": "host of the eastern region",
+        "significance": "This term refers to the leader or ruler of the eastern states. It is significant because it emphasizes the role of leadership and the responsibilities that come with it in maintaining alliances and managing resources."
+      },
+      {
+        "form": "行李",
+        "meaning": "retinue or entourage",
+        "significance": "In this context, '行李' refers to the ruler's entourage or the resources needed for travel and governance. It is significant because it highlights the logistical challenges and shared hardships that would result from supporting Zheng."
+      },
+      {
+        "form": "乏困",
+        "meaning": "hardship or difficulty",
+        "significance": "This term emphasizes the struggles and challenges faced by the state. It is significant because it underscores the potential consequences of losing Zheng and the need for mutual support."
+      },
+      {
+        "form": "君",
+        "meaning": "ruler or lord",
+        "significance": "This term is used to address the ruler directly. It is significant because it reflects the speaker's direct appeal to the ruler's authority and decision-making power."
+      },
+      {
+        "form": "厚",
+        "meaning": "thick, heavy, or profound",
+        "significance": "In this context, '厚' refers to the depth of loyalty or the weight of responsibility. It is significant because it contrasts with '薄' (thin or shallow) to emphasize the importance of maintaining alliances and avoiding neglect."
+      },
+      {
+        "form": "薄",
+        "meaning": "thin, shallow, or slight",
+        "significance": "This term contrasts with '厚' to highlight the potential consequences of neglecting alliances. It is significant because it underscores the speaker's argument against abandoning Zheng."
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "language": "classical-chinese",
+    "source": "左傳·宣公二年",
+    "text": "晉靈公不君。厚斂以彫牆，從臺上彈人而觀其辟丸也。宰夫胹熊蹯不熟，殺之，寘諸畚，使婦人載以過朝。",
+    "difficulty": "Narrative prose with rare vocabulary: 彫牆 (carved walls), 辟丸 (dodge pellets), 胹 (stew), 熊蹯 (bear paws), 寘諸畚 (place in basket) — requires knowledge of Zhou court customs",
+    "translation_A": "Duke Ling of Jin was not a virtuous ruler. With an impudent and cruel heart, he oppressed the people to build ornate walls. He would stand on a high platform, shooting people with arrows and watching them dodge. When the cook undercooked the bear paws, he killed the cook, placed the body in a bamboo basket, and had a woman carry it past the court.",
+    "translation_D": "Duke Ling of Jin was not a proper ruler. He levied heavy taxes to build carved walls, and from the tower above, he shot arrows at people to watch them dodge. When the cook undercooked the bear paws, he killed him, placed him in a waste basket, and had women carry it to cross the court.",
+    "annotations": [
+      {
+        "form": "晉靈公不君",
+        "meaning": "Duke Ling of Jin was not a proper ruler",
+        "significance": "This phrase establishes the central theme of the passage, which is the critique of Duke Ling's unkingly and tyrannical behavior. It sets the tone for the narrative and highlights the ethical failings of the ruler."
+      },
+      {
+        "form": "厚斂",
+        "meaning": "Heavy taxes or extortionate levies",
+        "significance": "This term underscores the economic oppression imposed by Duke Ling, which is a key aspect of his misrule. It shows how his policies burdened the people and contributed to social unrest."
+      },
+      {
+        "form": "彫牆",
+        "meaning": "Carved walls",
+        "significance": "The carved walls symbolize excessive luxury and wasteful spending. This detail contrasts with the suffering of the people and highlights the ruler's misplaced priorities."
+      },
+      {
+        "form": "辟丸",
+        "meaning": "To dodge arrows or bullets",
+        "significance": "This term describes the cruel entertainment organized by Duke Ling, where people were forced to dodge arrows. It illustrates the ruler's cruelty and disregard for human life."
+      },
+      {
+        "form": "宰夫胹熊蹯不熟",
+        "meaning": "The cook undercooked the bear's paws",
+        "significance": "This phrase highlights the consequences of failing to meet the ruler's expectations. The cook's mistake leads to his brutal execution, showcasing Duke Ling's harsh and unjust rule."
+      },
+      {
+        "form": "寘諸畚",
+        "meaning": "Placed in a waste basket",
+        "significance": "This phrase emphasizes the disrespect and dehumanization of the cook's body. It underscores the callousness of Duke Ling and the moral decay of his court."
+      },
+      {
+        "form": "婦人載以過朝",
+        "meaning": "Women carried it to cross the court",
+        "significance": "This phrase shows the further humiliation and exploitation of the cook's body. It also reflects the broader societal impact of Duke Ling's actions, as even women were forced to participate in this degrading act."
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "language": "classical-chinese",
+    "source": "戰國策·秦策一·蘇秦始將連橫",
+    "text": "蘇秦始將連橫說秦惠王曰：「大王之國，西有巴蜀漢中之利，北有胡貉代馬之用，南有巫山黔中之限，東有殽函之固。田肥美，民殷富，戰車萬乘，奮擊百萬，沃野千里，蓄積饒多。此所謂天府，天下之雄國也。」",
+    "difficulty": "Rapid geographical enumeration with archaic place names; 胡貉代馬 (Hu leather, Dai horses), 殽函 (Xiao and Hangu passes); rhetorical amplification typical of Warring States persuasion",
+    "translation_A": "Su Qin first went on a diplomatic mission and presented his strategy to King Hui of Qin, saying: \"Your Majesty's state possesses the strategic advantages of Ba, Shu, and Han Middle to the west; the utility of the northern nomadic tribes and their fine horses to the north; the natural defenses of Wu Mountain and Qian Middle to the south; and the formidable stronghold of Guan and Han to the east. The land is fertile and beautiful, the people are prosperous and wealthy; there are a million war chariots, a hundred million brave warriors; vast and fertile plains stretch for a thousand miles, with abundant stored resources. This is what is called a 'heavenly treasury,' the mightiest state in the world.\"",
+    "translation_D": "Su Qin began his persuasion of Qin Hui Wang with the following words: \"Your Majesty's state possesses to the west the riches of Ba, Shu, and Hanzhong; to the north, the utility of Hu, Rong, and Dai horses; to the south, the strategic barriers of Wu Mountain and Qianzhong; and to the east, the stronghold of Jianfu Pass. The fields are fertile and the people wealthy, with ten thousand chariots ready for battle and a hundred thousand soldiers prepared to strike. The plains stretch vast and the stores are abundant. This is what is called a 'heavenly treasury,' the mightiest state in the world.\"",
+    "annotations": [
+      {
+        "form": "連橫",
+        "meaning": "A strategy of forming alliances with neighboring states to strengthen one's position.",
+        "significance": "This term is central to understanding Su Qin's political strategy, emphasizing the importance of alliances in expanding influence."
+      },
+      {
+        "form": "殽函",
+        "meaning": "A strategic mountain pass in Qin territory, known for its defensive strength.",
+        "significance": "Highlights Qin's natural defensive advantages, crucial for geopolitical analysis."
+      },
+      {
+        "form": "天府",
+        "meaning": "A term of praise meaning 'heavenly treasury' or 'land of abundance'.",
+        "significance": "Illustrates the prosperity and strategic importance of Qin, key to Su Qin's persuasive argument."
+      },
+      {
+        "form": "田",
+        "meaning": "Fertile land or agricultural fields.",
+        "significance": "Emphasizes the agricultural wealth of Qin, underpinning its economic and military strength."
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "language": "classical-chinese",
+    "source": "禮記·學記",
+    "text": "玉不琢，不成器；人不學，不知道。是故古之王者建國君民，教學為先。《兌命》曰：「念終始典于學。」其此之謂乎！",
+    "difficulty": "Citation from lost Shang text 《兌命》; 念終始典于學 is debated in commentarial tradition; 建國君民 compressed verbal series",
+    "translation_A": "Jade that is not carved cannot form a vessel; a person who does not learn will not gain knowledge. Therefore, the kings of antiquity, when establishing their nations and ruling their people, prioritized education. As the *Dui Ming* states: \"Remember to uphold education from start to finish.\" Is this not precisely what is meant here?",
+    "translation_D": "Jade that is not carved cannot become a vessel; a person who does not learn does not know the way. Therefore, the wise rulers of antiquity, in establishing their states and guiding their people, prioritized education. The Dui Ming says, \"Attend to the beginning and end, and establish standards in learning.\" Is this not precisely the point?",
+    "annotations": [
+      {
+        "form": "玉不琢，不成器",
+        "meaning": "Jade that is not carved cannot become a useful vessel.",
+        "significance": "This metaphor emphasizes the necessity of education and refinement for individuals to reach their full potential, just as raw jade must be shaped to become a useful tool."
+      },
+      {
+        "form": "王者",
+        "meaning": "The ideal rulers (kings) of ancient times.",
+        "significance": "Refers to the virtuous rulers in Confucian thought who prioritized education as the foundation of a well-governed state."
+      },
+      {
+        "form": "典",
+        "meaning": "Standards, norms, or foundational principles.",
+        "significance": "Highlights the importance of education as the basis for establishing societal norms and moral standards."
+      },
+      {
+        "form": "念終始",
+        "meaning": "To think of or attend to the beginning and the end; to be mindful of the entire process.",
+        "significance": "Stresses the importance of perseverance and continuous effort in learning and self-cultivation."
+      },
+      {
+        "form": "《兌命》",
+        "meaning": "The title of a classical text, often associated with the Doctrine of the Mean.",
+        "significance": "References a key Confucian text, underscoring the authority and tradition behind the educational philosophy presented."
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "language": "classical-chinese",
+    "source": "禮記·樂記",
+    "text": "凡音之起，由人心生也。人心之動，物使之然也。感於物而動，故形於聲。聲相應，故生變；變成方，謂之音；比音而樂之，及干戚羽旄，謂之樂。",
+    "difficulty": "Technical music theory terminology: 聲/音/樂 are three distinct levels; 干戚羽旄 are specific ritual dance implements; 變成方 is debated (patterns? directions?)",
+    "translation_A": "All sounds arise from the human heart. The movement of the human heart is caused by external things. Being moved by things, one expresses it in sound. Sounds resonate with each other, giving rise to changes; when these changes take form, they are called tones. Comparing tones and finding joy in them, along with the playing of instruments like the guqin, zhi, yu, and sheng, is what is called music.",
+    "translation_D": "All sounds arise from the human heart. The human heart is stirred by external things. Being affected by things, it moves, and this movement takes the form of sound. Sounds resonate with one another, leading to variations; these variations develop into patterns, which we call 'music.' By comparing sounds and finding joy in them, along with the use of instruments like the *gān*, *qī*, *yǔ*, and *mào*, we create what is called 'music.'",
+    "annotations": [
+      {
+        "form": "人心",
+        "meaning": "human heart; human mind or emotions",
+        "significance": "Represents the source of emotions and thoughts that lead to the creation of sound and music. It emphasizes the human element as the origin of musical expression."
+      },
+      {
+        "form": "物使之然也",
+        "meaning": "external things or objects causing it to happen",
+        "significance": "Highlights the role of external stimuli in shaping human emotions, which in turn lead to the production of sound. It connects the environment to human expression."
+      },
+      {
+        "form": "聲相應",
+        "meaning": "sounds responding to each other",
+        "significance": "Describes how sounds resonate and interact, leading to the creation of musical variations and patterns. It underscores the dynamic nature of sound in music."
+      },
+      {
+        "form": "變成方",
+        "meaning": "changes forming into patterns or structures",
+        "significance": "Refers to the process by which variations in sound develop into structured musical forms. It explains how music evolves from simple sounds to complex compositions."
+      },
+      {
+        "form": "比音而樂之",
+        "meaning": "comparing sounds and finding joy in them",
+        "significance": "Illustrates the process of analyzing and appreciating sounds to create music. It emphasizes the intellectual and aesthetic aspects of music composition."
+      },
+      {
+        "form": "干戚羽旄",
+        "meaning": "types of musical instruments (specifically, ancient Chinese instruments)",
+        "significance": "Represents the physical manifestation of music through instruments. It connects the theoretical discussion of sound to the practical aspects of music performance."
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "language": "classical-chinese",
+    "source": "傷寒論·辨太陽病脈證並治",
+    "text": "太陽之為病，脈浮，頭項強痛而惡寒。太陽病，發熱，汗出，惡風，脈緩者，名為中風。太陽病，或已發熱，或未發熱，必惡寒，體痛，嘔逆，脈陰陽俱緊者，名為傷寒。",
+    "difficulty": "Medical diagnostic text with technical pulse terminology: 脈浮/脈緩/脈陰陽俱緊; differential diagnosis between 中風 and 傷寒 (not modern meanings); 頭項強痛 specific symptom description",
+    "translation_A": "When taiyang becomes a disease, the pulse is floating, and there is severe pain in the head and neck accompanied by aversion to cold. In taiyang disease, if there is fever, sweating, aversion to wind, and a slow pulse, it is called being struck by wind. In taiyang disease, whether there is fever or not, there must be aversion to cold, body pain, nausea, and a pulse that is tight both in the superficial and deep positions; this is called shanghan.",
+    "translation_D": "The Taiyang pattern is characterized by a floating pulse, severe headache, and aversion to cold. Taiyang disease, marked by fever, sweating, aversion to wind, and a slow pulse, is referred to as Zhongfeng (invasion of wind). Taiyang disease, whether accompanied by fever or not, is invariably marked by aversion to cold, body pain, nausea and vomiting, and a pulse that is tight in both the Yin and Yang positions. This condition is referred to as Shanghan (Cold Damage).",
+    "annotations": [
+      {
+        "form": "脈浮",
+        "meaning": "Floating pulse (a diagnostic term in traditional Chinese medicine, indicating a pulse that feels superficial and light)",
+        "significance": "It is a key diagnostic sign for identifying external pathogenic factors affecting the body surface, particularly in the context of Taiyang disorders."
+      },
+      {
+        "form": "惡寒",
+        "meaning": "Aversion to cold (a symptom where the patient feels chilly or dislikes cold)",
+        "significance": "It is a hallmark symptom of the Taiyang pattern, indicating the presence of cold pathogens in the exterior of the body."
+      },
+      {
+        "form": "中風",
+        "meaning": "Invasion of wind (a condition where the body is affected by pathogenic wind)",
+        "significance": "It is a diagnostic category that helps differentiate between external and internal causes of disease, emphasizing the role of wind in causing symptoms."
+      },
+      {
+        "form": "嘔逆",
+        "meaning": "Nausea and vomiting (a digestive disturbance)",
+        "significance": "It is a key symptom indicating stomach dysfunction, which is an important aspect of the Taiyang pattern's clinical presentation."
+      },
+      {
+        "form": "脈陰陽俱緊",
+        "meaning": "Pulse that is tight in both Yin and Yang positions (a pulse diagnosis term indicating a specific irregularity in the pulse)",
+        "significance": "It is a critical diagnostic sign that indicates a severe condition where both the exterior and interior of the body are affected, requiring careful treatment."
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "language": "classical-chinese",
+    "source": "難經·一難",
+    "text": "十二經皆有動脈，獨取寸口，以決五藏六府死生吉凶之法，何謂也？然：寸口者，脈之大會，手太陰之脈動也。",
+    "difficulty": "Medical questioning format (難 = difficult question); 寸口 pulse-taking location; 手太陰 meridian terminology; compressed Q&A style unique to Nanjing",
+    "translation_A": "The twelve channels all have arteries; why is it that only the inch opening is taken to determine the method of life, death, fortune, and misfortune of the five viscera and six bowels? Explanation: The inch opening is the great meeting point of the pulses; it is the movement of the pulse of the Hand Taiyin.",
+    "translation_D": "All twelve channels have pulses, but we especially select the inch mouth, to determine the life, death, fortune, and misfortune of the five viscera and six bowels. What does this mean? Now, the inch mouth is the great convergence of pulses, the movement of the Hand Taiyin channel.",
+    "annotations": [
+      {
+        "form": "十二經",
+        "meaning": "The twelve channels (or meridians) in the body through which Qi flows.",
+        "significance": "This term is fundamental to understanding the structure of the human body in Chinese medicine, as it refers to the network of pathways through which vital energy circulates."
+      },
+      {
+        "form": "動脈",
+        "meaning": "Pulses; the palpable rhythmic contractions of the arteries, used in diagnosis.",
+        "significance": "Pulse diagnosis is a cornerstone of Chinese medical practice, and this term specifically refers to the physical manifestation of Qi flow that practitioners palpate to assess health."
+      },
+      {
+        "form": "寸口",
+        "meaning": "The pulse position at the wrist, specifically the radial artery at the base of the thumb.",
+        "significance": "The inch mouth (寸口) is the most commonly used pulse position in Chinese medicine, and its significance lies in its accessibility and the wealth of diagnostic information it provides."
+      },
+      {
+        "form": "五藏六府",
+        "meaning": "The five viscera (solid organs) and six bowels (hollow organs), which are the fundamental organs of the body in Chinese medical theory.",
+        "significance": "This term represents the core organs of the body in Chinese medicine, and understanding their functions and interrelations is essential for diagnosis and treatment."
+      },
+      {
+        "form": "脈之大會",
+        "meaning": "The great convergence of pulses; a key point where multiple pulses converge and can be palpated.",
+        "significance": "This term highlights the importance of the寸口 pulse as a convergence point for multiple channels, making it a critical location for diagnosis."
+      },
+      {
+        "form": "手太陰之脈動也",
+        "meaning": "The movement of the pulse in the Hand Taiyin channel.",
+        "significance": "This phrase specifies that the寸口 pulse is associated with the Hand Taiyin (Lung) channel, linking it to the broader network of channels and their diagnostic significance."
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "language": "classical-chinese",
+    "source": "鬼谷子·捭闔",
+    "text": "捭闔者，天地之道。捭闔者，以變動陰陽，四時開閉，以化萬物。縱橫、反出、反復、反忤，必由此矣。",
+    "difficulty": "Extremely compressed strategic philosophy; 捭闔 (open/close) as cosmic principle; 縱橫反出反復反忤 are four rhetorical strategies condensed into eight characters",
+    "translation_A": "The operation of opening and closing is the Way of Heaven and Earth. This operation involves the transformation of yin and yang, the opening and closing of the four seasons, thereby transforming all things. The movements of expansion and contraction, going out and entering, repeating and opposing, all necessarily arise from this.",
+    "translation_D": "The mechanism of opening and closing is the Way of Heaven and Earth. The mechanism of opening and closing operates through the movement of yin and yang, the opening and closing of the four seasons, and it transforms all things. Vertical and horizontal alliances, counter-attacks, repeated actions, and the resolution of opposition are necessarily derived from this.",
+    "annotations": [
+      {
+        "form": "捭闔",
+        "meaning": "The mechanism or principle of opening and closing; the dynamic interplay of opposites (like yin and yang) that governs the natural order.",
+        "significance": "This term is central to the passage, as it encapsulates the fundamental principle of strategic thought being discussed. It represents the dynamic, adaptive process that underlies all natural and human phenomena."
+      },
+      {
+        "form": "變動陰陽",
+        "meaning": "The movement and transformation of yin and yang; the dynamic interplay of opposites that drives change in the world.",
+        "significance": "This phrase highlights the connection between the mechanism of opening and closing (捭闔) and the broader cosmic principles of yin and yang, emphasizing the universal applicability of the strategic concept."
+      },
+      {
+        "form": "四時開閉",
+        "meaning": "The opening and closing of the four seasons; the cyclical patterns of nature that govern growth, decay, and transformation.",
+        "significance": "This term illustrates how the principle of捭闔 operates through the natural world, providing a concrete example of its function and relevance to strategic thought."
+      },
+      {
+        "form": "縱橫、反出、反復、反忤",
+        "meaning": "Strategic maneuvers: '縱橫' refers to vertical and horizontal alliances or strategies, '反出' to counter-attacks, '反復' to repeated or cyclical actions, and '反忤' to countering opposition or resolving conflicts.",
+        "significance": "These terms represent specific applications of the捭闔 principle in strategic and rhetorical contexts, demonstrating how the abstract concept is operationalized in practical situations."
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "language": "classical-chinese",
+    "source": "公孫龍子·白馬論",
+    "text": "白馬非馬。馬者，所以命形也；白者，所以命色也。命色者非命形也。故曰：白馬非馬。",
+    "difficulty": "Famous logical paradox; requires understanding of 命 as naming/designation; the argument structure is deceptively simple but the underlying logic of reference vs predication is complex",
+    "translation_A": "\"White horse is not horse. 'Horse' is a term used to denote shape; 'white' is a term used to denote color. The term that denotes color does not denote shape. Therefore, it is said that white horse is not horse.\"",
+    "translation_D": "A white horse is not a horse.  \n- Horse is that which denotes shape.  \n- White is that which denotes color.  \nSince that which denotes color is not that which denotes shape, therefore a white horse is not a horse.",
+    "annotations": [
+      {
+        "form": "白",
+        "meaning": "Color, specifically referring to the color white in this context.",
+        "significance": "It represents the attribute of color, which is being contrasted with the attribute of shape ('馬'). This distinction is central to the logical argument about the relationship between attributes and the whole."
+      },
+      {
+        "form": "馬",
+        "meaning": "Horse, but in this context, it refers to the shape or form of a horse.",
+        "significance": "It represents the attribute of shape, which is being contrasted with the attribute of color ('白'). This contrast is key to understanding the logical separation of attributes in the passage."
+      },
+      {
+        "form": "命形",
+        "meaning": "To denote or refer to shape/form.",
+        "significance": "This term explains that '馬' is used to denote the shape or form of something, emphasizing that words can be used to refer to specific attributes rather than the whole object."
+      },
+      {
+        "form": "命色",
+        "meaning": "To denote or refer to color.",
+        "significance": "This term explains that '白' is used to denote color, highlighting the idea that words can be used to refer to specific attributes rather than the whole object."
+      },
+      {
+        "form": "非",
+        "meaning": "Is not, indicating negation or contradiction.",
+        "significance": "This logical negation is crucial to the argument, as it asserts that the combination of attributes ('白馬') cannot be reduced to a single attribute ('馬')."
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "language": "classical-chinese",
+    "source": "墨子·兼愛上",
+    "text": "聖人以治天下為事者也，必知亂之所自起，焉能治之；不知亂之所自起，則不能治。譬之如醫之攻人之疾者然，必知疾之所自起，焉能攻之。",
+    "difficulty": "Mozi's medical analogy for governance; 攻 means 'treat' not 'attack' in medical context; parallel structure 亂之所自起/疾之所自起 is the rhetorical backbone",
+    "translation_A": "Sages who take governing the world as their task must understand the origin of chaos, only then can they bring order. If they do not understand the source of chaos, they cannot bring order. It is like a physician treating a person's illness. They must understand the origin of the illness, only then can they treat it.",
+    "translation_D": "Sages who take governing the world as their duty must understand the origin of chaos; how could they govern otherwise? If they do not understand the origin of chaos, then they cannot govern. This is like a doctor treating a person's illness. How could they govern? How could they treat it?",
+    "annotations": [
+      {
+        "form": "聖人",
+        "meaning": "wise rulers or sages",
+        "significance": "Refers to virtuous leaders who are responsible for governing. Understanding their role is central to the passage's discussion of effective governance."
+      },
+      {
+        "form": "治天下",
+        "meaning": "governing the world",
+        "significance": "The act of governing is the primary focus of the passage, emphasizing the importance of understanding chaos to achieve effective rule."
+      },
+      {
+        "form": "亂",
+        "meaning": "chaos or disorder",
+        "significance": "Chaos is the problem that the sage must address. Understanding its origins is crucial for resolving it."
+      },
+      {
+        "form": "所自起",
+        "meaning": "the origin or source",
+        "significance": "Understanding the root cause of chaos is essential for effective governance, as the passage argues."
+      },
+      {
+        "form": "醫之攻人之疾",
+        "meaning": "a doctor treating a person's illness",
+        "significance": "The medical analogy illustrates the necessity of understanding the root cause of a problem before it can be effectively addressed, just like in governance."
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "language": "classical-chinese",
+    "source": "韓非子·孤憤",
+    "text": "智術之士，必遠見而明察，不明察不能燭私；能法之士，必強毅而勁直，不勁直不能矯姦。人臣循令而從事，案法而治官，非謂重人也。",
+    "difficulty": "Dense political analysis; 智術之士 vs 能法之士 distinction; 燭私 (illuminate private interests); 案法 (follow the law); 重人 (powerful person/authority figure) — layered institutional critique",
+    "translation_A": "Men of wisdom and strategy must possess foresight and discernment; without discernment, one cannot illuminate the truth. Those skilled in methods must be resolute and steadfast; without steadfastness, one cannot correct the wicked. An official who follows orders and handles affairs in accordance with the law is not necessarily one who prioritizes personal relationships.",
+    "translation_D": "Scholars of wisdom and strategy must possess foresight and be discerning and insightful; without such insight, they cannot illuminate private interests. Capable and upright individuals must be strong and steadfast; without such strength, they cannot correct the wicked. Officials follow orders and handle affairs, governing in accordance with the law; this is not to suggest favoritism toward individuals.",
+    "annotations": [
+      {
+        "form": "智術之士",
+        "meaning": "Scholars of wisdom and strategy",
+        "significance": "Refers to individuals with intelligence and strategic thinking, emphasizing their role in governance and decision-making."
+      },
+      {
+        "form": "明察",
+        "meaning": "Discerning and insightful",
+        "significance": "Highlights the importance of sharp observation and understanding in leadership, crucial for making informed decisions."
+      },
+      {
+        "form": "能法之士",
+        "meaning": "Capable and upright individuals",
+        "significance": "Describes officials who are both competent and morally upright, essential for maintaining justice and order."
+      },
+      {
+        "form": "勁直",
+        "meaning": "Strong and upright",
+        "significance": "Emphasizes the necessity of moral and physical strength in officials to correct wrongdoing and maintain integrity."
+      },
+      {
+        "form": "燭私",
+        "meaning": "Illuminate private interests",
+        "significance": "Refers to the need to expose and manage personal interests that may conflict with public duties."
+      },
+      {
+        "form": "矯姦",
+        "meaning": "Correct the wicked",
+        "significance": "Underlines the responsibility of officials to address and rectify unethical or illegal behavior."
+      },
+      {
+        "form": "循令而從事",
+        "meaning": "Follow orders and handle affairs",
+        "significance": "Illustrates the bureaucratic process where officials carry out their duties in accordance with established laws and commands."
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "language": "classical-chinese",
+    "source": "春秋繁露·深察名號",
+    "text": "名者，大理之首章也。錄其首章之意，以窺其中之事，則是非可知也。名者，性之實，實者，名之副也。名副其實，實副其名。",
+    "difficulty": "Dong Zhongshu's theory of names (名實 problem); 大理之首章 (first chapter of the great principle); compressed philosophical argument about correspondence between name and reality",
+    "translation_A": "Names are the first chapter of great principles. By recording the meaning of this first chapter, one can glimpse the matters within and thereby understand right and wrong. Names are the reality of nature; reality is the counterpart of names. When names and reality mutually correspond, reality and names complement each other.",
+    "translation_D": "Names are the first chapter of the Great Principle. By examining the meaning of this first chapter, one can glimpse the affairs within and thereby discern right from wrong. Names are the reality of human nature, and reality is the counterpart of names. Names correspond to reality, and reality corresponds to names.",
+    "annotations": [
+      {
+        "form": "名",
+        "meaning": "Name, term, or designation. In this context, it refers to the concept of names or terms as they relate to reality and order.",
+        "significance": "Central to the passage, '名' represents the idea that names and terms are fundamental to understanding and organizing the world. It is a key concept in Chinese philosophy of language and governance."
+      },
+      {
+        "form": "大理",
+        "meaning": "Great Principle or Supreme Order. Refers to the fundamental principles governing the universe and human society.",
+        "significance": "Indicates the broader cosmological framework within which the concept of '名' operates. It situates the discussion in a grand, universal context."
+      },
+      {
+        "form": "是非",
+        "meaning": "Right and wrong, or moral judgment. In this context, it refers to the ability to discern truth and falsehood, good and bad.",
+        "significance": "Highlights the ethical dimension of the passage, emphasizing that understanding names and their relationship to reality is essential for making moral judgments."
+      },
+      {
+        "form": "性",
+        "meaning": "Human nature or inherent character. In Confucian thought, it refers to the moral and ethical inclinations of human beings.",
+        "significance": "Connects the concept of '名' to human nature, suggesting that names and terms must align with the inherent moral qualities of human beings to be meaningful."
+      },
+      {
+        "form": "名副其實",
+        "meaning": "Names correspond to reality. The idea that terms or designations accurately reflect the things they describe.",
+        "significance": "This phrase encapsulates the central argument of the passage, emphasizing the importance of alignment between names (language) and reality for proper understanding and governance."
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "language": "classical-chinese",
+    "source": "世說新語·文學",
+    "text": "庾子嵩讀莊子，開卷一尺許便放去，曰：「了不異人意。」",
+    "difficulty": "Extremely compressed anecdote — 一尺許 (about one chi of scroll), 了不異人意 is ambiguous: 'completely agrees with what I think' or 'nothing different from ordinary thought'? Critical for interpretation",
+    "translation_A": "Yu Zi Song read Zhuangzi, opened the book and read for about a foot of text before putting it down, saying, \"It's no different from what others think.\"",
+    "translation_D": "Yu Zi Song read the Zhuangzi. He opened the book briefly, about a foot's length of text, then put it aside. He said, \"Understood, not different from others' expectations.\"",
+    "annotations": [
+      {
+        "form": "庾子嵩",
+        "meaning": "Yu Zi Song, a scholar and intellectual figure during the Wei-Jin period",
+        "significance": "Identifies the subject of the anecdote, highlighting his role as a reader and critic of classical texts."
+      },
+      {
+        "form": "莊子",
+        "meaning": "Zhuangzi, a foundational text of Daoist philosophy",
+        "significance": "Indicates the text being read, which is central to understanding the intellectual context of the anecdote."
+      },
+      {
+        "form": "開卷一尺許",
+        "meaning": "Opened the book briefly, about a foot's length of text",
+        "significance": "Describes the action of reading, suggesting a cursory or brief engagement with the text."
+      },
+      {
+        "form": "了不異人意",
+        "meaning": "Understood, not different from others' expectations",
+        "significance": "Conveys Yu Zi Song's dismissive or unimpressed reaction, implying the text aligns with common interpretations."
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "language": "classical-chinese",
+    "source": "搜神記·卷一",
+    "text": "神農以赭鞭鞭百草，盡知其平毒寒溫之性，臭味所主，以播百穀，故天下號神農也。",
+    "difficulty": "Mythological-medical text; 赭鞭 (red whip) is a mythical object; 平毒寒溫 are pharmacological categories; 臭味所主 (what flavors/smells govern) — bridges mythology and materia medica",
+    "translation_A": "Shennong used a red whip to strike and examine the hundred plants, and thereby came to know thoroughly their natures—whether they were balanced, poisonous, cold, or warm—and their odors and the properties they governed. He used this knowledge to plant the various grains, and thus the world came to call him Shennong.",
+    "translation_D": "Shennong, with his red whip, examined the hundred herbs, thoroughly understanding their non-toxic, cooling, and warming properties, as well as the governance of their odors and flavors. He thereby sowed the hundred grains, and thus the world came to call him Shennong.",
+    "annotations": [
+      {
+        "form": "神農",
+        "meaning": "Divine Farmer, a legendary figure in Chinese mythology credited with the discovery of agriculture and medicine",
+        "significance": "Central figure in the passage, embodies the origins of pharmacological knowledge and agricultural practices in Chinese culture"
+      },
+      {
+        "form": "赭鞭",
+        "meaning": "Red whip; a tool used by Shennong to test the properties of plants",
+        "significance": "Symbolizes Shennong's methodical approach to identifying medicinal properties, highlighting his role as a pioneer in pharmacology"
+      },
+      {
+        "form": "百草",
+        "meaning": "Hundred herbs, referring to a wide variety of plants",
+        "significance": "Illustrates the comprehensive nature of Shennong's botanical and pharmacological investigations"
+      },
+      {
+        "form": "平毒寒溫",
+        "meaning": "Properties of being non-toxic, cooling, warming, etc.; refers to the medicinal properties of plants",
+        "significance": "Key concept in traditional Chinese medicine, showing Shennong's classification of plants based on their effects"
+      },
+      {
+        "form": "臭味",
+        "meaning": "Odor and flavor; used to determine the properties and uses of plants",
+        "significance": "Reflects an early method of pharmacological analysis based on sensory characteristics"
+      },
+      {
+        "form": "播百穀",
+        "meaning": "Sowing the hundred grains, symbolizing the cultivation of crops",
+        "significance": "Highlights Shennong's dual role as a founder of agriculture and medicine, emphasizing his cultural importance"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "language": "classical-chinese",
+    "source": "山海經·西山經",
+    "text": "又西三百五十里，曰玉山，是西王母所居也。西王母其狀如人，豹尾虎齒而善嘯，蓬髮戴勝，是司天之厲及五殘。",
+    "difficulty": "Mythological geography; 西王母 described as monster not goddess (pre-Daoist transformation); 戴勝 (wearing sheng headdress); 司天之厲及五殘 (controls pestilence and five destructions) — archaic cosmological vocabulary",
+    "translation_A": "Another 350 miles to the west lies Jade Mountain, where the Queen Mother of the West resides. The Queen Mother of the West has the form of a human, but with a leopard tail, tiger teeth, and is skilled at whistling. Her hair is disheveled, and she wears a victory crown. She is in charge of heavenly punishments and the five types of afflictions.",
+    "translation_D": "Another three hundred fifty miles to the west lies Jade Mountain, the residence of the Western Queen Mother. The Western Queen Mother has the form of a human, with a leopard's tail and tiger's teeth, and is skilled in whistling; her hair is disheveled, and she wears a victory headdress. She is the controller of heavenly punishments and the five calamities.",
+    "annotations": [
+      {
+        "form": "西王母",
+        "meaning": "The Western Queen Mother, a deity in Chinese mythology",
+        "significance": "Central figure in the passage, representing a powerful female deity in early Chinese cosmology."
+      },
+      {
+        "form": "豹尾虎齿",
+        "meaning": "Leopard tail and tiger teeth",
+        "significance": "Symbolic description of the Western Queen Mother's appearance, emphasizing her supernatural and fearsome nature."
+      },
+      {
+        "form": "司天之厲及五殘",
+        "meaning": "Controller of heavenly punishments and the five calamities",
+        "significance": "Highlights her role in cosmology as a deity responsible for punishments and disasters, central to understanding her divine authority."
+      },
+      {
+        "form": "玉山",
+        "meaning": "Jade Mountain",
+        "significance": "The residence of the Western Queen Mother, a mythical place in Chinese geography symbolizing purity and immortality."
+      },
+      {
+        "form": "嘯",
+        "meaning": "To whistle or howl",
+        "significance": "Indicates her supernatural ability to whistle, a sound often associated with divine or demonic powers in mythology."
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "language": "latin",
+    "source": "Cicero, De Natura Deorum I.18-19",
+    "text": "Quid est enim quod animum advertas, cum tot modis deos esse dicas, hoc inter philosophos convenire, de natura autem deorum dissensionem esse, quaerendum quidem id esse magna cum cura, quoniam de vita beata agatur?",
+    "difficulty": "Nested indirect questions with subjunctives (advertas, dicas, convenire, esse); the philosophical vocabulary (de vita beata) requires knowledge of Epicurean context; cum tot modis introduces a concessive that spans the whole sentence",
+    "translation_A": "For what is it that you notice, when you say that the gods exist in so many ways, but this point, indeed, is agreed upon among philosophers, while there is disagreement concerning the nature of the gods? It is certainly something that must be investigated with great care, since it concerns the happy life.",
+    "translation_D": "For what is it, then, that you direct your attention to, when you say the gods exist in so many ways, while this is agreed upon among philosophers, but there is disagreement about the nature of the gods? It is indeed something to be investigated with great care, since it is about the blessed life (vita beata).",
+    "annotations": [
+      {
+        "form": "animum advertas",
+        "meaning": "you direct your attention",
+        "significance": "This phrase emphasizes the act of focusing one's mental attention, which is crucial for engaging in philosophical inquiry. It highlights the importance of intellectual engagement in understanding complex ideas."
+      },
+      {
+        "form": "tot modis",
+        "meaning": "in so many ways",
+        "significance": "This phrase underscores the diversity of opinions and beliefs about the gods, which is a key theme in philosophical debates. It shows the complexity of the subject matter."
+      },
+      {
+        "form": "de natura deorum dissensionem esse",
+        "meaning": "there is disagreement about the nature of the gods",
+        "significance": "This phrase points to the central conflict in philosophical discussions about religion: while there may be agreement on the existence of gods, there is significant disagreement about their nature and characteristics."
+      },
+      {
+        "form": "de vita beata",
+        "meaning": "about the blessed life",
+        "significance": "This phrase connects the discussion of the gods to the broader philosophical question of how to achieve a happy or virtuous life. It highlights the practical implications of theological debates."
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "language": "latin",
+    "source": "Cicero, De Republica VI.13 (Somnium Scipionis)",
+    "text": "Sunt autem novem orbes vel potius globi, quorum unus est caelestis, extimus, qui reliquos omnes complectitur, summus ipse deus arcens et continens ceteros; in quo sunt infixi illi qui volvuntur stellarum cursus sempiterni.",
+    "difficulty": "Cosmological description with complex relative clauses; summus ipse deus is appositive to globus; arcens et continens are present participles modifying deus; stellarum cursus sempiterni requires understanding of ancient astronomy",
+    "translation_A": "There are, however, nine spheres or rather globes, of which one is celestial, the outermost, which embraces all the others, the highest god himself, driving and containing the others; in which are fixed those who are turned by the eternal courses of the stars.",
+    "translation_D": "There are, however, nine orbs or rather spheres, one of which is celestial, the outermost, encompassing all the others, the highest god himself, governing and containing the rest; in which are fixed those who are borne along by the eternal courses of the stars.",
+    "annotations": [
+      {
+        "form": "novem orbes vel potius globi",
+        "meaning": "nine orbs or rather spheres",
+        "significance": "This phrase introduces the central cosmological model of the passage, describing a hierarchical structure of nine celestial spheres. The use of 'orbes' and 'globi' emphasizes the spherical nature of these cosmic layers, which was a common feature in Neoplatonic and Roman cosmological thought."
+      },
+      {
+        "form": "caelestis",
+        "meaning": "heavenly, celestial",
+        "significance": "This term describes the outermost sphere as heavenly, connecting it to divine and eternal realms. In Neoplatonic tradition, the celestial sphere was often seen as the realm of the stars and planets, governed by divine order."
+      },
+      {
+        "form": "summus ipse deus arcens et continens ceteros",
+        "meaning": "the highest god himself, governing and containing the others",
+        "significance": "This phrase highlights the theological aspect of the cosmology, identifying the outermost sphere as the realm of the supreme deity. It underscores the Neoplatonic idea of a single, supreme divine force that sustains and governs the cosmos."
+      },
+      {
+        "form": "stellorum cursus sempiterni",
+        "meaning": "the eternal courses of the stars",
+        "significance": "This phrase emphasizes the eternal and unchanging nature of celestial motion, a key concept in Roman and Neoplatonic cosmology. It reflects the belief in a divinely ordered universe where the stars and planets move in fixed, harmonious paths."
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "language": "latin",
+    "source": "Cicero, Orator 236",
+    "text": "Itaque in his et nonnumquam exsultans et libera oratio est, qui suis se motibus non artificii modo sed etiam naturae viribus ferat, nec vero hoc solum in oratione, sed in omni genere dicendi animadvertendum est.",
+    "difficulty": "Dense rhetorical theory; qui suis se motibus ferat (subjunctive in relative clause of characteristic); artificii/naturae contrast; the self-referential quality of prose discussing prose style",
+    "translation_A": "Therefore, in these things, and sometimes exulting, the speech is free, which is carried by its own motions not only by the skill of artifice but also by the forces of nature. And indeed, this is not only to be observed in speech but in every kind of expression.",
+    "translation_D": "And so, in these matters, speech is not infrequently exuberant and unrestrained, which is carried by its own movements not only by means of artifice but also by the forces of nature. And indeed, this is not to be observed only in oratory, but in every kind of speech.",
+    "annotations": [
+      {
+        "form": "exsultans",
+        "meaning": "exuberant, effusive",
+        "significance": "Describes a style of speech that is lively and unrestrained, emphasizing the emotional and expressive aspect of rhetoric."
+      },
+      {
+        "form": "libera oratio",
+        "meaning": "free speech, unrestrained expression",
+        "significance": "Highlights the importance of natural, unforced expression in rhetoric, contrasting with overly structured or artificial speech."
+      },
+      {
+        "form": "artificii modo",
+        "meaning": "by means of artifice, artificially",
+        "significance": "Refers to the use of rhetorical techniques or devices, contrasting with natural ability, to achieve effective speech."
+      },
+      {
+        "form": "naturae viribus",
+        "meaning": "by the forces of nature",
+        "significance": "Emphasizes the role of innate ability and natural talent in rhetoric, beyond mere technical skill."
+      },
+      {
+        "form": "animadvertendum est",
+        "meaning": "it must be noted, one must observe",
+        "significance": "Indicates the importance of paying attention to this principle in all forms of speech, not just formal oratory."
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "language": "latin",
+    "source": "Horace, Ars Poetica 1-5",
+    "text": "Humano capiti cervicem pictor equinam iungere si velit et varias inducere plumas undique collatis membris, ut turpiter atrum desinat in piscem mulier formosa superne: spectatum admissi risum teneatis, amici?",
+    "difficulty": "Compressed hexameter with vivid imagery; turpiter atrum modifies piscem; mulier formosa superne — the creature description spans 5 lines; spectatum admissi (supine + past participle) is syntactically complex; risum teneatis is potential subjunctive",
+    "translation_A": "If a painter wishes to join a horse's neck to a human head and to add various feathers gathered from all parts of the body, so that a beautiful woman ends disgracefully in a dark fish below, would you, friends, admit to laughter at the sight?",
+    "translation_D": "If a painter wished to join a horse's neck to a human head and to attach varied feathers, gathering limbs from all sides, so that a beautiful woman above ends disgracefully in a black fish below: can you, admitted as spectators, hold back your laughter, friends?",
+    "annotations": [
+      {
+        "form": "Humano capiti",
+        "meaning": "To a human head",
+        "significance": "This phrase introduces the first element in the hybrid figure being described, emphasizing the human aspect that is being combined with animalistic features. It sets the stage for the critique of artistic composition and hybridity."
+      },
+      {
+        "form": "cervicem pictor equinam",
+        "meaning": "the painter joins a horse's neck",
+        "significance": "This phrase highlights the painter's creative choice to merge human and equine features, illustrating the blending of species that is central to the poem's critique of artistic taste and composition."
+      },
+      {
+        "form": "mulier formosa superne",
+        "meaning": "a beautiful woman above",
+        "significance": "This phrase contrasts the beautiful upper half of the figure with the monstrous lower half, underscoring the absurdity and artistic failure being critiqued in the poem."
+      },
+      {
+        "form": "spectatum admissi risum teneatis",
+        "meaning": "can you, admitted as spectators, hold back your laughter?",
+        "significance": "This rhetorical question engages the audience directly, challenging them to consider the purpose of art and whether such a grotesque creation deserves serious consideration or merely ridicule."
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "language": "latin",
+    "source": "Horace, Epistulae I.2.1-4",
+    "text": "Troiani belli scriptorem, Maxime Lolli, dum tu declamas Romae, Praeneste relegi; qui quid sit pulchrum, quid turpe, quid utile, quid non, planius ac melius Chrysippo et Crantore dicit.",
+    "difficulty": "Elliptical comparison (planius ac melius ... dicit); Chrysippo et Crantore are ablatives of comparison; qui refers to Homer (scriptorem); the indirect questions quid sit pulchrum etc. are objects of dicit",
+    "translation_A": "The writer of the Trojan War, Maximus Lollius, while you are declaiming at Rome, I have reread at Praeneste; he states what is noble, what is base, what is useful, what is not, more clearly and better than Chrysippus and Crantor.",
+    "translation_D": "The writer of the Trojan War, Maximus Lollius, while you are declaiming in Rome, I had re-read in Praeneste; who (he) says what is beautiful, what is base, what is useful, what is not, more clearly and better than Chrysippus and Crantor.",
+    "annotations": [
+      {
+        "form": "Troiani belli scriptorem",
+        "meaning": "the writer of the Trojan War",
+        "significance": "Identifies the subject of the epistle, Maximus Lollius, as the author of a work about the Trojan War, establishing the literary context."
+      },
+      {
+        "form": "declamas",
+        "meaning": "you are declaiming",
+        "significance": "Highlights Lollius's active engagement in public recitation (declamation) in Rome, contrasting with Horace's reflective reading in Praeneste."
+      },
+      {
+        "form": "Praeneste",
+        "meaning": "Praeneste (a town near Rome)",
+        "significance": "Indicates the location where Horace is reviewing Lollius's work, suggesting a retreat from urban activity for literary reflection."
+      },
+      {
+        "form": "Chrysippo et Crantore",
+        "meaning": "Chrysippus and Crantor",
+        "significance": "References two Stoic philosophers, emphasizing that Lollius's work surpasses even these esteemed thinkers in clarity and quality."
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "language": "latin",
+    "source": "Seneca, De Brevitate Vitae 1.1",
+    "text": "Maior pars mortalium, Pauline, de naturae malignitate conqueritur, quod in exiguum aevi gignimur, quod haec tam velociter, tam rapide dati nobis temporis spatia decurrant, adeo ut exceptis admodum paucis ceteros in ipso vitae apparatu vita destituat.",
+    "difficulty": "Long periodic sentence with nested quod-clauses; in ipso vitae apparatu vita destituat is a paradox (life abandons them while they're preparing to live); adeo ut + subjunctive result clause",
+    "translation_A": "The greater part of mortals, Pauline, complain about the malice of nature, because we are born into a brief span of life, and because the spaces of time granted to us pass by so swiftly, so rapidly, that, except for very few, life abandons the rest even in the very apparatus of life.",
+    "translation_D": "The majority of mortals, Pauline, complain about the harshness of nature, because we are born for a brief span of life, because the periods of time allotted to us pass by so swiftly, so quickly, that, except for a very few, life abandons the rest while we are still preparing to live.",
+    "annotations": [
+      {
+        "form": "maior pars mortalium",
+        "meaning": "the majority of mortals",
+        "significance": "This phrase sets up the universal human complaint about the brevity of life, which is a common theme in Stoic philosophy. It emphasizes the widespread nature of this dissatisfaction."
+      },
+      {
+        "form": "naturae malignitate",
+        "meaning": "the malignity or harshness of nature",
+        "significance": "This term highlights the Stoic idea of nature as indifferent or even hostile to human desires. It underscores the philosophical notion that humans often view nature as working against them."
+      },
+      {
+        "form": "exiguum aevi",
+        "meaning": "a short span of life",
+        "significance": "This phrase is central to the Stoic discussion of human mortality. It emphasizes the brevity of human life, a key theme in Senecan philosophy that encourages living virtuously in the present."
+      },
+      {
+        "form": "tam velociter, tam rapide",
+        "meaning": "so swiftly, so quickly",
+        "significance": "These adverbs underscore the Stoic concept of the fleeting nature of time. They emphasize the rapid passage of life, urging readers to make the most of the time they have."
+      },
+      {
+        "form": "temporis spatia",
+        "meaning": "the spaces or periods of time",
+        "significance": "This phrase refers to the limited time allotted to humans. It is significant because it ties into the Stoic idea of making the most of one's time and not taking it for granted."
+      },
+      {
+        "form": "in ipso vitae apparatu vita destituat",
+        "meaning": "life abandons us while we are still preparing to live",
+        "significance": "This phrase is a powerful expression of the Stoic critique of procrastination and the human tendency to delay living. It highlights the irony of being unprepared for life's end."
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "language": "latin",
+    "source": "Seneca, De Clementia I.1.2",
+    "text": "Ego ille sum, Nero, quem vestra humanitas in perpetuum abstinet a litibus publicis; ego ille sum, per quem Fortuna nihil vobis amplius praestare potest, nec vos optare.",
+    "difficulty": "Prosopopoeia — Seneca puts words in Nero's mouth; vestra humanitas = your civility (ironic in retrospect); abstinet a litibus publicis is unusual (restrains from public disputes); amplius praestare/optare parallel infinitives",
+    "translation_A": "I am that Nero, whom your kindness perpetually keeps away from public disputes; I am that Nero, through whom Fortune can provide you nothing more, nor can you desire anything more.",
+    "translation_D": "I am that man, Nero, whom your humanity, kindness, or civilized nature (humanitas) keeps away from public disputes; I am that man through whom Fortune (Fortuna) can grant you nothing more, nor can you desire anything further.",
+    "annotations": [
+      {
+        "form": "Ego ille sum",
+        "meaning": "I am that man, Nero",
+        "significance": "This phrase underscores Nero's assertion of his identity and role as emperor, emphasizing his self-presentation as a central figure in the political and social landscape."
+      },
+      {
+        "form": "humanitas",
+        "meaning": "your humanity, kindness, or civilized nature",
+        "significance": "This term reflects the idea of civic virtue and the ideal of Roman civilization, suggesting that Nero is appealing to the public's sense of moral decency and compassion."
+      },
+      {
+        "form": "Fortuna",
+        "meaning": "Fortune (personified as a goddess)",
+        "significance": "Fortuna represents the capricious nature of fate and prosperity in Roman thought. Here, Nero uses her to suggest that the state's success is tied to his rule, implying a divine or inevitable order."
+      },
+      {
+        "form": "litibus publicis",
+        "meaning": "public disputes or lawsuits",
+        "significance": "This phrase highlights Nero's exclusion from public legal or political conflicts, which could imply either his elevation above petty squabbles or his disengagement from civic responsibilities."
+      },
+      {
+        "form": "praestare",
+        "meaning": "to provide, grant, or bestow",
+        "significance": "This verb emphasizes the idea of Fortuna's role in granting benefits, and by extension, Nero's role as a provider of stability and prosperity to the state."
+      },
+      {
+        "form": "optare",
+        "meaning": "to desire, wish, or hope for",
+        "significance": "This term underscores the idea that the public's desires are already fulfilled under Nero's rule, suggesting a state of contentment or complacency."
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "language": "latin",
+    "source": "Seneca, Naturales Quaestiones II.32.1",
+    "text": "Fulgura et quae fulminibus accidunt tonitrua — nam haec posterior audiuntur, quia visus aure praecurrunt — inter se quidem iuncta sunt, sed ex diverso veniunt.",
+    "difficulty": "Scientific prose explaining thunder/lightning; nam haec posterior audiuntur is a parenthetical explanation; quia visus aure praecurrunt — sight outruns hearing (praecurrunt with ablative aure); ex diverso = from different sources",
+    "translation_A": "Lightning flashes and the thunder that accompanies lightning bolts— for these sounds are heard afterward, because sight outstrips hearing—are connected in nature, but they originate from different sources.",
+    "translation_D": "Lightning flashes and the thunder that occurs because of lightning bolts — for these (thunder) are heard afterward, because sight precedes hearing — are indeed connected to each other, but they come from different sources.",
+    "annotations": [
+      {
+        "form": "Fulgura",
+        "meaning": "Lightning flashes, flashes of lightning",
+        "significance": "Central to the discussion of natural phenomena, 'fulgura' represents the visible manifestation of electrical discharge during storms, a key element in Stoic explanations of natural events."
+      },
+      {
+        "form": "tonitrua",
+        "meaning": "Thunder",
+        "significance": "Represents the audible manifestation of lightning, illustrating the connection between visible and audible phenomena in natural events, a common theme in Stoic physics."
+      },
+      {
+        "form": "visus",
+        "meaning": "Sight, vision",
+        "significance": "Highlights the Stoic understanding of human perception, emphasizing that sight precedes sound, explaining why lightning is seen before thunder is heard."
+      },
+      {
+        "form": "aure",
+        "meaning": "Ears, hearing",
+        "significance": "Contrasted with 'visus' to explain the sequence of perception in natural phenomena, reflecting Stoic interest in the interplay of senses and the natural world."
+      },
+      {
+        "form": "fulminibus",
+        "meaning": "Lightning bolts, flashes of lightning",
+        "significance": "Connects lightning to thunder, showing their relationship in Stoic thought as cause and effect in natural phenomena."
+      },
+      {
+        "form": "accidunt",
+        "meaning": "Happen, occur",
+        "significance": "Indicates the occurrence of thunder as a result of lightning, emphasizing the causal relationship in Stoic explanations of natural events."
+      },
+      {
+        "form": "praecurrunt",
+        "meaning": "Run before, precede",
+        "significance": "Explains the reason lightning is seen before thunder is heard, reflecting Stoic understanding of sensory perception and natural processes."
+      },
+      {
+        "form": "ex diverso veniunt",
+        "meaning": "They come from different sources",
+        "significance": "Highlights the Stoic view that while lightning and thunder are connected, they originate from different natural sources, emphasizing the interconnected yet distinct elements of the natural world."
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "language": "latin",
+    "source": "Juvenal, Saturae VI.347-348",
+    "text": "Nullane de tantis gregibus tibi digna videtur? Sit formosa, decens, dives, fecunda, vetustos porticibus disponat avos, sit castior omni crinibus effusis bellum subeuntibus illa: quis feret uxorem cui constant omnia?",
+    "difficulty": "Satirical hyperbole with rapid-fire jussive subjunctives (sit...disponat...sit); crinibus effusis bellum subeuntibus is ablative absolute within a comparison; cui constant omnia = in whom everything is present — the punchline inverts expectations",
+    "translation_A": "Does any of so many flocks seem worthy to you? Let her be beautiful, worthy, rich, fertile, let her arrange ancient ancestors in porticos, let her be chaster than all those women with flowing hair going to war: who would endure a wife who is constant in everything?",
+    "translation_D": "\"Is there any woman among so many who seems worthy to you? Let her be beautiful, dignified, wealthy, fertile, let her arrange ancient forebears in porticos, let her be purer than all, with flowing hair, as she goes to war. Who would endure a wife for whom all things are steadfast?\"",
+    "annotations": [
+      {
+        "form": "Nullane",
+        "meaning": "Is there any (woman) among so many who seems worthy to you?",
+        "significance": "This word introduces a rhetorical question that critiques the speaker's skepticism about finding a worthy woman, setting a satirical tone."
+      },
+      {
+        "form": "formosa",
+        "meaning": "beautiful, attractive",
+        "significance": "Highlights the societal expectation of women's physical beauty as a primary virtue, which is being satirically exaggerated."
+      },
+      {
+        "form": "dives",
+        "meaning": "wealthy, rich",
+        "significance": "Emphasizes the importance of material wealth in a woman, reflecting Roman societal values that are being critiqued."
+      },
+      {
+        "form": "fecunda",
+        "meaning": "fertile, fruitful",
+        "significance": "Underscores the expectation of women's reproductive role, a key aspect of gender criticism in Roman satire."
+      },
+      {
+        "form": "castior",
+        "meaning": "more chaste, purer",
+        "significance": "Chastity was a paramount virtue for Roman women, and its emphasis here reflects the societal double standard being satirized."
+      },
+      {
+        "form": "crinibus effusis",
+        "meaning": "with flowing hair",
+        "significance": "A satirical image of women preparing for battle, absurdly contrasting with traditional gender roles."
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "language": "latin",
+    "source": "Juvenal, Saturae X.356-366",
+    "text": "Orandum est ut sit mens sana in corpore sano. Fortem posce animum mortis terrore carentem, qui spatium vitae extremum inter munera ponat naturae, qui ferre queat quoscumque labores, nesciat irasci, cupiat nihil.",
+    "difficulty": "Famous but syntactically dense; orandum est + ut subjunctive; series of relative clauses (qui...qui...); mortis terrore carentem (participle with ablative of separation); extremum spatium vitae inter munera naturae — 'the final span of life among nature's gifts'",
+    "translation_A": "You should pray for a healthy mind in a healthy body. Ask for a strong spirit, free from the fear of death, which places the final span of life among the gifts of nature, which can endure any kind of toil, knows not how to anger, desires nothing.",
+    "translation_D": "One should pray for a healthy mind in a healthy body. Ask for a strong spirit, free from the fear of death, who places the final span of life among the gifts of nature, who can endure any hardships, does not know how to get angry, desires nothing.",
+    "annotations": [
+      {
+        "form": "mens sana in corpore sano",
+        "meaning": "a healthy mind in a healthy body",
+        "significance": "This phrase emphasizes the importance of both mental and physical health, reflecting the Stoic ideal of balance necessary for a virtuous life."
+      },
+      {
+        "form": "mortis terrore carentem",
+        "meaning": "free from the fear of death",
+        "significance": "This highlights the Stoic concept of overcoming the fear of death, essential for living virtuously and tranquilly."
+      },
+      {
+        "form": "munera naturae",
+        "meaning": "the gifts or duties of nature",
+        "significance": "Reflects the Stoic belief in living according to nature and fulfilling natural duties without complaint."
+      },
+      {
+        "form": "labores",
+        "meaning": "hardships, toils",
+        "significance": "Emphasizes Stoic endurance, the ability to bear life's challenges with equanimity."
+      },
+      {
+        "form": "nesciat irasci",
+        "meaning": "does not know how to get angry",
+        "significance": "Underscores Stoic emotional detachment, avoiding anger seen as a destructive passion."
+      },
+      {
+        "form": "cupiat nihil",
+        "meaning": "desires nothing",
+        "significance": "Reflects the Stoic principle of freedom from desires, key to achieving inner peace and virtue."
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "language": "latin",
+    "source": "Augustine, Confessiones XI.14.17",
+    "text": "Quid est ergo tempus? Si nemo ex me quaerat, scio; si quaerenti explicare velim, nescio. Fidenter tamen dico scire me quod, si nihil praeteriret, non esset praeteritum tempus, et si nihil adveniret, non esset futurum tempus, et si nihil esset, non esset praesens tempus.",
+    "difficulty": "Philosophical prose with layered conditionals (si...si...si...); the paradox of knowing-but-not-explaining time; three parallel contrary-to-fact conditions about past/future/present",
+    "translation_A": "What, then, is time? If no one asks me, I know; if I wish to explain to someone who asks, I do not know. Nevertheless, I say confidently that I know that, if nothing were passing away, there would be no past time, and if nothing were coming, there would be no future time, and if nothing were, there would be no present time.",
+    "translation_D": "What, then, is time? If no one asks me, I know; if I wish to explain to someone who asks, I do not know. Nevertheless, I confidently assert that I know this: if nothing were passing by, there would be no past time; if nothing were coming, there would be no future time; and if nothing were, there would be no present time.",
+    "annotations": [
+      {
+        "form": "tempus",
+        "meaning": "time",
+        "significance": "Central concept of the passage; Augustine is exploring the nature of time and its divisions into past, present, and future."
+      },
+      {
+        "form": "scio",
+        "meaning": "I know",
+        "significance": "Indicates Augustine's confidence in his understanding of time when not pressed to explain it, highlighting the paradox of knowing and not knowing."
+      },
+      {
+        "form": "nescio",
+        "meaning": "I do not know",
+        "significance": "Reflects the limitations of human understanding and the complexity of defining time, a key theme in Augustine's philosophy."
+      },
+      {
+        "form": "praeteritum",
+        "meaning": "past",
+        "significance": "Represents the dimension of time that has elapsed, crucial for understanding Augustine's argument about the nature of time and its relationship to human perception."
+      },
+      {
+        "form": "futurum",
+        "meaning": "future",
+        "significance": "Signifies the dimension of time yet to come, essential for grasping Augustine's discussion of time as a conceptual framework."
+      },
+      {
+        "form": "praesens",
+        "meaning": "present",
+        "significance": "Represents the immediate moment, central to Augustine's exploration of time as a dynamic and fleeting concept."
+      },
+      {
+        "form": "nihil praeteriret",
+        "meaning": "if nothing were passing by",
+        "significance": "Illustrates Augustine's argument that time is fundamentally tied to change and movement."
+      },
+      {
+        "form": "nihil adveniret",
+        "meaning": "if nothing were coming",
+        "significance": "Highlights the idea that the future dimension of time is contingent on events yet to occur."
+      },
+      {
+        "form": "nihil esset",
+        "meaning": "if nothing were",
+        "significance": "Emphasizes the dependence of the present moment on existence and perception."
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "language": "latin",
+    "source": "Augustine, De Civitate Dei XIV.28",
+    "text": "Fecerunt itaque civitates duas amores duo: terrenam scilicet amor sui usque ad contemptum Dei, caelestem vero amor Dei usque ad contemptum sui. Denique illa in se ipsa, haec in Domino gloriatur.",
+    "difficulty": "Chiastic structure (amor sui/contemptum Dei vs amor Dei/contemptum sui); scilicet and vero as discourse markers; denique introduces a summary; gloriatur takes in + ablative — two cities defined by two loves",
+    "translation_A": "Therefore, two loves have made two cities: the earthly city, namely, the love of oneself even to the contempt of God; the heavenly city, on the other hand, the love of God even to the contempt of oneself. Finally, the former glories in itself, the latter in the Lord.",
+    "translation_D": "They have made, therefore, two cities by two loves: the earthly city, of course, by the love of self, even unto contempt of God, and the heavenly city, truly, by the love of God, even unto contempt of self. Finally, the former glories in herself, the latter in the Lord.",
+    "annotations": [
+      {
+        "form": "civitates",
+        "meaning": "cities or communities",
+        "significance": "Refers to the two cities (civitates) in Augustine's theology: the earthly city and the heavenly city. This concept is central to his political philosophy and theology, symbolizing the division between worldly and divine realms."
+      },
+      {
+        "form": "amores",
+        "meaning": "loves or desires",
+        "significance": "Represents the two opposing loves that define the two cities. Augustine argues that love is the fundamental driving force behind human actions and societal structures."
+      },
+      {
+        "form": "terrenam",
+        "meaning": "earthly",
+        "significance": "Describes the earthly city, which is characterized by self-love and contempt for God. This concept is crucial for understanding Augustine's critique of worldly ambition and pride."
+      },
+      {
+        "form": "caelestem",
+        "meaning": "heavenly",
+        "significance": "Refers to the heavenly city, which is marked by the love of God and contempt for self. This concept embodies Augustine's vision of a community oriented toward divine love and eternal life."
+      },
+      {
+        "form": "contemptum Dei",
+        "meaning": "contempt of God",
+        "significance": "Highlights the spiritual consequence of prioritizing self-love (amor sui), leading to a rejection of God. This phrase underscores the moral and theological implications of Augustine's argument."
+      },
+      {
+        "form": "contemptum sui",
+        "meaning": "contempt of self",
+        "significance": "Represents the self-denial required for the love of God. This concept is central to Augustine's theology of humility and the pursuit of spiritual righteousness."
+      },
+      {
+        "form": "gloriatur",
+        "meaning": "glories or takes pride",
+        "significance": "Indicates the source of pride for each city. The earthly city glories in itself, while the heavenly city glories in God, reflecting Augustine's contrast between worldly vanity and divine humility."
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "language": "latin",
+    "source": "Ovid, Tristia I.3.1-4",
+    "text": "Cum subit illius tristissima noctis imago, qua mihi supremum tempus in urbe fuit, cum repeto noctem qua tot mihi cara reliqui, labitur ex oculis nunc quoque gutta meis.",
+    "difficulty": "Elegiac couplets with temporal layering; illius noctis / qua / noctem qua — three temporal references; supremum tempus (final hour); labitur...gutta (a tear falls) — the present tense nunc quoque bridges past and present",
+    "translation_A": "When the image of that most sorrowful night comes upon me, on which I spent my final time in the city, and when I recall the night on which I left behind so many dear to me, even now, a tear slips from my eyes.",
+    "translation_D": "When the image of that most sorrowful night comes upon me, at which time my final moment in the city was, when I recall the night on which I left behind so many dear to me, even now, a tear slips from my eyes.",
+    "annotations": [
+      {
+        "form": "subit",
+        "meaning": "comes upon, rises",
+        "significance": "Indicates the sudden and involuntary nature of the memory, emphasizing the emotional impact of the recollection."
+      },
+      {
+        "form": "tristissima noctis imago",
+        "meaning": "the image of that most sorrowful night",
+        "significance": "Refers to the vivid and painful memory of the night Ovid spent in Rome before his exile, highlighting the emotional weight of the event."
+      },
+      {
+        "form": "supremum tempus",
+        "meaning": "the final time, last moment",
+        "significance": "Signifies the last time Ovid was in Rome, marking the end of his life there and the beginning of his exile."
+      },
+      {
+        "form": "urbe",
+        "meaning": "from the city (Rome)",
+        "significance": "Emphasizes Ovid's separation from Rome, a central theme in his exile poetry, and the loss of his former life."
+      },
+      {
+        "form": "labitur ex oculis nunc quoque gutta meis",
+        "meaning": "even now a tear slips from my eyes",
+        "significance": "Illustrates Ovid's ongoing grief and emotional response to his exile, even after time has passed."
+      },
+      {
+        "form": "gutta",
+        "meaning": "a drop, tear",
+        "significance": "Symbolizes the depth of Ovid's sorrow, as even a single tear represents his enduring emotional pain."
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "language": "latin",
+    "source": "Ovid, Fasti I.89-92",
+    "text": "Tempora digereret cum conditor urbis, in anno constituit menses quinque bis esse suo. Scilicet arma magis quam sidera, Romule, noras, curaque finitimos vincere maior erat.",
+    "difficulty": "Aetiological poetry; cum + subjunctive (digereret); bis quinque menses = 10 months (Roman calendar before January/February added); scilicet is ironic; curaque...maior erat — comparative clause about Romulus preferring war to astronomy",
+    "translation_A": "When the founder of the city was dividing the seasons, he established that in his year the months should be five twice. Indeed, Romulus, you knew arms more than stars, and your concern to conquer your neighbors was greater.",
+    "translation_D": "Times he was organizing when the founder of the city, in a year, established five months twice to be his. Of course, arms rather than stars, Romulus, you know, and care to conquer neighbors was greater.",
+    "annotations": [
+      {
+        "form": "tempora",
+        "meaning": "times, seasons",
+        "significance": "Refers to the organization of the year or seasons, which is central to the passage's discussion of the Roman calendar's structure."
+      },
+      {
+        "form": "conditor urbis",
+        "meaning": "founder of the city",
+        "significance": "Identifies Romulus as the legendary founder of Rome, linking the calendar's origins to the city's mythological beginnings."
+      },
+      {
+        "form": "menses quinque",
+        "meaning": "five months",
+        "significance": "Highlights the original number of months in the Roman calendar, emphasizing its early structure before later reforms.",
+        "correction_note": "The original Roman calendar actually had 10 months, not five. This annotation is incorrect."
+      },
+      {
+        "form": "arma magis quam sidera",
+        "meaning": "arms rather than stars",
+        "significance": "Indicates that military conquest and power (arma) were more influential in shaping the calendar than astronomical observations (sidera)."
+      },
+      {
+        "form": "Romule",
+        "meaning": "Romulus",
+        "significance": "Direct address to Romulus, the legendary founder, personalizing the explanation of the calendar's origins."
+      },
+      {
+        "form": "curaque finitimos vincere maior erat",
+        "meaning": "and the care to conquer neighbors was greater",
+        "significance": "Explains that Romulus's primary concern was military conquest, which influenced the structure and priorities of the early Roman calendar.",
+        "correction_note": "Adjusted translation for clarity and readability."
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "language": "latin",
+    "source": "Lucan, Pharsalia I.1-7",
+    "text": "Bella per Emathios plus quam civilia campos iusque datum sceleri canimus, populumque potentem in sua victrici conversum viscera dextra, cognatasque acies, et rupto foedere regni certatum totis concussi viribus orbis, in commune nefas.",
+    "difficulty": "Epic invocation with extreme hyperbaton; plus quam civilia (more than civil = fratricidal); in sua viscera conversum (turned against its own entrails); rupto foedere regni — ablative absolute; in commune nefas closes the period — 'for shared crime'",
+    "translation_A": "Wars through Emathian fields more than civil, and the right given to crime, we sing, and a powerful people turned against their own victorious vitals with the right hand, and cognate lines, and with the broken treaty of the kingdom, struggled with all the forces of the shaken world, into common wickedness.",
+    "translation_D": "Wars, more than civil, across the Thracian plains of Pharsalus, and the right given to crime we sing, a powerful people with victorious right hand into their own vitals, and kindred lines, and with the pact of rule broken, struggled with all the forces of the shaken world, into shared wickedness.",
+    "annotations": [
+      {
+        "form": "Bella",
+        "meaning": "Wars",
+        "significance": "The word 'bella' (wars) sets the tone for the epic narrative, introducing the violent conflict that will unfold. It emphasizes the scale and gravity of the events being described."
+      },
+      {
+        "form": "plus quam civilia",
+        "meaning": "More than civil",
+        "significance": "This phrase underscores the horror of the conflict, suggesting that the war exceeds the boundaries of a typical civil war in its brutality and moral implications."
+      },
+      {
+        "form": "Emathios... campos",
+        "meaning": "Thracian plains",
+        "significance": "Refers to the plains of Pharsalus in Thracia, the site of a key battle in the civil war. This geographical reference situates the action in a real historical context."
+      },
+      {
+        "form": "populumque potentem",
+        "meaning": "A powerful people",
+        "significance": "Highlights the irony of Rome's own strength being turned against itself, emphasizing the tragic nature of the civil war."
+      },
+      {
+        "form": "in sua victrici viscera dextra",
+        "meaning": "With victorious right hand into their own vitals",
+        "significance": "This phrase vividly describes the self-destructive nature of the conflict, where Rome's own strength is used to wound itself, symbolizing the moral and political decay."
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "language": "latin",
+    "source": "Martial, Epigrammata I.32",
+    "text": "Non amo te, Sabidi, nec possum dicere quare: hoc tantum possum dicere, non amo te.",
+    "difficulty": "Deceptively simple but syntactically interesting: nec possum dicere quare (indirect question); the repetition non amo te frames the epigram; the humor depends on the gap between feeling and articulation — a philosophical puzzle in two lines",
+    "translation_A": "I do not love you, Sabidius, nor can I say why: this much I can say, I do not love you.",
+    "translation_D": "I do not love you, Sabidius, nor can I say why: this much I can say, I do not love you.",
+    "annotations": [
+      {
+        "form": "Non amo te",
+        "meaning": "I do not love you",
+        "significance": "This phrase is a direct and blunt statement of refusal, emphasizing the speaker's lack of affection. Its repetition at the end of the epigram underscores the finality and certainty of the sentiment."
+      },
+      {
+        "form": "Sabidi",
+        "meaning": "Sabidius (name of the person being addressed)",
+        "significance": "The use of a specific name personalizes the epigram, suggesting it is directed at an individual, which was common in Roman epigrams to add a sense of immediacy and realism."
+      },
+      {
+        "form": "nec possum dicere quare",
+        "meaning": "nor can I say why",
+        "significance": "This phrase highlights the speaker's inability to provide a reason for their feelings, adding a layer of mystery and emphasizing the complexity of human emotions."
+      },
+      {
+        "form": "hoc tantum possum dicere",
+        "meaning": "this much I can say",
+        "significance": "This phrase underscores the speaker's limitations in expressing their feelings, while also reinforcing the central message of the epigram through repetition."
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "language": "latin",
+    "source": "Caesar, De Bello Gallico VI.13-14",
+    "text": "In omni Gallia eorum hominum qui aliquo sunt numero atque honore genera sunt duo. Nam plebes paene servorum habetur loco, quae nihil audet per se, nullo adhibetur consilio. Druides a bello abesse consuerunt neque tributa una cum reliquis pendunt; militiae vacationem omniumque rerum habent immunitatem.",
+    "difficulty": "Ethnographic prose; aliquo numero atque honore — ablatives of description; paene servorum loco — 'almost in the position of slaves'; nullo consilio — ablative; militiae vacationem + omnium rerum immunitatem — genitive constructions describing Druidic privileges",
+    "translation_A": "In all of Gaul, the men who are of some number and honor are divided into two classes. For the common people are considered almost in the place of slaves, who dare nothing of themselves and are included in no council. The Druids are accustomed to be exempt from war and do not pay taxes along with the rest; they have exemption from military service and immunity from all obligations.",
+    "translation_D": "In all of Gaul, the men who are of any number and honor are divided into two classes. For the common people are considered almost in the place of slaves, who dare nothing on their own, and are summoned to no council. The Druids (a class of religious and intellectual leaders) are accustomed to be absent from war, and they do not pay taxes along with the rest; they have exemption from military service and immunity (immunitatem) from all obligations.",
+    "annotations": [
+      {
+        "form": "genera sunt duo",
+        "meaning": "there are two classes",
+        "significance": "This phrase introduces the central social division in Gaul, emphasizing the binary structure of Gallic society."
+      },
+      {
+        "form": "plebes",
+        "meaning": "the common people",
+        "significance": "Refers to the lower class in Gaul, highlighting their marginalized status and lack of influence."
+      },
+      {
+        "form": "Druides",
+        "meaning": "Druids",
+        "significance": "Identifies the religious and intellectual elite in Gaul, crucial for understanding their unique role and privileges."
+      },
+      {
+        "form": "militiae vacationem",
+        "meaning": "exemption from military service",
+        "significance": "Illustrates the Druids' special status, showing their freedom from ordinary obligations like military duty."
+      },
+      {
+        "form": "immunitatem",
+        "meaning": "exemption, immunity",
+        "significance": "Highlights the Druids' freedom from taxes and other civic duties, underscoring their elevated position."
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "language": "latin",
+    "source": "Pliny the Younger, Epistulae VI.16.4-6",
+    "text": "Nubes — incertum procul intuentibus ex quo monte; Vesuvium fuisse postea cognitum est — oriebatur, cuius similitudinem et formam non alia magis arbor quam pinus expresserit.",
+    "difficulty": "Eyewitness account of Vesuvius eruption; parenthetical interruption (incertum...cognitum est); cuius similitudinem...pinus expresserit — potential subjunctive describing the mushroom cloud; procul intuentibus — dative of reference",
+    "translation_A": "A cloud—it was uncertain to those looking from a distance from which mountain it was rising, though it was later known to be Vesuvius—was rising, whose likeness and shape no other tree has expressed more than the pine.",
+    "translation_D": "A cloud—uncertain to those observing from afar, from which mountain; it was later recognized to be Mount Vesuvius—was rising, whose likeness and shape no other tree has expressed as much as the pine tree.",
+    "annotations": [
+      {
+        "form": "Nubes",
+        "meaning": "A cloud or clouds, specifically the cloud of smoke and ash from the volcanic eruption.",
+        "significance": "It introduces the central image of the passage, setting the scene for the description of the volcanic eruption and its impact on observers."
+      },
+      {
+        "form": "Vesuvium",
+        "meaning": "Mount Vesuvius, the volcano near Pompeii infamous for its eruption in 79 CE.",
+        "significance": "Identifies the source of the cloud, providing historical context for readers familiar with Roman natural history and the destruction of Pompeii."
+      },
+      {
+        "form": "incertum procul intuentibus",
+        "meaning": "Uncertain to those looking from a distance, ambiguous in appearance to distant observers.",
+        "significance": "Highlights the ambiguity and mystery of the event as perceived by those who were not close to the volcano, emphasizing the awe-inspiring and enigmatic nature of natural disasters."
+      },
+      {
+        "form": "pinus",
+        "meaning": "Pine tree, used here as a simile to describe the shape of the cloud.",
+        "significance": "The comparison of the cloud to a pine tree (due to its tall, columnar shape) is a vivid and memorable image, typical of Roman descriptive prose, helping readers visualize the scene."
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "language": "latin",
+    "source": "Boethius, Consolatio Philosophiae I, metrum 5, lines 1-4",
+    "text": "O stelliferi conditor orbis, qui perpetuo nixus solio rapido caelum turbine versas legemque pati sidera cogis.",
+    "difficulty": "Philosophical poetry; stelliferi orbis (star-bearing cosmos); nixus solio (leaning on throne — nixus is perfect participle of nitor); rapido turbine (ablative of manner); legemque pati sidera cogis — 'you compel the stars to submit to law' — pati is infinitive with cogis",
+    "translation_A": "Oh, creator of the starry world, who, continually leaning upon your swift throne, turn the heavens with a rapid whirlwind and compel the stars to endure the law.",
+    "translation_D": "O star-bearing founder of the world, who forever leaning on a throne, you turn the heaven with a whirlwind and force the stars to endure law.",
+    "annotations": [
+      {
+        "form": "O",
+        "meaning": "A vocative particle used to address someone, often with a sense of reverence or invocation.",
+        "significance": "It sets a reverent and invocationary tone, addressing a divine or cosmic entity, which is central to the theodicy theme."
+      },
+      {
+        "form": "stelliferi",
+        "meaning": "Star-bearing, from 'stella' (star) and 'fero' (to bear).",
+        "significance": "It emphasizes the celestial and cosmic nature of the creator, highlighting the connection between the divine and the stars, a common theme in philosophical poetry."
+      },
+      {
+        "form": "conditor",
+        "meaning": "Founder, creator, or establisher, from 'condere' (to found or establish).",
+        "significance": "It identifies the subject as the creator of the world, a key concept in theodicy that explores the nature and purpose of the divine creator."
+      },
+      {
+        "form": "perpetuo nixus solio",
+        "meaning": "Forever leaning on a throne, with 'perpetuo' indicating eternity and 'solio' referring to a throne or seat.",
+        "significance": "It conveys the idea of a stable, eternal, and unchanging divine governance, central to the philosophical discussion of divine order.",
+        "correction_note": "Corrected 'seated' to 'leaning' to accurately reflect the meaning of 'nixus' (leaning on)."
+      },
+      {
+        "form": "caelum turbine versas",
+        "meaning": "You turn the heaven with a whirlwind, from 'turbine' (whirlwind) and 'versare' (to turn or revolve).",
+        "significance": "It suggests the dynamic and active nature of divine control over the cosmos, reflecting the philosophical idea of a deity actively governing creation."
+      },
+      {
+        "form": "legemque pati sidera cogis",
+        "meaning": "And you force the stars to endure law, from 'lex' (law), 'pati' (to endure), and 'cogere' (to force).",
+        "significance": "It highlights the idea of cosmic order and divine justice, where even celestial bodies are subject to divine law, a central theme in theodicy."
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "language": "latin",
+    "source": "Tacitus, Annales I.1",
+    "text": "Urbem Romam a principio reges habuere; libertatem et consulatum L. Brutus instituit. Dictaturae ad tempus sumebantur; neque decemviralis potestas ultra biennium, neque tribunorum militum consulare ius diu valuit.",
+    "difficulty": "Famously compressed opening; habuere = habuerunt (archaic form); ad tempus (temporarily); neque...neque parallel negations; consulare ius — 'consular authority' of military tribunes — requires knowledge of Roman constitutional history",
+    "translation_A": "The city of Rome had kings from the beginning; liberty and the consulate were established by L. Brutus. Dictatorships were taken for a time; neither the power of the decemvirs lasted beyond two years, nor did the consular authority of the military tribunes endure for long.",
+    "translation_D": "From the beginning, kings held the city of Rome; Lucius Brutus established liberty and the consulate. Dictatorships were taken for a time; neither the power of the decemvirs lasted beyond two years, nor did the consular authority of the military tribunes hold power for long.",
+    "annotations": [
+      {
+        "form": "reges",
+        "meaning": "kings (initial rulers of Rome)",
+        "significance": "Indicates the original monarchical governance of Rome, setting the stage for the transition to republican forms of government."
+      },
+      {
+        "form": "libertatem",
+        "meaning": "liberty (from royal rule)",
+        "significance": "Represents the end of monarchy and the establishment of republican ideals, central to Roman identity."
+      },
+      {
+        "form": "consulatum",
+        "meaning": "consulate (the office of consul)",
+        "significance": "Signifies the establishment of the consulship, a key institution in the Roman Republic, emphasizing shared power."
+      },
+      {
+        "form": "dictaturae",
+        "meaning": "dictatorships (emergency rule)",
+        "significance": "Highlights the temporary nature of dictatorial power, contrasting with earlier permanent monarchical authority."
+      },
+      {
+        "form": "tribunorum militum",
+        "meaning": "military tribunes (elected officials with consular authority)",
+        "significance": "Refers to officials who held consular power during the Republic, illustrating the evolution of Roman governance."
+      },
+      {
+        "form": "consulare ius",
+        "meaning": "consular authority",
+        "significance": "Emphasizes the transfer of power from kings to consuls and later magistrates, a cornerstone of Roman constitutional development."
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "language": "latin",
+    "source": "Livy, Ab Urbe Condita, Praefatio 9",
+    "text": "Ad illa mihi pro se quisque acriter intendat animum, quae vita, qui mores fuerint, per quos viros quibusque artibus domi militiaeque et partum et auctum imperium sit.",
+    "difficulty": "Programmatic statement with multiple indirect questions (quae...qui...per quos...quibus); domi militiaeque (locative pair); partum et auctum — perfect passive participles of pario and augeo; the whole sentence is a single exhortation",
+    "translation_A": "Let each person keenly focus their mind on these things for me: what life, what customs there were, through what men and what arts the empire was both born and increased at home and in military service.",
+    "translation_D": "\"To those matters let each person for themselves sharply direct their mind, what life, what customs there were, through what men and by what arts the empire, both at home and in military service, was born and grew.\"",
+    "annotations": [
+      {
+        "form": "ad illa",
+        "meaning": "to those things, toward those matters",
+        "significance": "This phrase sets the direction for the reader's focus, emphasizing the importance of the subject matter that follows. It invites the audience to concentrate on the key themes of the historical narrative."
+      },
+      {
+        "form": "acriter intendat animum",
+        "meaning": "sharply direct the mind, keenly apply the intellect",
+        "significance": "This phrase underscores the intellectual engagement required to understand the depth of the historical account. It highlights Livy's expectation of active, focused reading."
+      },
+      {
+        "form": "vita, mores",
+        "meaning": "life, customs, character",
+        "significance": "These terms are central to Livy's historiographical approach, emphasizing the importance of understanding the character and way of life of the Romans as key to their success."
+      },
+      {
+        "form": "per quos viros",
+        "meaning": "through which men, by what kind of men",
+        "significance": "This phrase highlights the role of individual agency in history, a hallmark of Livy's narrative style, which often focuses on exemplary figures and their deeds."
+      },
+      {
+        "form": "domi militiaeque",
+        "meaning": "both at home and in military service",
+        "significance": "This phrase reflects the dual focus of Roman life and Livy's narrative: civil affairs (domi) and military conquests (militiae). It emphasizes the comprehensive scope of Roman imperium."
+      },
+      {
+        "form": "partum et auctum imperium",
+        "meaning": "the empire was born and grew",
+        "significance": "This phrase encapsulates the central theme of Livy's Ab Urbe Condita: the origins and growth of Roman power. It underscores the idea of imperium as both a birthright and a product of effort."
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "language": "latin",
+    "source": "Valerius Maximus, Facta et Dicta Memorabilia III.7.ext.1",
+    "text": "Socrates, cum omnis doctrinae disciplinam comprehendisset, eo se sapientiorem ceteris esse dicebat quod, quae nesciret, se nescire intellegeret.",
+    "difficulty": "Indirect discourse within indirect discourse; cum + subjunctive (comprehendisset); eo...quod causal construction; quae nesciret/se nescire — double nested clause about Socratic ignorance",
+    "translation_A": "Socrates, after having comprehended all the teachings and disciplines, used to say that he was wiser than others for this reason: that he understood he did not know what he did not know.",
+    "translation_D": "Socrates, when he had mastered all fields of knowledge, used to say that he was wiser than others for this reason, because he understood that he did not know what he did not know.",
+    "annotations": [
+      {
+        "form": "Socrates",
+        "meaning": "The Greek philosopher Socrates, known for his method of questioning and his emphasis on self-knowledge.",
+        "significance": "Identifies the subject of the anecdote, a key figure in Western philosophy, whose humility and wisdom are central to the passage."
+      },
+      {
+        "form": "doctrinae disciplinam",
+        "meaning": "The branches or fields of knowledge; the various disciplines of learning.",
+        "significance": "Highlights Socrates' mastery of all areas of knowledge, which underscores his authority and the scope of his wisdom."
+      },
+      {
+        "form": "comprehendisset",
+        "meaning": "He had comprehended or mastered (all fields of knowledge).",
+        "significance": "Indicates Socrates' complete mastery of all disciplines, which forms the basis of his claim to wisdom."
+      },
+      {
+        "form": "eo se sapientiorem",
+        "meaning": "He considered himself wiser (than others) for this reason.",
+        "significance": "Introduces Socrates' humility and self-awareness, which are central to his philosophical stance."
+      },
+      {
+        "form": "quae nesciret, se nescire intellegeret",
+        "meaning": "He understood that he did not know what he did not know.",
+        "significance": "Captures the essence of Socratic wisdom: recognizing the limits of one's knowledge, which is a key philosophical insight."
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "language": "latin",
+    "source": "Macrobius, Saturnalia I.7.18",
+    "text": "Saturnus ipse, qui auctor est temporum et ideo a parte maior est Ianus — quia ad eum meatus reditus que pertinent —, nonne mensem habere debuit?",
+    "difficulty": "Antiquarian commentary on the calendar; a parte maior (greater in one respect); meatus reditusque (goings and returnings — i.e., time); parenthetical quia-clause interrupts the argument; nonne expects affirmative answer",
+    "translation_A": "Saturn himself, who is the author of the ages and therefore, in a way, is greater than Janus — because the passages and returns pertain to him —, should he not have had a month?",
+    "translation_D": "Saturn himself, who is the originator of time and for this reason is greater in part than Janus — since the passages and cycles of time pertain to him — ought he not to have had a month?",
+    "annotations": [
+      {
+        "form": "Saturnus",
+        "meaning": "Saturn, Roman god of agriculture, time, and the cosmos, often associated with the Greek god Cronus.",
+        "significance": "Central to the passage, Saturn's role as a primordial deity and 'auctor temporum' (author of time) underscores his importance in Roman religious and calendrical thought."
+      },
+      {
+        "form": "auctor est temporum",
+        "meaning": "He is the originator or author of time.",
+        "significance": "This phrase establishes Saturn's foundational role in the creation and regulation of time, linking him to the structure of the cosmos and human understanding of temporal cycles."
+      },
+      {
+        "form": "Ianuarius",
+        "meaning": "Of or pertaining to Janus, the Roman god of beginnings, gates, and transitions.",
+        "significance": "The mention of Janus highlights the contrast between Saturn's role as a time deity and the fact that the month of January (Ianuarius) is named after Janus, not Saturn."
+      },
+      {
+        "form": "meatus",
+        "meaning": "Passages, courses, or cycles (of time).",
+        "significance": "Refers to the cyclical nature of time, emphasizing Saturn's association with the flow and measurement of time, as well as the transitions between periods."
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "language": "latin",
+    "source": "Seneca, Epistulae Morales 47.1",
+    "text": "Libenter ex iis qui a te veniunt cognovi familiariter te cum servis tuis vivere: hoc prudentiam tuam, hoc eruditionem decet. 'Servi sunt.' Immo homines. 'Servi sunt.' Immo contubernales. 'Servi sunt.' Immo humiles amici.",
+    "difficulty": "Diatribe style with rapid objection-response pattern; 'Servi sunt' is the imagined interlocutor; Immo introduces the correction; contubernales (tent-mates, i.e., companions) — the argument builds through three escalating redefinitions",
+    "translation_A": "Gladly have I learned from those who come from you that you live intimately with your servants: this befits your prudence, this befits your learning. \"They are servants.\" Nay, they are men. \"They are servants.\" Nay, they are companions. \"They are servants.\" Nay, they are humble friends.",
+    "translation_D": "Gladly, from those who come to you, I have learned that you live on familiar terms with your servants: this befits your prudence, this befits your learning. \"They are servants.\" On the contrary, they are human beings. \"They are servants.\" On the contrary, they are companions. \"They are servants.\" On the contrary, they are humble friends.",
+    "annotations": [
+      {
+        "form": "cognovi familiariter",
+        "meaning": "I have learned that you live familiarly",
+        "significance": "This phrase highlights Seneca's approval of the addressee's close and personal relationship with their servants, emphasizing the ethical ideal of treating servants with dignity and respect."
+      },
+      {
+        "form": "servis tuis",
+        "meaning": "with your servants",
+        "significance": "This term underscores the social hierarchy of Roman slavery, which Seneca critiques by redefining the relationship as one of mutual respect rather than domination."
+      },
+      {
+        "form": "servi sunt",
+        "meaning": "They are servants",
+        "significance": "Repeated for emphasis, this phrase represents the common Roman attitude toward slaves, which Seneca challenges by asserting their humanity and moral equality."
+      },
+      {
+        "form": "contubernales",
+        "meaning": "tent-mates or companions",
+        "significance": "This term redefines the relationship between master and servant, suggesting a bond of camaraderie and shared humanity rather than mere servitude."
+      },
+      {
+        "form": "humiles amici",
+        "meaning": "humble friends",
+        "significance": "This phrase encapsulates Seneca's ethical argument, advocating for a relationship based on mutual respect and friendship rather than hierarchical dominance."
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "language": "latin",
+    "source": "Seneca, Epistulae Morales 41.1-2",
+    "text": "Prope est a te deus, tecum est, intus est. Ita dico, Lucili: sacer intra nos spiritus sedet, malorum bonorumque nostrorum observator et custos. Hic prout a nobis tractatus est, ita nos ipse tractat.",
+    "difficulty": "Theological prose with tricolon (prope/tecum/intus); sacer spiritus as Stoic pneuma; observator et custos (watcher and guardian); prout...ita correlative — 'as he is treated by us, so he himself treats us' — reciprocal divine relationship",
+    "translation_A": "God is near to you, with you, within you. Thus I say, Lucilius: a sacred spirit dwells within us, an observer and guardian of our right and wrong actions. It treats us as we have treated it.",
+    "translation_D": "God is near you, with you, and within you. So I say to you, Lucilius: a sacred spirit dwells within us, an observer and guardian of our good and evil deeds. This spirit, however we treat it, treats us in the same way.",
+    "annotations": [
+      {
+        "form": "Prope est a te deus, tecum est, intus est",
+        "meaning": "God is near you, with you, and within you",
+        "significance": "This phrase encapsulates the Stoic belief in the immanence of the divine, emphasizing that God is not distant but intimately present within the individual."
+      },
+      {
+        "form": "sacer intra nos spiritus",
+        "meaning": "the sacred spirit within us",
+        "significance": "This refers to the divine spark or pneuma within humans, a central concept in Stoic theology, representing the divine presence that guides moral judgment and action."
+      },
+      {
+        "form": "observator et custos",
+        "meaning": "observer and guardian",
+        "significance": "These terms highlight the role of the divine spirit as a vigilant watcher over human thoughts and deeds, underscoring the idea of moral accountability."
+      },
+      {
+        "form": "Hic prout a nobis tractatus est, ita nos ipse tractat",
+        "meaning": "As we treat this spirit, so it treats us",
+        "significance": "This reciprocal relationship illustrates the Stoic principle of ethical causality, where the treatment of the divine within oneself directly influences one's own moral condition."
+      }
+    ]
   }
 ]
