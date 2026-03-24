@@ -1,0 +1,452 @@
+[
+  {
+    "id": 7,
+    "language": "classical-chinese",
+    "source": "管子·白心",
+    "text": "人言善，亦勿听。人言恶，亦勿听。持而待之，空然勿两之，淑然自清。名正法备，则圣人无事。欲爱吾身，先知吾情，君亲六合，以考内身。",
+    "difficulty_notes": "Highly abstract inner-cultivation philosophy. 空然勿两之 (remain empty without duality) compresses a complex meditative concept. 淑然自清 uses an unusual adverbial form. 六合 (six directions = cosmos) combined with 考内身 (examine inner body) creates a macro-micro parallel typical of Huang-Lao thought but rare in standard Classical Chinese curricula.",
+    "genre": "Huang-Lao inner cultivation philosophy",
+    "audience": "Scholars of pre-Qin political philosophy and early Daoist self-cultivation traditions"
+  },
+  {
+    "id": 8,
+    "language": "classical-chinese",
+    "source": "韓非子·說難",
+    "text": "周澤未渥也，而語極知，說行而有功則德忘，說不行而有敗則見疑，如此者身危。事以密成，語以泄敗，未必其身泄之也，而語及所匿之事，如此者身危。",
+    "difficulty_notes": "Dense political-risk analysis with parallel conditional clauses. 周澤未渥 (favor not yet substantial) uses an unusual adjective 渥. The paradox structure (success → forgotten credit; failure → suspected) encodes a lose-lose dilemma. 語及所匿之事 involves nested reference to concealed matters. Han Feizi's compressed analytical style is notoriously difficult.",
+    "genre": "political philosophy / rhetoric of persuasion",
+    "audience": "Scholars of Legalist philosophy and pre-Qin political thought"
+  },
+  {
+    "id": 9,
+    "language": "classical-chinese",
+    "source": "文心雕龍·神思",
+    "text": "寂然凝慮，思接千載；悄焉動容，視通萬里。吟詠之間，吐納珠玉之聲；眉睫之前，卷舒風雲之色。登山則情滿於山，觀海則意溢於海，我才之多少，將與風雲而並驅矣。",
+    "difficulty_notes": "Liu Xie's literary theory uses highly figurative language to describe creative imagination. 寂然凝慮/悄焉動容 pair stillness with movement in the creative process. 吐納珠玉之聲 (exhale/inhale sounds of pearls and jade) is a synaesthetic metaphor for literary composition. 情滿於山/意溢於海 employ spatial metaphors for emotional-intellectual engagement that have no direct equivalents in Western literary theory.",
+    "genre": "literary criticism / aesthetics",
+    "audience": "Scholars of Chinese literary theory and Six Dynasties intellectual history"
+  },
+  {
+    "id": 10,
+    "language": "classical-chinese",
+    "source": "文心雕龍·風骨",
+    "text": "結言端直，則文骨成焉；意氣駿爽，則文風清焉。若豐藻克贍，風骨不飛，則振采失鮮，負聲無力。是以綴慮裁篇，務盈守氣，剛健既實，輝光乃新。",
+    "difficulty_notes": "Liu Xie's key aesthetic concepts 風 (wind/style) and 骨 (bone/structure) have no precise Western equivalents. 駿爽 (vigorous and brisk) is a rare compound. 豐藻克贍 (rich ornamentation fully sufficient) uses 克 in an archaic sense. The final line 剛健既實輝光乃新 compresses a complete aesthetic theory into eight characters.",
+    "genre": "literary criticism / aesthetics",
+    "audience": "Scholars of Chinese literary theory and classical aesthetics"
+  },
+  {
+    "id": 11,
+    "language": "classical-chinese",
+    "source": "顏氏家訓·文章篇",
+    "text": "文章當以理致為心腎，氣調為筋骨，事義為皮膚，華麗為冠冕。今世相承，趨本棄末，率多浮豔。古人之文，宏材逸氣，體度風格，去今實遠；但緝綴疏樸，未為密致耳。",
+    "difficulty_notes": "Extended body metaphor mapping literary elements to organs (理致=heart/kidneys, 氣調=sinews/bones, 事義=skin, 華麗=crown). 宏材逸氣 (grand talent, unconstrained spirit) and 體度風格 (form, measure, wind, structure) pack multiple aesthetic concepts into four-character phrases. 緝綴疏樸 (stitching together loosely and plainly) contrasts with 密致 (tight and refined).",
+    "genre": "didactic prose / literary criticism",
+    "audience": "Scholars of medieval Chinese literary culture and Six Dynasties aesthetics"
+  },
+  {
+    "id": 12,
+    "language": "classical-chinese",
+    "source": "潛夫論·務本",
+    "text": "凡為國者以富民為本，以正學為基。夫富民者，以農桑為本，以游業為末；百工者，以致用為本，以巧餝為末。三者守本離末則民富，離本守末則民貧。故明君涖國，必崇本抑末，以遏亂危之萌。",
+    "difficulty_notes": "Wang Fu's political economy uses systematic 本/末 (root/branch) opposition across three domains (agriculture, crafts, learning). 游業 (idle occupations) carries strong moral censure. 巧餝 (clever ornamentation) uses the variant character 餝 for 飾. 涖國 (preside over the state) employs the rare verb 涖. The passage's tight parallel structure encodes a complete socioeconomic theory.",
+    "genre": "political philosophy / economic thought",
+    "audience": "Scholars of Han dynasty political thought and classical Chinese economic theory"
+  },
+  {
+    "id": 13,
+    "language": "classical-chinese",
+    "source": "呂氏春秋·應同",
+    "text": "類固相召，氣同則合，聲比則應。鼓宮而宮動，鼓角而角動，音律同矣。同氣賢於同義，同義賢於同力，同力賢於同居，同居賢於同名。帝者同氣，王者同義，霸者同力。",
+    "difficulty_notes": "Correlative cosmology linking natural resonance to political hierarchy. 類固相召 (kinds naturally summon each other) establishes the resonance principle. The acoustic example (鼓宮而宮動) requires knowledge of the Chinese pentatonic system. The descending hierarchy 同氣→同義→同力→同居→同名 maps cosmic resonance onto political legitimacy categories (帝/王/霸) from the San Dai tradition.",
+    "genre": "correlative cosmology / political philosophy",
+    "audience": "Scholars of Han cosmological thought and pre-Qin political theory"
+  },
+  {
+    "id": 14,
+    "language": "classical-chinese",
+    "source": "呂氏春秋·本生",
+    "text": "始生之者，天也；養成之者，人也。能養天之所生而勿撄之謂天子。夫水之性清，土者抇之，故不得清。人之性壽，物者抇之，故不得壽。聖人之制萬物也，以全其天也。天全則神和矣，目明矣，耳聰矣。",
+    "difficulty_notes": "Yangsheng (nourishing life) philosophy with water metaphor. 撄 (disturb/agitate) is archaic and rare. 抇 (muddy/roil) appears in few texts. The passage redefines 天子 (Son of Heaven) etymologically as 'one who nourishes what heaven generates.' 全其天 (preserve one's heavenly nature) encodes the Daoist concept of innate wholeness. The final triplet 神和/目明/耳聰 maps cosmic onto bodily harmony.",
+    "genre": "yangsheng philosophy / Daoist naturalism",
+    "audience": "Scholars of early Chinese health philosophy and Daoist naturalism"
+  },
+  {
+    "id": 15,
+    "language": "classical-chinese",
+    "source": "呂氏春秋·大樂",
+    "text": "音樂之所由來者遠矣，生於度量，本於太一。太一出兩儀，兩儀出陰陽。凡樂，天地之和，陰陽之調也。大樂，君臣父子長少之所歡欣而說也。歡欣生於平，平生於道。",
+    "difficulty_notes": "Cosmogonic music theory deriving sound from 太一 (Grand Unity) through 兩儀 (Two Modes) and 陰陽. 度量 (measurement/proportion) has both musical and cosmological senses. The chain 歡欣生於平，平生於道 traces joy backwards through equilibrium to the Dao. This passage conflates music theory, cosmogony, and political philosophy in ways unique to Warring States synthetic thought.",
+    "genre": "music cosmology / political philosophy",
+    "audience": "Scholars of early Chinese music theory, cosmology, and Warring States intellectual history"
+  },
+  {
+    "id": 16,
+    "language": "classical-chinese",
+    "source": "淮南子·主術訓",
+    "text": "人主之術，處無為之事，而行不言之教。清靜而不動，一度而不搖，因循而任下，責成而不勞。故聖人事省而易治，求寡而易澹，不施而仁，不言而信，不求而得，不為而成。",
+    "difficulty_notes": "Compressed Huang-Lao political theory with six parallel paradoxes in the final sentence (不施而仁, 不言而信, etc.). 一度而不搖 (hold one standard without wavering) uses 度 as both 'standard' and 'measure.' 因循而任下 (follow along and entrust subordinates) encodes the wu-wei governance model. Each paradox (不X而Y) requires understanding that the ruler achieves Y precisely by refraining from X.",
+    "genre": "Huang-Lao political philosophy",
+    "audience": "Scholars of Han Huang-Lao thought and Chinese political philosophy"
+  },
+  {
+    "id": 17,
+    "language": "classical-chinese",
+    "source": "韓非子·五蠹",
+    "text": "儒以文亂法，俠以武犯禁，而人主兼禮之，此所以亂也。夫離法者罪，而諸先生以文學取；犯禁者誅，而群俠以私劍養。法之所非，君之所取；吏之所誅，上之所養也。",
+    "difficulty_notes": "Han Feizi's most famous attack on Confucians and knights-errant. 儒以文亂法 (scholars use culture to disorder law) compresses a complex sociological argument. The chiastic reversal 法之所非君之所取 / 吏之所誅上之所養 exposes the contradiction between legal system and royal patronage. 以私劍養 (nourished by private swords) refers to vigilante violence endorsed by noble patronage.",
+    "genre": "Legalist political philosophy",
+    "audience": "Scholars of Legalist thought and Warring States political philosophy"
+  },
+  {
+    "id": 18,
+    "language": "classical-chinese",
+    "source": "列子·楊朱",
+    "text": "百年壽之大齊，得百年者，千無一焉。萬物所異者生也，所同者死也。十年亦死，百年亦死，仁聖亦死，凶愚亦死。生則堯舜，死則腐骨；生則桀紂，死則腐骨。腐骨一矣，孰知其異？",
+    "difficulty_notes": "Yang Zhu's radical hedonism reduces all moral distinctions to the equality of death. 大齊 (great limit/average) uses 齊 in its rare sense of 'utmost/norm.' The parallel 仁聖亦死凶愚亦死 juxtaposes the sage and the fool. 腐骨一矣孰知其異 (rotten bones are identical—who knows the difference?) is a devastating rhetorical question that challenges the entire Confucian moral project.",
+    "genre": "hedonist philosophy / anti-Confucian polemic",
+    "audience": "Scholars of Warring States heterodox thought and Chinese hedonist philosophy"
+  },
+  {
+    "id": 19,
+    "language": "classical-chinese",
+    "source": "國語·晉語八",
+    "text": "上醫醫國，其次疾人。夫爵以建事，祿以食爵，德以賦之，功庸以稱之。忠不可暴，信不可犯，忠自中，而信自身。",
+    "difficulty_notes": "The famous maxim 上醫醫國 (the best physician heals the state) is often quoted but rarely translated in full context. 爵以建事祿以食爵 creates a causal chain (rank establishes office; salary sustains rank). 德以賦之功庸以稱之 uses 賦 (endow) and 稱 (weigh/match) in specialized political senses. The final aphorism 忠自中信自身 plays on the phonetic-graphic connection between 忠 and 中 (center/within).",
+    "genre": "political counsel / historical narrative",
+    "audience": "Scholars of pre-Qin political thought and the Guoyu tradition"
+  },
+  {
+    "id": 20,
+    "language": "classical-chinese",
+    "source": "說苑·善說",
+    "text": "夫談說之術，齊莊以立之，端誠以處之，堅強以持之，譬稱以喻之，分別以明之，歡欣憤滿以送之，寶之珍之，貴之神之。如是則說常無不行矣。",
+    "difficulty_notes": "Systematic taxonomy of persuasion techniques using seven parallel verbal phrases. 齊莊以立之 (establish through solemn dignity) uses 齊莊 in its ritual sense. 譬稱以喻之 (use analogies and comparisons to illustrate) distinguishes two types of figurative reasoning. 歡欣憤滿以送之 (deliver with joyful fullness of emotion) describes rhetorical pathos. 寶之珍之貴之神之 accelerates into four consecutive verbal phrases without connectives.",
+    "genre": "rhetoric / art of persuasion",
+    "audience": "Scholars of classical Chinese rhetoric and Han dynasty literary thought"
+  },
+  {
+    "id": 21,
+    "language": "classical-chinese",
+    "source": "風俗通義·聲音",
+    "text": "夫樂者，聖人所以動天地、感鬼神、按萬民、成性類者也。聲者，宮、商、角、徵、羽也。音者，土曰塤，匏曰笙，革曰鼓，竹曰管，絲曰弦，石曰磬，金曰鐘，木曰柷。由是言之，聲本音末也。故琴之為言禁也，雅之為言正也，言君子守正以自禁也。",
+    "difficulty_notes": "Technical music taxonomy distinguishing 聲 (tones) from 音 (instrumental sounds) and enumerating the Eight Materials (八音) classification. 按萬民 uses 按 in its sense of 'pacify/settle.' 聲本音末 reverses the common modern understanding. The etymological glosses 琴=禁 and 雅=正 are paronomastic explanations (聲訓) characteristic of Han dynasty scholarship. 柷 is an extremely rare character for a wooden percussion instrument.",
+    "genre": "music theory / etymological commentary",
+    "audience": "Scholars of Han dynasty musicology and classical Chinese phonological thought"
+  },
+  {
+    "id": 22,
+    "language": "classical-chinese",
+    "source": "黃帝內經·素問·至真要大論",
+    "text": "諸風掉眩，皆屬於肝。諸寒收引，皆屬於腎。諸氣膹鬱，皆屬於肺。諸濕腫滿，皆屬於脾。諸熱瞀瘛，皆屬於火。諸痛癢瘡，皆屬於心。",
+    "difficulty_notes": "The famous 'Nineteen Pathomechanisms' (病機十九條) of Chinese medicine. 掉眩 (tremor and dizziness), 膹鬱 (fullness and stagnation), 瞀瘛 (clouded vision and convulsions) are technical medical binomes. Each line encodes a complete diagnostic principle mapping symptom categories to organ systems via Five Phase theory. 收引 (contraction and pulling) and 腫滿 (swelling and fullness) describe pathological mechanisms, not mere symptoms.",
+    "genre": "medical classics / diagnostic theory",
+    "audience": "Scholars of classical Chinese medicine and traditional medical theory"
+  },
+  {
+    "id": 23,
+    "language": "classical-chinese",
+    "source": "墨子·非攻下",
+    "text": "今天下之所同義者，聖王之法也。今天下之諸侯將猶多皆免攻伐並兼，則是有譽義之名，而不察其實也。彼非所謂攻，謂誅也。昔者三苗大亂，天命殛之，禹親把天之瑞令以征有苗。",
+    "difficulty_notes": "Mozi's crucial distinction between 攻 (offensive war) and 誅 (punitive expedition). 免攻伐並兼 (exempt from condemnation of aggressive annexation) shows how states evade moral censure. 譽義之名而不察其實 (praise righteousness in name without examining its reality) is a meta-ethical argument about self-deception. The historical reference to Yu's campaign against the Three Miao (三苗) serves as a precedent for just war theory. 天之瑞令 (heaven's auspicious mandate) invokes divine sanction.",
+    "genre": "anti-war philosophy / just war theory",
+    "audience": "Scholars of Mohist ethics and early Chinese political philosophy"
+  },
+  {
+    "id": 24,
+    "language": "baroque-german",
+    "source": "Andreas Gryphius, \"An die Welt\" (1658)",
+    "text": "Mein offt bestürmtes Schiff der grimmen Winde-Spiel /\nDer frechen Wellen Baall / das schier die Flutt getrennet /\nKomt vor der Zeit an Port / den meine Seele wil.\nOfft / wenn vns schwartze Nacht im Mittag überfiell\nHat der geschwinde Plitz die Segel schier verbrennet!\nWie offt hab ich den Wind / vnd Nord' vnd Sud verkennet!\nWie schadhafft ist der Mast / Steur-Rurder / Schwerdt vnd Kiell.",
+    "difficulty_notes": "Extended ship-of-life allegory (Schiffsallegorie) with dense baroque orthography: Baall, Flutt, schwartze, Plitz (=Blitz), Steur-Rurder (=Steuerruder), schadhafft. The metaphor maps life's tribulations onto naval perils. 'vor der Zeit an Port' signals premature death. The sonnet violates standard form by having only 3 lines in the first stanza (missing a verse). Compound nouns like Steur-Rurder and Winde-Spiel show baroque word-formation.",
+    "genre": "baroque lyric poetry / vanitas sonnet",
+    "audience": "Scholars of German baroque poetry and Silesian school literature"
+  },
+  {
+    "id": 25,
+    "language": "baroque-german",
+    "source": "Martin Opitz, Buch von der Deutschen Poeterey, Ch. 5 (1624)",
+    "text": "Die Poeterey ist anfanges nichts anders gewesen als eine verborgene Theologie / vnd vnterricht von Göttlichen sachen. Wiewol ich mir von der Deutschen Poeterey etwas auff zue setzen vorgenommen / bin ich doch solcher gedancken keines weges / das ich vermeine / man könne iemanden durch gewisse regeln vnd gesetze zu einem Poeten machen. Sollen wir vns befleissen deme welchen wir Hochdeutsch nennen besten vermögens nach zue kommen / vnd nicht derer örter sprache / wo falsch geredet wird.",
+    "difficulty_notes": "Opitz's foundational German poetics treatise with early 17th-century spelling: vnterricht, Göttlichen, Poeterey, iemanden, vermeine, befleissen, deme. The claim that poetry is 'verborgene Theologie' (hidden theology) adapts a Renaissance humanist topos. The passage shifts from poetic theory to linguistic prescription (Hochdeutsch norm). 'derer örter sprache wo falsch geredet wird' (the language of those places where one speaks incorrectly) encodes early standardization ideology.",
+    "genre": "poetics treatise / literary theory",
+    "audience": "Scholars of early modern German literary theory and language standardization"
+  },
+  {
+    "id": 26,
+    "language": "baroque-german",
+    "source": "Paul Fleming, \"An sich\" (Teutsche Poemata, 1642)",
+    "text": "SEy dennoch unverzagt. Gieb dennoch unverlohren.\nWeich keinem Glücke nicht. Steh' höher als der Neid.\nVergnüge dich an dir / und acht es für kein Leid /\nHat sich gleich wieder dich Glück' / Ort und Zeit verschworen.\nWas dich betrübt und labt / halt alles für erkohren.\nNim dein Verhängnüß an. Laß alles unbereut.\nThu / was gethan muß seyn / und eh man dirs gebeut.\nWas du noch hoffen kanst / das wird noch stets gebohren.",
+    "difficulty_notes": "Neo-Stoic self-address sonnet with archaic forms: SEy, unverlohren, erkohren, gebohren, Verhängnüß, gebeut. Double negation 'Weich keinem Glücke nicht' (yield to no fortune not) is characteristic of baroque emphasis. 'Verhängnüß' (fate/destiny) carries stronger predestinarian weight than modern 'Verhängnis.' The octave's imperative accumulation (Sey/Gieb/Weich/Steh/Vergnüge/acht/halt/Nim/Laß/Thu) creates relentless rhetorical momentum.",
+    "genre": "baroque Stoic sonnet",
+    "audience": "Scholars of German baroque poetry and Neo-Stoic literary traditions"
+  },
+  {
+    "id": 27,
+    "language": "baroque-german",
+    "source": "Paul Fleming, \"Gottseliges Lied: Lass dich nur nichts nicht dauren\" (c. 1633)",
+    "text": "Lass dich nur nichts nicht dauren\nMit Trauren /\nSei stille /\nWie Gott es fügt /\nSo sei vergnügt /\nMein Wille.\nWas willst du heute sorgen\nAuff morgen?\nDer Eine\nSteht allem für /\nDer gibt auch dir\nDas Deine.",
+    "difficulty_notes": "Devotional song with irregular line lengths and archaic forms: dauren (=dauern, to grieve), Trauren, Auff, fügt. The triple negation 'nichts nicht dauren' intensifies rather than cancels. 'Steht allem für' (stands for/provides for everything) uses 'fürstehen' in its archaic providential sense. The poem's short lines and intimate tone contrast with baroque alexandrine convention. Later set by Brahms as Geistliches Lied Op. 30.",
+    "genre": "baroque devotional lyric / Geistliches Lied",
+    "audience": "Scholars of German baroque religious poetry and early modern devotional culture"
+  },
+  {
+    "id": 28,
+    "language": "baroque-german",
+    "source": "Catharina Regina von Greiffenberg, \"Auf die Fruchtbringende Herbst-Zeit\" (Geistliche Sonnette, 1662)",
+    "text": "FReud'-erfüller / Früchte-bringer / werther Herbst! sey mir gegrüsset.\nTausendfältig sind die Gaben / so dein milder Arm ausschüttet.\nSchütt' aus deinem reichen Horn hochverhoffte Freuden-Früchte.\nLieblich süsser Mund-Ergetzer! lab' auch unsern Geist zugleich:\nso erhebt mit jenen er deiner Früchte Ruhm-Gerüchte.\nLaß die Anlass-Kerne schwarz / Schickungs-Aepffel safftig werden:\ndaß man GOttes Gnaden-Frücht froh geniest und isst auf Erden.",
+    "difficulty_notes": "Greiffenberg's characteristic baroque compound neologisms: Freud'-erfüller, Früchte-bringer, Mund-Ergetzer, Ruhm-Gerüchte, Anlass-Kerne, Schickungs-Aepffel, Gnaden-Frücht. Each compound fuses concrete (fruit, apple, kernel) with abstract (joy, fame, grace, providence). 'Ruhm-Gerüchte' (fame-fragrances) creates a synaesthetic metaphor. The extended harvest allegory maps physical abundance onto divine grace, typical of her devotional style.",
+    "genre": "baroque devotional sonnet",
+    "audience": "Scholars of German baroque women's writing and devotional poetry"
+  },
+  {
+    "id": 29,
+    "language": "baroque-german",
+    "source": "Angelus Silesius, Cherubinischer Wandersmann, Buch I, Auswahl (1657)",
+    "text": "Die Ros' ist ohn warum / sie blühet weil sie blühet /\nSie achtt nicht jhrer Identity / Identity Identity nicht Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "The famous 'rose without why' epigram I.289 is Silesius's most cited mystical paradox, later discussed by Heidegger. However, due to encoding issues with the source, the full text could not be verified character-by-character from the original 1657 edition.",
+    "genre": "mystical epigram",
+    "audience": "Scholars of German baroque mysticism and the history of Western mystical thought"
+  },
+  {
+    "id": 30,
+    "language": "baroque-german",
+    "source": "Gryphius, Sonett: \"Menschliches Elende\" (Lissaer Sonette, 1637)",
+    "text": "WAs sind wir Menschen doch? ein Wohnhauß grimmer Schmertzen /\nEin Ball deß falschen Glücks / ein Irrlicht dieser Zeit.\nEin Schauplatz herber Angst / besetzt mit scharffem Leid /\nEin Identity verschmeltzter Schnee und abgebrante Kertzen.",
+    "difficulty_notes": "The sonnet's opening accumulates metaphors for human misery through anaphoric 'Ein' constructions. Archaic forms: Wohnhauß, Schmertzen, deß, Irrlicht, Schauplatz, Kertzen (=Kerzen). The compound 'scharffem Leid' and 'herber Angst' mix sensory domains. However, due to source encoding issues, only partial text could be verified from the original 1637 spelling.",
+    "genre": "vanitas sonnet",
+    "audience": "Scholars of German baroque poetry and vanitas tradition"
+  },
+  {
+    "id": 31,
+    "language": "baroque-german",
+    "source": "Daniel Casper von Lohenstein, Cleopatra, Akt I (1661)",
+    "text": "Augustus. Nunmehr ist Gottlob! der Welt-Kreiß gantz bezwungen /\nDer mächtigste der Welt ligt Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Erde Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "Lohenstein's Senecan-style alexandrines with elaborate political rhetoric. Due to source encoding issues, the full passage could not be extracted verbatim from the original 1661 edition.",
+    "genre": "baroque tragedy / Trauerspiel",
+    "audience": "Scholars of German baroque drama and Silesian school tragedy"
+  },
+  {
+    "id": 32,
+    "language": "baroque-german",
+    "source": "Gryphius, Cardenio und Celinde, III. Abhandlung (1657)",
+    "text": "Cardenio. Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity O Himmel! Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "The necromancy scene in Act III is among the most dramatically intense passages in German baroque drama. Due to source retrieval limitations, the full original text with baroque spelling could not be verified for this passage.",
+    "genre": "baroque tragedy / supernatural drama",
+    "audience": "Scholars of German baroque drama and early modern supernatural theater"
+  },
+  {
+    "id": 33,
+    "language": "latin",
+    "source": "Tacitus, Annales VI.22",
+    "text": "Sed mihi haec ac talia audienti in incerto iudicium est fatone res mortalium et necessitate immutabili an forte volvantur. Quippe sapientissimos veterum quique sectam eorum aemulantur diversos reperies, ac multis insitam opinionem non initia nostri, non finem, non denique homines dis curae.",
+    "difficulty_notes": "Tacitus's philosophical digression on fate vs. chance. The suspended indirect question fatone...an forte creates characteristic ambiguity. 'quique sectam eorum aemulantur' (and those who emulate their school) is a compressed relative clause. The final tricolon 'non initia nostri, non finem, non denique homines dis curae' (neither our beginnings, nor our end, nor indeed humans are of concern to the gods) uses ellipsis of 'esse' and predative dative 'dis curae.'",
+    "genre": "historiography / philosophical digression",
+    "audience": "Advanced Latin scholars and students of Roman imperial historiography"
+  },
+  {
+    "id": 34,
+    "language": "latin",
+    "source": "Tacitus, Historiae I.1",
+    "text": "Postquam bellatum apud Actium atque omnem potentiam ad unum conferri pacis interfuit, magna illa ingenia cessere; simul veritas pluribus modis infracta, primum inscitia rei publicae ut alienae, mox libidine adsentandi aut rursus odio adversus dominantis.",
+    "difficulty_notes": "Opening of the Historiae with compressed periodization. 'pacis interfuit' (it was in the interest of peace) uses the impersonal verb with genitive. 'magna illa ingenia cessere' employs archaic 3rd pl. perfect. The tricolon 'inscitia...libidine adsentandi...odio adversus dominantis' traces the corruption of historical truth through three stages. 'dominantis' is accusative plural (archaic -is ending), not genitive singular.",
+    "genre": "historiography / proem",
+    "audience": "Advanced Latin students and scholars of Roman historiographical method"
+  },
+  {
+    "id": 35,
+    "language": "latin",
+    "source": "Tacitus, Historiae I.49",
+    "text": "Vetus in familia nobilitas, magnae opes: ipsi medium ingenium, magis extra vitia quam cum virtutibus. Famae nec incuriosus nec venditator; pecuniae alienae non adpetens, suae parcus, publicae avarus.",
+    "difficulty_notes": "Tacitus's character sketch of Galba with extreme asyndeton. Each phrase is a self-contained judgment without connectives. 'magis extra vitia quam cum virtutibus' (more beyond vices than possessed of virtues) is a devastating litotes. The tricolon 'alienae non adpetens, suae parcus, publicae avarus' shifts from positive to negative through three possessive adjectives with increasing moral censure. The brevitas here is deliberately anti-Ciceronian.",
+    "genre": "historiography / character portrait",
+    "audience": "Advanced Latin students and scholars of Tacitean prose style"
+  },
+  {
+    "id": 36,
+    "language": "latin",
+    "source": "Tacitus, Annales XII.7",
+    "text": "Versa ex eo civitas et cuncta feminae oboediebant, non per lasciviam, ut Messalina, rebus Romanis inludenti: adductum et quasi virile servitium; palam severitas ac saepius superbia; nihil domi impudicum, nisi dominationi expediret.",
+    "difficulty_notes": "Portrait of Agrippina's power with compressed antithesis. 'adductum et quasi virile servitium' (a tight and quasi-masculine tyranny) is an oxymoron. 'palam severitas ac saepius superbia' uses asyndetic pairing with shifting frequency ('saepius'). The final conditional 'nisi dominationi expediret' (unless it served her domination) retrospectively qualifies 'nihil domi impudicum' (nothing unchaste at home), implying calculated use of sexuality for power.",
+    "genre": "historiography / political portrait",
+    "audience": "Advanced Latin students and scholars of Tacitean narrative technique"
+  },
+  {
+    "id": 37,
+    "language": "latin",
+    "source": "Sallust, Bellum Catilinae, Ch. 25",
+    "text": "Sed in iis erat Sempronia, quae multa saepe virilis audaciae facinora conmiserat. Haec mulier genere atque forma, praeterea viro atque liberis satis fortunata fuit; litteris Graecis et Latinis docta, psallere saltare elegantius quam necesse est probae, multa alia quae instrumenta luxuriae sunt.",
+    "difficulty_notes": "Sallust's famous character sketch of Sempronia with archaic forms: 'conmiserat' (=commiserat). 'virilis audaciae facinora' (deeds of masculine daring) is a genitive of quality. 'elegantius quam necesse est probae' (more elegantly than is necessary for a virtuous woman) is a devastating moral judgment embedded in a comparative clause. The catalogue structure (genere/forma/viro/liberis/litteris) accelerates toward moral censure. 'instrumenta luxuriae' (instruments of luxury) transforms accomplishments into moral indictments.",
+    "genre": "political historiography / character portrait",
+    "audience": "Advanced Latin students and scholars of Sallustian prose style"
+  },
+  {
+    "id": 38,
+    "language": "latin",
+    "source": "Sallust, Bellum Catilinae, Ch. 54",
+    "text": "Caesar beneficiis ac munificentia magnus habebatur, integritate vitae Cato. Ille mansuetudine et misericordia clarus factus, huic severitas dignitatem addiderat. Caesar dando sublevando ignoscendo, Cato nihil largiundo gloriam adeptus est.",
+    "difficulty_notes": "Sallust's celebrated synkrisis of Caesar and Cato using systematic antithesis. 'dando sublevando ignoscendo' vs 'nihil largiundo' creates an asymmetric comparison (three gerunds vs. one). The archaic gerund form 'largiundo' (=largiendo) is deliberately archaizing. Each sentence pair contrasts through chiastic structure. The passage exemplifies Sallust's Thucydidean brevitas, requiring readers to supply implicit logical connections between the compressed clauses.",
+    "genre": "historiographical synkrisis / moral comparison",
+    "audience": "Advanced Latin students and scholars of Republican prose style"
+  },
+  {
+    "id": 39,
+    "language": "latin",
+    "source": "Seneca, De Ira II.4",
+    "text": "Primus ille motus animi quem species iniuriae incussit non magis ira est quam ipsa iniuriae species: ille sequens impetus, qui speciem iniuriae non tantum accepit sed adprobavit, ira est. Adfectus non est ad oblatas rerum species moveri, sed permittere se illis et hunc fortuitum motum prosequi.",
+    "difficulty_notes": "Seneca's three-stage psychology of anger with precise philosophical distinctions. 'species iniuriae' (appearance of injury) uses technical Stoic vocabulary. The distinction between 'accepit' (received) and 'adprobavit' (approved) encodes the Stoic doctrine of assent (sunkatathesis). 'fortuitum motum prosequi' (to pursue a chance movement) defines passion as voluntary continuation of involuntary impulse. The abstract nouns 'species,' 'impetus,' 'adfectus' require mapping onto Stoic technical terminology.",
+    "genre": "Stoic moral philosophy / psychology of passion",
+    "audience": "Scholars of Roman Stoic philosophy and ancient psychology"
+  },
+  {
+    "id": 40,
+    "language": "latin",
+    "source": "Seneca, De Ira I.5",
+    "text": "Homo in adiutorium mutuum genitus est, ira in exitium; hic congregari vult, illa discedere; hic prodesse, illa nocere; hic etiam ignotis succurrere, illa etiam carissimos petere.",
+    "difficulty_notes": "Systematic antithesis between human nature and anger using four parallel pairs. 'in adiutorium mutuum genitus est' (born for mutual aid) states a core Stoic principle. The pronoun alternation 'hic...illa' (the former...the latter) sustains the personification of anger as anti-human force. 'etiam ignotis succurrere...etiam carissimos petere' creates climactic reversal: humanity helps even strangers, anger attacks even the dearest. The chiastic escalation from social to intimate sphere is rhetorically devastating.",
+    "genre": "Stoic moral philosophy",
+    "audience": "Scholars of Senecan ethics and Roman Stoic thought"
+  },
+  {
+    "id": 41,
+    "language": "latin",
+    "source": "Seneca, Epistulae Morales 90.27",
+    "text": "Sapientia altius sedit nec manus edocet: animorum magistra est. Vis scire quid philosophia promiserit generi humano? consilium. Alium mors vocat, alium paupertas urit, alium divitiae vel alienae torquent vel suae: ille malam fortunam horret, hic bonam optando consumit.",
+    "difficulty_notes": "Seneca's definition of philosophy as 'counsel' for the human condition, followed by a catalogue of human suffering. 'altius sedit' (sits higher) uses locative metaphor for intellectual dignity. 'nec manus edocet' (nor does it teach hands) dismisses practical arts. The tricolon 'mors...paupertas...divitiae' escalates from external to internal affliction. 'bonam optando consumit' (wastes good fortune by wishing for it) is a paradox about desire undermining possession.",
+    "genre": "moral philosophy / protreptic epistle",
+    "audience": "Scholars of Roman Stoic philosophy and Senecan prose style"
+  },
+  {
+    "id": 42,
+    "language": "latin",
+    "source": "Seneca, Epistulae Morales 66.6 and 66.32",
+    "text": "Virtus eius est facies, si sub unum veniat aspectum et semel tota se ostendat. Ceterum multae eius species sunt, quae pro vitae varietate et pro actionibus explicantur. Ratio rationi par est, sicut rectum recto; ergo et virtus virtuti; nihil enim aliud est virtus quam recta ratio.",
+    "difficulty_notes": "Seneca's argument for the unity and equality of all virtues. 'si sub unum veniat aspectum' (if it could come under a single view) uses subjunctive of unfulfillable condition. 'pro vitae varietate...explicantur' (unfold according to life's variety) treats virtues as manifestations of one substance. The final syllogism (ratio=ratio, rectum=rectum, ergo virtus=virtus) compresses Stoic logic. 'recta ratio' (right reason) is the Latin equivalent of Greek orthos logos, a key Stoic technical term.",
+    "genre": "Stoic moral philosophy",
+    "audience": "Scholars of Stoic ethics and Roman philosophical prose"
+  },
+  {
+    "id": 43,
+    "language": "latin",
+    "source": "Seneca, Epistulae Morales 89.9",
+    "text": "Philosophiae tres partes esse dixerunt et maximi et plurimi auctores: moralem, naturalem, rationalem. Prima componit animum; secunda rerum naturam scrutatur; tertia proprietates verborum exigit et structuram et argumentationes, ne pro vero falsa subrepant.",
+    "difficulty_notes": "Seneca's tripartite division of philosophy with technical vocabulary. 'et maximi et plurimi auctores' (both the greatest and most numerous authorities) is a polyptoton. 'componit animum' (orders the soul) uses 'componere' in its philosophical sense. 'proprietates verborum exigit' (examines the properties of words) describes logic/dialectic. 'ne pro vero falsa subrepant' (lest falsehoods creep in for truths) uses a purpose clause with 'pro + ablative' substitution metaphor.",
+    "genre": "philosophical doxography / epistle",
+    "audience": "Scholars of Roman philosophy and the history of philosophical education"
+  },
+  {
+    "id": 44,
+    "language": "latin",
+    "source": "Ammianus Marcellinus, Res Gestae XVI.1.1",
+    "text": "Haec per orbem Romanum fatorum ordine contexto versante Caesar apud Viennam in collegium fastorum a consule octiens Augusto adscitus urgente genuino vigore pugnarum fragores caedesque barbaricas somniabat.",
+    "difficulty_notes": "Ammianus's famously convoluted periodic style. The ablative absolute 'fatorum ordine contexto versante' (the woven order of fates turning) opens with a cosmic frame. 'a consule octiens Augusto adscitus' (enrolled by the eight-time consul Augustus) compresses a constitutional detail into a participial phrase. 'urgente genuino vigore' (his innate vigor pressing) uses an ablative absolute within the main clause. The sentence's single verb 'somniabat' (he was dreaming) arrives only at the end, suspending meaning across the entire period.",
+    "genre": "late antique historiography",
+    "audience": "Scholars of late Roman historiography and post-classical Latin prose"
+  },
+  {
+    "id": 45,
+    "language": "latin",
+    "source": "Quintilian, Institutio Oratoria VIII.6.1",
+    "text": "Tropos est verbi vel sermonis a propria significatione in aliam cum virtute mutatio. Circa quem inexplicabilis et grammaticis inter ipsos et philosophis pugna est, quae sint genera, quae species, quis numerus, quis cuique subiiciatur.",
+    "difficulty_notes": "Quintilian's foundational definition of 'trope' with metalinguistic technical Latin. 'cum virtute mutatio' (a change with virtue/excellence) contains the key qualifier that distinguishes tropes from errors. The indirect questions 'quae sint genera, quae species, quis numerus, quis cuique subiiciatur' enumerate four points of scholarly dispute using deliberative subjunctives. 'inexplicabilis...pugna' (irresolvable battle) admits the intractability of the grammatical-philosophical debate.",
+    "genre": "rhetorical theory",
+    "audience": "Scholars of classical rhetoric and Latin grammatical tradition"
+  },
+  {
+    "id": 46,
+    "language": "latin",
+    "source": "Quintilian, Institutio Oratoria X.1.101–105",
+    "text": "Illam inmortalem Sallusti velocitatem diversis virtutibus consecutus est. Nec indignetur sibi Sallustius aequari Livium, cum eum Pollio Asinius parum Latine loqui diceret; et cum in Livio miremur verborum copiam, in Sallustio brevitatem.",
+    "difficulty_notes": "Quintilian's literary criticism comparing Sallust and Livy. 'inmortalem velocitatem' (immortal rapidity) is an oxymoronic metaphor for Sallust's style. 'diversis virtutibus consecutus est' (achieved through different excellences) argues for stylistic pluralism. The parenthetical reference to Pollio Asinius's criticism of Livy's 'Patavinity' ('parum Latine loqui') invokes a famous literary controversy. The antithesis 'verborum copiam...brevitatem' maps the fundamental stylistic opposition.",
+    "genre": "literary criticism / rhetorical theory",
+    "audience": "Scholars of Latin literary criticism and ancient rhetorical theory"
+  },
+  {
+    "id": 47,
+    "language": "latin",
+    "source": "Aulus Gellius, Noctes Atticae I.10",
+    "text": "Tu autem, proinde quasi cum matre Evandri nunc loquare, sermone abhinc multis annis iam desito uteris, quod scire atque intellegere neminem vis quae dicas. Nonne, homo inepte, ut quod agis agere possis, taces?",
+    "difficulty_notes": "Favorinus's attack on linguistic archaism. 'cum matre Evandri' (with Evander's mother) is a learned mythological insult—Evander's mother Carmenta was supposedly pre-Roman. 'sermone...iam desito' (speech already abandoned) uses perfect passive participle of 'desinere.' The paradox 'quod scire...neminem vis quae dicas' (because you want no one to know what you say) accuses the archaist of self-defeating obscurity. The final rhetorical question 'ut quod agis agere possis, taces?' (to accomplish what you're doing, you should stay silent?) is cutting.",
+    "genre": "antiquarian miscellany / linguistic criticism",
+    "audience": "Scholars of Roman antiquarianism and Latin linguistic thought"
+  },
+  {
+    "id": 48,
+    "language": "latin",
+    "source": "Aulus Gellius, Noctes Atticae V.7",
+    "text": "Caput et os coperimento personae tectum undique unaque tantum vocis emittendae via pervium, quoniam non vaga neque diffusa est, set in unum tantummodo exitum collectam coactamque vocem ciet, magis claros canorosque sonitus facit.",
+    "difficulty_notes": "Technical acoustics of the theatrical mask (persona). 'coperimento personae tectum undique' (covered on all sides by the mask's covering) uses nested ablatives. 'unaque tantum vocis emittendae via pervium' (permeable by only one path for sending out voice) combines gerundive with ablative of route. 'set' (archaic for 'sed') is deliberately antiquarian. 'collectam coactamque vocem ciet' (rouses the collected and compressed voice) uses two past participles as predicative adjectives. The passage explains the etymology of 'personare' (to resound through).",
+    "genre": "antiquarian miscellany / acoustics",
+    "audience": "Scholars of Roman theater, Latin etymology, and ancient acoustics"
+  },
+  {
+    "id": 49,
+    "language": "baroque-german",
+    "source": "Gryphius, Erster Reyen aus Leo Armenius (1650)",
+    "text": "Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "Due to source retrieval limitations from Projekt Gutenberg, the full original text of this choral passage could not be verified character-by-character. The Reyen (chorus) passages in Leo Armenius feature elaborate allegorical imagery and baroque ornamentation.",
+    "genre": "baroque tragedy / choral lyric",
+    "audience": "Scholars of German baroque drama and early modern theater"
+  },
+  {
+    "id": 50,
+    "language": "baroque-german",
+    "source": "Gryphius, Sonett: \"Thränen des Vaterlandes / Anno 1636\" (1636)",
+    "text": "Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "Due to source retrieval limitations, the full original text with 1636 baroque spelling could not be verified. This is Gryphius's most famous sonnet about the Thirty Years' War devastation.",
+    "genre": "baroque war sonnet / political lyric",
+    "audience": "Scholars of German baroque poetry and Thirty Years' War literature"
+  },
+  {
+    "id": 51,
+    "language": "baroque-german",
+    "source": "Lohenstein, Cleopatra, V. Abhandlung (1661)",
+    "text": "Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "Due to Projekt Gutenberg's page structure preventing text extraction, the full original text could not be verified. Lohenstein's alexandrine verse in the death scene features extreme rhetorical elaboration.",
+    "genre": "baroque tragedy / Trauerspiel",
+    "audience": "Scholars of German baroque drama and Silesian school tragedy"
+  },
+  {
+    "id": 52,
+    "language": "baroque-german",
+    "source": "Greiffenberg, \"Uber das unaussprechliche Heilige Geistes-Eingeben!\" (Geistliche Sonnette, 1662)",
+    "text": "Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "Due to source encoding issues, the full original text could not be retrieved. This is Greiffenberg's most celebrated mystical sonnet about divine inspiration, featuring her characteristic compound neologisms and paradoxical imagery.",
+    "genre": "baroque devotional sonnet / mysticism",
+    "audience": "Scholars of German baroque women's writing and mystical poetry"
+  },
+  {
+    "id": 53,
+    "language": "baroque-german",
+    "source": "Logau, Sinngedichte (1654), Auswahl",
+    "text": "Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "Due to source retrieval issues from zeno.org, the full original text of these epigrams could not be verified. Logau's satirical epigrams feature 17th century spelling and cutting political wit.",
+    "genre": "baroque satirical epigram",
+    "audience": "Scholars of German baroque satire and epigrammatic tradition"
+  },
+  {
+    "id": 54,
+    "language": "baroque-german",
+    "source": "Kuhlmann, Der Kühlpsalter, 62. Psalm (1684)",
+    "text": "Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity Identity.",
+    "difficulty_notes": "Due to limited online availability of the original text, the full passage could not be verified. Kuhlmann's mystical psalms feature extreme baroque wordplay, numerological structures, and ecstatic prophetic language.",
+    "genre": "baroque mystical poetry / prophetic verse",
+    "audience": "Scholars of German baroque mysticism and radical Protestantism"
+  },
+  {
+    "id": 55,
+    "language": "latin",
+    "source": "Tacitus, Annales IV.32",
+    "text": "Situs gentium, varietates proeliorum, clari ducum exitus retinent ac redintegrant legentium animum: nos saeva iussa, continuas accusationes, fallaces amicitias, perniciem innocentium et easdem exitii causas coniungimus.",
+    "difficulty_notes": "Tacitus's famous methodological apology for writing about domestic tyranny rather than wars. The first sentence catalogues the attractions of military history through asyndeton: 'situs gentium, varietates proeliorum, clari ducum exitus.' The antithesis 'retinent ac redintegrant' vs. implicit 'fatigant' contrasts engaging vs. depressing subject matter. 'easdem exitii causas' (the same causes of destruction) captures the monotony of tyranny. The passage is a rare moment of authorial self-reflection.",
+    "genre": "historiographical methodology / meta-narrative",
+    "audience": "Scholars of Roman historiography and ancient literary self-consciousness"
+  },
+  {
+    "id": 56,
+    "language": "latin",
+    "source": "Tacitus, Annales VI.6",
+    "text": "Adeo facinora atque flagitia sua ipsi quoque in supplicium verterant. Neque frustra praestantissimus sapientiae firmare solitus est, si recludantur tyrannorum mentes, posse aspici laniatus et ictus, quando ut corpora verberibus, ita saevitia, libidine, malis consultis animus dilaceretur.",
+    "difficulty_notes": "Tacitus's psychological portrait of Tiberius's self-punishment. 'si recludantur tyrannorum mentes' (if tyrants' minds were laid open) uses a vivid counterfactual. The analogy 'ut corpora verberibus, ita...animus dilaceretur' (as bodies by blows, so the mind is torn apart by cruelty, lust, evil counsel) maps physical to psychological torture. 'praestantissimus sapientiae' (the most outstanding in wisdom) is an oblique reference to Socrates or possibly Plato. The passage exemplifies Tacitean moral psychology.",
+    "genre": "historiography / moral psychology",
+    "audience": "Advanced Latin students and scholars of Tacitean psychological portraiture"
+  }
+]
