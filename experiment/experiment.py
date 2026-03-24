@@ -288,6 +288,11 @@ def main():
         action="store_true",
         help="Only run condition D (pipeline + factcheck), append to existing results",
     )
+    parser.add_argument(
+        "--a-vs-d",
+        action="store_true",
+        help="Run only conditions A and D (baseline vs best pipeline)",
+    )
     args = parser.parse_args()
 
     with open(args.passages) as f:
@@ -305,7 +310,9 @@ def main():
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
     # Choose output file based on mode
-    if args.condition_d_only:
+    if args.a_vs_d:
+        trans_file = RESULTS_DIR / "translations_avd.json"
+    elif args.condition_d_only:
         trans_file = RESULTS_DIR / "translations_d.json"
     else:
         trans_file = RESULTS_DIR / "translations.json"
@@ -328,7 +335,29 @@ def main():
         print(f"Passage {pid}: {passage['source']} ({lang})")
         print(f"{'=' * 60}")
 
-        if args.condition_d_only:
+        if args.a_vs_d:
+            # Run only A and D
+            print("  [A] Direct translation...", end=" ", flush=True)
+            t0 = time.time()
+            trans_a = run_condition_a(passage, small_client)
+            print(f"done ({time.time() - t0:.1f}s)")
+
+            print("  [D] Pipeline + factcheck (4 rounds)...", end=" ", flush=True)
+            t0 = time.time()
+            result_d = run_condition_d(passage, small_client)
+            trans_d = result_d["round3_translation"]
+            print(f"done ({time.time() - t0:.1f}s)")
+
+            entry = {
+                "passage_id": pid,
+                "source": passage["source"],
+                "language": lang,
+                "condition_A_direct": trans_a,
+                "condition_D_pipeline_fc": trans_d,
+                "condition_D_annotations_checked": result_d["round1_factchecked"],
+            }
+            all_translations.append(entry)
+        elif args.condition_d_only:
             # Only run condition D
             print("  [D] Pipeline + factcheck (4 rounds)...", end=" ", flush=True)
             t0 = time.time()
@@ -377,7 +406,7 @@ def main():
             all_translations.append(entry)
 
         # ── Prepare blinded translations for manual judge (ABC only) ──
-        if not args.condition_d_only:
+        if not args.condition_d_only and not args.a_vs_d:
             conditions = {"A": trans_a, "B": trans_b, "C": trans_c}
             labels = list(conditions.keys())
             random.shuffle(labels)
