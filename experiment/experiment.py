@@ -18,13 +18,13 @@ import sys
 import time
 from pathlib import Path
 
-from anthropic import Anthropic
 from openai import OpenAI
 
 from prompts import (
     build_cot,
     build_direct,
     build_pipeline,
+    build_pipeline_factcheck,
     build_pipeline_round2,
     build_pipeline_round3,
 )
@@ -79,7 +79,7 @@ def call_judge(
     source_info: str,
     translations: dict[str, str],
     label_map: dict[str, str],
-    client: Anthropic,
+    client,
 ) -> dict:
     """Call Claude to judge three translations blindly."""
     prompt = f"""You are an expert in classical language translation and philology.
@@ -150,21 +150,44 @@ def run_condition_b(passage: dict, client: OpenAI) -> str:
 
 
 def run_condition_c(passage: dict, client: OpenAI) -> dict:
-    """Condition C: 3-round pipeline."""
-    # Round 1: word selection + annotation
+    """Condition C: 3-round pipeline (no fact-check)."""
     msgs_r1 = build_pipeline(passage)
     r1 = call_small_model(msgs_r1, client)
 
-    # Round 2: commentary
     msgs_r2 = build_pipeline_round2(passage, r1)
     r2 = call_small_model(msgs_r2, client)
 
-    # Round 3: translation
     msgs_r3 = build_pipeline_round3(passage, r1, r2)
     r3 = call_small_model(msgs_r3, client)
 
     return {
         "round1_annotations": r1,
+        "round2_commentary": r2,
+        "round3_translation": extract_translation(r3),
+    }
+
+
+def run_condition_d(passage: dict, client: OpenAI) -> dict:
+    """Condition D: 4-round pipeline with fact-check."""
+    # Round 1: word selection + annotation
+    msgs_r1 = build_pipeline(passage)
+    r1 = call_small_model(msgs_r1, client)
+
+    # Round 1.5: fact-check
+    msgs_fc = build_pipeline_factcheck(passage, r1)
+    r1_checked = call_small_model(msgs_fc, client)
+
+    # Round 2: commentary (using fact-checked annotations)
+    msgs_r2 = build_pipeline_round2(passage, r1_checked)
+    r2 = call_small_model(msgs_r2, client)
+
+    # Round 3: translation
+    msgs_r3 = build_pipeline_round3(passage, r1_checked, r2)
+    r3 = call_small_model(msgs_r3, client)
+
+    return {
+        "round1_annotations": r1,
+        "round1_factchecked": r1_checked,
         "round2_commentary": r2,
         "round3_translation": extract_translation(r3),
     }
@@ -260,6 +283,11 @@ def main():
         default=None,
         help="Run only one passage (by id) for testing",
     )
+    parser.add_argument(
+        "--condition-d-only",
+        action="store_true",
+        help="Only run condition D (pipeline + factcheck), append to existing results",
+    )
     args = parser.parse_args()
 
     with open(args.passages) as f:
@@ -276,8 +304,13 @@ def main():
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
+    # Choose output file based on mode
+    if args.condition_d_only:
+        trans_file = RESULTS_DIR / "translations_d.json"
+    else:
+        trans_file = RESULTS_DIR / "translations.json"
+
     # Resume from existing results if available
-    trans_file = RESULTS_DIR / "translations.json"
     if trans_file.exists():
         with open(trans_file) as f:
             all_translations = json.load(f)
@@ -295,49 +328,69 @@ def main():
         print(f"Passage {pid}: {passage['source']} ({lang})")
         print(f"{'=' * 60}")
 
-        # ── Run 3 conditions ──
-        print("  [A] Direct translation...", end=" ", flush=True)
-        t0 = time.time()
-        trans_a = run_condition_a(passage, small_client)
-        print(f"done ({time.time() - t0:.1f}s)")
+        if args.condition_d_only:
+            # Only run condition D
+            print("  [D] Pipeline + factcheck (4 rounds)...", end=" ", flush=True)
+            t0 = time.time()
+            result_d = run_condition_d(passage, small_client)
+            trans_d = result_d["round3_translation"]
+            print(f"done ({time.time() - t0:.1f}s)")
 
-        print("  [B] CoT translation...", end=" ", flush=True)
-        t0 = time.time()
-        trans_b = run_condition_b(passage, small_client)
-        print(f"done ({time.time() - t0:.1f}s)")
+            entry = {
+                "passage_id": pid,
+                "source": passage["source"],
+                "language": lang,
+                "condition_D_pipeline_fc": trans_d,
+                "condition_D_annotations_raw": result_d["round1_annotations"],
+                "condition_D_annotations_checked": result_d["round1_factchecked"],
+                "condition_D_commentary": result_d["round2_commentary"],
+            }
+            all_translations.append(entry)
+        else:
+            # Run A, B, C
+            print("  [A] Direct translation...", end=" ", flush=True)
+            t0 = time.time()
+            trans_a = run_condition_a(passage, small_client)
+            print(f"done ({time.time() - t0:.1f}s)")
 
-        print("  [C] Pipeline translation (3 rounds)...", end=" ", flush=True)
-        t0 = time.time()
-        result_c = run_condition_c(passage, small_client)
-        trans_c = result_c["round3_translation"]
-        print(f"done ({time.time() - t0:.1f}s)")
+            print("  [B] CoT translation...", end=" ", flush=True)
+            t0 = time.time()
+            trans_b = run_condition_b(passage, small_client)
+            print(f"done ({time.time() - t0:.1f}s)")
 
-        entry = {
-            "passage_id": pid,
-            "source": passage["source"],
-            "language": lang,
-            "condition_A_direct": trans_a,
-            "condition_B_cot": trans_b,
-            "condition_C_pipeline": trans_c,
-            "condition_C_annotations": result_c["round1_annotations"],
-            "condition_C_commentary": result_c["round2_commentary"],
-        }
-        all_translations.append(entry)
+            print("  [C] Pipeline translation (3 rounds)...", end=" ", flush=True)
+            t0 = time.time()
+            result_c = run_condition_c(passage, small_client)
+            trans_c = result_c["round3_translation"]
+            print(f"done ({time.time() - t0:.1f}s)")
 
-        # ── Prepare blinded translations for manual judge ──
-        conditions = {"A": trans_a, "B": trans_b, "C": trans_c}
-        labels = list(conditions.keys())
-        random.shuffle(labels)
-        blind_labels = ["X", "Y", "Z"]
-        label_map = {bl: cl for bl, cl in zip(blind_labels, labels)}
-        translations_blind = {
-            bl: conditions[cl] for bl, cl in zip(blind_labels, labels)
-        }
-        entry["blind_map"] = label_map
-        entry["blind_translations"] = translations_blind
+            entry = {
+                "passage_id": pid,
+                "source": passage["source"],
+                "language": lang,
+                "condition_A_direct": trans_a,
+                "condition_B_cot": trans_b,
+                "condition_C_pipeline": trans_c,
+                "condition_C_annotations": result_c["round1_annotations"],
+                "condition_C_commentary": result_c["round2_commentary"],
+            }
+            all_translations.append(entry)
+
+        # ── Prepare blinded translations for manual judge (ABC only) ──
+        if not args.condition_d_only:
+            conditions = {"A": trans_a, "B": trans_b, "C": trans_c}
+            labels = list(conditions.keys())
+            random.shuffle(labels)
+            blind_labels = ["X", "Y", "Z"]
+            label_map = {bl: cl for bl, cl in zip(blind_labels, labels)}
+            translations_blind = {
+                bl: conditions[cl] for bl, cl in zip(blind_labels, labels)
+            }
+            entry["blind_map"] = label_map
+            entry["blind_translations"] = translations_blind
 
         # Incremental save
-        with open(RESULTS_DIR / "translations.json", "w") as f:
+        with open(trans_file, "w") as f:
             json.dump(all_translations, f, indent=2, ensure_ascii=False)
 
     print(f"\n{'=' * 60}")

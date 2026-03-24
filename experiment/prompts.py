@@ -72,6 +72,45 @@ def build_pipeline(passage: dict) -> list[dict]:
     ]
 
 
+def build_pipeline_factcheck(passage: dict, round1_response: str) -> list[dict]:
+    """Fact-check round: verify annotations against source metadata and text."""
+    lang_name = {
+        "classical-chinese": "Classical Chinese",
+        "baroque-german": "Baroque German (17th century)",
+        "latin": "Latin",
+    }[passage["language"]]
+    source = passage.get("source", "")
+
+    return [
+        {"role": "system", "content": (
+            "You are a meticulous philological fact-checker. "
+            "Your job is to catch errors in annotations before they propagate."
+        )},
+        {"role": "user", "content": (
+            f"A previous annotator produced the following annotations for a {lang_name} text.\n\n"
+            f"=== Source metadata ===\n"
+            f"Attribution: {source}\n\n"
+            f"=== Original text ===\n"
+            f"{passage['text']}\n\n"
+            f"=== Annotations to verify ===\n"
+            f"{round1_response}\n\n"
+            f"Check each annotation for:\n"
+            f"1. **Proper nouns**: Do person/place names match the source attribution? "
+            f"Is the author correctly identified?\n"
+            f"2. **Lexical accuracy**: For each word, does the given meaning match "
+            f"its actual meaning in this grammatical context? Check prefixes, "
+            f"case endings, verb forms carefully.\n"
+            f"3. **Negation/polarity**: Are negative constructions (privative prefixes, "
+            f"negative particles, 'ex-/in-/un-' forms) translated with the correct polarity?\n"
+            f"4. **Internal consistency**: Do the annotations contradict each other?\n\n"
+            f"Output the CORRECTED annotations as a JSON array in the same format. "
+            f"If an annotation is correct, keep it unchanged. "
+            f"If wrong, fix it and add a 'correction_note' field explaining what was wrong.\n"
+            f"If all annotations are correct, output them unchanged."
+        )},
+    ]
+
+
 def build_pipeline_round2(passage: dict, round1_response: str) -> list[dict]:
     """Round 2: commentary generation given round 1 annotations."""
     lang_name = {

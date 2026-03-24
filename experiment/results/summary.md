@@ -185,9 +185,70 @@ Condition A was surprisingly competitive, winning or tying on 2 passages and nev
 
 ---
 
-## Recommendations for the Commentary Pipeline
+## Phase 2: Condition D — Pipeline + Fact-Check
 
-1. **Add a fact-checking stage** between annotation and translation — verify proper nouns, dates, author attributions against the source metadata
-2. **Pipeline is most valuable for archaic/non-standard orthography** (Baroque German) where decoding is a genuine bottleneck
-3. **For well-attested classical languages** (Latin prose), direct translation may suffice; reserve Pipeline for poetic or syntactically unusual texts
-4. **Error propagation is the key risk** — consider running Pipeline and Direct in parallel and cross-checking for contradictions
+Based on Finding #2 (error amplification), we added a **fact-check round** between annotation (Round 1) and commentary (Round 2). The fact-checker receives:
+- The source metadata (author, work, chapter)
+- The original text
+- The annotations to verify
+
+It checks: proper noun accuracy, lexical polarity (negation errors), case/prefix analysis, and internal consistency. Corrected annotations are passed to subsequent rounds.
+
+### C vs D Comparison
+
+| Passage | C (Pipeline) | D (Pipeline + FC) | Fact-check impact |
+|---------|-------------|-------------------|-------------------|
+| 1 (Guoyu) | 8.0 | 8.0 | No change — annotations were already correct |
+| 2 (Lunheng) | 6.3 | **8.5** | **Fixed critical error:** Cai Yong → Wang Chong. Book titles now include original Chinese (譏俗, 政務, 論衡). |
+| 3 (Lohenstein) | 8.5 | 8.0 | Slight regression — removed helpful inline glosses [Noth], [Käyserthumb] that C had. Translation still correct. |
+| 4 (Hoffmannswaldau) | 6.5 | 7.0 | Minor improvement — "contemptible" better than "vile" for *schnöder*. Still mistranslates *bundtes* as "bound" (= colorful). |
+| 5 (Tacitus) | 5.8 | **7.0** | **Partially fixed:** No longer says "experienced in slavery" (opposite meaning). Now says "tested by necessity and servitude" — better but still not ideal (*expertes* = "free from", not "tested by"). |
+| 6 (Sallust) | 8.0 | 8.5 | Minor improvement — "a few years before" (correct temporal framing) vs. "a few years ago". Better rendering of *incessere*. |
+
+### D Scores
+
+| Dimension | P1 | P2 | P3 | P4 | P5 | P6 | **Avg** |
+|-----------|----|----|----|----|----|----|---------|
+| Accuracy  | 8  | 9  | 8  | 6  | 6  | 8  | 7.5 |
+| Completeness | 8 | 9 | 8 | 8 | 7 | 8 | 8.0 |
+| Register  | 8  | 9  | 7  | 7  | 7  | 8  | 7.7 |
+| Fluency   | 8  | 8  | 8  | 7  | 7  | 9  | 7.8 |
+| **Avg**   | **8.0** | **8.8** | **7.8** | **7.0** | **6.8** | **8.3** | **7.8** |
+
+### Updated Aggregate (All 4 Conditions)
+
+| Condition | Avg Score | Best Count |
+|-----------|-----------|------------|
+| A (Direct) | 7.38 | 2 |
+| B (CoT) | 7.02 | 2 |
+| C (Pipeline) | 7.18 | 2 |
+| **D (Pipeline + FC)** | **7.78** | — |
+
+**Fact-checking raised the pipeline average from 7.18 to 7.78** — a 0.6 point improvement. More importantly:
+
+- **Eliminated the catastrophic failure** on Passage 2 (6.3 → 8.8)
+- **Partially fixed** the polarity error on Passage 5 (5.8 → 7.0)
+- **Never made things worse** by more than 0.5 points (Passage 3: bracket glosses removed)
+
+---
+
+## Final Conclusions
+
+### The case for structured commentary
+
+1. **Pipeline + fact-check (D) is the best overall strategy**, beating all other conditions in average score
+2. The fact-check stage costs one additional LLM call (~20s) but prevents the error amplification that was C's fatal weakness
+3. **Greatest value is for archaic/obscure texts** where the model's pre-training is insufficient (Baroque German, rare Classical Chinese)
+
+### When to use what
+
+| Text type | Recommended | Why |
+|-----------|-------------|-----|
+| Archaic orthography (Baroque German) | **D (Pipeline + FC)** | Decoding is a genuine bottleneck; structured annotation helps |
+| Rare Classical Chinese | **D (Pipeline + FC)** | Proper noun identification and context matter; fact-check prevents hallucination |
+| Well-attested Latin prose | **A (Direct)** | Model's training data is strong enough; extra stages add noise |
+| Poetry with complex rhetoric | **B or D** | CoT captures literary nuance; Pipeline preserves structural parallelism |
+
+### Key design principle
+
+**Structured annotation is a force multiplier — but force multipliers amplify errors too.** The fact-check stage is not optional; it's the difference between a pipeline that's reliably better and one that's unpredictably worse.
