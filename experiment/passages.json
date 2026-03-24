@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "language": "classical-chinese",
+    "source": "《國語·越語下》, attributed to Zuo Qiuming (左丘明)",
+    "text": "天時不作，弗為人客；人事不起，弗為之始。今君王未盈而溢，未勝而驕，不勞而矜其功，天時不作而先為人客，人事不起而創為之始，此逆於天而不和於人。王姑待之。",
+    "difficulty_notes": "Dense political-strategic vocabulary with parallel constructions (天時/人事, 未盈而溢/未勝而驕). Fan Li's counsel uses negation-based rhetorical parallelism that is rare outside Guoyu. Key terms like 人客 (aggressor) and 創為之始 (initiate action prematurely) have specialized meanings in Warring States diplomatic discourse. The passage requires understanding of the 'timing' (時) philosophy central to pre-Qin strategic thought.",
+    "genre": "political-strategic counsel",
+    "audience": "Students of pre-Qin political philosophy and Warring States diplomatic rhetoric; scholars of early Chinese strategic thought"
+  },
+  {
+    "id": 2,
+    "language": "classical-chinese",
+    "source": "Wang Chong (王充), 《論衡·自紀篇》, Eastern Han dynasty",
+    "text": "充既疾俗情，作《譏俗》之書；又閔人君之政，徒欲治人，不得其宜，不曉其務，愁精苦思，不睹所趨，故作《政務》之書。又傷偽書俗文多不實誠，故為《論衡》之書。夫養實者不育華，調行者不飾辭。",
+    "difficulty_notes": "The passage mixes autobiographical explanation with philosophical aphorism. Key difficulties include: 疾俗情 (loathe vulgar sentiments), 閔人君之政 (grieve over rulers' governance), and the final aphorism using agricultural metaphor (養實/育華, 調行/飾辭) that compresses Wang Chong's entire epistemology into two parallel phrases. The text references three of Wang Chong's works, requiring knowledge of his intellectual biography.",
+    "genre": "philosophical autobiography / intellectual manifesto",
+    "audience": "Scholars of Han dynasty intellectual history; students of classical Chinese philosophical prose and argumentation"
+  },
+  {
+    "id": 3,
+    "language": "baroque-german",
+    "source": "Daniel Casper von Lohenstein, Agrippina, Act I (1665)",
+    "text": "Paris. Di Noth hat mich in's Schloß/ die Treu' in's Zimmer bracht.\nNero. Wie beb'stu? Was für Angst hält dein Gemüth umbgeben?\nParis. Nicht mir/ dem Nero geht's umb's Käyserthumb umb's Leben.\nNero. Eröffn' es bald/ wer ist es?\nParis. Agrippine.\nNero. Schlag Donner! Wo in Rom solch eine Wölffin leb't. Welch Drache frißt sein Kind?",
+    "difficulty_notes": "Baroque German alexandrine verse with archaic spelling (beb'stu, Käyserthumb, frißt). The passage features rapid-fire stichomythia (one-line exchanges) characteristic of Lohenstein's Senecan style. Key difficulties: elided verb forms (beb'stu = bebst du), compressed political metaphor (Wölffin = she-wolf for treacherous mother), and the mythological allusion to a dragon devouring its young. Lohenstein's syntax is notoriously dense even by baroque standards.",
+    "genre": "baroque tragedy / Trauerspiel",
+    "audience": "Scholars of German baroque literature and Silesian school drama; students of early modern German theater"
+  },
+  {
+    "id": 4,
+    "language": "baroque-german",
+    "source": "Christian Hoffmann von Hoffmannswaldau, \"Die Welt\" (published posthumously, 1695)",
+    "text": "WAs ist die Welt / und ihr berühmtes gläntzen?\nWas ist die Welt und ihre gantze Pracht?\nEin schnöder Schein in kurtzgefasten Gräntzen /\nEin schneller Blitz bey schwartzgewölckter Nacht.\nEin bundtes Feld / da Kummerdisteln grünen;\nEin schön Spital / so voller Kranckheit steckt.\nEin Sclavenhauß / da alle Menschen dienen /\nEin faules Grab / so Alabaster deckt.",
+    "difficulty_notes": "Baroque German with extensive archaic orthography (gläntzen, gantze, kurtzgefasten, Gräntzen, schwartzgewölckter, bundtes, Kummerdisteln). The poem uses sustained antithetical imagery (Vanitas motif): each line pairs an attractive surface with a repulsive reality. Compound neologisms like 'Kummerdisteln' (sorrow-thistles) and 'schwartzgewölckter' (black-clouded) are characteristic of baroque word-formation. The metaphor chain (Spital/Sclavenhauß/Grab) requires understanding of 17th-century German cultural context.",
+    "genre": "baroque lyric poetry / vanitas poem",
+    "audience": "Students of German baroque poetry and the Second Silesian School; scholars of early modern German lyric traditions"
+  },
+  {
+    "id": 5,
+    "language": "latin",
+    "source": "Tacitus, De Vita Iulii Agricolae, Chapter 30 (Calgacus's speech, c. 98 AD)",
+    "text": "Quotiens causas belli et necessitatem nostram intueor, magnus mihi animus est hodiernum diem consensumque vestrum initium libertatis toti Britanniae fore: nam et universi coistis et servitutis expertes, et nullae ultra terrae ac ne mare quidem securum inminente nobis classe Romana. Ita proelium atque arma, quae fortibus honesta, eadem etiam ignavis tutissima sunt.",
+    "difficulty_notes": "Tacitean Latin with characteristic brevity and ellipsis. Key difficulties: 'coistis' (syncopated perfect of coeo), 'servitutis expertes' (genitive with adjective requiring careful case analysis), 'ne...quidem' framing around 'mare securum' with ablative absolute 'inminente classe'. The final sentence uses a compressed relative clause where 'quae...honesta' and 'eadem...tutissima' create a paradox about war being both honorable and safe. Tacitus's style here is deliberately un-Ciceronian.",
+    "genre": "historiographical rhetoric / ethnographic prose",
+    "audience": "Advanced Latin students and scholars of Roman imperial historiography; students of ancient rhetoric and Tacitean style"
+  },
+  {
+    "id": 6,
+    "language": "latin",
+    "source": "Sallust, Bellum Iugurthinum, Chapter 41 (c. 40 BC)",
+    "text": "Ceterum mos partium et factionum ac deinde omnium malarum artium paucis ante annis Romae ortus est otio atque abundantia earum rerum, quae prima mortales ducunt. Nam ante Carthaginem deletam populus et senatus Romanus placide modesteque inter se rem publicam tractabant, neque gloriae neque dominationis certamen inter civis erat: metus hostilis in bonis artibus civitatem retinebat. Sed ubi illa formido mentibus decessit, scilicet ea, quae res secundae amant, lascivia atque superbia incessere.",
+    "difficulty_notes": "Sallustian archaic style with deliberate use of old forms ('civis' for 'cives', 'incessere' archaic infinitive for 'incesserunt'). The passage builds a complex causal argument: peace (otium) breeds moral decay. Key difficulties: 'quae prima mortales ducunt' (elliptical relative clause), 'metus hostilis in bonis artibus civitatem retinebat' (fear as positive force - counterintuitive argument), and the parenthetical 'scilicet ea quae res secundae amant' interrupting the main clause. Sallust's compressed, asymmetric syntax deliberately imitates Thucydides.",
+    "genre": "political historiography / moral digression",
+    "audience": "Advanced Latin students and scholars of late Republican prose; students of Roman political thought and historiographical method"
+  }
+]
