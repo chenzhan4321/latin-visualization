@@ -1,0 +1,452 @@
+[
+  {
+    "id": 57,
+    "language": "classical-chinese",
+    "source": "荀子·性惡",
+    "text": "凡人之欲為善者，為性惡也。夫薄願厚，惡願美，狹願廣，貧願富，賤願貴，苟無之中者，必求於外。故富而不願財，貴而不願埶，苟有之中者，必不及於外。用此觀之，人之欲為善者，為性惡也。",
+    "difficulty_notes": "Xunzi's paradox of moral aspiration: desire for goodness proves innate badness. 薄願厚/惡願美/狹願廣 form a compressed parallel series. 埶 is an archaic variant of 勢 (power/influence). The logical structure — arguing from lack to desire to innate deficiency — inverts Mencius's sprout theory. 苟無之中者必求於外 compresses a complex conditional into eight characters.",
+    "genre": "moral philosophy / human nature theory",
+    "audience": "Scholars of pre-Qin Confucian ethics and the Mencius-Xunzi debate"
+  },
+  {
+    "id": 58,
+    "language": "classical-chinese",
+    "source": "荀子·禮論",
+    "text": "禮起於何也？曰：人生而有欲，欲而不得，則不能無求。求而無度量分界，則不能不爭；爭則亂，亂則窮。先王惡其亂也，故制禮義以分之，以養人之欲，給人之求。使欲必不窮乎物，物必不屈於欲，兩者相持而長，是禮之所起也。",
+    "difficulty_notes": "Xunzi's social contract theory of ritual origins. The chain 欲→求→爭→亂→窮 maps a causal degradation sequence. 度量分界 packs four concepts (measure, quantity, distinction, boundary) into one phrase. 使欲必不窮乎物物必不屈於欲 establishes a reciprocal equilibrium between desire and resources. 兩者相持而長 (both sustain each other and grow) encodes an economic equilibrium concept rare in pre-Qin thought.",
+    "genre": "ritual theory / social philosophy",
+    "audience": "Scholars of Confucian ritual theory and pre-Qin institutional thought"
+  },
+  {
+    "id": 59,
+    "language": "classical-chinese",
+    "source": "荀子·天論",
+    "text": "楚王後車千乘，非知也；君子啜菽飲水，非愚也；是節然也。若夫志意脩，德行厚，知慮明，生於今而志乎古，則是其在我者也。故君子敬其在己者，而不慕其在天者；小人錯其在己者，而慕其在天者。",
+    "difficulty_notes": "Xunzi's anti-fatalism argument separating human agency from circumstance. 後車千乘 (a retinue of a thousand chariots) contrasts with 啜菽飲水 (sipping beans and drinking water). 節然 (a matter of circumstance) uses 節 in a rare abstract sense. 在我者/在天者 creates a clean dichotomy between human effort and cosmic dispensation. 錯 here means 'abandon/neglect' (archaic usage), not 'mistake.'",
+    "genre": "naturalist philosophy / anti-fatalism",
+    "audience": "Scholars of Warring States cosmology and Xunzi's naturalism"
+  },
+  {
+    "id": 60,
+    "language": "classical-chinese",
+    "source": "荀子·解蔽",
+    "text": "故為蔽：欲為蔽，惡為蔽，始為蔽，終為蔽，遠為蔽，近為蔽，博為蔽，淺為蔽，古為蔽，今為蔽。凡萬物異則莫不相為蔽，此心術之公患也。聖人知心術之患，見蔽塞之禍，故無欲、無惡、無始、無終、無近、無遠、無博、無淺、無古、無今，兼陳萬物而中縣衡焉。",
+    "difficulty_notes": "Xunzi's epistemology of cognitive bias (蔽 'obscuration'). Ten binary pairs enumerate sources of partiality. 心術之公患 (common affliction of the mind's art) uses 術 in the sense of 'method/technique.' 兼陳萬物而中縣衡焉 (array all things together and suspend the balance at the center) is a powerful metaphor for impartial judgment. 縣 is the archaic form of 懸 (suspend).",
+    "genre": "epistemology / cognitive theory",
+    "audience": "Scholars of Chinese epistemology and philosophy of mind"
+  },
+  {
+    "id": 61,
+    "language": "classical-chinese",
+    "source": "荀子·正名",
+    "text": "名無固宜，約之以命，約定俗成謂之宜，異於約則謂之不宜。名無固實，約之以命實，約定俗成，謂之實名。名有固善，徑易而不拂，謂之善名。物有同狀而異所者，有異狀而同所者，可別也。",
+    "difficulty_notes": "Xunzi's philosophy of language, anticipating conventionalism. 約定俗成 (established by convention, completed through custom) became a standard idiom. 名無固宜/名無固實/名有固善 creates a trichotomy of naming properties. 徑易而不拂 (direct, simple, and not contrary) defines linguistic economy. 同狀而異所/異狀而同所 distinguishes homonymy from synonymy using spatial metaphor.",
+    "genre": "philosophy of language / semantics",
+    "audience": "Scholars of Chinese linguistic philosophy and pre-Qin logic"
+  },
+  {
+    "id": 62,
+    "language": "classical-chinese",
+    "source": "荀子·富國",
+    "text": "離居不相待則窮，群居而無分則爭；窮者患也，爭者禍也，救患除禍，則莫若明分使群矣。彊脅弱也，知懼愚也，民下違上，少陵長，不以德為政：如是，則老弱有失養之憂，而壯者有分爭之禍矣。",
+    "difficulty_notes": "Xunzi's political economy of social order. 離居不相待/群居而無分 presents a dilemma: isolation causes poverty, aggregation without hierarchy causes conflict. 明分使群 (clarify distinctions to enable community) is Xunzi's solution. 彊脅弱/知懼愚/民下違上/少陵長 enumerates four types of social disorder. 陵 means 'to encroach upon/bully' (archaic usage).",
+    "genre": "political economy / social theory",
+    "audience": "Scholars of pre-Qin political philosophy and institutional design"
+  },
+  {
+    "id": 63,
+    "language": "classical-chinese",
+    "source": "莊子·秋水",
+    "text": "以道觀之，物無貴賤；以物觀之，自貴而相賤；以俗觀之，貴賤不在己。以差觀之，因其所大而大之，則萬物莫不大；因其所小而小之，則萬物莫不小。知天地之為稊米也，知毫末之為丘山也，則差數睹矣。",
+    "difficulty_notes": "Zhuangzi's perspectival relativism through four viewpoints (道/物/俗/差). 自貴而相賤 (each values itself and cheapens the other) compresses a complex social psychology. 因其所大而大之 uses the factitive construction twice. 稊米 (millet grain) and 丘山 (hills and mountains) provide concrete anchors for abstract relativity. 差數睹矣 (the calculus of differences becomes visible) is a rare philosophical compound.",
+    "genre": "Daoist relativist epistemology",
+    "audience": "Scholars of Daoist philosophy and Chinese epistemology"
+  },
+  {
+    "id": 64,
+    "language": "classical-chinese",
+    "source": "莊子·至樂",
+    "text": "天無為以之清，地無為以之寧，故兩無為相合，萬物皆化。芒乎芴乎，而無從出乎！芴乎芒乎，而無有象乎！萬物職職，皆從無為殖。故曰天地無為也而無不為也，人也孰能得無為哉！",
+    "difficulty_notes": "Cosmogonic wu-wei theory. 芒乎芴乎 uses rare onomatopoeic/descriptive particles suggesting indistinctness and evanescence. 職職 is a rare reduplicated adjective meaning 'thriving/proliferating.' 從無為殖 (propagate from non-action) compresses creation theory into four characters. The final rhetorical question 人也孰能得無為哉 challenges human aspiration to cosmic effortlessness.",
+    "genre": "Daoist cosmogony / wu-wei philosophy",
+    "audience": "Scholars of Daoist cosmology and metaphysics"
+  },
+  {
+    "id": 65,
+    "language": "classical-chinese",
+    "source": "莊子·知北遊",
+    "text": "道不可致，德不可至。仁可為也，義可虧也，禮相偽也。故曰：『失道而後德，失德而後仁，失仁而後義，失義而後禮。禮者，道之華而亂之首也。』故曰：『為道者日損，損之又損之以至於無為，無為而無不為也。』",
+    "difficulty_notes": "Zhuangzi's hierarchical degradation of values from Dao down to Ritual (echoing and expanding Laozi 38). 道不可致德不可至 uses near-homophone verbs 致/至 with subtle semantic distinction (致=bring about; 至=arrive at). 道之華而亂之首 (the flower of the Way and the beginning of disorder) is a devastating critique of Confucian li. 日損 (daily diminishment) inverts the Confucian ideal of daily moral accumulation.",
+    "genre": "Daoist anti-Confucian metaphysics",
+    "audience": "Scholars of Daoist-Confucian philosophical debate"
+  },
+  {
+    "id": 66,
+    "language": "classical-chinese",
+    "source": "莊子·寓言",
+    "text": "卮言日出，和以天倪，因以曼衍，所以窮年。不言則齊，齊與言不齊，言與齊不齊也，故曰無言。言無言，終身言，未嘗言；終身不言，未嘗不言。",
+    "difficulty_notes": "Zhuangzi's meta-philosophy of language. 卮言 (goblet words — words that tip and flow freely) is a unique Zhuangzian neologism. 天倪 (heavenly whetstone/boundary) is cryptic and much debated. 曼衍 (sprawling/extending) suggests organic proliferation. The paradox 言無言終身言未嘗言 collapses the speech/silence distinction through logical regress. This passage has defeated translators for centuries.",
+    "genre": "philosophy of language / meta-philosophy",
+    "audience": "Scholars of Zhuangzi hermeneutics and Chinese philosophy of language"
+  },
+  {
+    "id": 67,
+    "language": "classical-chinese",
+    "source": "商君書·開塞",
+    "text": "聖人不法古，不修今。法古則後於時，修今則塞於勢。周不法商，夏不法虞，三代異勢，而皆可以王。故興王有道，而持之異理。武王逆取而貴順，爭天下而講於仁。",
+    "difficulty_notes": "Shang Yang's radical historicism rejecting precedent. 法古則後於時修今則塞於勢 compresses a philosophy of history into parallel clauses. 逆取而貴順 (seize by going against, then value conformity) captures the Legalist paradox of revolutionary founding followed by conservative consolidation. 爭天下而講於仁 (contend for the realm yet profess benevolence) exposes hypocrisy in Confucian historical narrative.",
+    "genre": "Legalist political philosophy / historicism",
+    "audience": "Scholars of Legalist thought and Warring States political theory"
+  },
+  {
+    "id": 68,
+    "language": "classical-chinese",
+    "source": "商君書·農戰",
+    "text": "國去言則民樸，民樸則不淫。民見上利之從壹空出也，則作壹；作壹則民不偷。民不偷則多力，多力則國強。詩、書、禮、樂、善、修、仁、廉、辯、慧，國有十者，上無使守戰。國以十者治則敵至必削，不至必貧。",
+    "difficulty_notes": "Shang Yang's anti-cultural polemic listing ten 'parasites' (詩書禮樂善修仁廉辯慧). 去言 (eliminate discourse) advocates censorship. 壹空 (single channel) refers to agriculture as the sole legitimate occupation. 作壹 (activities unified) demands economic monoculture. The logical chain 民樸→不淫→作壹→不偷→多力→國強 maps cultural suppression to military power. This passage directly attacks the entire Confucian curriculum.",
+    "genre": "Legalist anti-intellectualism / agrarian militarism",
+    "audience": "Scholars of Legalist political economy and Qin state ideology"
+  },
+  {
+    "id": 69,
+    "language": "classical-chinese",
+    "source": "商君書·弱民",
+    "text": "民弱國強，民強國弱。故有道之國，務在弱民。樸則強，淫則弱。弱則軌，淫則越志。弱則有用，越志則強。故曰：以強去強者，弱；以弱去強者，強。",
+    "difficulty_notes": "Shang Yang's deliberately paradoxical 'weakening the people' doctrine. 民弱國強民強國弱 presents the zero-sum state-society relationship. 樸則強淫則弱 creates a double paradox: the 'simple' are actually 'strong' (useful to the state). 以強去強者弱以弱去強者強 is a logical chiasm that inverts ordinary semantics of strength/weakness. The entire passage requires reading 強/弱 with shifting referents.",
+    "genre": "Legalist statecraft / authoritarian theory",
+    "audience": "Scholars of Legalist political theory and totalitarian thought"
+  },
+  {
+    "id": 70,
+    "language": "classical-chinese",
+    "source": "抱朴子·金丹",
+    "text": "夫金丹之為物，燒之愈久，變化愈妙。黃金入火，百煉不消，埋之，畢天不朽。服此二物，煉人身體，故能令人不老不死。此蓋假求於外物以自堅固，有如脂之養火而不可滅，銅青塗腳，入水不腐，此是借銅之勁以扞其肉也。",
+    "difficulty_notes": "Ge Hong's alchemical theory of sympathetic transformation. 燒之愈久變化愈妙 establishes a proportional relationship between duration and transmutation. 畢天不朽 uses 畢天 (exhausting heaven = until the end of time). The analogy chain (脂養火/銅青塗腳) applies material science reasoning to immortality. 假求於外物以自堅固 (borrowing external substances to solidify oneself) encodes the alchemical principle of correspondence. 扞 (to ward off/protect) is a rare verb.",
+    "genre": "Daoist alchemy / proto-chemistry",
+    "audience": "Scholars of Daoist alchemy, Chinese science history, and Ge Hong studies"
+  },
+  {
+    "id": 71,
+    "language": "classical-chinese",
+    "source": "抱朴子·論仙",
+    "text": "夫言始者必有終者多矣，混而齊之，非通理矣。暗昧滯乎心神，則不信有周孔於在昔矣。夫存亡終始，誠是大體。然而萬殊之類，不可以一概斷之。有生而必終者，人之大分也；有修道而不死者，仙之所為也。",
+    "difficulty_notes": "Ge Hong's defense of immortality against skeptics. 言始者必有終 presents and then refutes the standard mortality argument. 混而齊之非通理矣 (to confuse and equalize them is not sound reasoning) attacks inductive generalization. The comparison to doubting Zhou and Confucius (不信有周孔於在昔) is a rhetorical trap. 大分 (great portion/allotment) vs. 所為 (achievement) contrasts natural destiny with cultivated transcendence.",
+    "genre": "Daoist apologetics / philosophy of immortality",
+    "audience": "Scholars of medieval Daoist philosophy and religious argumentation"
+  },
+  {
+    "id": 72,
+    "language": "classical-chinese",
+    "source": "抱朴子·對俗",
+    "text": "夫陶冶造化，莫靈於人。故達其淺者，則能役用萬物，得其深者，則能長生久視。知之者則為之，昧之者則疑之。知之不行，不異無知；行之不至，不異無行。",
+    "difficulty_notes": "Ge Hong's pragmatic epistemology of cultivation. 陶冶造化 (to mold and smelt creation) uses craft metaphors for cosmic manipulation. 莫靈於人 (nothing is more numinous than humans) asserts human exceptionalism. 達其淺者/得其深者 creates a gradation from worldly mastery to transcendence. The chain 知之不行不異無知/行之不至不異無行 argues that incomplete practice equals ignorance, a remarkably pragmatic position for a mystical text.",
+    "genre": "Daoist self-cultivation / practical epistemology",
+    "audience": "Scholars of medieval Daoism and Chinese philosophy of practice"
+  },
+  {
+    "id": 73,
+    "language": "classical-chinese",
+    "source": "史記·貨殖列傳",
+    "text": "天下熙熙，皆為利來；天下壤壤，皆為利往。夫千乘之王，萬家之侯，百室之君，尚猶患貧，而況匹夫編戶之民乎！故善者因之，其次利道之，其次教誨之，其次整齊之，最下者與之爭。",
+    "difficulty_notes": "Sima Qian's political economy. 熙熙/壤壤 are onomatopoeic reduplicatives conveying bustling crowds. The descending hierarchy of governance responses to profit-seeking (因之→利道之→教誨之→整齊之→與之爭) maps from laissez-faire to state competition, anticipating modern economic policy debate. 編戶之民 (registered household commoners) is a specific administrative term. This passage was radical in its validation of profit-seeking against Confucian orthodoxy.",
+    "genre": "economic history / political economy",
+    "audience": "Scholars of Chinese economic thought and Sima Qian's historiography"
+  },
+  {
+    "id": 74,
+    "language": "classical-chinese",
+    "source": "漢書·藝文志",
+    "text": "道家者流，蓋出於史官，歷記成敗存亡禍福古今之道，然後知秉要執本，清虛以自守，卑弱以自持，此君人南面之術也。合於堯之克讓，易之嗛嗛，一謙而四益，此其所長也。及放者為之，則欲絕去禮學，兼棄仁義，曰獨任清虛可以為治。",
+    "difficulty_notes": "Ban Gu's intellectual genealogy of Daoism. 歷記成敗存亡禍福古今之道 compresses the historian's entire project into one phrase. 秉要執本 (grasp the essential, hold the fundamental) defines Daoist epistemology. 君人南面之術 (the art of ruling by facing south) links Daoism to political technique. 嗛嗛 is the archaic form of 謙謙 from the Yijing. The critique of extremists (放者) who 絕去禮學 introduces a moderate vs. radical distinction within Daoism.",
+    "genre": "intellectual history / bibliographic classification",
+    "audience": "Scholars of Han intellectual history and Chinese historiography of philosophy"
+  },
+  {
+    "id": 75,
+    "language": "classical-chinese",
+    "source": "淮南子·齊俗訓",
+    "text": "率性而行謂之道，得其天性謂之德。性失然後貴仁，道失然後貴義。是故仁義立而道德遷矣，禮樂飾而純朴散矣，是非形而百姓眩矣，珠玉尊而天下爭矣。",
+    "difficulty_notes": "Degradation theory of civilization echoing Laozi but in systematic prose. 率性而行/得其天性 defines Dao and De through naturalness. 性失然後貴仁道失然後貴義 presents a causal chain of cultural decline. The four parallel final clauses (仁義立而道德遷/禮樂飾而純朴散/是非形而百姓眩/珠玉尊而天下爭) map the progressive corruption from ethics through aesthetics to materialism. 遷 (shift/displace) and 眩 (dazzled/confused) carry heavy philosophical weight.",
+    "genre": "Huang-Lao civilization critique",
+    "audience": "Scholars of Han Huang-Lao thought and Chinese primitivism"
+  },
+  {
+    "id": 76,
+    "language": "classical-chinese",
+    "source": "淮南子·原道訓",
+    "text": "混混滑滑，濁而徐清。故植之而塞於天地，橫之而彌於四海，施之無窮而無所朝夕。舒之幎於六合，卷之不盈於一握。約而能張，幽而能明，弱而能強，柔而能剛。",
+    "difficulty_notes": "The Dao described through paradoxical material metaphors. 混混滑滑 uses four-character onomatopoeia for primordial flux. 植之而塞於天地橫之而彌於四海 (plant it vertically and it fills heaven-earth; lay it horizontally and it covers the four seas) describes spatial omnipresence. 舒之幎於六合卷之不盈於一握 (unfold it and it covers the cosmos; roll it up and it doesn't fill a palm) uses 幎 (to cover like a cloth), an extremely rare verb. The eight-phrase series of paradoxes 約而能張幽而能明 etc. encodes coincidentia oppositorum.",
+    "genre": "Daoist cosmology / metaphysics",
+    "audience": "Scholars of Han Daoist philosophy and Chinese metaphysics"
+  },
+  {
+    "id": 77,
+    "language": "classical-chinese",
+    "source": "莊子·在宥",
+    "text": "聞在宥天下，不聞治天下也。在之也者，恐天下之淫其性也；宥之也者，恐天下之遷其德也。天下不淫其性，不遷其德，有治天下者哉！堯之治天下也，使天下欣欣焉人樂其性，是不恬也；桀之治天下也，使天下瘁瘁焉人苦其性，是不愉也。",
+    "difficulty_notes": "Zhuangzi's distinction between 在宥 (letting-be and tolerating) and 治 (governing). 在 and 宥 are both rare in philosophical usage: 在 here means 'to let exist freely,' 宥 means 'to be lenient/tolerant.' 淫其性/遷其德 (corrupt their nature / displace their virtue) identify the two fundamental damages of governance. The critique of Yao (使天下欣欣焉) is shocking: even benevolent excitement 不恬 (is not tranquil) counts as interference.",
+    "genre": "Daoist anti-statist philosophy",
+    "audience": "Scholars of Daoist political philosophy and anarchist thought"
+  },
+  {
+    "id": 78,
+    "language": "classical-chinese",
+    "source": "孫子兵法·用間",
+    "text": "故明君賢將，所以動而勝人，成功出於眾者，先知也。先知者，不可取於鬼神，不可象於事，不可驗於度，必取於人，知敵之情者也。故用間有五：有因間，有內間，有反間，有死間，有生間。五間俱起，莫知其道，是謂神紀，人君之寶也。",
+    "difficulty_notes": "Sunzi's intelligence theory. 動而勝人成功出於眾 (move and conquer, succeed beyond all others) sets up the premise. The triple negation 不可取於鬼神/不可象於事/不可驗於度 systematically eliminates divination, analogy, and calculation as intelligence sources. 象於事 (model from precedent) uses 象 as a verb. 神紀 (divine thread/principle) is a hapax legomenon in military literature. The five types of spy (因/內/反/死/生) form a technical taxonomy.",
+    "genre": "military intelligence theory",
+    "audience": "Scholars of ancient military thought and intelligence studies"
+  },
+  {
+    "id": 79,
+    "language": "classical-chinese",
+    "source": "孫子兵法·虛實",
+    "text": "夫兵形象水，水之形，避高而趨下；兵之形，避實而擊虛。水因地而制流，兵因敵而制勝。故兵無常勢，水無常形，能因敵變化而取勝者，謂之神。故五行無常勝，四時無常位，日有短長，月有死生。",
+    "difficulty_notes": "Sunzi's water metaphor for military adaptability. 兵形象水 (military form resembles water) establishes the central analogy. 避高而趨下/避實而擊虛 maps hydrodynamics to strategy. 因地而制流/因敵而制勝 uses parallel structure to move from natural to martial domains. 無常勢/無常形 asserts radical contingency. The cosmic extension (五行/四時/日月) elevates tactical flexibility to cosmological principle. 月有死生 uses 死生 (death and birth) for lunar phases.",
+    "genre": "military strategy / natural philosophy",
+    "audience": "Scholars of Chinese military thought and strategic theory"
+  },
+  {
+    "id": 80,
+    "language": "classical-chinese",
+    "source": "莊子·天地",
+    "text": "夫道，覆載萬物者也，洋洋乎大哉！君子不可以不刳心焉。無為為之之謂天，無為言之之謂德，愛人利物之謂仁，不同同之之謂大，行不崖異之謂寬，有萬不同之謂富。",
+    "difficulty_notes": "A series of paradoxical definitions. 刳心 (hollow out the heart) uses a visceral craft metaphor for spiritual emptying. 無為為之之謂天 (to do through non-doing is called Heaven) stacks three 之 particles. 不同同之之謂大 (to unify the different is called greatness) creates a logical twist. 行不崖異之謂寬 uses 崖 (cliff/precipice) metaphorically for rigid differentiation. Each definition subverts ordinary understanding through paradox.",
+    "genre": "Daoist definition theory / metaphysics",
+    "audience": "Scholars of Zhuangzi and Daoist metaphysics"
+  },
+  {
+    "id": 81,
+    "language": "classical-chinese",
+    "source": "戰國策·齊策·鄒忌諷齊王納諫",
+    "text": "鄒忌脩八尺有餘，而形貌昳麗。朝服衣冠，窺鏡，謂其妻曰：「我孰與城北徐公美？」其妻曰：「君美甚，徐公何能及君也！」城北徐公，齊國之美麗者也。忌不自信，而復問其妾曰：「吾孰與徐公美？」妾曰：「徐公何能及君也！」旦日，客從外來，與坐談，問之客曰：「吾與徐公孰美？」客曰：「徐公不若君之美也。」",
+    "difficulty_notes": "Zou Ji's analogical persuasion through personal vanity. 脩八尺有餘 uses 脩 (tall) as an archaic variant of 修. 昳麗 is a rare compound meaning 'dazzlingly beautiful.' The triple interrogation (妻/妾/客) with progressively weaker denials encodes a social hierarchy of flattery. 朝服衣冠窺鏡 (dress in court clothes, peer into the mirror) uses four actions to establish vanity. The parallel structure conceals the political allegory until the conclusion.",
+    "genre": "political rhetoric / analogical persuasion",
+    "audience": "Scholars of Warring States rhetoric and Chinese political communication"
+  },
+  {
+    "id": 82,
+    "language": "latin",
+    "source": "Lucretius, De Rerum Natura III.417-432",
+    "text": "Principio quoniam tenuem constare minutis corporibus docui multoque minoribus esse principiis factam quam liquidus umor aquai aut nebula aut fumus — nam longe mobilitate praestat et a tenui causa magis icta movetur — nunc igitur quoniam quassatis undique vasis diffluere umorem et laticem discedere cernis, et nebula ac fumus quoniam discedit in auras, crede animam quoque diffundi multoque perire ocius et citius dissolvi in corpora prima, cum semel ex hominis membris ablata recessit.",
+    "difficulty_notes": "Lucretius's argument for the soul's mortality via analogy to fluids and vapors. The extended period spans 15 lines with a single main clause (crede) delayed by multiple subordinate causal clauses (quoniam...quoniam). 'liquidus umor aquai' uses the archaic genitive '-ai' for '-ae.' 'quassatis undique vasis' (when vessels are shattered on all sides) is the ablative absolute grounding the analogy. The soul-as-vapor metaphor requires tracking three parallel dissolutions (water, mist, soul).",
+    "genre": "didactic philosophy / Epicurean physics",
+    "audience": "Scholars of Epicurean philosophy and Latin didactic poetry"
+  },
+  {
+    "id": 83,
+    "language": "latin",
+    "source": "Lucretius, De Rerum Natura II.216-224",
+    "text": "Illud in his quoque te rebus cognoscere avemus, corpora cum deorsum rectum per inane feruntur ponderibus propriis, incerto tempore ferme incertisque locis spatio depellere paulum, tantum quod momen mutatum dicere possis. Quod nisi declinare solerent, omnia deorsum imbris uti guttae caderent per inane profundum nec foret offensus natus nec plaga creata principiis; ita nihil umquam natura creasset.",
+    "difficulty_notes": "Lucretius's clinamen (atomic swerve) doctrine — the most controversial passage in Epicurean physics. 'incerto tempore ferme incertisque locis' (at roughly uncertain times and uncertain places) introduces indeterminacy. 'tantum quod momen mutatum dicere possis' (only so much that you could call it a changed motion) minimizes the swerve. 'imbris uti guttae' (like drops of rain) provides the counterfactual image. 'offensus...nec plaga' (collision nor blow) explains why the swerve is cosmogonically necessary.",
+    "genre": "Epicurean atomic physics / didactic poetry",
+    "audience": "Scholars of ancient atomism and Lucretian philosophy"
+  },
+  {
+    "id": 84,
+    "language": "latin",
+    "source": "Lucretius, De Rerum Natura IV.1037-1048",
+    "text": "Sic in amore Venus simulacris ludit amantis, nec satiare queunt spectando corpora coram nec manibus quicquam teneris abradere membris possunt errantes incerti corpore toto. Denique cum membris conlatis flore fruuntur aetatis, iam cum praesagit gaudia corpus atque in eost Venus ut muliebria conserat arva, adfigunt avide corpus iunguntque salivas oris et inspirant pressantes dentibus ora, nequiquam, quoniam nihil inde abradere possunt nec penetrare et abire in corpus corpore toto.",
+    "difficulty_notes": "Lucretius's devastating materialist analysis of erotic desire. 'simulacris ludit amantis' (Venus toys with lovers through images) reduces love to atomic simulacra. 'nec satiare queunt...nec...abradere' (neither satisfy nor scrape away anything) exposes desire's futility. 'muliebria conserat arva' (sow feminine fields) is a striking agricultural metaphor for sex. 'nequiquam' (in vain) is the philosophical punchline. The passage requires understanding Epicurean perception theory to grasp why physical contact cannot satisfy.",
+    "genre": "Epicurean psychology of desire / anti-erotic didactic",
+    "audience": "Advanced Latin students and scholars of Epicurean ethics and Roman sexuality"
+  },
+  {
+    "id": 85,
+    "language": "latin",
+    "source": "Lucretius, De Rerum Natura I.329-330, 265-270",
+    "text": "Nec tamen undique corporea stipata tenentur omnia natura; namque est in rebus inane. Nunc age, res quoniam docui non posse creari de nihilo neque item genitas ad nil revocari, ne qua forte tamen coeptes diffidere dictis, quod nequeunt oculis rerum primordia cerni, accipe praeterea quae corpora tute necessest confiteare esse in rebus nec posse videri.",
+    "difficulty_notes": "Lucretius's argument for void and invisible atoms. 'undique corporea stipata...natura' (packed on all sides by corporeal nature) describes a hypothetical plenum. 'namque est in rebus inane' (for there is void in things) is one of the most consequential philosophical statements in Latin. 'genitas ad nil revocari' (things created cannot be called back to nothing) compresses the conservation principle. 'confiteare' is the subjunctive of 'confiteor' in an unusually philosophical usage.",
+    "genre": "Epicurean physics / didactic poetry",
+    "audience": "Scholars of ancient atomism and Latin philosophy"
+  },
+  {
+    "id": 86,
+    "language": "latin",
+    "source": "Cicero, De Finibus I.37-38",
+    "text": "Non enim hanc solam sequimur, quae suavitate aliqua naturam ipsam movet et cum iucunditate quadam percipitur sensibus, sed maximam voluptatem illam habemus, quae percipitur omni dolore detracto. Itaque non placuit Epicuro medium esse quiddam inter dolorem et voluptatem; illud enim ipsum, quod quibusdam medium videretur, cum omni dolore careret, non modo voluptatem esse, verum etiam summam voluptatem.",
+    "difficulty_notes": "Cicero's presentation of Epicurean katastematic pleasure. 'quae suavitate aliqua naturam ipsam movet' (which moves nature itself by some sweetness) defines kinetic pleasure. 'omni dolore detracto' (with all pain removed) defines the higher catastematic pleasure. 'non placuit Epicuro medium esse quiddam' (Epicurus did not accept there to be something intermediate) rejects a third state between pleasure and pain. The nested relative clauses and indirect speech require careful syntactic parsing.",
+    "genre": "philosophical dialogue / Epicurean ethics",
+    "audience": "Scholars of Hellenistic ethics and Ciceronian philosophy"
+  },
+  {
+    "id": 87,
+    "language": "latin",
+    "source": "Cicero, De Finibus V.17-18",
+    "text": "Constitit autem fere inter omnes id, in quo prudentia versaretur et quod assequi vellet, aptum et accommodatum naturae esse oportere et tale, ut ipsum per se invitaret et alliceret appetitum animi, quem ὁρμήν Graeci vocant. Quid autem sit, quod ita moveat itaque a natura in primo ortu appetatur, non constat deque eo est inter philosophos, cum summum bonum exquiritur, omnis dissensio.",
+    "difficulty_notes": "Cicero's mapping of Greek ὁρμή onto Latin appetitus animi. The first sentence contains four nested subordinate clauses before the main verb 'constitit.' 'aptum et accommodatum naturae' (fitted and adapted to nature) encodes the Stoic oikeiosis doctrine. 'in primo ortu appetatur' (is sought in the first origin) refers to the cradle argument. 'cum summum bonum exquiritur' inserts an ablative absolute into already complex indirect speech. This is among the densest philosophical prose in Latin.",
+    "genre": "philosophical dialogue / ethics of the summum bonum",
+    "audience": "Scholars of Hellenistic philosophy and Ciceronian philosophical language"
+  },
+  {
+    "id": 88,
+    "language": "latin",
+    "source": "Cicero, Tusculanae Disputationes I.53-54",
+    "text": "Quod semper movetur, aeternum est; quod autem motum adfert alicui quodque ipsum agitatur aliunde, quando finem habet motus, vivendi finem habeat necesse est. Solum igitur, quod se ipsum movet, quia numquam deseritur a se, numquam ne moveri quidem desinit. Principii autem nulla est origo; nam e principio oriuntur omnia, ipsum autem nulla ex re alia nasci potest.",
+    "difficulty_notes": "Cicero's Latin rendering of Plato's Phaedrus argument for soul immortality via self-motion. 'Quod semper movetur aeternum est' translates Plato's ἀεικίνητον. 'quodque ipsum agitatur aliunde' (that which is itself set in motion from elsewhere) uses the passive with ablative of agent. 'numquam ne moveri quidem desinit' (never even ceases to be moved) stacks intensifiers. The passage is essentially a philosophical translation exercise, reproducing Greek metaphysics in Latin syntax.",
+    "genre": "philosophical dialogue / Platonic soul theory",
+    "audience": "Scholars of Ciceronian philosophy and Platonic reception in Rome"
+  },
+  {
+    "id": 89,
+    "language": "latin",
+    "source": "Cicero, De Officiis I.50",
+    "text": "Optime autem societas hominum coniunctioque servabitur, si, ut quisque erit coniunctissimus, ita in eum benignitatis plurimum conferetur. Sed quae naturae principia sint communitatis et societatis humanae, repetendum videtur altius. Est enim primum quod cernitur in universi generis humani societate; eius autem vinculum est ratio et oratio, quae docendo, discendo, communicando, disceptando, iudicando conciliat inter se homines coniungitque naturali quadam societate.",
+    "difficulty_notes": "Cicero's Stoic-influenced theory of natural human community. 'ut quisque erit coniunctissimus ita...plurimum' (as each person is most closely connected, so the most...) encodes a proportionality principle. 'ratio et oratio' (reason and speech) is a characteristically Ciceronian pair linking intellect to language. The five gerunds 'docendo, discendo, communicando, disceptando, iudicando' enumerate the activities constituting civil society. 'naturali quadam societate' adds philosophical weight through 'quadam' (a certain kind of).",
+    "genre": "Stoic social philosophy / natural law theory",
+    "audience": "Scholars of Roman Stoicism and natural law tradition"
+  },
+  {
+    "id": 90,
+    "language": "latin",
+    "source": "Cicero, Pro Archia XIV",
+    "text": "Nam nisi multorum praeceptis multisque litteris mihi ab adulescentia suasissem, nihil esse in vita magno opere expetendum nisi laudem atque honestatem, in ea autem persequenda omnis cruciatus corporis, omnia pericula mortis atque exsili parvi esse ducenda, numquam me pro salute vestra in tot ac tantas dimicationes atque in hos profligatorum hominum cotidianos impetus obiecissem.",
+    "difficulty_notes": "One of the longest and most complex periods in Cicero's forensic oratory. The protasis (nisi...suasissem) contains two indirect statements (nihil esse...omnis cruciatus...parvi esse ducenda). The apodosis (numquam me...obiecissem) delays the main verb to the final word. 'profligatorum hominum' (ruined/abandoned men) carries strong moral censure. The sentence argues that literature motivated Cicero's public service — a politically audacious claim in a courtroom.",
+    "genre": "forensic oratory / defense of liberal arts",
+    "audience": "Scholars of Ciceronian rhetoric and Roman attitudes toward literature"
+  },
+  {
+    "id": 91,
+    "language": "latin",
+    "source": "Cicero, Brutus 32",
+    "text": "Is et ipse scripsit multa praeclare et docuit alios; et cum cetera melius quam superiores, tum primus intellexit etiam in soluta oratione, dum versum effugeres, modum tamen et numerum quendam oportere servari. Ante hunc enim verborum quasi structura et quaedam ad numerum conclusio nulla erat; aut, si quando erat, non apparebat eam dedita opera esse quaesitam.",
+    "difficulty_notes": "Cicero's analysis of Isocrates's rhythmic prose revolution. 'in soluta oratione dum versum effugeres' (in prose, so long as you avoided verse) defines the boundary between poetry and prose. 'modum tamen et numerum quendam oportere servari' (yet a measure and certain rhythm ought to be maintained) introduces prose rhythm theory. 'verborum quasi structura' (a kind of structure of words) uses 'quasi' to indicate the metaphor is approximate. 'dedita opera esse quaesitam' (had been deliberately sought) reveals the paradox of artful artlessness.",
+    "genre": "rhetorical history / prose rhythm theory",
+    "audience": "Scholars of ancient rhetoric and Latin prose style"
+  },
+  {
+    "id": 92,
+    "language": "latin",
+    "source": "Pliny the Elder, Naturalis Historia VII.1-2",
+    "text": "Principium iure tribuetur homini, cuius causa videtur cuncta alia genuisse natura, magna, saeva mercede contra tanta sua munera, non ut sit satis aestimare, parens melior homini an tristior noverca fuerit. Ante omnia unum animantium cunctorum alienis velat opibus. Ceteris sua varie tegimenta tribuit, testas, cortices, coria, spinas, villos, saetas, pilos, plumam, pinnas, squamas, vellera; truncos etiam arboresque cortice, interdum gemino, a frigoribus et calore tutata est: hominem tantum nudum et in nuda humo natali die abicit ad vagitus statim et ploratum.",
+    "difficulty_notes": "Pliny's pessimistic anthropology. 'cuius causa videtur cuncta alia genuisse natura' (for whose sake nature seems to have produced everything else) establishes human centrality before subverting it. 'magna saeva mercede' (at a great, cruel price) — ablative of price — introduces the paradox. 'parens melior...an tristior noverca' (a better parent or a sadder stepmother) uses a striking metaphor for nature. The catalogue of animal coverings (testas, cortices, coria...) through asyndeton contrasts with 'hominem tantum nudum' — the naked human. 'abicit' (throws down) is deliberately violent.",
+    "genre": "encyclopedic natural history / philosophical anthropology",
+    "audience": "Scholars of Roman encyclopedism and ancient anthropology"
+  },
+  {
+    "id": 93,
+    "language": "latin",
+    "source": "Pliny the Elder, Naturalis Historia II.1",
+    "text": "Mundum et hoc quodcumque nomine alio caelum appellare libuit, cuius circumflexu degunt cuncta, numen esse credi par est, aeternum, inmensum, neque genitum neque interiturum umquam. Huius extera indagare nec interest hominum nec capit humanae coniectura mentis. Furor est mensuram eius animo quosdam agitasse atque prodere ausos, alios rursus occasione hinc sumpta aut his data innumerabiles tradidisse mundos.",
+    "difficulty_notes": "Pliny's cosmological prolegomenon. 'hoc quodcumque nomine alio caelum appellare libuit' (this thing which we have seen fit to call sky by another name) — a remarkably tentative opening for an encyclopedia. 'cuius circumflexu degunt cuncta' (in whose revolution all things live) uses 'circumflexu' in its literal astronomical sense. 'numen esse credi par est' (it is fitting to believe it a divine power) introduces theology obliquely. 'Furor est' (it is madness) dismisses both finite cosmologists and many-worlds theorists in one sentence.",
+    "genre": "encyclopedic cosmology / natural philosophy",
+    "audience": "Scholars of Roman scientific thought and ancient cosmology"
+  },
+  {
+    "id": 94,
+    "language": "latin",
+    "source": "Petronius, Satyricon 1-2",
+    "text": "Num alio genere Furiarum declamatores inquietantur, qui clamant: 'Haec vulnera pro libertate publica excepi; hunc oculum pro vobis impendi: date mihi ducem qui me ducat ad liberos meos, nam succisi poplites membra non sustinent'? Qui inter haec nutriuntur, non magis sapere possunt quam bene olere qui in culina habitant. Levibus enim atque inanibus sonis ludibria quaedam excitando, effecistis ut corpus orationis enervaretur et caderet.",
+    "difficulty_notes": "Petronius's satire of declamatory education. 'Num alio genere Furiarum' (are they not tormented by some other kind of Furies?) opens with a rhetorical question using mythological hyperbole. The embedded declamation ('Haec vulnera pro libertate publica excepi') parodies stock rhetorical exercises. 'non magis sapere possunt quam bene olere qui in culina habitant' (they can no more be wise than those who live in a kitchen can smell good) is a brilliantly vulgar simile. 'corpus orationis enervaretur et caderet' (the body of speech was emasculated and collapsed) uses the medical/bodily metaphor central to Roman rhetorical criticism.",
+    "genre": "satirical fiction / rhetorical criticism",
+    "audience": "Scholars of Roman satire and ancient rhetoric"
+  },
+  {
+    "id": 95,
+    "language": "latin",
+    "source": "Petronius, Satyricon 34",
+    "text": "Iam Trimalchio eadem omnia lusu intermisso poposcerat feceratque potestatem clara voce, si quis nostrum iterum vellet mulsum sumere, cum subito signum symphonia datur et gustatoria pariter a choro cantante rapiuntur. Ceterum inter tumultum cum forte paropsis excidisset et puer iacentem sustulisset, animadvertit Trimalchio colaphisque obiurgari puerum ac proicere rursus paropsidem iussit.",
+    "difficulty_notes": "Petronius's mock-epic dinner narrative. 'lusu intermisso' (the game having been interrupted) uses an ablative absolute for trivial action. 'feceratque potestatem clara voce' (had given permission in a loud voice) parodies legal/military language for wine-serving. 'gustatoria pariter a choro cantante rapiuntur' (appetizers are snatched away in unison by a singing chorus) achieves comic bathos. 'paropsis' (side-dish) is a Greek loan word marking Trimalchio's pretensions. 'colaphisque obiurgari puerum ac proicere rursus paropsidem iussit' (ordered the boy punished with slaps and the dish thrown back down) reveals his grotesque values.",
+    "genre": "satirical fiction / social comedy",
+    "audience": "Scholars of Roman satire and Neronian literature"
+  },
+  {
+    "id": 96,
+    "language": "latin",
+    "source": "Apuleius, Metamorphoses XI.23",
+    "text": "Accessi confinium mortis et calcato Proserpinae limine per omnia vectus elementa remeavi, nocte media vidi solem candido coruscantem lumine, deos inferos et deos superos accessi coram et adoravi de proximo. Ecce tibi rettuli quae, quamvis audita, ignores tamen necesse est.",
+    "difficulty_notes": "Apuleius's account of Lucius's Isis initiation — the most important ancient description of mystery religion experience. 'confinium mortis' (the boundary of death) describes ritual death. 'calcato Proserpinae limine' (having trodden upon Proserpina's threshold) uses the ablative absolute for descent to the underworld. 'per omnia vectus elementa remeavi' (carried through all the elements I returned) compresses a cosmic journey. 'nocte media vidi solem candido coruscantem lumine' (at midnight I saw the sun gleaming with white light) is the central paradox. 'quamvis audita ignores tamen necesse est' (though heard, you must necessarily not understand) enforces secrecy.",
+    "genre": "mystery religion / aretalogy / prose fiction",
+    "audience": "Scholars of ancient religion, mystery cults, and Apuleian narrative"
+  },
+  {
+    "id": 97,
+    "language": "latin",
+    "source": "Apuleius, Metamorphoses XI.6",
+    "text": "Vives autem beatus, vives in mea tutela gloriosus, et cum spatium saeculi tui permensus ad inferos demearis, ibi quoque in ipso subterraneo semirutundo me, quam vides, Acherontis tenebris interlucentem Stygiisque penetralibus regnantem, campos Elysios incolens ipse, tibi propitiam frequens adorabis.",
+    "difficulty_notes": "Isis's promise to Lucius of afterlife protection. 'spatium saeculi tui permensus' (having traversed the span of your age) uses an elaborate periphrasis for death. 'subterraneo semirutundo' (subterranean half-rotunda) is a architectural neologism for the underworld's vault. 'Acherontis tenebris interlucentem' (shining through the darkness of Acheron) creates an oxymoron of divine light in the underworld. 'Stygiisque penetralibus regnantem' (ruling in the Stygian inner sanctums) piles up mythological geography. Apuleius's Africitas (African Latin style) is evident in the baroque accumulation.",
+    "genre": "mystery religion aretalogy / divine speech",
+    "audience": "Scholars of Apuleius, ancient religion, and late Latin style"
+  },
+  {
+    "id": 98,
+    "language": "latin",
+    "source": "Boethius, Consolatio Philosophiae III, Prosa 10",
+    "text": "Quoniam igitur quae sit imperfecti, quae etiam perfecti boni forma uidisti, nunc demonstrandum reor quonam haec felicitatis perfectio constituta sit. In quo illud primum arbitror inquirendum, an aliquod huiusmodi bonum quale paulo ante definisti in rerum natura possit exsistere, ne nos praeter rei subiectae ueritatem cassa cogitationis imago decipiat. Sed quin exsistat sitque hoc ueluti quidam omnium fons bonorum negari nequit.",
+    "difficulty_notes": "Boethius's ontological argument for the supreme Good. 'quae sit imperfecti quae etiam perfecti boni forma' (what is the form of imperfect and also of perfect good) sets up the Platonic framework. 'ne nos praeter rei subiectae ueritatem cassa cogitationis imago decipiat' (lest a hollow image of thought deceive us beyond the truth of the underlying reality) anticipates the ontological objection. 'ueluti quidam omnium fons bonorum' (as it were a certain fountain of all goods) uses the Neoplatonic emanation metaphor. The passage bridges Platonic, Aristotelian, and Neoplatonic metaphysics in late Latin.",
+    "genre": "Neoplatonic theology / consolation literature",
+    "audience": "Scholars of late antique philosophy and medieval Neoplatonism"
+  },
+  {
+    "id": 99,
+    "language": "latin",
+    "source": "Vitruvius, De Architectura I.1.3",
+    "text": "Geometria autem plura praesidia praestat architecturae; et primum ex euthygrammis circini tradit usum, e quo maxime facilius aedificiorum in areis expediuntur descriptiones normarumque et librationum et linearum directiones. Item per opticen in aedificiis ab certis regionibus caeli lumina recte ducuntur. Per arithmeticen vero sumptus aedificiorum consummantur, mensurarum rationes explicantur, difficilesque symmetriarum quaestiones geometricis rationibus et methodis inveniuntur.",
+    "difficulty_notes": "Vitruvius's curriculum for architects mixing Latin and Greek technical terminology. 'euthygrammis' (straight-line constructions) is a Greek loan left untranslated. 'normarumque et librationum et linearum directiones' (the directions of set-squares, levels, and lines) lists surveying tools. 'ab certis regionibus caeli lumina recte ducuntur' (lights are correctly drawn from certain regions of the sky) describes orientation for natural lighting. 'symmetriarum quaestiones geometricis rationibus et methodis' mixes Greek and Latin technical language. The entire passage demonstrates the challenge of rendering Greek techne in Latin prose.",
+    "genre": "architectural theory / technical handbook",
+    "audience": "Scholars of Roman architecture, ancient engineering, and technical Latin"
+  },
+  {
+    "id": 100,
+    "language": "latin",
+    "source": "Celsus, De Medicina, Prooemium 9-11",
+    "text": "Iisdemque temporibus in tres partes medicina diducta est, ut una esset quae victu, altera quae medicamentis, tertia quae manu mederetur. Primam Διαιτητικήν, secundam Φαρμακευτικήν, tertiam Χειρουργίαν Graeci nominarunt. Eius autem, quae victu morbos curat, longe clarissimi auctores etiam altius quaedam agitare conati, rerum quoque naturae sibi cognitionem vindicarunt, tamquam sine ea trunca et debilis medicina esset.",
+    "difficulty_notes": "Celsus's history of medicine embedding untranslated Greek terms (Διαιτητικήν/Φαρμακευτικήν/Χειρουργίαν) in Latin syntax. 'quae victu...quae medicamentis...quae manu mederetur' tripartition uses three different ablatives of means. 'altius quaedam agitare conati' (having attempted to investigate certain things more deeply) describes the Dogmatist physicians' philosophical ambitions. 'rerum quoque naturae sibi cognitionem vindicarunt' (they also claimed for themselves knowledge of the nature of things) links medicine to Lucretian natural philosophy. 'trunca et debilis' (truncated and feeble) uses a vivid bodily metaphor for incomplete knowledge.",
+    "genre": "medical history / doxography",
+    "audience": "Scholars of ancient medicine and Roman scientific writing"
+  },
+  {
+    "id": 101,
+    "language": "latin",
+    "source": "Columella, De Re Rustica I, Praefatio 3",
+    "text": "Cetera non dissimulanda erunt agrorum cultori praecepta rusticationis, quae cum plurima tradiderint Poeni ex Africa scriptores, multa tamen ab his falso prodita coarguunt nostri coloni, sicut Tremelius, qui querens id ipsum tamen excusat, quod Italiae et Africae solum caelumque diversae naturae nequeat eosdem proventus habere.",
+    "difficulty_notes": "Columella's engagement with Carthaginian agricultural science (Mago). 'Poeni ex Africa scriptores' (Punic writers from Africa) refers to the translated Carthaginian agricultural manual. 'falso prodita coarguunt nostri coloni' (our farmers refute things handed down falsely) uses 'coarguunt' — a forensic verb applied to farming. 'solum caelumque diversae naturae' (soil and climate of different nature) introduces the concept of terroir. The sentence structure embeds a quote-within-a-quote (Tremelius's complaint and excuse) in a remarkably compressed period.",
+    "genre": "agricultural science / practical handbook",
+    "audience": "Scholars of Roman agriculture and ancient technical writing"
+  },
+  {
+    "id": 102,
+    "language": "latin",
+    "source": "Frontinus, Strategemata I, Praefatio",
+    "text": "Cum ad instruendam rei militaris scientiam unus ex numero studiosorum eius accesserim eique destinato, quantum cura nostra valuit, satisfecisse visus sim, deberi adhuc institutae arbitror operae, ut sollertia ducum facta, quae a Graecis una στρατηγημάτων appellatione comprehensa sunt, expeditis amplectar commentariis. Ita enim consilii quoque et providentiae exemplis succincti duces erunt, unde illis excogitandi generandique similia facultas nutriatur.",
+    "difficulty_notes": "Frontinus's preface embedding Greek στρατηγημάτων in a Latin period of extraordinary length. 'cum...accesserim...satisfecisse visus sim' (since I have approached...and seem to have satisfied) uses the perfect subjunctive in a complex cum-clause. 'deberi adhuc institutae...operae' (it is still owed to the work undertaken) personifies the obligation. 'expeditis amplectar commentariis' (I shall embrace them in concise notebooks) — 'expeditis' modifying 'commentariis' means 'freed from encumbrance.' 'excogitandi generandique similia' (of devising and generating similar things) uses gerundive pairs for creative military thinking.",
+    "genre": "military handbook / strategic anthology",
+    "audience": "Scholars of Roman military science and technical Latin prose"
+  },
+  {
+    "id": 103,
+    "language": "latin",
+    "source": "Livy, Ab Urbe Condita XXI.31",
+    "text": "Postero die profectus adversa ripa Rhodani mediterranea Galliae petit, non quia rectior ad Alpes via esset, sed quantum a mari recessisset minus obvium fore Romanum credens, cum quo priusquam in Italiam ventum foret non erat in animo manus conserere. Quartis castris ad Insulam pervenit. Ibi Isara Rhodanusque amnes diversis ex Alpibus decurrentes, agri aliquantum amplexi confluunt in unum; Insulae nomen inditum.",
+    "difficulty_notes": "Livy's narrative of Hannibal's Alpine approach. 'adversa ripa Rhodani' (up the opposing bank of the Rhône) uses 'adversa' in its directional sense. 'non quia rectior ad Alpes via esset sed quantum a mari recessisset' nests a comparative clause within a causal one. 'manus conserere' (to join hands = engage in battle) is a military idiom. 'agri aliquantum amplexi' (having embraced a fair extent of land) personifies rivers. The geographical precision requires knowledge of Alpine topography. The entire passage exemplifies Livian periodic structure at its most elaborate.",
+    "genre": "military historiography / geographic narrative",
+    "audience": "Scholars of Roman historiography and the Second Punic War"
+  },
+  {
+    "id": 104,
+    "language": "latin",
+    "source": "Lucretius, De Rerum Natura V.925-932",
+    "text": "Et Venus in silvis iungebat corpora amantum; conciliabat enim vel mutua quamque cupido vel violenta viri vis atque inpensa libido vel pretium, glandes atque arbita vel pira lecta. Et manuum mira freti virtute pedumque venabant silvestria saecla ferarum missilibus saxis et magno pondere clavae; multaque vincebant, vitabant pauca latebris.",
+    "difficulty_notes": "Lucretius's primitive anthropology. 'Venus in silvis iungebat corpora amantum' (Venus joined lovers' bodies in the forests) mythologizes animal coupling. The tricolon 'vel mutua cupido / vel violenta viri vis / vel pretium glandes' (mutual desire / male violence / bribes of acorns) offers a disturbingly frank catalogue of sexual motivation. 'arbita' (arbutus berries) is a rare botanical term. 'silvestria saecla ferarum' (the woodland race of beasts) uses 'saecla' unusually for 'breeds.' 'vitabant pauca latebris' (they avoided few things by hiding) implies early humans were more hunter than hunted.",
+    "genre": "didactic poetry / primitive anthropology",
+    "audience": "Scholars of Epicurean anthropology and Latin scientific poetry"
+  },
+  {
+    "id": 105,
+    "language": "latin",
+    "source": "Pliny the Younger, Epistulae VI.20.14-16",
+    "text": "Iam dies alibi, illic nox omnibus noctibus nigrior densiorque; quam tamen faces multae variaque lumina solvebant. Placuit egredi in litus, et ex proximo aspicere, ecquid iam mare admitteret; quod adhuc vastum et adversum permanebat. Ibi super abiectum linteum recubans semel atque iterum frigidam aquam poposcit hausitque. Deinde flammae flammarumque praenuntius odor sulpuris alios in fugam vertunt, excitant illum.",
+    "difficulty_notes": "Pliny's eyewitness account of Vesuvius's eruption (79 AD). 'dies alibi illic nox omnibus noctibus nigrior densiorque' (daylight elsewhere, there a night blacker and thicker than all nights) — a stunning oxymoron of daytime darkness. 'ecquid iam mare admitteret' (whether the sea would yet permit) uses the subjunctive to express tentative hope. 'super abiectum linteum recubans' (lying back on a spread-out sheet) provides domestic detail amid catastrophe. 'flammarumque praenuntius odor sulpuris' (the prophetic smell of sulphur preceding the flames) uses the rare adjective 'praenuntius.' The shift between past tenses creates urgency.",
+    "genre": "epistolary literature / disaster narrative",
+    "audience": "Scholars of Roman epistolography and ancient natural disaster accounts"
+  },
+  {
+    "id": 106,
+    "language": "latin",
+    "source": "Lucretius, De Rerum Natura III.830-837",
+    "text": "Nil igitur mors est ad nos neque pertinet hilum, quandoquidem natura animi mortalis habetur. Et velut anteacto nil tempore sensimus aegri, ad confligendum venientibus undique Poenis, omnia cum belli trepido concussa tumultu horrida contremuere sub altis aetheris oris, in dubioque fuere utrorum ad regna cadendum omnibus humanis esset terraque marique.",
+    "difficulty_notes": "Lucretius's most famous argument: death is nothing to us. 'Nil igitur mors est ad nos neque pertinet hilum' (death therefore is nothing to us and concerns us not a whit) — 'hilum' is an archaic word for the smallest possible quantity. 'anteacto nil tempore sensimus aegri' (we felt nothing painful in past time) grounds the argument in prenatal non-existence. The analogy to the Punic Wars ('ad confligendum venientibus undique Poenis') historicizes the cosmic argument. 'horrida contremuere sub altis aetheris oris' (shuddered horribly beneath the high shores of the sky) uses epic diction for world-historical catastrophe. 'utrorum ad regna cadendum' (under whose dominion all must fall) is an indirect question within the historical digression.",
+    "genre": "Epicurean thanatology / didactic poetry",
+    "audience": "Scholars of Epicurean ethics and philosophy of death"
+  }
+]
