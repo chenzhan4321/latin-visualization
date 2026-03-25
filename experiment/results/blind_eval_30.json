@@ -1,0 +1,272 @@
+[
+  {
+    "eval_id": 1,
+    "passage_id": 8,
+    "language": "classical-chinese",
+    "source": "韓非子·說難",
+    "original": "周澤未渥也，而語極知，說行而有功則德忘，說不行而有敗則見疑，如此者身危。事以密成，語以泄敗，未必其身泄之也，而語及所匿之事，如此者身危。",
+    "translation_X": "When extensive virtue has not yet been fully realized, yet speech reaches the height of wisdom, if persuasion leads to successful action, then virtue is forgotten; if persuasion does not lead to action but instead results in failure, then suspicion arises. Such circumstances endanger one's position. Affairs are accomplished through secrecy, but speech leads to failure through disclosure. It is not necessarily that the individual themselves disclose the hidden matter, yet speech touches upon what is concealed—such circumstances endanger one's position.",
+    "translation_Y": "When kindness and generosity have not yet been widely bestowed, but words are exceedingly wise, if a proposal is implemented and achieves success, the merit is forgotten, and if a proposal is not implemented and results in failure, suspicion arises. In such cases, one's position becomes precarious. Affairs are accomplished through secrecy, but ruined through disclosure. It is not necessarily that the person themselves leaked the information, yet their words touch upon the concealed matters. In such cases, one's position becomes precarious."
+  },
+  {
+    "eval_id": 2,
+    "passage_id": 96,
+    "language": "latin",
+    "source": "Apuleius, Metamorphoses XI.23",
+    "original": "Accessi confinium mortis et calcato Proserpinae limine per omnia vectus elementa remeavi, nocte media vidi solem candido coruscantem lumine, deos inferos et deos superos accessi coram et adoravi de proximo. Ecce tibi rettuli quae, quamvis audita, ignores tamen necesse est.",
+    "translation_X": "I approached the boundary of death and, having trodden upon Proserpina's threshold, was carried through all elements and returned. In the middle of the night, I saw the sun shining with bright light, approached the gods below and the gods above face to face, and worshipped them from a close distance. Behold, I have brought back to you things which, although heard, you must nevertheless ignore.",
+    "translation_Y": "I approached the boundary of death and, having trodden upon Proserpina's threshold, traversed all the elements and returned. In the middle of the night, I saw the sun shining with bright light; I approached the gods below and the gods above, and worshiped them from nearby. Behold, I have brought back to you things which, although heard, you must nevertheless ignore."
+  },
+  {
+    "eval_id": 3,
+    "passage_id": 74,
+    "language": "classical-chinese",
+    "source": "漢書·藝文志",
+    "original": "道家者流，蓋出於史官，歷記成敗存亡禍福古今之道，然後知秉要執本，清虛以自守，卑弱以自持，此君人南面之術也。合於堯之克讓，易之嗛嗛，一謙而四益，此其所長也。及放者為之，則欲絕去禮學，兼棄仁義，曰獨任清虛可以為治。",
+    "translation_X": "The Daoist tradition originated among the historiographers, who recorded the rise and fall, survival and destruction, and the fortunes and misfortunes of past and present. From this, they came to understand how to grasp the essentials and hold fast to the fundamentals. They cultivated clarity and emptiness for self-preservation and humility and weakness for self-support. This is the art of rulership (the method of facing south as a ruler). It aligns with Yao’s humble willingness to yield and Shun’s cautious and reverent demeanor—one humility that brings four benefits. However, when unworthy individuals embrace this approach, they seek to reject ritual and learning and abandon ren (benevolence) and yi (righteousness), claiming that relying solely on clarity and emptiness is sufficient to govern.",
+    "translation_Y": "The Daoist school originated from the historians, who recorded the rise and fall, existence and extinction, disasters and blessings of past and present, and thereby understood how to grasp the essentials and hold on to the fundamentals, cultivate clarity and emptiness for self-preservation, and maintain humility and weakness for self-restraint. This is the art of rulership for a king facing south. It aligns with Yao's modesty and Yi's cautiousness—one humility leading to four benefits. These are its strengths. However, when indulgent individuals practice this, they wish to completely abandon ritual and learning, discard benevolence and righteousness, and claim that relying solely on clarity and emptiness can achieve order."
+  },
+  {
+    "eval_id": 4,
+    "passage_id": 127,
+    "language": "latin",
+    "source": "Cicero, De Republica VI.13 (Somnium Scipionis)",
+    "original": "Sunt autem novem orbes vel potius globi, quorum unus est caelestis, extimus, qui reliquos omnes complectitur, summus ipse deus arcens et continens ceteros; in quo sunt infixi illi qui volvuntur stellarum cursus sempiterni.",
+    "translation_X": "There are, however, nine orbs or rather spheres, one of which is celestial, the outermost, encompassing all the others, the highest god himself, governing and containing the rest; in which are fixed those who are borne along by the eternal courses of the stars.",
+    "translation_Y": "There are, however, nine spheres or rather globes, of which one is celestial, the outermost, which embraces all the others, the highest god himself, driving and containing the others; in which are fixed those who are turned by the eternal courses of the stars."
+  },
+  {
+    "eval_id": 5,
+    "passage_id": 91,
+    "language": "latin",
+    "source": "Cicero, Brutus 32",
+    "original": "Is et ipse scripsit multa praeclare et docuit alios; et cum cetera melius quam superiores, tum primus intellexit etiam in soluta oratione, dum versum effugeres, modum tamen et numerum quendam oportere servari. Ante hunc enim verborum quasi structura et quaedam ad numerum conclusio nulla erat; aut, si quando erat, non apparebat eam dedita opera esse quaesitam.",
+    "translation_X": "He himself also wrote many excellent works and taught others; and while he surpassed his predecessors in other respects, he was the first to understand that even in free prose (soluta oratione), while avoiding verse, a certain rhythm and measure ought nonetheless to be preserved. For before him, there was no structure of words, as it were, and no rhythmic conclusion (ad numerum conclusio); or, if there ever was one, it did not seem to have been sought out with careful effort.",
+    "translation_Y": "He himself also wrote many excellent things and taught others; and while he did other things better than his predecessors, he was the first to understand that even in continuous speech, while avoiding verse, a certain rhythm and meter should nonetheless be preserved. For before him, the structure of words and a certain rhythmic conclusion were non-existent; or, if they ever existed, it did not appear that they had been sought with careful effort."
+  },
+  {
+    "eval_id": 6,
+    "passage_id": 137,
+    "language": "latin",
+    "source": "Augustine, De Civitate Dei XIV.28",
+    "original": "Fecerunt itaque civitates duas amores duo: terrenam scilicet amor sui usque ad contemptum Dei, caelestem vero amor Dei usque ad contemptum sui. Denique illa in se ipsa, haec in Domino gloriatur.",
+    "translation_X": "They have made, therefore, two cities by two loves: the earthly city, of course, by the love of self, even unto contempt of God, and the heavenly city, truly, by the love of God, even unto contempt of self. Finally, the former glories in herself, the latter in the Lord.",
+    "translation_Y": "Therefore, two loves have made two cities: the earthly city, namely, the love of oneself even to the contempt of God; the heavenly city, on the other hand, the love of God even to the contempt of oneself. Finally, the former glories in itself, the latter in the Lord."
+  },
+  {
+    "eval_id": 7,
+    "passage_id": 37,
+    "language": "latin",
+    "source": "Sallust, Bellum Catilinae, Ch. 25",
+    "original": "Sed in iis erat Sempronia, quae multa saepe virilis audaciae facinora conmiserat. Haec mulier genere atque forma, praeterea viro atque liberis satis fortunata fuit; litteris Graecis et Latinis docta, psallere saltare elegantius quam necesse est probae, multa alia quae instrumenta luxuriae sunt.",
+    "translation_X": "But among them was Sempronia, who had often committed many daring deeds worthy of a man. This woman was fortunate in her family and beauty, and also in her husband and children. She was well-educated in Greek and Latin literature, and she played the harp and danced with a elegance greater than what is necessary for a respectable woman; she also possessed many other things that served as instruments of luxury.",
+    "translation_Y": "But among them was Sempronia, who had often committed many daring deeds with masculine audacity. This woman, of noble lineage and beauty, was also quite fortunate in her husband and children; well-versed in Greek and Latin literature, she could play the lyre and dance with a elegance greater than what is necessary for a virtuous woman, along with many other things that serve as instruments of luxury."
+  },
+  {
+    "eval_id": 8,
+    "passage_id": 99,
+    "language": "latin",
+    "source": "Vitruvius, De Architectura I.1.3",
+    "original": "Geometria autem plura praesidia praestat architecturae; et primum ex euthygrammis circini tradit usum, e quo maxime facilius aedificiorum in areis expediuntur descriptiones normarumque et librationum et linearum directiones. Item per opticen in aedificiis ab certis regionibus caeli lumina recte ducuntur. Per arithmeticen vero sumptus aedificiorum consummantur, mensurarum rationes explicantur, difficilesque symmetriarum quaestiones geometricis rationibus et methodis inveniuntur.",
+    "translation_X": "Geometry, however, provides more support to architecture; and first, it imparts the use of the compass from straight lines, from which the descriptions, norms, leveling, and line alignments of buildings are most easily prepared on sites. Also, through optics, in buildings, light is correctly directed from certain regions of the sky. Through arithmetic, indeed, the costs of buildings are calculated, the principles of measurements are explained, and difficult questions of symmetry are resolved by geometric principles and methods.",
+    "translation_Y": "Geometry, however, provides architecture with numerous supports; and first, it provides the use of the compass for straight lines, from which the descriptions of buildings in open spaces, along with the norms and leveling, are most easily expedited. Similarly, through optics, light is correctly directed in buildings from specific regions of the sky. Through arithmetic, however, the costs of buildings are calculated, the principles of measurements are explained, and difficult problems of symmetry are solved by geometric reasoning and methods."
+  },
+  {
+    "eval_id": 9,
+    "passage_id": 128,
+    "language": "latin",
+    "source": "Cicero, Orator 236",
+    "original": "Itaque in his et nonnumquam exsultans et libera oratio est, qui suis se motibus non artificii modo sed etiam naturae viribus ferat, nec vero hoc solum in oratione, sed in omni genere dicendi animadvertendum est.",
+    "translation_X": "Therefore, in these things, and sometimes exulting, the speech is free, which is carried by its own motions not only by the skill of artifice but also by the forces of nature. And indeed, this is not only to be observed in speech but in every kind of expression.",
+    "translation_Y": "And so, in these matters, speech is not infrequently exuberant and unrestrained, which is carried by its own movements not only by means of artifice but also by the forces of nature. And indeed, this is not to be observed only in oratory, but in every kind of speech."
+  },
+  {
+    "eval_id": 10,
+    "passage_id": 13,
+    "language": "classical-chinese",
+    "source": "呂氏春秋·應同",
+    "original": "類固相召，氣同則合，聲比則應。鼓宮而宮動，鼓角而角動，音律同矣。同氣賢於同義，同義賢於同力，同力賢於同居，同居賢於同名。帝者同氣，王者同義，霸者同力。",
+    "translation_X": "Beings of the same kind are mutually responsive; those with the same vital energy unite; voices of similar pitch resonate with one another. When you strike the *gong* note, the *gong* resonates; when you strike the *jue* note, the *jue* resonates, for their tones are in harmony. Sharing the same vital energy is superior to sharing the same righteousness, sharing the same righteousness is superior to sharing the same strength, sharing the same strength is superior to sharing the same dwelling, and sharing the same dwelling is superior to sharing the same name. The Son of Heaven unites through vital energy, the king through righteousness, and the hegemon through strength.",
+    "translation_Y": "Categories summon one another, vital energies unite when the same, voices respond when in harmony. When the note *gong* is struck, *gong* resonates; when the note *jiao* is struck, *jiao* resonates—the tones align indeed. Sharing vital energy (氣) is superior to sharing moral principles (義), sharing moral principles is superior to sharing strength (力), sharing strength is superior to sharing residence (居), and sharing residence is superior to sharing name (名). The emperor aligns through vital energy (同氣), the king through moral principles (同義), and the hegemon through strength (同力)."
+  },
+  {
+    "eval_id": 11,
+    "passage_id": 117,
+    "language": "classical-chinese",
+    "source": "難經·一難",
+    "original": "十二經皆有動脈，獨取寸口，以決五藏六府死生吉凶之法，何謂也？然：寸口者，脈之大會，手太陰之脈動也。",
+    "translation_X": "The twelve channels all have arteries; why is it that only the inch opening is taken to determine the method of life, death, fortune, and misfortune of the five viscera and six bowels? Explanation: The inch opening is the great meeting point of the pulses; it is the movement of the pulse of the Hand Taiyin.",
+    "translation_Y": "All twelve channels have pulses, but we especially select the inch mouth, to determine the life, death, fortune, and misfortune of the five viscera and six bowels. What does this mean? Now, the inch mouth is the great convergence of pulses, the movement of the Hand Taiyin channel."
+  },
+  {
+    "eval_id": 12,
+    "passage_id": 34,
+    "language": "latin",
+    "source": "Tacitus, Historiae I.1",
+    "original": "Postquam bellatum apud Actium atque omnem potentiam ad unum conferri pacis interfuit, magna illa ingenia cessere; simul veritas pluribus modis infracta, primum inscitia rei publicae ut alienae, mox libidine adsentandi aut rursus odio adversus dominantis.",
+    "translation_X": "After the battle at Actium, when all power was concentrated into one for the sake of peace, the great minds gave way; at the same time, truth was compromised in many ways, first through ignorance of the state as if it were foreign, then by the urge to flatter or hatred towards those in power.",
+    "translation_Y": "After the war at Actium and the concentration of all power in the hands of one, which served the interest of peace, those great talents withdrew; at the same time, truth was shattered in many ways, first through ignorance of public affairs as if they were foreign, soon afterward through the desire to flatter or, conversely, hatred toward those in power."
+  },
+  {
+    "eval_id": 13,
+    "passage_id": 105,
+    "language": "latin",
+    "source": "Pliny the Younger, Epistulae VI.20.14-16",
+    "original": "Iam dies alibi, illic nox omnibus noctibus nigrior densiorque; quam tamen faces multae variaque lumina solvebant. Placuit egredi in litus, et ex proximo aspicere, ecquid iam mare admitteret; quod adhuc vastum et adversum permanebat. Ibi super abiectum linteum recubans semel atque iterum frigidam aquam poposcit hausitque. Deinde flammae flammarumque praenuntius odor sulpuris alios in fugam vertunt, excitant illum.",
+    "translation_X": "Already elsewhere it was day, but there night was darker and thicker than all other nights; yet many torches and various lights dispelled it. It pleased him to go out onto the shore and to look from a nearby point whether the sea would now admit anything, which was still vast and rough. There, lying on a thrown-off linen cloth, he once and again asked for cold water and drank it. Then the smell of sulfur, a herald of flames and fire, turned others to flight and roused him.",
+    "translation_Y": "Now elsewhere it was day, but there a night darker and denser than all other nights; yet many torches and varied lights dispelled it. It pleased him to go out onto the shore and to look from close up whether the sea now admitted anything; but it was still vast and opposing. There, lying on a thrown-down cloth, he once and again asked for cold water and drank it. Then the smell of sulfur, heralding flames and fire, turned others to flight and roused him."
+  },
+  {
+    "eval_id": 14,
+    "passage_id": 36,
+    "language": "latin",
+    "source": "Tacitus, Annales XII.7",
+    "original": "Versa ex eo civitas et cuncta feminae oboediebant, non per lasciviam, ut Messalina, rebus Romanis inludenti: adductum et quasi virile servitium; palam severitas ac saepius superbia; nihil domi impudicum, nisi dominationi expediret.",
+    "translation_X": "The state was transformed from that point onward, and all the women obeyed, not through wantonness, like Messalina, who mocked Roman affairs, but through a kind of manly service. Openly, there was severity and often arrogance; nothing shameless occurred at home unless it was expedient for domination.",
+    "translation_Y": "The state was transformed by him, and all women obeyed, not through wantonness, like Messalina, who mocked Roman affairs, but having been led into a kind of manly service; openly, there was severity and often pride; nothing shameless at home, unless it served domination."
+  },
+  {
+    "eval_id": 15,
+    "passage_id": 14,
+    "language": "classical-chinese",
+    "source": "呂氏春秋·本生",
+    "original": "始生之者，天也；養成之者，人也。能養天之所生而勿撄之謂天子。夫水之性清，土者抇之，故不得清。人之性壽，物者抇之，故不得壽。聖人之制萬物也，以全其天也。天全則神和矣，目明矣，耳聰矣。",
+    "translation_X": "Heaven gives birth to all living things; humans nurture them. One who nourishes Heaven's creation without interfering with it is called the Son of Heaven. Water is naturally clear, but when stirred by the earth, it loses its clarity. Human nature is inherently long-lived, but when disturbed by external things, it cannot attain longevity. The sage governs all things by preserving their natural endowment. When the natural endowment is preserved, the spirit harmonizes, vision sharpens, and hearing clarifies.",
+    "translation_Y": "That which first gives life is Heaven; that which nurtures it to completion is humanity. To nurture what Heaven has produced without interfering with it is what is called the Son of Heaven. The nature of water is clarity, but when soil stirs it, it ceases to be clear. The nature of humanity is longevity, but when desires stir it, it ceases to be long-lived. The sage, in regulating the myriad things, preserves their heavenly nature. When Heaven is preserved, the spirit is harmonious, the eyes are clear, and the ears are acute."
+  },
+  {
+    "eval_id": 16,
+    "passage_id": 112,
+    "language": "classical-chinese",
+    "source": "左傳·宣公二年",
+    "original": "晉靈公不君。厚斂以彫牆，從臺上彈人而觀其辟丸也。宰夫胹熊蹯不熟，殺之，寘諸畚，使婦人載以過朝。",
+    "translation_X": "Duke Ling of Jin was not a virtuous ruler. With an impudent and cruel heart, he oppressed the people to build ornate walls. He would stand on a high platform, shooting people with arrows and watching them dodge. When the cook undercooked the bear paws, he killed the cook, placed the body in a bamboo basket, and had a woman carry it past the court.",
+    "translation_Y": "Duke Ling of Jin was not a proper ruler. He levied heavy taxes to build carved walls, and from the tower above, he shot arrows at people to watch them dodge. When the cook undercooked the bear paws, he killed him, placed him in a waste basket, and had women carry it to cross the court."
+  },
+  {
+    "eval_id": 17,
+    "passage_id": 47,
+    "language": "latin",
+    "source": "Aulus Gellius, Noctes Atticae I.10",
+    "original": "Tu autem, proinde quasi cum matre Evandri nunc loquare, sermone abhinc multis annis iam desito uteris, quod scire atque intellegere neminem vis quae dicas. Nonne, homo inepte, ut quod agis agere possis, taces?",
+    "translation_X": "You, however, are speaking now as if with Evander's mother, using a language that has been abandoned for many years, since you want no one to know or understand what you are saying. Are you not keeping silent, foolish man, so that you can do what you are doing?",
+    "translation_Y": "But you, just as if you were now speaking with the mother of Evander (a mythical figure in Roman legend), are using a language that has been abandoned for many years now, since you wish that no one knows or understands what you are saying. Is it not so, foolish man, that you keep silent in order to maintain what you are doing?"
+  },
+  {
+    "eval_id": 18,
+    "passage_id": 21,
+    "language": "classical-chinese",
+    "source": "風俗通義·聲音",
+    "original": "夫樂者，聖人所以動天地、感鬼神、按萬民、成性類者也。聲者，宮、商、角、徵、羽也。音者，土曰塤，匏曰笙，革曰鼓，竹曰管，絲曰弦，石曰磬，金曰鐘，木曰柷。由是言之，聲本音末也。故琴之為言禁也，雅之為言正也，言君子守正以自禁也。",
+    "translation_X": "Music is what sages use to move heaven and earth, to touch the spirits, to regulate the people, and to fulfill the nature of all kinds. Pitch refers to the five notes: *gong*, *shang*, *jue*, *zhi*, and *yu*. Sound is produced by the following materials and instruments: earth produces the *hu*, gourd produces the *sheng*, leather produces the drum, bamboo produces the *guan*, silk produces strings, stone produces the *qing*, metal produces bells, and wood produces the *yu*. From this, it can be seen that pitch is the foundation, while sound is the ornament. Therefore, the word \"qin\" (zither) implies self-restraint, and the word \"ya\" (elegant music) implies uprightness. This means that a gentleman upholds righteousness to restrain himself.",
+    "translation_Y": "Music is the means by which sages move heaven and earth, affect spirits, govern the people, and complete human nature. Tone refers to the five pitches: *gong*, *shang*, *jue*, *zhi*, and *yu*. Sound is categorized by material: earth is called *hu*, gourd is called *sheng*, hide is called *gu*, bamboo is called *guan*, silk is called *xian*, stone is called *qing*, metal is called *zhong*, and wood is called *yu*. From this, we see that tone is the foundation, and sound is the elaboration. Thus, the zither is associated with \"restraint,\" and elegance is associated with \"correctness,\" for the gentleman upholds correctness and practices self-restraint."
+  },
+  {
+    "eval_id": 19,
+    "passage_id": 57,
+    "language": "classical-chinese",
+    "source": "荀子·性惡",
+    "original": "凡人之欲為善者，為性惡也。夫薄願厚，惡願美，狹願廣，貧願富，賤願貴，苟無之中者，必求於外。故富而不願財，貴而不願埶，苟有之中者，必不及於外。用此觀之，人之欲為善者，為性惡也。",
+    "translation_X": "Human beings who desire to act virtuously do so because their nature is bad. If one is thin, one desires thickness; if one is wicked, one desires goodness; if one is narrow, one desires breadth; if one is poor, one desires wealth; if one is lowly, one desires nobility. If one lacks it within, one must seek it externally. Therefore, if one is wealthy, one does not desire more wealth; if one is noble, one does not desire more power. If one possesses it within, one necessarily will not seek it externally. From this perspective, the fact that people desire to be good is because their nature is bad.",
+    "translation_Y": "Ordinary people who desire to do good are, by nature, evil. For the thin desire the thick, the evil desire the beautiful, the narrow desire the broad, the poor desire the rich, the lowly desire the noble. If one lacks something within, one must seek it from without. Therefore, if one is wealthy and does not desire wealth, or noble and does not desire power, it is because one already possesses it within. Observing this, we see that people who desire to do good are, by nature, evil."
+  },
+  {
+    "eval_id": 20,
+    "passage_id": 45,
+    "language": "latin",
+    "source": "Quintilian, Institutio Oratoria VIII.6.1",
+    "original": "Tropos est verbi vel sermonis a propria significatione in aliam cum virtute mutatio. Circa quem inexplicabilis et grammaticis inter ipsos et philosophis pugna est, quae sint genera, quae species, quis numerus, quis cuique subiiciatur.",
+    "translation_X": "A trope (tropos) is a change of a word or speech from its proper meaning to another, accomplished with some quality or effectiveness. Concerning this, an inexplicable conflict exists among grammarians themselves and between grammarians and philosophers, regarding what the genres are, what the species are, what the number is, and what is subordinate to each.",
+    "translation_Y": "A trope is the change of a word or speech from its proper meaning to another, performed with effectiveness. Concerning this, there is an inexplicable and contentious debate among grammarians themselves and between grammarians and philosophers—what are its kinds, what are its species, what is its number, and how each is classified."
+  },
+  {
+    "eval_id": 21,
+    "passage_id": 108,
+    "language": "classical-chinese",
+    "source": "莊子·養生主",
+    "original": "吾生也有涯，而知也無涯。以有涯隨無涯，殆已！已而為知者，殆而已矣！為善無近名，為惡無近刑。緣督以為經，可以保身，可以全生，可以養親，可以盡年。",
+    "translation_X": "My life has a limit, while knowledge has no limit. To pursue the limitless with the limited is perilous! Indeed, those who consider themselves knowledgeable are in peril! Do good without seeking fame, do evil without fearing punishment. If you govern yourself with this as a principle, you can protect your person, preserve your life, nurture your relatives, and fulfill your years.",
+    "translation_Y": "My life has a limit, but knowledge is limitless. Pursuing the limitless with the limited is perilous. Indeed, how perilous it is for one who seeks knowledge! To do good without seeking fame, to commit no wrong without fearing punishment—by adhering to these principles, one can protect oneself, preserve one's life, care for one's parents, and live out one's years."
+  },
+  {
+    "eval_id": 22,
+    "passage_id": 98,
+    "language": "latin",
+    "source": "Boethius, Consolatio Philosophiae III, Prosa 10",
+    "original": "Quoniam igitur quae sit imperfecti, quae etiam perfecti boni forma uidisti, nunc demonstrandum reor quonam haec felicitatis perfectio constituta sit. In quo illud primum arbitror inquirendum, an aliquod huiusmodi bonum quale paulo ante definisti in rerum natura possit exsistere, ne nos praeter rei subiectae ueritatem cassa cogitationis imago decipiat. Sed quin exsistat sitque hoc ueluti quidam omnium fons bonorum negari nequit.",
+    "translation_X": "Since, therefore, you have seen what pertains to the imperfect and also the form of the perfect good, I now think that it must be shown where this perfection of happiness is established. In this regard, I believe that the first thing to be investigated is whether any such good as you defined a little while ago can exist in the nature of things, lest a vain image of thought deceive us beyond the truth of the subject. But that it does exist and is, as it were, a certain source of all goods cannot be denied.",
+    "translation_Y": "Since, therefore, you have seen both the form of the imperfect and the form of the perfect good, I now think it must be demonstrated where this perfection of happiness is established. In this regard, I first judge it necessary to inquire whether any such good, as you defined a little earlier, can exist in the nature of things, lest an empty mental image deceive us beyond the truth of the subject. But that such a good exists and is, as it were, a fountainhead of all goods cannot be denied."
+  },
+  {
+    "eval_id": 23,
+    "passage_id": 102,
+    "language": "latin",
+    "source": "Frontinus, Strategemata I, Praefatio",
+    "original": "Cum ad instruendam rei militaris scientiam unus ex numero studiosorum eius accesserim eique destinato, quantum cura nostra valuit, satisfecisse visus sim, deberi adhuc institutae arbitror operae, ut sollertia ducum facta, quae a Graecis una στρατηγημάτων appellatione comprehensa sunt, expeditis amplectar commentariis. Ita enim consilii quoque et providentiae exemplis succincti duces erunt, unde illis excogitandi generandique similia facultas nutriatur.",
+    "translation_X": "When I undertook the task of instructing in the science of military matters and, as far as my care could achieve, satisfied one of my students who had approached me for this purpose, I still consider myself obligated to continue the work I have begun. For this reason, I shall compile the strategic deeds of commanders, which the Greeks encompass with the single term \"stratēgemata\" (strategic deeds), into concise commentaries. In this way, leaders will be equipped not only with examples of strategy but also of foresight, from which they may cultivate the ability to devise and generate similar actions.",
+    "translation_Y": "When I approached one of his students to instruct him in the science of military affairs and seemed to have satisfied his needs as much as my care allowed, I still believe that I owe further instruction to the task I undertook. This is to embrace the clever deeds of commanders, which the Greeks have encompassed under the single term \"stratagems,\" with clear commentaries. For in this way, leaders will be equipped with concise examples of counsel and foresight, from which the ability to devise and create similar strategies may be nurtured."
+  },
+  {
+    "eval_id": 24,
+    "passage_id": 22,
+    "language": "classical-chinese",
+    "source": "黃帝內經·素問·至真要大論",
+    "original": "諸風掉眩，皆屬於肝。諸寒收引，皆屬於腎。諸氣膹鬱，皆屬於肺。諸濕腫滿，皆屬於脾。諸熱瞀瘛，皆屬於火。諸痛癢瘡，皆屬於心。",
+    "translation_X": "All cases of dizziness and vertigo are attributed to the liver. All cases of coldness and contraction are attributed to the kidneys. All cases of distension and oppression are attributed to the lungs. All cases of dampness and swelling are attributed to the spleen. All cases of heat, convulsions, and spasms are attributed to fire. All cases of pain, itching, and sores are attributed to the heart.",
+    "translation_Y": "Various wind-related dizziness and vertigo are all associated with the liver. Various cold-induced contraction and withdrawal are all associated with the kidneys. Various qi-related chest tightness and oppression are all associated with the lungs. Various dampness-related swelling and fullness are all associated with the spleen. Various heat-induced convulsions and spasms are all associated with fire. Various painful itching and sores are all associated with the heart."
+  },
+  {
+    "eval_id": 25,
+    "passage_id": 80,
+    "language": "classical-chinese",
+    "source": "莊子·天地",
+    "original": "夫道，覆載萬物者也，洋洋乎大哉！君子不可以不刳心焉。無為為之之謂天，無為言之之謂德，愛人利物之謂仁，不同同之之謂大，行不崖異之謂寬，有萬不同之謂富。",
+    "translation_X": "The Dao is that which carries and sustains all things. How vast and great it is! A gentleman cannot but examine his heart and cultivate it thoroughly. To act without forced action is called Heaven. To speak without forced words is called Virtue. To love others and benefit things is called Benevolence. To unify all differences is called Greatness. To conduct oneself without partiality is called Generosity. To possess all manner of things is called Wealth.",
+    "translation_Y": "The Dao, that which covers and supports all things, is vast and profound! It is not something the noble person can neglect to examine deeply. That which is naturally so without forced action is called Heaven; that which is naturally so without forced expression is called Virtue; loving others and benefiting things is called Benevolence; unity amidst diversity is called Greatness; conduct that does not oppose or deviate is called Tolerance; and having all kinds of resources is called Wealth."
+  },
+  {
+    "eval_id": 26,
+    "passage_id": 122,
+    "language": "classical-chinese",
+    "source": "春秋繁露·深察名號",
+    "original": "名者，大理之首章也。錄其首章之意，以窺其中之事，則是非可知也。名者，性之實，實者，名之副也。名副其實，實副其名。",
+    "translation_X": "Names are the first chapter of the Great Principle. By examining the meaning of this first chapter, one can glimpse the affairs within and thereby discern right from wrong. Names are the reality of human nature, and reality is the counterpart of names. Names correspond to reality, and reality corresponds to names.",
+    "translation_Y": "Names are the first chapter of great principles. By recording the meaning of this first chapter, one can glimpse the matters within and thereby understand right and wrong. Names are the reality of nature; reality is the counterpart of names. When names and reality mutually correspond, reality and names complement each other."
+  },
+  {
+    "eval_id": 27,
+    "passage_id": 44,
+    "language": "latin",
+    "source": "Ammianus Marcellinus, Res Gestae XVI.1.1",
+    "original": "Haec per orbem Romanum fatorum ordine contexto versante Caesar apud Viennam in collegium fastorum a consule octiens Augusto adscitus urgente genuino vigore pugnarum fragores caedesque barbaricas somniabat.",
+    "translation_X": "These things, interwoven throughout the Roman world by the order of the fates, Caesar, turning his attention to Vienne, admitted into the college of annals by Augustus, consul for the eighth time, pressing with genuine strength, he was dreaming of the crashes of battles and barbarian massacres.",
+    "translation_Y": "These things, woven through the Roman world in the order of the fates, Caesar, while turning the pages, being admitted into the college of chronicles by the eight-time consul Augustus, dreamed of the clashes and barbarian slaughters, urged on by genuine strength."
+  },
+  {
+    "eval_id": 28,
+    "passage_id": 77,
+    "language": "classical-chinese",
+    "source": "莊子·在宥",
+    "original": "聞在宥天下，不聞治天下也。在之也者，恐天下之淫其性也；宥之也者，恐天下之遷其德也。天下不淫其性，不遷其德，有治天下者哉！堯之治天下也，使天下欣欣焉人樂其性，是不恬也；桀之治天下也，使天下瘁瘁焉人苦其性，是不愉也。",
+    "translation_X": "It is said that one should leniently tolerate the world, but not govern it. To tolerate it is because one fears that the world might indulge its nature; to govern it is because one fears that the world might alter its virtue. If the world does not indulge its nature and does not alter its virtue, is there any need to govern the world then? When Yao governed the world, he caused the world to be joyful and content, with people delighting in their nature—this is not tranquility; when Jie governed the world, he caused the world to be weary and suffering, with people resenting their nature—this is not harmony.",
+    "translation_Y": "Hearing of tolerance towards the world, I do not hear of governing the world. The reason for tolerance is the fear that the world may indulge its nature; the reason for governance is the fear that the world may alter its virtue. If the world neither indulges its nature nor alters its virtue, is there really someone who can govern the world? When Yao governed the world, he made the world joyful, and people delighted in their nature—this is not tranquility. When Jie governed the world, he made the world weary, and people suffered in their nature—this is not happiness."
+  },
+  {
+    "eval_id": 29,
+    "passage_id": 15,
+    "language": "classical-chinese",
+    "source": "呂氏春秋·大樂",
+    "original": "音樂之所由來者遠矣，生於度量，本於太一。太一出兩儀，兩儀出陰陽。凡樂，天地之和，陰陽之調也。大樂，君臣父子長少之所歡欣而說也。歡欣生於平，平生於道。",
+    "translation_X": "Music's origin is deeply rooted. It arises from measurement and rhythm and is grounded in the Ultimate One (Taiyi). The Ultimate One gives rise to the Two Extremes, and the Two Extremes give rise to yin and yang. All music represents the harmony of heaven and earth and the balance of yin and yang. Great music is what brings joy and delight to rulers and subjects, fathers and sons, elders and youths. Joy arises from harmony, and harmony arises from the Way (Dao).",
+    "translation_Y": "Music has its origin in antiquity. It is born from measure and based on the Great Unity. The Great Unity gives rise to the Two Aspects, and the Two Aspects give rise to yin and yang. All music is the harmony of heaven and earth and the balance of yin and yang. Great music is what brings joy and delight to rulers and ministers, fathers and sons, elders and youths. Joy arises from harmony, and harmony arises from the Way."
+  },
+  {
+    "eval_id": 30,
+    "passage_id": 12,
+    "language": "classical-chinese",
+    "source": "潛夫論·務本",
+    "original": "凡為國者以富民為本，以正學為基。夫富民者，以農桑為本，以游業為末；百工者，以致用為本，以巧餝為末。三者守本離末則民富，離本守末則民貧。故明君涖國，必崇本抑末，以遏亂危之萌。",
+    "translation_X": "All who govern a state take enriching the people as the foundation and proper learning as the basis. Now, enriching the people is founded upon agriculture and sericulture, with secondary industries as the supplement; the various crafts are founded upon practical use, with decorative excess as the supplement. If these three—agriculture, crafts, and industries—uphold the foundation and reject the secondary, the people will be rich; if they neglect the foundation and uphold the secondary, the people will be poor. Therefore, a wise ruler governing the state must esteem the foundation and suppress the secondary, in order to check the sprouts of chaos and danger.",
+    "translation_Y": "All who govern a country take enriching the people as the foundation and proper learning as the basis. To enrich the people, one must take agriculture and sericulture as the foundation and secondary industries as the supplement; for the hundred crafts, one must take practical use as the foundation and decorative intricacies as the supplement. If these three focus on the essentials and avoid superficialities, the people will be rich; if they abandon the essentials and focus on superficialities, the people will be poor. Therefore, a wise ruler governing the country must honor the essentials and suppress the superficialities to prevent the sprouts of chaos and danger."
+  }
+]

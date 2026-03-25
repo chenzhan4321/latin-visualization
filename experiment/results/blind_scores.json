@@ -1,0 +1,91 @@
+[
+  {"eval_id":1, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":7,"comp":8,"reg":7,"flu":7}, "winner":"tie",
+   "note":"Both adequate. X reads 周澤 as 'extensive virtue' (defensible but unusual); Y's 'kindness and generosity' is more standard. X's 'endangers one's position' and Y's 'position becomes precarious' are equally valid. Essentially tied."},
+
+  {"eval_id":2, "X":{"acc":8,"comp":7,"reg":7,"flu":8}, "Y":{"acc":8,"comp":8,"reg":8,"flu":8}, "winner":"Y",
+   "note":"Y includes 'Behold, I have brought back' for 'Ecce tibi rettuli' which X truncates. Y's 'traversed all the elements' better captures 'per omnia vectus elementa'. Both handle the Isis initiation well."},
+
+  {"eval_id":3, "X":{"acc":8,"comp":8,"reg":8,"flu":8}, "Y":{"acc":7,"comp":8,"reg":7,"flu":7}, "winner":"X",
+   "note":"X has 'cultivated clarity and emptiness' — more precise for 清虛以自守. X's 'this is the art of the sovereign who faces south' captures 君人南面之術 better. Y's 'cultivate clarity and emptiness for self-preservation' is workable but less elegant."},
+
+  {"eval_id":4, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":7}, "winner":"Y",
+   "note":"Y's 'driving and containing' for 'arcens et continens' is more dynamic than X's 'governing and containing'. Y's 'globes' for 'globi' is more literal (X uses 'orbs' then 'spheres'). Both serviceable but Y slightly more precise."},
+
+  {"eval_id":5, "X":{"acc":8,"comp":8,"reg":9,"flu":8}, "Y":{"acc":7,"comp":8,"reg":7,"flu":8}, "winner":"X",
+   "note":"X includes 'soluta oratione' gloss — scholarly. X's 'free prose' is clearer than Y's 'continuous speech' for 'soluta oratione'. X reads as a more informed scholarly translation."},
+
+  {"eval_id":6, "X":{"acc":8,"comp":9,"reg":8,"flu":8}, "Y":{"acc":8,"comp":9,"reg":8,"flu":8}, "winner":"tie",
+   "note":"Both excellent renderings of Augustine's famous chiasmus. X: 'the earthly city, of course, by the love of self' vs Y: 'the earthly city, namely, the love of oneself'. Nearly indistinguishable quality."},
+
+  {"eval_id":7, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":7}, "winner":"Y",
+   "note":"Y's 'masculine audacity' for 'virilis audaciae' is better than X's 'daring deeds worthy of a man'. Y's 'of noble lineage and beauty' is more natural than X's 'fortunate in her family and beauty'. Y reads as more scholarly."},
+
+  {"eval_id":8, "X":{"acc":7,"comp":7,"reg":7,"flu":7}, "Y":{"acc":7,"comp":7,"reg":7,"flu":7}, "winner":"tie",
+   "note":"Both struggle with this technically dense Vitruvius passage. X's 'descriptions, norms, leveling' and Y's 'descriptions of buildings in open spaces' are both imperfect renderings. Neither clearly better."},
+
+  {"eval_id":9, "X":{"acc":7,"comp":8,"reg":7,"flu":6}, "Y":{"acc":8,"comp":8,"reg":8,"flu":8}, "winner":"Y",
+   "note":"Y's 'exuberant and unrestrained' for 'exsultans et libera' is superior to X's awkward 'sometimes exulting, the speech is free'. Y's 'not only in oratory, but in every kind of speech' is clearer. X has a syntactic stumble."},
+
+  {"eval_id":10, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":9,"flu":8}, "winner":"Y",
+   "note":"Y includes glosses (氣/義/力) and uses 'jiao' (correct modern pinyin) vs X's 'jue'. Y's 'Categories summon one another' is more precise than X's vaguer 'Beings of the same kind'. Y is clearly more scholarly."},
+
+  {"eval_id":11, "X":{"acc":6,"comp":7,"reg":6,"flu":6}, "Y":{"acc":8,"comp":8,"reg":8,"flu":7}, "winner":"Y",
+   "note":"X translates 動脈 as 'arteries' (wrong — means 'pulsating vessels/pulses'). Y correctly says 'pulses'. X's 'inch opening' for 寸口 is less standard than Y's 'inch mouth'. Y demonstrates better medical knowledge."},
+
+  {"eval_id":12, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":8}, "winner":"Y",
+   "note":"Y's 'those great talents withdrew' for 'magna ingenia cessere' is more precise than X's 'great minds gave way'. Y's 'shattered' for 'infracta' is stronger and more accurate than X's 'compromised'. Y handles the temporal sequence better."},
+
+  {"eval_id":13, "X":{"acc":7,"comp":7,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":8}, "winner":"Y",
+   "note":"Y's 'thrown-down linen' for 'abiectum linteum' is more vivid and accurate. Y includes 'but it was still vast and opposing' capturing 'adversum'. Both handle the Vesuvius letter well but Y is slightly sharper."},
+
+  {"eval_id":14, "X":{"acc":8,"comp":8,"reg":8,"flu":8}, "Y":{"acc":7,"comp":8,"reg":7,"flu":7}, "winner":"X",
+   "note":"X's 'a kind of manly service' is clearer. X handles 'nisi dominationi expediret' as 'unless it was expedient for domination' — more precise than Y's 'unless it served domination'. X reads the Tacitean compression better."},
+
+  {"eval_id":15, "X":{"acc":7,"comp":7,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":8}, "winner":"Y",
+   "note":"Y's 'That which first gives life is Heaven; that which nurtures it to completion is humanity' captures the parallel structure of 始生之者天也養成之者人也 better than X's flatter rendering. Y preserves the philosophical register."},
+
+  {"eval_id":16, "X":{"acc":7,"comp":8,"reg":7,"flu":6}, "Y":{"acc":8,"comp":8,"reg":7,"flu":7}, "winner":"Y",
+   "note":"X says 'shooting people with arrows' — wrong, 彈 means pellets/slingshot not arrows. Y correctly says 'shot arrows' — also wrong, should be 'shot pellets'. But Y's 'levied heavy taxes' for 厚斂 is better than X's 'oppressed the people'. Y slightly better overall."},
+
+  {"eval_id":17, "X":{"acc":7,"comp":8,"reg":7,"flu":8}, "Y":{"acc":8,"comp":8,"reg":8,"flu":7}, "winner":"Y",
+   "note":"Y includes '(a mythical figure in Roman legend)' gloss for Evander — essential context for the joke. X lacks this. The entire passage depends on knowing Evander's mother spoke an incomprehensibly archaic language."},
+
+  {"eval_id":18, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":8}, "winner":"Y",
+   "note":"Y's 'Sound is categorized by material' is more precise than X's 'Sound is produced by the following materials and instruments'. Y correctly distinguishes 聲 (pitch) from 音 (sound by material) — X conflates them. Y includes etymological glosses 琴=禁, 雅=正."},
+
+  {"eval_id":19, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":7,"comp":8,"reg":7,"flu":7}, "winner":"tie",
+   "note":"Both handle Xunzi's nature-is-evil argument adequately. X's 'Human beings who desire to act virtuously do so because their nature is bad' and Y's 'Ordinary people who desire to do good are, by nature, evil' are equivalent. Tie."},
+
+  {"eval_id":20, "X":{"acc":8,"comp":8,"reg":9,"flu":8}, "Y":{"acc":7,"comp":8,"reg":7,"flu":8}, "winner":"X",
+   "note":"X includes '(tropos)' gloss and 'accomplished with some quality or effectiveness' — more precise rendering of 'cum virtute'. Y's 'performed with effectiveness' loses the nuance. X reads as more informed."},
+
+  {"eval_id":21, "X":{"acc":8,"comp":8,"reg":7,"flu":8}, "Y":{"acc":7,"comp":8,"reg":7,"flu":7}, "winner":"X",
+   "note":"X's 'My life has a limit, while knowledge has no limit' is clean. X handles 緣督以為經 as 'govern yourself with this as a principle' — reasonable if imperfect. Y's 'by adhering to these principles' is vaguer. X's flow is better."},
+
+  {"eval_id":22, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":8}, "winner":"Y",
+   "note":"Y's 'I first judge it necessary to inquire' better captures Boethius's philosophical register than X's 'I believe that the first thing to be investigated'. Y's 'can exist in the nature of things' is clearer for 'in rerum natura possit exsistere'."},
+
+  {"eval_id":23, "X":{"acc":6,"comp":7,"reg":6,"flu":6}, "Y":{"acc":6,"comp":7,"reg":6,"flu":5}, "winner":"tie",
+   "note":"Both struggle with Frontinus's dense military Latin. X misreads the subject ('one of my students who had approached me'). Y's 'I approached one of his students' is also confused. Neither satisfactory — Frontinus is genuinely hard."},
+
+  {"eval_id":24, "X":{"acc":7,"comp":8,"reg":6,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":7}, "winner":"Y",
+   "note":"Y preserves the pathological categories with modifiers: 'wind-related dizziness', 'cold-induced contraction', 'qi-related chest tightness' — more precise than X's bare 'all cases of dizziness'. Y reflects the medical 病機十九條 structure better."},
+
+  {"eval_id":25, "X":{"acc":7,"comp":8,"reg":7,"flu":7}, "Y":{"acc":8,"comp":8,"reg":8,"flu":8}, "winner":"Y",
+   "note":"Y's 'covers and supports all things, is vast and profound' preserves 覆載萬物/洋洋乎大哉 better. Y's parallel '無為為之 = naturally so without forced action' is clearer than X's 'To act without forced action'. Y maintains the Daoist register."},
+
+  {"eval_id":26, "X":{"acc":8,"comp":8,"reg":8,"flu":7}, "Y":{"acc":7,"comp":8,"reg":7,"flu":7}, "winner":"X",
+   "note":"X's 'Names are the reality of human nature' captures 名者性之實 more precisely. Y's 'Names are the reality of nature' loses the 性 (human nature) nuance. X handles Dong Zhongshu's name theory better."},
+
+  {"eval_id":27, "X":{"acc":6,"comp":7,"reg":6,"flu":5}, "Y":{"acc":5,"comp":7,"reg":6,"flu":5}, "winner":"X",
+   "note":"Both struggle with Ammianus's notoriously convoluted Latin. X at least gets 'Vienne' and 'college of annals' right. Y's 'turning the pages' is a misreading. Neither good but X slightly less wrong."},
+
+  {"eval_id":28, "X":{"acc":7,"comp":8,"reg":7,"flu":6}, "Y":{"acc":7,"comp":8,"reg":7,"flu":7}, "winner":"Y",
+   "note":"Y's 'Hearing of tolerance towards the world' captures 聞在宥天下 slightly better. X's 'It is said that one should leniently tolerate' over-interprets. Both miss that 在 and 宥 are two distinct concepts (let-be and forgive). Slight Y edge on fluency."},
+
+  {"eval_id":29, "X":{"acc":8,"comp":8,"reg":9,"flu":8}, "Y":{"acc":7,"comp":8,"reg":7,"flu":8}, "winner":"X",
+   "note":"X's 'Ultimate One (Taiyi)' is the correct scholarly term; Y's 'Great Unity' is a generic translation that loses the specific cosmological reference. X's 'Two Extremes' is standard; Y's 'Two Aspects' is vague. X is clearly more informed."},
+
+  {"eval_id":30, "X":{"acc":8,"comp":8,"reg":8,"flu":8}, "Y":{"acc":7,"comp":8,"reg":7,"flu":7}, "winner":"X",
+   "note":"X includes 'with secondary industries' and 'decorative excess' — more precise than Y's 'secondary industries as the supplement' and 'decorative intricacies'. X captures 明君涖國必崇本抑末 better. Slight X edge."}
+]
