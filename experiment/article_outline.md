@@ -110,22 +110,114 @@ Three levels of insight:
 2. **Error propagation is the intrinsic risk of pipelines** — each stage can inject errors that subsequent stages inherit and reinforce. This is isomorphic to the "authority bias" in human scholarly commentary
 3. **Fact-checking is what makes the pipeline usable** — one extra API call (~20s) reduces catastrophic failure rate to zero
 
-## 6. Language-Specific Findings
+## 6. Large-Scale Experiment: 129 Passages, Blind Evaluation
 
-| Text type | Best strategy | Why |
-|-----------|--------------|-----|
-| Baroque German | **D (Pipeline + FC)** | Archaic orthography decoding is a genuine bottleneck |
-| Rare Classical Chinese | **D (Pipeline + FC)** | Proper nouns and allusions need structured annotation |
-| Well-attested Latin prose | **A (Direct)** | Model's pre-training is strong enough; extra stages add noise |
+### 6.1 Scale
 
-## 7. Scaling Experiment (In Progress)
+The experiment was scaled from 6 to 144 passages (129 valid after filtering):
+- **61 Classical Chinese** — from 20+ sources (Guanzi, Hanfeizi, Wenxin Diaolong, Yanshi Jiaxun, Lüshi Chunqiu, Huainanzi, Zuozhuan, Zhuangzi, Xunzi, Shangjunshu, Baopuzi, Shanghan Lun, Nanjing, Guiguzi, Gongsun Longzi, Chunqiu Fanlu, Shishuo Xinyu, Shanhaijing, etc.)
+- **68 Latin** — from 20+ authors (Tacitus, Sallust, Seneca, Cicero, Horace, Juvenal, Augustine, Ovid, Lucan, Martial, Lucretius, Pliny, Petronius, Apuleius, Boethius, Vitruvius, Celsus, Quintilian, Aulus Gellius, Ammianus, etc.)
+- **6 Baroque German** (60% model collapse rate on 17th-century German — see §6.4)
+- Only conditions A (Direct) and D (Pipeline + Fact-check) were run, based on Phase 1 findings that B and C are dominated by A and D respectively.
 
-50 additional high-difficulty passages (A vs D only), to test:
-- Statistical significance (paired Wilcoxon signed-rank test)
-- Confidence intervals for the D-A score difference
-- Whether the language-specific pattern holds at scale
+### 6.2 Blind Evaluation Protocol
 
-## 8. Discussion
+To eliminate judge bias, a **blinded evaluation** was conducted:
+1. 30 passages randomly sampled (stratified: 15 Chinese + 15 Latin)
+2. Each passage's A and D translations randomly assigned labels X and Y
+3. Judge (Claude Opus 4.6) scored X and Y on 4 dimensions (1-10) **without knowing which was A or D**
+4. Secret key revealed only after all 30 scores were finalized
+
+### 6.3 Results
+
+**Win rate:**
+
+| | D (Pipeline+FC) | A (Direct) | Tie |
+|---|---|---|---|
+| **Count** | **22** | 3 | 5 |
+| **Percentage** | **73%** | 10% | 17% |
+
+**Mean scores:**
+
+| | A (Direct) | D (Pipeline+FC) | Delta |
+|---|---|---|---|
+| **Overall** | 7.18 | **7.69** | **+0.51** |
+| Classical Chinese | 7.15 | **7.77** | **+0.62** |
+| Latin | 7.22 | **7.62** | **+0.40** |
+
+**Per-dimension breakdown:**
+
+| Dimension | A | D | Delta | Interpretation |
+|---|---|---|---|---|
+| **Accuracy** | 6.97 | **7.70** | **+0.73** | Fewer misreadings of grammar and vocabulary |
+| **Completeness** | 7.83 | 7.90 | +0.07 | Both conditions produce complete translations |
+| **Register** | 6.97 | **7.73** | **+0.77** | More scholarly terminology, proper noun handling |
+| **Fluency** | 6.97 | 7.43 | +0.47 | Moderate improvement in naturalness |
+
+The largest gains are in **Accuracy** and **Register** — exactly the two dimensions that structured annotation is designed to improve. Completeness shows no difference (both models produce complete translations), and Fluency improves moderately.
+
+### 6.4 What D Does Better: Three Patterns
+
+**Pattern 1: Technical terminology with inline glosses**
+
+D embeds original terms in parentheses, transforming a generic translation into a scholarly tool:
+
+> **A:** "managing affairs through non-action and teaching through silence"
+> **D:** "engaging in non-action (無為之事, *wu wei zhi shi*), and implementing wordless instruction (不言之教, *bu yan zhi jiao*)"
+
+This pattern appears in ~21% of D translations and accounts for the Register improvement.
+
+**Pattern 2: Proper noun disambiguation**
+
+> **A:** "Caesar was considered great… Cato was renowned"
+> **D:** "**Julius Caesar** was regarded as great… **Cato the Younger** through integrity of life"
+
+The annotation stage forces the model to identify who is being discussed, preventing ambiguity.
+
+**Pattern 3: Medical/technical precision**
+
+The most dramatic D victory: Passage #11 (難經). A translates 動脈 as "arteries" (a modern anatomical term, completely wrong in the context of pulse diagnosis). D correctly renders it as "pulses" — the annotation stage caught that 動脈 in classical medical texts means "pulsating vessels at the pulse-taking position," not anatomical arteries.
+
+### 6.5 What D Does Worse: The 10%
+
+D lost on 3 out of 30 passages. Common pattern: **when the source text is semantically transparent and requires no contextual knowledge**, D's extra annotations add noise without benefit.
+
+- Apuleius's Isis initiation (#2): vivid, concrete imagery that translates directly
+- Cicero's Somnium Scipionis (#4): well-known cosmological description, model's pre-training sufficient
+- Zhuangzi's 在宥 (#28): D over-interpreted a passage whose power lies in its ambiguity
+
+### 6.6 Baroque German: Model Collapse
+
+9 out of 15 baroque German passages (60%) produced degenerate "Identity" token repetition in **both** A and D conditions. This is not a pipeline failure but a **model-level failure**: the 70B model's tokenizer fragments 17th-century German compound neologisms (e.g., *Kummerdisteln*, *schwartzgewölckter*) into meaningless subword sequences, causing generation collapse. Pipeline cannot fix a tokenizer-level problem.
+
+## 7. Language-Specific Findings
+
+| Text type | Best strategy | Win rate | Why |
+|-----------|--------------|----------|-----|
+| Classical Chinese | **D (Pipeline + FC)** | **80%** (12/15 in blind eval) | Polysemous characters, proper nouns, technical terminology all benefit from structured annotation |
+| Latin | **D (Pipeline + FC)** | **67%** (10/15 in blind eval) | Proper noun disambiguation, philosophical register; model's Latin is stronger so baseline is higher |
+| Baroque German | Inconclusive | — | 60% model collapse; insufficient valid data |
+
+## 8. Core Argument
+
+> **Structured annotation is a force multiplier — and force multipliers amplify errors too.**
+
+Three levels of insight:
+
+1. **Commentary structure works** — not because "more thinking = better" (CoT is actually worst), but because **structured decomposition** breaks a hard problem into sub-tasks the model can handle
+2. **Error propagation is the intrinsic risk of pipelines** — each stage can inject errors that subsequent stages inherit and reinforce. This is isomorphic to the "authority bias" in human scholarly commentary traditions (cf. the millennium-long acceptance of the forged Old Text Documents)
+3. **Fact-checking is what makes the pipeline usable** — one extra API call (~20s) reduces catastrophic failure rate to zero and compresses the bimodal score distribution back to unimodal
+
+The experiment trajectory itself tells the story:
+
+| Phase | Condition | Avg Score | Failure mode |
+|-------|-----------|-----------|-------------|
+| 1 | A (Direct) | 7.38 | Stable but mediocre |
+| 1 | B (CoT) | 7.02 | Unstable; analysis ≠ improvement |
+| 1 | C (Pipeline) | 7.18 | **Bimodal**: great or terrible |
+| 2 | D (Pipeline + FC) | **7.69** | Stable and superior |
+
+## 9. Discussion
 
 ### What this means for LLM-assisted scholarship
 
@@ -134,8 +226,27 @@ The commentary pipeline is not a silver bullet. It is a **conditional improvemen
 2. A fact-check stage that catches annotation errors before they propagate
 3. Awareness that for well-represented text types, the pipeline adds cost without benefit
 
+The 4× API cost of Pipeline+FC (4 rounds vs 1) is justified when:
+- The text contains archaic orthography or rare vocabulary
+- Proper nouns need identification for the target audience
+- Technical terminology (medical, legal, philosophical) needs disambiguation
+- The scholarly register matters (academic publications, teaching materials)
+
+It is **not** justified when:
+- The source text is semantically transparent
+- The model's pre-training covers the text type well
+- Speed matters more than scholarly precision
+
 ### The broader lesson
 
-This mirrors a pattern across LLM applications: **structured prompting improves average quality but increases variance**. The fact-check stage is a variance reduction technique — analogous to ensemble methods in ML, or peer review in academia.
+This mirrors a pattern across LLM applications: **structured prompting improves average quality but increases variance**. Without a variance-reduction mechanism (here: fact-checking), the pipeline is a gamble. With it, the pipeline becomes a reliable upgrade.
 
-The ancient commentary tradition learned this lesson over millennia: *annotation requires annotation*. Our experiment suggests that LLM pipelines face the same constraint.
+The ancient commentary tradition learned this lesson over millennia: *annotation requires annotation* (注疏之學，疏亦須疏). Our experiment suggests that LLM pipelines face the same constraint. The fact-check stage is the digital equivalent of the 疏 — a commentary on the commentary, ensuring that each layer of interpretation is grounded before the next begins.
+
+### Limitations
+
+1. **Single judge**: All evaluations by one model (Claude Opus). Inter-rater reliability not tested.
+2. **No human expert evaluation**: A classicist or sinologist might score differently, especially on Register.
+3. **Single translation model**: Results specific to DeepSeek-R1-70B; larger or specialized models may show different patterns.
+4. **Baroque German undersampled**: Model collapse prevents meaningful analysis of German texts.
+5. **Fact-check uses the same model**: The fact-checker is DeepSeek-R1-70B itself — it can only catch errors it "knows" are wrong. A stronger fact-checker (e.g., Claude) might catch more.
